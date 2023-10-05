@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "importHelpers": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    
+    "sourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "target": "es2020",
+    "types": ["lit"],
+    "outDir": "dist/",
+  },
+  "include": [
+    "src",
+  ]
+}
