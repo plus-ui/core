@@ -1,44 +1,34 @@
 {
-    "name": "core",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-      "dev": "vite --open",
-      "build": "wireit",
-      "preview": "vite preview --open"
+  "name": "core",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "wireit",
+    "preview": "vite preview --open"
+  },
+  "dependencies": {
+    "lit": "^2.7.6 || ^3.0.0",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.0",
+    "wireit": "^0.14.0"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "build:ts"
+      ]
     },
-    "dependencies": {
-    },
-    "devDependencies": {
-      "lit": "^2.7.6",
-      "tslib": "^2.6.2",
-      "typescript": "^5.0.2",
-      "vite": "^4.4.5",
-      "vite-plugin-dts": "^3.6.0",
-      "wireit": "^0.14.0"
-    },
-    "wireit": {
-      "build": {
-        "dependencies": [
-          "build:ts"
-        ]
-      },
-        "build:ts": {
-          "command": "tsc --pretty --outDir dist",
-          "files": [
-            "tsconfig.json",
-            "src/*.ts"
-          ],
-          "output": [
-            "dist/**/*.js",
-            "dist/**/*.js.map",
-            "dist/**/*.d.ts",
-            "!vite.config.ts"
-          ],
-          "clean": "if-file-deleted",
-          "dependencies": []
-        }
-      }
+    "build:ts": {
+      "command": "tsc --build --pretty",
+      "clean": "if-file-deleted",
+      "files": ["src/**/*.ts", "tsconfig.json"],
+      "output": ["dist/**"]
+    }
   }
-  
+}

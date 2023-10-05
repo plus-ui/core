@@ -22,9 +22,6 @@
     "strictNullChecks": false,
     "target": "es2020",
     "types": ["lit"],
-    "outDir": "dist/",
+    "outDir": "dist",
   },
-  "include": [
-    "src",
-  ]
 }
