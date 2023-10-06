@@ -1,8 +1,9 @@
-import { LitElement, html } from "lit";
+import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
+import { PlusElement } from "../../shared/plus.element";
 
 @customElement("plus-badge")
-export class BadgeComponent extends LitElement {
+export class BadgeComponent extends PlusElement("") {
   @property({ type: String }) text = "";
 
   render() {

@@ -4,41 +4,19 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-      "dev": "vite --open",
-      "build": "wireit",
-      "preview": "vite preview --open"
+        "dev": "vite --open",
+        "build": "vite build",
+        "preview": "vite preview --open"
     },
     "dependencies": {
+        "lit": "^2.7.6"
     },
     "devDependencies": {
-      "lit": "^2.7.6",
-      "tslib": "^2.6.2",
-      "typescript": "^5.0.2",
-      "vite": "^4.4.5",
-      "vite-plugin-dts": "^3.6.0",
-      "wireit": "^0.14.0"
-    },
-    "wireit": {
-      "build": {
-        "dependencies": [
-          "build:ts"
-        ]
-      },
-        "build:ts": {
-          "command": "tsc --pretty --outDir dist",
-          "files": [
-            "tsconfig.json",
-            "src/*.ts"
-          ],
-          "output": [
-            "dist/**/*.js",
-            "dist/**/*.js.map",
-            "dist/**/*.d.ts",
-            "!vite.config.ts"
-          ],
-          "clean": "if-file-deleted",
-          "dependencies": []
-        }
-      }
-  }
-  
+        "@rollup/plugin-typescript": "^11.1.5",
+        "rollup-plugin-summary": "^2.0.0",
+        "tailwindcss": "^3.3.3",
+        "tslib": "^2.6.2",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5"
+    }
+}
