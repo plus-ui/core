@@ -1,2 +1,2 @@
-export { BadgeComponent } from "./badge/badge.component";
-export { AvatarComponent } from "./avatar/avatar.component";
+export { BadgeComponent } from "./components/badge/badge.component";
+export { AvatarComponent } from "./components/avatar/avatar.component";
