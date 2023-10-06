@@ -1,9 +1,8 @@
-import { html } from "lit";
+import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { PlusElement } from "../../shared/plus.element";
 
 @customElement("plus-avatar")
-export class AvatarComponent extends PlusElement("") {
+export class AvatarComponent extends LitElement {
   @property({ type: String }) text = "";
 
   render() {
