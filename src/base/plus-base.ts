@@ -1,10 +1,9 @@
 // Import statements
-import { property } from "lit/decorators.js";
+import { property } from "lit-element";
 import { LitElement } from "lit";
 
 // PlusBase class
 export abstract class PlusBase extends LitElement {
-
   // ID property with default value
   @property({ type: String, reflect: true })
   id: string = `plusui-${Math.random().toString(36).slice(2, 12)}`;
@@ -28,7 +27,7 @@ export abstract class PlusBase extends LitElement {
   // Required property with default value
   @property({ type: Boolean, reflect: true })
   required: boolean = false;
-  
+
   // Loading property with default value
   @property({ type: Boolean })
   loading = false;
@@ -39,14 +38,13 @@ export abstract class PlusBase extends LitElement {
 
   // emit function to dispatch events
   emit(name: string, options?: CustomEventInit) {
-
     // Create a new CustomEvent object
     const event = new CustomEvent(name, {
       bubbles: true,
       cancelable: false,
       composed: true,
       detail: {},
-      ...options
+      ...options,
     });
 
     // Dispatch the event

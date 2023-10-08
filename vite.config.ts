@@ -9,6 +9,7 @@ export default defineConfig({
         index: "src/components/index.ts",
         avatar: "src/components/avatar/avatar.component.ts",
         badge: "src/components/badge/badge.component.ts",
+        base: "src/base/plus-base.ts",
       },
       output: {
         format: "es",

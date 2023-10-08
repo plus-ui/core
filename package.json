@@ -24,7 +24,7 @@
     "preview": "vite preview --open"
   },
   "dependencies": {
-    "lit": "^2.7.6"
+    "lit": "^2.8.0"
   },
   "devDependencies": {
     "rollup-plugin-summary": "^2.0.0",
