@@ -1,15 +1,45 @@
 import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { PlusElement } from "../../shared/plus.element";
+import { badgeStyle } from "./badge.style";
+import { ColorHelper } from "../../helper/color-helper";
 
 @customElement("plus-badge")
 export class BadgeComponent extends PlusElement("") {
-  @property({ type: String }) text = "";
+  @property({ type: String }) color;
+  @property({ type: String }) size: "small" | "medium" | "large" = "medium";
 
   render() {
+    const { size, color } = this;
+
+    const { tone, colorName } = ColorHelper.parseColorString(color);
+
+    const dc = ColorHelper.generateColorVariables({
+      color: colorName,
+      tones: {
+        [tone]: ["bg"],
+      },
+      variable: "--plus-badge",
+    });
+
+    const style = {
+      ...dc,
+      ...(dc["--bcm-badge-bg"] && {
+        "--bcm-badge-text": ColorHelper.getContrastingTextColor(
+          dc["--bcm-badge-bg"]
+        ),
+      }),
+    };
+
+    const { base } = badgeStyle({ size });
     return html`
-      <div>
-        <slot>${this.text}</slot>
+      <div
+        class="${base()}"
+        style="${ColorHelper.objectToCssString(style)}"
+        role="status"
+        aria-live="polite"
+      >
+        <slot></slot>
       </div>
     `;
   }
