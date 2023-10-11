@@ -1,29 +1,37 @@
-import typescript from "@rollup/plugin-typescript";
 import { defineConfig } from "vite";
 import summary from "rollup-plugin-summary";
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
   build: {
-    minify: true,
-    sourcemap: true,
     rollupOptions: {
       input: {
-        index: "index.ts",
+        index: "src/components/index.ts",
+        avatar: "src/components/avatar/avatar.component.ts",
+        badge: "src/components/badge/badge.component.ts",
+        base: "src/base/plus-base.ts",
+      },
+      output: {
+        format: "es",
+        entryFileNames: "[name].js",
+      },
+      external: ["lit-element"],
+    },
+    lib: {
+      entry: {
+        index: "src/components/index.ts",
         avatar: "src/components/avatar/avatar.component.ts",
         badge: "src/components/badge/badge.component.ts",
       },
-      output: {
-        dir: "dist",
-        entryFileNames: "[name].js",
-        chunkFileNames: "chunk/[name].js",
-        assetFileNames: "[name].[ext]"
-      },
-      plugins: [
-        typescript({
-          tsconfig: "tsconfig.json"
-        }),
-        summary()
-      ]
-    }
+      formats: ["es"],
+    },
   },
+  plugins: [
+    summary(),
+    dts({
+      rollupTypes: true,
+      outDir: "types",
+      tsconfigPath: "tsconfig.json",
+    }),
+  ],
 });
