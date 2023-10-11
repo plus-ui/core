@@ -8,11 +8,14 @@ export default defineConfig({
         index: "src/components/index.ts",
         avatar: "src/components/avatar/avatar.component.ts",
         badge: "src/components/badge/badge.component.ts",
-        base: "src/base/plus-base.ts",
+        ["styles/badge.style"]: "src/components/badge/badge.style.ts",
+        ["assets/base"]: "src/base/plus-base.ts",
+        ["helpers/color-helper"]: "src/helper/color-helper.ts",
       },
       output: {
         format: "es",
         entryFileNames: "[name].js",
+        chunkFileNames: "assets/[name].js",
       }
     },
   },

@@ -1,11 +1,13 @@
 // Import statements
-import { LitElement } from "lit";
+import { LitElement, unsafeCSS } from "lit";
 import { property } from "lit/decorators.js";
-// import tailwind from "../shared/tailwind.global.css";
+/** @ts-ignore */
+import tailwind from "../shared/tailwind.global.css?inline";
 
 // PlusBase class
 export abstract class PlusBase extends LitElement {
-  // static styles = [unsafeCSS(tailwind)];
+  static styles = [unsafeCSS(tailwind)];
+
   // ID property with default value
   @property({ type: String, reflect: true })
   id: string = `plusui-${Math.random().toString(36).slice(2, 12)}`;

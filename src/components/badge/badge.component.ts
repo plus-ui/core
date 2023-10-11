@@ -3,11 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { badgeStyle } from "./badge.style";
 import { ColorHelper } from "../../helper/color-helper";
-import {withTailwind} from 'vite-lit-with-tailwind';
-import elementStyles from './../../shared/tailwind.global.css?inline';
-
 @customElement("plus-badge")
-@withTailwind(elementStyles)
 export class BadgeComponent extends PlusBase {
 
   

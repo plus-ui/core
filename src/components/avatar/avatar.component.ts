@@ -8,7 +8,7 @@ export class AvatarComponent extends PlusBase {
 
   render() {
     return html`
-      <div>
+      <div class="text-blue-400">
         <slot>${this.text}</slot>
       </div>
     `;
