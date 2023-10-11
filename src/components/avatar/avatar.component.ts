@@ -1,5 +1,6 @@
 import { PlusBase } from "../../base/plus-base";
-import { customElement, property, html } from "lit-element";
+import { html } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
 @customElement("plus-avatar")
 export class AvatarComponent extends PlusBase {

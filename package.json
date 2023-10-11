@@ -2,7 +2,6 @@
   "name": "core",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "exports": {
     ".": [
       {
@@ -33,6 +32,10 @@
     "tslib": "^2.6.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
-    "vite-plugin-dts": "^3.6.0"
+    "vite-plugin-dts": "^3.6.0",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "vite-lit-with-tailwind": "^2.1.1"
   }
 }

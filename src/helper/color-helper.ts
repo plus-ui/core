@@ -8,7 +8,7 @@ export class ColorHelper {
    * @param {number} defaultTone - The default tone value to use if tone is not provided in the string.
    * @returns {Object} - An object containing the parsed tone and color name.
    */
-  static parseColorString(color, defaultTone = 600) {
+  static parseColorString(color: any, defaultTone = 600) {
     // Check if the color string is empty or undefined
     if (!color) {
       return { tone: null, colorName: null };
@@ -36,7 +36,7 @@ export class ColorHelper {
    * @param {Object} args.tones - An object containing tone definitions.
    * @returns {Object} - An object containing the generated CSS custom properties.
    */
-  static generateColorVariables(args) {
+  static generateColorVariables(args: object) {
     // Destructure arguments with default values
     const { color, variable, tones } = (args = Object.assign({
       variable: "--plus-color-default",
