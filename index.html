@@ -27,63 +27,107 @@
         justify-content: flex-start;
         gap: 12px;
       }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="row"><plus-avatar></plus-avatar></div>
+      <div class="row">
+        <plus-avatar shape="circle"></plus-avatar>
+        <plus-avatar shape="square"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar text="Murat Polat Özkan"></plus-avatar>
+        <plus-avatar text="Ramazan Yıldırım"></plus-avatar>
+        <plus-avatar text="Ömer Duraker Hilal Duraker"></plus-avatar>
+        <plus-avatar text="Didem"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar size="xs"></plus-avatar>
+        <plus-avatar size="sm"></plus-avatar>
+        <plus-avatar size="md"></plus-avatar>
+        <plus-avatar size="lg"></plus-avatar>
+        <plus-avatar size="xl"></plus-avatar>
+        <plus-avatar size="80"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar></plus-avatar>
+        <plus-avatar image="https://i.pravatar.cc/50"></plus-avatar>
+        <plus-avatar image="https://i.pravatar.cc/60" text="Murat Polat Özkan"></plus-avatar>
+        <plus-avatar image="https://picsum.photoasds/200" text="Murat Polat Özkan"></plus-avatar>
+        <plus-avatar image="https://picsum.photoasds/200" icon="fas fa-home"></plus-avatar>
+        <plus-avatar>M</plus-avatar>
+      </div>
+    </div>
+
+    <div class="container">
       <div class="row">
         <plus-button>
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i>
+          Filled Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
       </div>
       <div class="row">
         <plus-button size="sm">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i>
+          Filled Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button size="md">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i>
+          Filled Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button size="lg">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i>
+          Filled Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
       </div>
       <div class="row">
         <plus-button kind="filled">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Filled Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button kind="outlined">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Outlined Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button kind="dashed">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Dashed Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button kind="text">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Text Default Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
       </div>
       <div class="row">
         <plus-button status="primary" kind="filled">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Filled Primary Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button status="primary" kind="outlined">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Outlined Primary Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button status="primary" kind="dashed">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Dashed Primary Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
         <plus-button status="primary" kind="text">
-          <i class="fa-solid fa-plus"></i> Button
+          <i class="fa-solid fa-plus"></i> Text Primary Button
           <i class="fa-solid fa-plus"></i>
         </plus-button>
       </div>

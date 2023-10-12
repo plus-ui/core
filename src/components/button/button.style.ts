@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const buttonStyle = tv({
   slots: {
-    base: ["flex items-center justify-center font-sans font-medium rounded border box-content"],
+    base: ["flex items-center justify-center font-sans rounded border box-content"],
   },
   variants: {
     size: {

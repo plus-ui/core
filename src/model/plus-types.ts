@@ -1,3 +1,3 @@
-// import Plus from "./plus";
+import Plus from "./plus";
 
-// export declare type ...
+export declare type Size = keyof typeof Plus.Sizes;
