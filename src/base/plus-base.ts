@@ -3,10 +3,11 @@ import { LitElement, unsafeCSS } from "lit";
 import { property } from "lit/decorators.js";
 /** @ts-ignore */
 import tailwind from "../shared/tailwind.global.css?inline";
+import theme from "../shared/theme/default.css";
 
 // PlusBase class
 export abstract class PlusBase extends LitElement {
-  static styles = [unsafeCSS(tailwind)];
+  static styles = [unsafeCSS(tailwind), unsafeCSS(theme)];
 
   // ID property with default value
   @property({ type: String, reflect: true })

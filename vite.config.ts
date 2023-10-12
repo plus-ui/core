@@ -9,6 +9,7 @@ export default defineConfig({
         avatar: "src/components/avatar/avatar.component.ts",
         badge: "src/components/badge/badge.component.ts",
         ["styles/badge.style"]: "src/components/badge/badge.style.ts",
+        button: "src/components/button/button.component.ts",
         ["assets/base"]: "src/base/plus-base.ts",
         ["helpers/color-helper"]: "src/helper/color-helper.ts",
       },
