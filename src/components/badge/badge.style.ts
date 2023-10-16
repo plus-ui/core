@@ -6,27 +6,27 @@ export const badgeStyle = tv({
       "inline-flex items-center justify-center",
       "flex items-center justify-center flex-row",
       "rounded-full text-center",
-      "bg-[--plus-badge-bg] text-[--plus-badge-text]",
+      "bg-[--badge-bg] text-[--badge-text]",
       "whitespace-nowrap",
     ],
   },
   variants: {
     size: {
-      small: {
-        base: "text-1 min-w-1.5 min-h-1.5",
-        dotText: "px-1.5 min-w-4",
+      sm: {
+        base: "text-xs min-w-1.5 min-h-1.5",
+        dotText: "text-xs px-1.5 min-w-4 p-3",
       },
-      medium: {
-        base: "text-2 min-w-2 min-h-2",
+      md: {
+        base: "text-sm min-w-2 min-h-2",
         dotText: "px-1.5 min-w-5",
       },
-      large: {
-        base: "text-3 min-w-2.5 min-h-2.5",
+      lg: {
+        base: "text-base min-w-2.5 min-h-2.5",
         dotText: "px-2 min-w-6",
       },
     },
   },
   defaultVariants: {
-    size: "medium",
+    size: "md",
   },
 });

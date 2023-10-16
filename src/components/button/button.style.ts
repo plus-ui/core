@@ -70,7 +70,7 @@ export const buttonStyle = tv({
       kind: "outlined",
       status: "primary",
       class: {
-        base: "text-[--text-primary] bg-[--background-base-default] border-[--stroke-primary]",
+        base: "text-[--text-primary] bg-[--background-base-default] border-[--border-primary]",
       },
     },
     {
@@ -84,7 +84,7 @@ export const buttonStyle = tv({
       kind: "dashed",
       status: "primary",
       class: {
-        base: "text-[--text-primary] bg-[--background-base-default] border-[--stroke-primary] border-dashed",
+        base: "text-[--text-primary] bg-[--background-base-default] border-[--border-primary] border-dashed",
       },
     },
     {
