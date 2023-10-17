@@ -2,7 +2,10 @@ import { tv } from "tailwind-variants";
 
 export const buttonStyle = tv({
   slots: {
-    base: ["flex items-center justify-center font-sans rounded border box-content"],
+    base: [
+      "flex items-center justify-center font-sans rounded border box-content", 
+      "outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+    ],
   },
   variants: {
     size: {
@@ -18,16 +21,16 @@ export const buttonStyle = tv({
     },
     kind: {
       filled: {
-        base: "",
+        base: "border-transparent",
       },
       outlined: {
-        base: "",
+        base: "bg-color-base",
       },
       dashed: {
-        base: "",
+        base: "bg-color-base border-dashed",
       },
       text: {
-        base: "",
+        base: "bg-transparent border-transparent",
       },
     },
     status: {
@@ -40,7 +43,7 @@ export const buttonStyle = tv({
     },
     disabled: {
       true: {
-        base: "",
+        base: "cursor-not-allowed text-color-disabled user-select-none",
       },
     },
   },
@@ -48,57 +51,112 @@ export const buttonStyle = tv({
     {
       kind: "filled",
       status: "default",
+      disabled: false,
       class: {
-        base: "text-[--text-default] bg-[--background-default-default] border-[--background-default-default]",
+        base: [
+          "text-color-default bg-color-default", 
+          "hover:bg-color-default-hover", 
+          "active:bg-color-default-pressed", 
+          "focus-visible:bg-color-default-focus"
+        ],
       },
     },
     {
       kind: "filled",
       status: "primary",
+      disabled: false,
       class: {
-        base: "text-[--text-base] bg-[--background-primary-default] border-[--background-primary-default]",
+        base: [
+          "text-color-base bg-color-primary", 
+          "hover:bg-color-primary-hover", 
+          "active:bg-color-primary-pressed", 
+          "focus-visible:bg-color-primary-focus"
+        ],
+      },
+    },
+    {
+      kind: "filled",
+      disabled: true,
+      class: {
+        base: "bg-color-disabled",
       },
     },
     {
       kind: "outlined",
       status: "default",
+      disabled: false,
       class: {
-        base: "text-[--text-default] bg-[--background-base-default] border-[--border-default]",
+        base: [
+          "text-color-default border-color-default", 
+          "hover:bg-color-default-hover", 
+          "active:bg-color-default-pressed", 
+          "focus-visible:bg-color-default-focus"
+        ],
       },
     },
     {
       kind: "outlined",
       status: "primary",
+      disabled: false,
       class: {
-        base: "text-[--text-primary] bg-[--background-base-default] border-[--border-primary]",
+        base: [
+          "text-color-primary border-color-primary", 
+          "hover:bg-color-base-hover", 
+          "active:bg-color-base-pressed", 
+          "focus-visible:bg-color-base-focus"
+        ],
       },
     },
     {
       kind: "dashed",
       status: "default",
+      disabled: false,
       class: {
-        base: "text-[--text-default] bg-[--background-base-default] border-[--border-default] border-dashed",
+        base: [
+          "text-color-default  border-color-default",
+          "hover:bg-color-base-hover",
+          "active:bg-color-base-pressed",
+          "focus-visible:bg-color-base-focus",
+        ],
       },
     },
     {
       kind: "dashed",
       status: "primary",
+      disabled: false,
       class: {
-        base: "text-[--text-primary] bg-[--background-base-default] border-[--border-primary] border-dashed",
+        base: [
+          "text-color-primary border-color-primary",
+          "hover:bg-color-base-hover",
+          "active:bg-color-base-pressed",
+          "focus-visible:bg-color-base-focus",
+        ],
       },
     },
     {
       kind: "text",
       status: "default",
+      disabled: false,
       class: {
-        base: "text-[--text-default] bg-transparent border-transparent",
+        base: [
+          "text-color-default", 
+          "hover:bg-color-default-hover", 
+          "active:bg-color-default-pressed", 
+          "focus-visible:bg-color-default-focus"
+        ],
       },
     },
     {
       kind: "text",
       status: "primary",
+      disabled: false,
       class: {
-        base: "text-[--text-primary] bg-transparent border-transparent ",
+        base: [
+          "text-color-primary", 
+          "hover:bg-color-base-hover", 
+          "active:bg-color-base-pressed", 
+          "focus-visible:bg-color-base-focus"
+        ],
       },
     },
   ],
@@ -106,5 +164,6 @@ export const buttonStyle = tv({
     size: "md",
     kind: "filled",
     status: "default",
+    disabled: false,
   },
 });

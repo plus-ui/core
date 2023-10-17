@@ -1,29 +1,77 @@
-import type { Config } from 'tailwindcss'
-import { plusTwConfig } from './plus-tw-config'
+import type { Config } from "tailwindcss";
+import { themeColors, themeVariables } from "./theme-variables";
 
 export default {
   content: ["src/**/**/*.{ts,html,css,scss}"],
   theme: {
     extend: {
-      ...require('tailwindcss/defaultConfig').theme,
+      ...require("tailwindcss/defaultConfig").theme,
       fontFamily: {
-        ...require('tailwindcss/defaultConfig').theme.fontFamily,
-        sans: [
-          'Inter',
-          ...require('tailwindcss/defaultConfig').theme.fontFamily.sans,
-        ],
+        ...require("tailwindcss/defaultConfig").theme.fontFamily,
+        sans: ["Inter", ...require("tailwindcss/defaultConfig").theme.fontFamily.sans],
       },
+      colors: ({  colors }) => ({
+        inherit: colors.inherit,
+        current: colors.current,
+        transparent: colors.transparent,
+        black: colors.black,
+        white: colors.white,
+        slate: colors.slate,
+        gray: colors.gray,
+        zinc: colors.zinc,
+        neutral: colors.neutral,
+        stone: colors.stone,
+        red: colors.red,
+        orange: colors.orange,
+        amber: colors.amber,
+        yellow: colors.yellow,
+        lime: colors.lime,
+        green: colors.green,
+        emerald: colors.emerald,
+        teal: colors.teal,
+        cyan: colors.cyan,
+        sky: colors.sky,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        violet: colors.violet,
+        purple: colors.purple,
+        fuchsia: colors.fuchsia,
+        pink: colors.pink,
+        rose: colors.rose,
+        primaryColor: colors.blue
+      }),
       minHeight: ({ theme }) => ({
-        ...theme('spacing'),
-        ...require('tailwindcss/defaultConfig').theme.minHeight,
+        ...theme("spacing"),
+        ...require("tailwindcss/defaultConfig").theme.minHeight,
       }),
       minWidth: ({ theme }) => ({
-        ...theme('spacing'),
-        ...require('tailwindcss/defaultConfig').theme.minWidth,
+        ...theme("spacing"),
+        ...require("tailwindcss/defaultConfig").theme.minWidth,
       }),
-      ...plusTwConfig,
+      textColor: ({ theme }) => ({
+        ...theme("colors"),
+        color: {
+          ...themeColors.text,
+          invert: {
+            ...themeColors.textInvert,
+          },
+        },
+      }),
+      borderColor: ({ theme }) => ({
+        ...theme("colors"),
+        DEFAULT: theme("colors.gray.200", "currentColor"),
+        color: {
+          ...themeColors.border,
+        },
+      }),
+      backgroundColor: ({ theme }) => ({
+        ...theme("colors"),
+        color: {
+          ...themeColors.background,
+        },
+      }),
+      ...themeVariables,
     },
   },
   plugins: [],
-} satisfies Config
-
+} satisfies Config;
