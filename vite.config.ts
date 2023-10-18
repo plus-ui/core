@@ -12,6 +12,7 @@ export default defineConfig({
         button: "src/components/button/button.component.ts",
         ["assets/base"]: "src/base/plus-base.ts",
         ["helpers/color-helper"]: "src/helper/color-helper.ts",
+        link: "src/components/link/link.component.ts",
       },
       output: {
         format: "es",

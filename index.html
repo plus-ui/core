@@ -9,6 +9,7 @@
     <style>
       body {
         padding: 100px;
+        font-size: 16px;
       }
       .row {
         display: flex;
@@ -38,6 +39,15 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <plus-link href="https://google.com" target="_blank">Google</plus-link>
+        <plus-link href="https://novisitedlink.com">Novisitedlink</plus-link>
+        <plus-link href="https://google.com" kind="primary">Google</plus-link>
+        <plus-link href="https://novisitedlink.com" kind="primary">Novisitedlink</plus-link>
+      </div>
+
+
+
       <div class="row">
         <plus-badge invert>
           <plus-avatar shape="square"></plus-avatar>
