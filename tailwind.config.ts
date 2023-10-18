@@ -68,6 +68,9 @@ export default {
         ...theme("colors"),
         color: {
           ...themeColors.background,
+          invert: {
+            ...themeColors.backgroundInvert,
+          },
         },
       }),
       ...themeVariables,
