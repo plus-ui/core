@@ -1,14 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Lit + TS</title>
     <script type="module" src="./src/components/index.ts"></script>
-    <script
-      src="https://kit.fontawesome.com/c95256a193.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
     <style>
       body {
         padding: 100px;
@@ -42,10 +39,82 @@
   <body>
     <div class="container">
       <div class="row">
-        <plus-badge id="test">
+        <plus-badge invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+        <plus-badge content="1">
           <plus-avatar shape="square"></plus-avatar>
         </plus-badge>
       </div>
+      <div class="row">
+        <plus-badge content="1" placement="top-left">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+        <plus-badge content="1" placement="top-right">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" placement="bottom-left">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" placement="bottom-right">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+      </div>
+
+      <div class="row">
+        <plus-badge placement="top-left" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+        <plus-badge placement="top-right" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge placement="bottom-left" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge placement="bottom-right" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+      </div>
+      <div class="row">
+        <plus-badge content="1" status="success">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" status="warning">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" status="info">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" status="error">
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+      </div>
+
+      <div class="row">
+        <plus-badge content="1" status="success" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" status="warning" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" status="info" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+
+        <plus-badge content="1" status="error" invert>
+          <plus-avatar shape="square"></plus-avatar>
+        </plus-badge>
+      </div>
+
       <div class="row"><plus-avatar></plus-avatar></div>
       <div class="row">
         <plus-avatar shape="circle"></plus-avatar>
@@ -68,23 +137,12 @@
       <div class="row">
         <plus-avatar></plus-avatar>
         <plus-avatar image="https://i.pravatar.cc/50"></plus-avatar>
-        <plus-avatar
-          image="https://i.pravatar.cc/60"
-          text="Murat Polat Özkan"
-        ></plus-avatar>
-        <plus-avatar
-          image="https://picsum.photoasds/200"
-          text="Murat Polat Özkan"
-        ></plus-avatar>
-        <plus-avatar
-          image="https://picsum.photoasds/200"
-          icon="fas fa-home"
-        ></plus-avatar>
+        <plus-avatar image="https://i.pravatar.cc/60" text="Murat Polat Özkan"></plus-avatar>
+        <plus-avatar image="https://picsum.photoasds/200" text="Murat Polat Özkan"></plus-avatar>
+        <plus-avatar image="https://picsum.photoasds/200" icon="fas fa-home"></plus-avatar>
         <plus-avatar>M</plus-avatar>
       </div>
-    </div>
 
-    <div class="container">
       <div class="row">
         <plus-button>
           <i class="fa-solid fa-plus"></i>
@@ -184,7 +242,7 @@
     </div>
 
     <script>
-      document.addEventListener("plus-click", (e) => {
+      document.addEventListener("plus-click", e => {
         console.log(e);
       });
     </script>
