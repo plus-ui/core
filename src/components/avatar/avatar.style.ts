@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const avatarStyle = tv({
   slots: {
-    base: "uppercase flex items-center justify-center font-sans text-[--text-default] bg-[--background-default-default]",
+    base: "uppercase flex items-center justify-center font-sans text-color-default bg-color-default",
     image: "w-full h-full",
   },
   variants: {
