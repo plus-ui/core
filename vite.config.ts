@@ -13,6 +13,7 @@ export default defineConfig({
         ["assets/base"]: "src/base/plus-base.ts",
         ["helpers/color-helper"]: "src/helper/color-helper.ts",
         link: "src/components/link/link.component.ts",
+        divider: "src/components/divider/divider.component.ts",
       },
       output: {
         format: "es",

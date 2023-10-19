@@ -14,7 +14,7 @@
       .row {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        /* align-items: center; */
         justify-content: flex-start;
         gap: 12px;
       }
@@ -41,21 +41,30 @@
     <div class="container">
       <div class="row">
         <plus-link href="https://google.com" target="_blank">Google</plus-link>
+        <plus-divider type="vertical"></plus-divider>
+
         <plus-link href="https://novisitedlink.com">Novisitedlink</plus-link>
+        <plus-divider type="vertical"></plus-divider>
+
         <plus-link href="https://google.com" kind="primary">Google</plus-link>
+        <plus-divider type="vertical"></plus-divider>
+
         <plus-link href="https://novisitedlink.com" kind="primary">Novisitedlink</plus-link>
       </div>
 
-
-
+      <plus-divider></plus-divider>
       <div class="row">
         <plus-badge invert>
           <plus-avatar shape="square"></plus-avatar>
         </plus-badge>
+        <plus-divider type="vertical"></plus-divider>
+
         <plus-badge content="1">
           <plus-avatar shape="square"></plus-avatar>
         </plus-badge>
       </div>
+      <plus-divider kind="dashed"></plus-divider>
+
       <div class="row">
         <plus-badge content="1" placement="top-left">
           <plus-avatar shape="square"></plus-avatar>
