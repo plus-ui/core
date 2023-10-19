@@ -14,6 +14,7 @@ export default defineConfig({
         ["helpers/color-helper"]: "src/helper/color-helper.ts",
         link: "src/components/link/link.component.ts",
         divider: "src/components/divider/divider.component.ts",
+        chip: "src/components/chip/chip.component.ts",
       },
       output: {
         format: "es",

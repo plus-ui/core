@@ -61,6 +61,8 @@ export const themeColors = {
     focus: "var(--border-focus)",
     disabled: "var(--border-disabled)",
     error: "var(--border-error)",
+    success: "var(--border-success)",
+    warning: "var(--border-warning)",
     default: "var(--border-default)",
   },
   text: {
