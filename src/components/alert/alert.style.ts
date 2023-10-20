@@ -44,6 +44,14 @@ export const alertStyle = tv({
         base: "box-border border border-dashed",
       },
     },
+    hasDescription: {
+      true: {
+        textArea: "gap-2"
+      },
+      false:{
+        textArea: "gap-0"
+      }
+    },
     fullWidth: {
       true: {
         base: "w-full",
