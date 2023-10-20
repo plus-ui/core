@@ -1,0 +1,9 @@
+:host {
+  box-sizing: border-box;
+}
+
+.custom {
+  border: 1px solid transparent;
+  border-image: linear-gradient(0deg, red, blue);
+  box-sizing: border-box;
+}

@@ -18,6 +18,13 @@
         justify-content: flex-start;
         gap: 12px;
       }
+      .badge {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
       .container {
         display: flex;
         flex-direction: column;
@@ -39,6 +46,97 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <div style="max-width: 750px">
+          <plus-alert
+            closable
+            fullwidth
+            status="success"
+            icon="fa-solid fa-plus"
+            message="This is an alert message with a success status & custom icon & closeable & description"
+            description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
+          >
+            <i slot="icon" class="fa fa-clock"></i>
+          </plus-alert>
+        </div>
+      </div>
+      <div class="row">
+        <div style="max-width: 750px">
+          <plus-alert
+            icon="fa fa-clock"
+            invert
+            closable
+            status="success"
+            message="This is an alert message with a success status & custom icon & closeable & description"
+            description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
+          >
+          </plus-alert>
+        </div>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" status="default" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" status="info" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" status="success" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" status="warning" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" status="error" message="This is an alert message with an information status "></plus-alert>
+      </div>
+
+      <div class="row">
+        <plus-alert icon="fa fa-clock" invert status="default" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" invert status="info" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" invert status="success" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" invert status="warning" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" invert status="error" message="This is an alert message with an information status "></plus-alert>
+      </div>
+
+
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="outline" status="default" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="outline" status="info" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="outline" status="success" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="outline" status="warning" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="outline" status="error" message="This is an alert message with an information status "></plus-alert>
+      </div>
+
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="dashed" status="default" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="dashed" status="info" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="dashed" status="success" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="dashed" status="warning" message="This is an alert message with an information status "></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert icon="fa fa-clock" kind="dashed" status="error" message="This is an alert message with an information status "></plus-alert>
+      </div>
       <div class="row">
         <plus-link href="https://google.com" target="_blank">Google</plus-link>
         <plus-divider type="vertical"></plus-divider>

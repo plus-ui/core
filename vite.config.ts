@@ -15,6 +15,7 @@ export default defineConfig({
         link: "src/components/link/link.component.ts",
         divider: "src/components/divider/divider.component.ts",
         chip: "src/components/chip/chip.component.ts",
+        alert: "src/components/alert/alert.component.ts",
       },
       output: {
         format: "es",
