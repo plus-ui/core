@@ -64,6 +64,7 @@ export const themeColors = {
     success: "var(--border-success)",
     warning: "var(--border-warning)",
     default: "var(--border-default)",
+    information: "var(--border-information)",
   },
   text: {
     base: "var(--text-base)",
