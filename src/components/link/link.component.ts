@@ -24,9 +24,11 @@ export class LinkComponent extends PlusBase {
     const { base } = linkStyle({ kind });
 
     return html`
-      <a class="${base()}" href="${href}" target="${ifDefined(target)}" download="${ifDefined(download)}" rel="${ifDefined(rel)}" @click="${this.handleClick}">
-        <slot></slot>
-      </a>
+      <plus-text size="inherit">
+        <a class="${base()}" href="${href}" target="${ifDefined(target)}" download="${ifDefined(download)}" rel="${ifDefined(rel)}" @click="${this.handleClick}">
+          <slot></slot>
+        </a>
+      </plus-text>
     `;
   }
 }

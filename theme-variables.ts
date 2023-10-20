@@ -52,6 +52,7 @@ export const themeVariables = {
     "7xl": ["var(--font-size-7xl, 4.5rem)", { lineHeight: "var(--font-size-7xl-line-height, 1)" }],
     "8xl": ["var(--font-size-8xl, 6rem)", { lineHeight: "var(--font-size-8xl-line-height, 1)" }],
     "9xl": ["var(--font-size-9xl, 8rem)", { lineHeight: "var(--font-size-9xl-line-height, 1)" }],
+    "size-inherit": ["inherit", { lineHeight: "inherit" }],
   },
 };
 
