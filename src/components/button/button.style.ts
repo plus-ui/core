@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const buttonStyle = tv({
   slots: {
     base: [
-      "flex items-center justify-center font-sans rounded border box-content", 
+      "flex items-center justify-center font-sans rounded border", 
       "outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
     ],
   },

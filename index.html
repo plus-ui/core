@@ -18,11 +18,9 @@
         justify-content: flex-start;
         gap: 12px;
       }
-      .badge {
+      .col {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
+        flex-direction: column;
         gap: 12px;
       }
       .container {
@@ -105,7 +103,6 @@
         <plus-alert icon="fa fa-clock" invert status="error" message="This is an alert message with an information status "></plus-alert>
       </div>
 
-
       <div class="row">
         <plus-alert icon="fa fa-clock" kind="outline" status="default" message="This is an alert message with an information status "></plus-alert>
       </div>
@@ -137,6 +134,58 @@
       <div class="row">
         <plus-alert icon="fa fa-clock" kind="dashed" status="error" message="This is an alert message with an information status "></plus-alert>
       </div>
+      <div class="row">
+        <div class="col">
+          <plus-text>Default Text</plus-text>
+          <plus-text kind="placeholder">Placeholder Text</plus-text>
+          <plus-text disabled>Disabled Text</plus-text>
+          <plus-text kind="caption">Caption Text</plus-text>
+          <plus-text status="success">Success Text</plus-text>
+          <plus-text status="warning"> W<plus-text highlight>arn</plus-text>ing Text</plus-text>
+          <plus-text status="error">Error Text</plus-text>
+          <plus-text status="info">Info Text</plus-text>
+          <plus-text underline>Underline Text</plus-text>
+          <plus-text line-through>Line Through Text</plus-text>
+          <plus-text overline>Overline Text</plus-text>
+          <plus-text line-through underline overline>Line Through Text</plus-text>
+          <plus-text highlight>Highlight Text</plus-text>
+          <plus-text strong>Strong Text</plus-text>
+          <plus-text italic>Italic Text</plus-text>
+          <plus-text type="code">Code Text</plus-text>
+          <plus-text type="blockquote">Blockquote Text</plus-text>
+
+          <plus-text type="h1">H1 Text</plus-text>
+          <plus-text type="h2">H2 Text</plus-text>
+          <plus-text type="h3">H3 Text</plus-text>
+          <plus-text type="h4">H4 Text</plus-text>
+          <plus-text type="h5">H5 Text</plus-text>
+          <plus-text type="h6">H6 Text</plus-text>
+          <plus-text type="p">P Text</plus-text>
+
+          <plus-text size="xs">
+            xs Text
+            <plus-link href="https://google.com" target="_blank">Google</plus-link>
+          </plus-text>
+          <plus-text size="sm">sm Text</plus-text>
+          <plus-text size="md">md Text</plus-text>
+          <plus-text size="lg">lg Text</plus-text>
+          <plus-text size="xl">xl Text</plus-text>
+          <plus-text size="2xl">2xl Text</plus-text>
+          <plus-text size="3xl">3xl Text</plus-text>
+          <plus-text size="4xl">4xl Text</plus-text>
+          <plus-text size="5xl">
+            5xl Text
+            <plus-link href="https://google.com" target="_blank">Google</plus-link>
+          </plus-text>
+          <plus-text size="6xl">6xl Text</plus-text>
+          <plus-text size="7xl">7xl Text</plus-text>
+          <plus-text size="8xl">8xl Text</plus-text>
+          <plus-text size="9xl">9xl Text</plus-text>
+          <plus-text type="h1" size="9xl" status="error" highlight strong underline>P Text</plus-text>
+          <plus-text type="code">Code Text </plus-text>
+        </div>
+      </div>
+
       <div class="row">
         <plus-link href="https://google.com" target="_blank">Google</plus-link>
         <plus-divider type="vertical"></plus-divider>

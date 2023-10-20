@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const alertStyle = tv({
   slots: {
-    base: "font-sans flex flex-row items-start border border-solid justify-between rounded-md gap-3 p-3 w-auto",
+    base: "font-sans flex flex-row items-start border border-solid justify-between rounded-md gap-3 p-3 w-auto  font-normal",
     textArea: "flex flex-1 flex-col items-center justify-center text-center peer",
     descriptionSize: "text-xs empty:hidden",
     closableArea: "flex h-6 w-6 cursor-pointer items-center justify-center",
@@ -35,22 +35,22 @@ export const alertStyle = tv({
         base: "rounded-md border-transparent",
       },
       outline: {
-        base: "box-border border border-solid",
+        base: " border border-solid",
       },
       text: {
         base: "rounded-md",
       },
       dashed: {
-        base: "box-border border border-dashed",
+        base: " border border-dashed",
       },
     },
     hasDescription: {
       true: {
-        textArea: "gap-2"
+        textArea: "gap-2",
       },
-      false:{
-        textArea: "gap-0"
-      }
+      false: {
+        textArea: "gap-0",
+      },
     },
     fullWidth: {
       true: {

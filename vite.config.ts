@@ -16,6 +16,7 @@ export default defineConfig({
         divider: "src/components/divider/divider.component.ts",
         chip: "src/components/chip/chip.component.ts",
         alert: "src/components/alert/alert.component.ts",
+        text: "src/components/text/text.component.ts",
       },
       output: {
         format: "es",

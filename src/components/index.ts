@@ -5,3 +5,4 @@ export * from "./link/link.component";
 export * from "./divider/divider.component";
 export * from "./chip/chip.component";
 export * from "./alert/alert.component";
+export * from "./text/text.component";
