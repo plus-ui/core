@@ -73,6 +73,10 @@ export default {
           },
         },
       }),
+      ringColor: ({ theme }) => ({
+        DEFAULT: "var(--color-border-focus)",
+        ...theme('colors'),
+      }),
       ...themeVariables,
     },
   },
