@@ -25,13 +25,12 @@ export class AlertComponent extends PlusBase {
 
   render() {
     const { kind, status, size, invert, fullWidth, closable, message, description, icon } = this;
-    const hasDescription = !!description;
-    const { base, textArea, descriptionSize, closableArea } = alertStyle({ status, kind, size, invert, fullWidth, closable, hasDescription });
-    return html` <div class=${"alert " + base()} role="alert">
+    const { base, textArea, descriptionClass, closableArea } = alertStyle({ status, kind, size, invert, fullWidth, closable });
+    return html`<div class=${"alert " + base()} role="alert">
       ${icon ? html`<div><i class=${icon}></i></div>` : null}
       <div class=${textArea()}>
-        <span>${message}</span>
-        <span class=${descriptionSize()}>${description}</span>
+        <span class="empty:hidden">${message}</span>
+        <span class=${descriptionClass()}>${description}</span>
       </div>
       <div class=${closableArea()} @click=${() => this.el.remove()}>${closable ? html`<i class="fa fa-close"></i>` : null}</div>
     </div>`;

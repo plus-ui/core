@@ -2,32 +2,27 @@ import { tv } from "tailwind-variants";
 
 export const alertStyle = tv({
   slots: {
-    base: "font-sans flex flex-row items-start border border-solid justify-between rounded-md gap-3 p-3 w-auto  font-normal",
-    textArea: "flex flex-1 flex-col items-center justify-center text-center peer",
-    descriptionSize: "text-xs empty:hidden",
+    base: "font-sans flex flex-row items-baseline justify-between border border-solid rounded-md font-medium",
+    textArea: "flex flex-1 flex-col items-start justify-center",
+    descriptionClass: "empty:hidden font-normal",
     closableArea: "flex h-6 w-6 cursor-pointer items-center justify-center",
   },
   variants: {
     size: {
-      xs: {
-        base: "text-xs",
-        descriptionSize: "text-xs",
-      },
       sm: {
-        base: "text-sm",
-        descriptionSize: "text-xs",
+        base: "text-sm p-3 gap-2.5",
+        descriptionClass: "text-xs",
+        textArea: "gap-2",
       },
       md: {
-        base: "text-base",
-        descriptionSize: "text-sm",
+        base: "text-base p-3.5 gap-3",
+        descriptionClass: "text-sm",
+        textArea: "gap-3",
       },
       lg: {
-        base: "text-lg",
-        descriptionSize: "text-base",
-      },
-      xl: {
-        base: "text-xl",
-        descriptionSize: "text-base",
+        base: "text-lg p-4 gap-3.5",
+        descriptionClass: "text-base",
+        textArea: "gap-3.5",
       },
     },
     kind: {
@@ -42,14 +37,6 @@ export const alertStyle = tv({
       },
       dashed: {
         base: " border border-dashed",
-      },
-    },
-    hasDescription: {
-      true: {
-        textArea: "gap-2",
-      },
-      false: {
-        textArea: "gap-0",
       },
     },
     fullWidth: {
