@@ -2,18 +2,18 @@ import { tv } from "tailwind-variants";
 
 export const badgeStyle = tv({
   slots: {
-    base: ["absolute font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto"],
+    base: ["absolute font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto border border-white empty:box-content"],
   },
   variants: {
     size: {
       sm: {
-        base: "text-xs w-4 h-4 p-0.5",
+        base: "text-xs empty:min-w-1.5 min-w-5.5 empty:min-h-1.5 min-h-5.5 empty:px-0 px-2",
       },
       md: {
-        base: "text-xs py-1 empty:px-1 empty:min-w-0 min-w-6 empty:min-h-0 min-h-6",
+        base: "text-sm empty:min-w-2 min-w-6 empty:min-h-2 min-h-6 empty:px-0 px-3",
       },
       lg: {
-        base: "text-base w-6 h-6 p-2",
+        base: "text-base empty:min-w-2.5 min-w-7 empty:min-h-2.5 min-h-7 empty:px-0 px-4",
       },
     },
     kind: {
@@ -48,16 +48,23 @@ export const badgeStyle = tv({
     },
     placement: {
       "top-left": {
-        base: "-left-2 -top-2 empty:-left-1 empty:-top-1",
+        base: "top-0 left-0 scale-100 transform -translate-x-1/2 -translate-y-1/2 ",
       },
       "top-right": {
-        base: "-right-2 -top-2 empty:-right-1 empty:-top-1",
+        base: "top-0 right-0 scale-100 transform translate-x-1/2 -translate-y-1/2",
       },
       "bottom-left": {
-        base: "top-auto -bottom-2 -left-2 empty:-bottom-1 empty:-left-1",
+        // base: "top-auto -bottom-2 -left-2 empty:-bottom-1 empty:-left-1",
+        base: "bottom-0 left-0 scale-100 transform -translate-x-1/2 translate-y-1/2",
       },
       "bottom-right": {
-        base: "top-auto -right-2 -bottom-2 empty:-bottom-1 empty:-right-1",
+        // base: "top-auto -right-2 -bottom-2 empty:-bottom-1 empty:-right-1",
+        base: "bottom-0 right-0 scale-100 transform translate-x-1/2 translate-y-1/2",
+      },
+    },
+    isSingleChar: {
+      true: {
+        base: "px-0",
       },
     },
   },
@@ -103,7 +110,7 @@ export const badgeStyle = tv({
       class: {
         base: ["bg-color-invert-default text-color-base"],
       },
-    },
+    }
   ],
   defaultVariants: {
     size: "md",
@@ -111,5 +118,6 @@ export const badgeStyle = tv({
     kind: "text",
     placement: "top-right",
     invert: false,
+    isSingleChar: false,
   },
 });
