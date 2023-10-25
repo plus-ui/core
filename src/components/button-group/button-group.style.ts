@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const buttonGroupStyle = tv({
   slots: {
-    base: ["flex flex-row gap-0 [>plus-button]:border border-solid border-r-indigo-300 " ],
+    base: ["flex flex-row"],
   },
   variants: {
     size: {

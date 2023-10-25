@@ -4,7 +4,7 @@ export const buttonStyle = tv({
   slots: {
     base: [
       "relative flex items-center justify-center font-sans rounded border", 
-      "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:z-auto",
+      "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:z-[1]",
     ],
   },
   variants: {
@@ -48,10 +48,10 @@ export const buttonStyle = tv({
     },
     groupOrder: {
       first: {
-        base: "rounded-none rounded-l border-r-0",
+        base: "rounded-none rounded-l",
       },
       middle: {
-        base: "rounded-none  border-r-0",
+        base: "rounded-none",
       },
       last: {
         base: "rounded-none rounded-r ",

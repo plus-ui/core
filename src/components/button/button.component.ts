@@ -1,17 +1,23 @@
-import { html, unsafeStatic } from "lit/static-html.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { html, unsafeStatic } from "lit/static-html.js";
 
 import { customElement, property, state } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { buttonStyle } from "./button.style";
+import { unsafeCSS } from "lit";
+
+// @ts-ignore
+import style from "./button.style.css?inline";
 
 @customElement("plus-button")
 export class ButtonComponent extends PlusBase {
   //   @property({ type: String }) color!: string;
 
+  static styles = [...PlusBase.styles, unsafeCSS(style)];
+
+
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: String }) kind: "filled" | "outlined" | "dashed" | "text" =
-    "filled";
+  @property({ type: String }) kind: "filled" | "outlined" | "dashed" | "text" = "filled";
   @property({ type: String }) status: "default" | "primary" = "default";
 
   @property() type: "button" | "submit" | "reset" = "button";
@@ -20,7 +26,7 @@ export class ButtonComponent extends PlusBase {
   @property() target: "_blank" | "_parent" | "_self" | "_top";
   @property() download?: string;
   @property() rel = "noreferrer noopener";
-  @property() groupOrder: "first" | "middle" | "last" ;
+  @property({ reflect: true, attribute: "group-order" }) groupOrder: "first" | "middle" | "last";
 
   @state() private hasFocus = false;
 
@@ -43,21 +49,7 @@ export class ButtonComponent extends PlusBase {
   }
 
   render() {
-    const {
-      size,
-      type,
-      disabled,
-      kind,
-      status,
-      title,
-      name,
-      value,
-      href,
-      target,
-      download,
-      rel,
-      groupOrder,
-    } = this;
+    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder } = this;
 
     const { base } = buttonStyle({ size, disabled, kind, status, groupOrder });
 

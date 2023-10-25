@@ -4,3 +4,8 @@
   width: auto;
   cursor: pointer;
 }
+
+:host([group-order="middle"]),
+:host([group-order="last"]) {
+  margin-left: -1px;
+}
