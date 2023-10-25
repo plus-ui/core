@@ -33,6 +33,13 @@ export const buttonStyle = tv({
         base: "bg-transparent border-transparent",
       },
     },
+    groupPosition: {
+      vertical: {   
+       base: "w-full"  
+      },
+      horizontal: { 
+      },
+    },
     status: {
       default: {
         base: "",
@@ -54,11 +61,32 @@ export const buttonStyle = tv({
         base: "rounded-none",
       },
       last: {
-        base: "rounded-none rounded-r ",
+        base: "rounded-none rounded-r",
       },
     },
   },
   compoundVariants: [
+    {
+      groupPosition: "vertical",
+      groupOrder: "first",
+      class: {
+        base: "rounded-none rounded-t",
+      },
+    },
+    {
+      groupPosition: "vertical",
+      groupOrder: "middle",
+      class: {
+        base: "rounded-none",
+      },
+    },
+    {
+      groupPosition: "vertical",
+      groupOrder: "last",
+      class: {
+        base: "rounded-none rounded-b",
+      },
+    },
     {
       kind: "filled",
       status: "default",
@@ -177,5 +205,6 @@ export const buttonStyle = tv({
     status: "default",
     disabled: false,
     groupOrder: undefined,
+    groupPosition: undefined,
   },
 });

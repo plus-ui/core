@@ -5,7 +5,16 @@
   cursor: pointer;
 }
 
-:host([group-order="middle"]),
-:host([group-order="last"]) {
+:host([group-order="middle"][group-position="horizontal"]), 
+:host([group-order="last"][group-position="horizontal"]) {
   margin-left: -1px;
+}
+
+:host([group-order="middle"][group-position="vertical"]), 
+:host([group-order="last"][group-position="vertical"]) {
+  margin-top: -1px;
+}
+
+:host([group-order]) {
+  width: 100%;
 }

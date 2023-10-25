@@ -5,6 +5,14 @@ export const buttonGroupStyle = tv({
     base: ["flex flex-row"],
   },
   variants: {
+    type: {
+      vertical: {
+        base: "flex-col items-stretch",
+      },
+      horizontal: {
+        base: "flex-row",
+      },
+    },
     size: {
       sm: {},
       md: {},

@@ -27,6 +27,8 @@ export class ButtonComponent extends PlusBase {
   @property() download?: string;
   @property() rel = "noreferrer noopener";
   @property({ reflect: true, attribute: "group-order" }) groupOrder: "first" | "middle" | "last";
+  @property({ reflect: true, attribute: "group-position" }) groupPosition: "vertical" | "horizontal";
+
 
   @state() private hasFocus = false;
 
@@ -49,9 +51,9 @@ export class ButtonComponent extends PlusBase {
   }
 
   render() {
-    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder } = this;
+    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder, groupPosition } = this;
 
-    const { base } = buttonStyle({ size, disabled, kind, status, groupOrder });
+    const { base } = buttonStyle({ size, disabled, kind, status, groupOrder,groupPosition });
 
     const isLink = this.isLink();
     const tag = unsafeStatic(isLink ? `a` : `button`);

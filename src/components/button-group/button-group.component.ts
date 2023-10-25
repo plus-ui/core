@@ -14,6 +14,8 @@ export class ButtonGroupComponent extends PlusBase {
   @property({ type: String }) status: "success" | "warning" | "error" | "info" | "default" = "default";
   @property({ type: String }) color!: string;
 
+  @property({ type: String }) type: "vertical" | "horizontal" = "horizontal";
+
   handleSlotChange() {
     const slot = this.shadowRoot.querySelector("slot");
     const assignedNodes = slot.assignedNodes({ flatten: true }) as any;
@@ -21,6 +23,7 @@ export class ButtonGroupComponent extends PlusBase {
     const buttons = assignedNodes.filter(node => node.tagName === "PLUS-BUTTON");
 
     buttons.forEach((button, index) => {
+      button.groupPosition = this.type;  
       if (index === 0) {
         button.groupOrder = "first";
       }
@@ -34,7 +37,8 @@ export class ButtonGroupComponent extends PlusBase {
   }
 
   render() {
-    const { base } = buttonGroupStyle();
+    const { type } = this;
+    const { base } = buttonGroupStyle({type});
     return html`
       <div class=${"button-group " + base()} role="group" aria-live="polite">
         <slot @slotchange=${this.handleSlotChange}></slot>
