@@ -20,6 +20,7 @@ export class ButtonComponent extends PlusBase {
   @property() target: "_blank" | "_parent" | "_self" | "_top";
   @property() download?: string;
   @property() rel = "noreferrer noopener";
+  @property() groupOrder: "first" | "middle" | "last" ;
 
   @state() private hasFocus = false;
 
@@ -55,9 +56,10 @@ export class ButtonComponent extends PlusBase {
       target,
       download,
       rel,
+      groupOrder,
     } = this;
 
-    const { base } = buttonStyle({ size, disabled, kind, status });
+    const { base } = buttonStyle({ size, disabled, kind, status, groupOrder });
 
     const isLink = this.isLink();
     const tag = unsafeStatic(isLink ? `a` : `button`);

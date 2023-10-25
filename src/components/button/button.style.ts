@@ -3,8 +3,8 @@ import { tv } from "tailwind-variants";
 export const buttonStyle = tv({
   slots: {
     base: [
-      "flex items-center justify-center font-sans rounded border", 
-      "outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+      "relative flex items-center justify-center font-sans rounded border", 
+      "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:z-auto",
     ],
   },
   variants: {
@@ -44,6 +44,17 @@ export const buttonStyle = tv({
     disabled: {
       true: {
         base: "cursor-not-allowed text-color-disabled user-select-none",
+      },
+    },
+    groupOrder: {
+      first: {
+        base: "rounded-none rounded-l border-r-0",
+      },
+      middle: {
+        base: "rounded-none  border-r-0",
+      },
+      last: {
+        base: "rounded-none rounded-r ",
       },
     },
   },
@@ -165,5 +176,6 @@ export const buttonStyle = tv({
     kind: "filled",
     status: "default",
     disabled: false,
+    groupOrder: undefined,
   },
 });

@@ -17,6 +17,7 @@ export default defineConfig({
         chip: "src/components/chip/chip.component.ts",
         alert: "src/components/alert/alert.component.ts",
         text: "src/components/text/text.component.ts",
+        buttonGroup: "src/components/button-group/button-group.component.ts",
       },
       output: {
         format: "es",
