@@ -14,7 +14,3 @@
 :host([group-order="last"][group-position="vertical"]) {
   margin-top: -1px;
 }
-
-:host([group-order]) {
-  width: 100%;
-}

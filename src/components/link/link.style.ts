@@ -10,7 +10,7 @@ export const linkStyle = tv({
   variants: {
     kind: {
       default: "text-color-link hover:underline visited:text-color-visited",
-      primary: "text-color-default hover:underline visited:text-color-visited",
+      primary: "text-color-primary hover:underline visited:text-color-visited",
     },
   },
   defaultVariants: {

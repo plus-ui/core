@@ -6,7 +6,7 @@ import { chipStyle } from "./chip.style";
 @customElement("plus-chip")
 export class ChipComponent extends PlusBase {
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: String }) kind: "filled" | "outline" = "filled";
+  @property({ type: String }) kind: "filled" | "outlined" = "filled";
   @property({ type: String }) status: "success" | "warning" | "error" | "info" | "default" = "default";
 
   // next version of plus-badge
@@ -18,9 +18,7 @@ export class ChipComponent extends PlusBase {
     const { base } = chipStyle({ size, kind, status, disabled });
     return html`
       <div class=${base()}>
-        <slot name="prefix"> </slot>
-        <slot> </slot>
-        <slot name="suffix"> </slot>
+        <slot></slot>
       </div>
     `;
   }

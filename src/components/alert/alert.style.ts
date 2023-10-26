@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const alertStyle = tv({
   slots: {
-    base: "font-sans flex flex-row items-baseline justify-between border border-solid rounded-md font-medium",
+    base: "font-sans flex flex-row items-baseline justify-between border border-solid rounded-md font-medium w-fit",
     textArea: "flex flex-1 flex-col items-start justify-center",
     descriptionClass: "empty:hidden font-normal",
     closableArea: "flex h-6 w-6 cursor-pointer items-center justify-center",
@@ -29,7 +29,7 @@ export const alertStyle = tv({
       filled: {
         base: "rounded-md border-transparent",
       },
-      outline: {
+      outlined: {
         base: " border border-solid",
       },
       text: {
@@ -65,7 +65,7 @@ export const alertStyle = tv({
   },
   compoundVariants: [
     {
-      kind: ["outline", "dashed"],
+      kind: ["outlined", "dashed"],
       class: {
         base: ["border-box border"],
       },
@@ -112,35 +112,35 @@ export const alertStyle = tv({
       },
     },
     {
-      kind: ["outline", "dashed"],
+      kind: ["outlined", "dashed"],
       status: "default",
       class: {
         base: ["border-color-default text-color-default bg-transparent"],
       },
     },
     {
-      kind: ["outline", "dashed"],
+      kind: ["outlined", "dashed"],
       status: "success",
       class: {
         base: ["border-color-success text-color-success bg-transparent"],
       },
     },
     {
-      kind: ["outline", "dashed"],
+      kind: ["outlined", "dashed"],
       status: "warning",
       class: {
         base: ["border-color-warning text-color-warning bg-transparent"],
       },
     },
     {
-      kind: ["outline", "dashed"],
+      kind: ["outlined", "dashed"],
       status: "info",
       class: {
         base: ["border-color-information text-color-information bg-transparent"],
       },
     },
     {
-      kind: ["outline", "dashed"],
+      kind: ["outlined", "dashed"],
       status: "error",
       class: {
         base: ["border-color-error text-color-error bg-transparent"],

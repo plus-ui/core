@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const chipStyle = tv({
   slots: {
-    base: ["font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto rounded-full gap-2"],
+    base: ["font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto rounded-full gap-2 border border-solid"],
   },
   variants: {
     size: {
@@ -18,10 +18,10 @@ export const chipStyle = tv({
     },
     kind: {
       filled: {
-        base: "rounded-full",
+        base: "rounded-full border-transparent",
       },
-      outline: {
-        base: "bg-transparent border border-solid",
+      outlined: {
+        base: "bg-transparent",
       },
     },
     status: {
@@ -49,41 +49,41 @@ export const chipStyle = tv({
   },
   compoundVariants: [
     {
-      kind: "outline",
+      kind: "outlined",
       class: {
         base: ["border border-solid bg-transparent"],
       }
     },
     {
-      kind: "outline",
+      kind: "outlined",
       status: "info",
       class: {
         base: ["text-color-primary border-color-primary"],
       }
     },
     {
-      kind: "outline",
+      kind: "outlined",
       status: "success",
       class: {
         base: ["text-color-success border-color-success"],
       }
     },
     {
-      kind: "outline",
+      kind: "outlined",
       status: "warning",
       class: {
         base: ["text-color-warning border-color-warning"],
       }
     },
     {
-      kind: "outline",
+      kind: "outlined",
       status: "error",
       class: {
         base: ["text-color-error border-color-error"],
       }
     },
     {
-      kind: "outline",
+      kind: "outlined",
       status: "default",
       class: {
         base: ["text-color-default border-color-default"],
