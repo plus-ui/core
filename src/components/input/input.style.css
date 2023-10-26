@@ -1,0 +1,9 @@
+:host {
+    display: block;
+    width: 100%;
+    max-width: 256px;
+}
+
+:host([full-width]) {
+    max-width: none;
+}

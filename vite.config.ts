@@ -18,6 +18,8 @@ export default defineConfig({
         alert: "src/components/alert/alert.component.ts",
         text: "src/components/text/text.component.ts",
         buttonGroup: "src/components/button-group/button-group.component.ts",
+        input: "src/components/input/input.component.ts",
+        textarea: "src/components/textarea/textarea.component.ts",
       },
       output: {
         format: "es",

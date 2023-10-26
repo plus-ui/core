@@ -57,6 +57,10 @@ export default {
           },
         },
       }),
+      placeholderColor: ({ theme }) => ({
+        ...theme("textColor"),
+      }),
+
       borderColor: ({ theme }) => ({
         ...theme("colors"),
         DEFAULT: theme("colors.gray.200", "currentColor"),

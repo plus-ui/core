@@ -22,6 +22,7 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+        width: 100%;
       }
       .container {
         display: flex;
@@ -29,6 +30,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 12px;
+        width: 100%;
       }
 
       body {
@@ -44,550 +46,48 @@
   </head>
   <body>
     <div class="container">
+      <div class="col">
+        <plus-textarea full-width
+        clearable
+        required name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+        </plus-textarea>
 
-      <plus-button-group>
-        <plus-button kind="outlined">Button1</plus-button>
-        <plus-button kind="outlined">Button2</plus-button>
-        <plus-button kind="outlined">Button3</plus-button>
-        <plus-button kind="outlined">Button4</plus-button>
-        <plus-button kind="outlined">Button5</plus-button>
-      </plus-button-group>
+        <plus-textarea required name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+        </plus-textarea>
+        <plus-textarea required name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+          <i class="fas fa-plus" slot="prefix"></i>
+        </plus-textarea>
 
-      <plus-button-group type="vertical">
-        <plus-button kind="outlined">Button1</plus-button>
-        <plus-button kind="outlined">Button2</plus-button>
-        <plus-button kind="outlined">Button3</plus-button>
-        <plus-button kind="outlined">Button4</plus-button>
-        <plus-button kind="outlined">Button5</plus-button>
-      </plus-button-group>
-      <div class="row">
-        <plus-alert closable size="sm" icon="fa fa-clock" status="default" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert closable size="md" icon="fa fa-clock" status="default" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert closable size="lg" icon="fa fa-clock" status="default" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert
-          closable
-          icon="fa fa-clock"
-          status="default"
-          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
-        ></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert
-          closable
-          size="sm"
-          icon="fa fa-clock"
-          status="default"
-          message="This is an alert message with an information status "
-          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
-        ></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert
-          closable
-          size="md"
-          icon="fa fa-clock"
-          status="default"
-          message="This is an alert message with an information status "
-          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
-        ></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert
-          closable
-          size="lg"
-          icon="fa fa-clock"
-          status="default"
-          message="This is an alert message with an information status "
-          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
-        ></plus-alert>
-      </div>
-      <div class="row">
-        <div style="max-width: 750px">
-          <plus-alert
-            closable
-            full-width
-            status="success"
-            icon="fa-solid fa-plus"
-            message="This is an alert message with a success status & custom icon & closeable & description"
-            description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
-          >
-          </plus-alert>
-        </div>
-      </div>
-      <div class="row">
-        <div style="max-width: 750px">
-          <plus-alert
-            icon="fa fa-clock"
-            invert
-            closable
-            status="success"
-            message="This is an alert message with a success status & custom icon & closeable & description"
-            description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signiferumque ea per. An quod erant sed. Viris aliquam impedit et est, has veri deleniti sensibus id, summo paulo cetero no vel. Meis labitur atomorum quo eu, no cum noluisse hendrerit."
-          >
-          </plus-alert>
-        </div>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" status="default" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" status="info" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" status="success" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" status="warning" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" status="error" message="This is an alert message with an information status "></plus-alert>
-      </div>
+        <plus-textarea required disabled name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+          <i class="fas fa-plus" slot="prefix"></i>
+        </plus-textarea>
 
-      <div class="row">
-        <plus-alert icon="fa fa-clock" invert status="default" message="This is an alert message with an information status "></plus-alert>
+        <plus-textarea required error name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+          <i class="fas fa-plus" slot="prefix"></i>
+        </plus-textarea>
       </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" invert status="info" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" invert status="success" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" invert status="warning" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" invert status="error" message="This is an alert message with an information status "></plus-alert>
-      </div>
-
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="outline" status="default" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="outline" status="info" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="outline" status="success" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="outline" status="warning" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="outline" status="error" message="This is an alert message with an information status "></plus-alert>
-      </div>
-
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="dashed" status="default" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="dashed" status="info" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="dashed" status="success" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="dashed" status="warning" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <plus-alert icon="fa fa-clock" kind="dashed" status="error" message="This is an alert message with an information status "></plus-alert>
-      </div>
-      <div class="row">
-        <div class="col">
-          <plus-text>Default Text</plus-text>
-          <plus-text kind="placeholder">Placeholder Text</plus-text>
-          <plus-text disabled>Disabled Text</plus-text>
-          <plus-text kind="caption">Caption Text</plus-text>
-          <plus-text status="success">Success Text</plus-text>
-          <plus-text status="warning"> W<plus-text highlight>arn</plus-text>ing Text</plus-text>
-          <plus-text status="error">Error Text</plus-text>
-          <plus-text status="info">Info Text</plus-text>
-          <plus-text underline>Underline Text</plus-text>
-          <plus-text line-through>Line Through Text</plus-text>
-          <plus-text overline>Overline Text</plus-text>
-          <plus-text line-through underline overline>Line Through Text</plus-text>
-          <plus-text highlight>Highlight Text</plus-text>
-          <plus-text strong>Strong Text</plus-text>
-          <plus-text italic>Italic Text</plus-text>
-          <plus-text type="code">Code Text</plus-text>
-          <plus-text type="blockquote">Blockquote Text</plus-text>
-
-          <plus-text type="h1">H1 Text</plus-text>
-          <plus-text type="h2">H2 Text</plus-text>
-          <plus-text type="h3">H3 Text</plus-text>
-          <plus-text type="h4">H4 Text</plus-text>
-          <plus-text type="h5">H5 Text</plus-text>
-          <plus-text type="h6">H6 Text</plus-text>
-          <plus-text type="p">P Text</plus-text>
-
-          <plus-text size="xs">
-            xs Text
-            <plus-link href="https://google.com" target="_blank">Google</plus-link>
-          </plus-text>
-          <plus-text size="sm">sm Text</plus-text>
-          <plus-text size="md">md Text</plus-text>
-          <plus-text size="lg">lg Text</plus-text>
-          <plus-text size="xl">xl Text</plus-text>
-          <plus-text size="2xl">2xl Text</plus-text>
-          <plus-text size="3xl">3xl Text</plus-text>
-          <plus-text size="4xl">4xl Text</plus-text>
-          <plus-text size="5xl">
-            5xl Text
-            <plus-link href="https://google.com" target="_blank">Google</plus-link>
-          </plus-text>
-          <plus-text size="6xl">6xl Text</plus-text>
-          <plus-text size="7xl">7xl Text</plus-text>
-          <plus-text size="8xl">8xl Text</plus-text>
-          <plus-text size="9xl">9xl Text</plus-text>
-          <plus-text type="h1" size="9xl" status="error" highlight strong underline>P Text</plus-text>
-          <plus-text type="code">Code Text </plus-text>
-        </div>
-      </div>
-
-      <div class="row">
-        <plus-link href="https://google.com" target="_blank">Google</plus-link>
-        <plus-divider type="vertical"></plus-divider>
-
-        <plus-link href="https://novisitedlink.com">Novisitedlink</plus-link>
-        <plus-divider type="vertical"></plus-divider>
-
-        <plus-link href="https://google.com" kind="primary">Google</plus-link>
-        <plus-divider type="vertical"></plus-divider>
-
-        <plus-link href="https://novisitedlink.com" kind="primary">Novisitedlink</plus-link>
-      </div>
-
       <plus-divider></plus-divider>
-      <div class="row">
-        <plus-chip size="sm">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-        <plus-chip>
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-        <plus-chip size="lg">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
+      <div class="col">
+        <plus-input full-width
+        clearable
+        required name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+        </plus-input>
+
+        <plus-input required name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+        </plus-input>
+        <plus-input required name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+          <i class="fas fa-plus" slot="prefix"></i>
+        </plus-input>
+
+        <plus-input required disabled name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+          <i class="fas fa-plus" slot="prefix"></i>
+        </plus-input>
+
+        <plus-input required error name="input" label="Hello" caption="There will be a caption text here" placeholder="Placeholder text">
+          <i class="fas fa-plus" slot="prefix"></i>
+        </plus-input>
       </div>
 
-      <div class="row">
-        <plus-chip size="sm" kind="outline">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-
-        <plus-chip kind="outline">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-
-        <plus-chip size="lg" kind="outline">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-      </div>
-
-      <div class="row">
-        <plus-chip size="sm" status="success">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-        <plus-chip status="error">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-        <plus-chip size="lg" status="warning">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-      </div>
-      <div class="row">
-        <plus-chip size="sm" kind="outline" status="success">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-
-        <plus-chip kind="outline" status="error">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-
-        <plus-chip size="lg" kind="outline" status="warning">
-          <i slot="prefix" class="fa-solid fa-plus"></i>
-          chip
-          <i slot="suffix" class="fa-solid fa-plus"></i>
-        </plus-chip>
-      </div>
-      <div class="row">
-        <plus-badge invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-        <plus-divider type="vertical"></plus-divider>
-
-        <plus-badge content="1">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-      </div>
-      <plus-divider kind="dashed"></plus-divider>
-
-      <div class="row">
-        <plus-badge content="New" size="sm" >
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-        <plus-badge content="New" size="md" >
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-        <plus-badge content="New" size="lg" >
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-      </div>
-      <div class="row">
-        <plus-badge content="1" size="sm" >
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-        <plus-badge content="1" size="md" >
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-        <plus-badge content="1" size="lg" >
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-      </div>
-      <div class="row">
-        <plus-badge size="sm" status="info" offset="14%">
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-        <plus-badge size="md" status="info" offset="14%,14%">
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-        <plus-badge size="lg" status="info" offset="14%,14%">
-          <plus-avatar></plus-avatar>
-        </plus-badge>
-      </div>
-      <div class="row">
-        <plus-badge content="1" placement="top-left">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-        <plus-badge content="1" placement="top-right">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" placement="bottom-left">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" placement="bottom-right">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-      </div>
-
-      <div class="row">
-        <plus-badge placement="top-left" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-        <plus-badge placement="top-right" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge placement="bottom-left" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge placement="bottom-right" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-      </div>
-      <div class="row">
-        <plus-badge content="1" status="success">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" status="warning">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" status="info">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" status="error">
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-      </div>
-
-      <div class="row">
-        <plus-badge content="1" status="success" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" status="warning" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" status="info" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-
-        <plus-badge content="1" status="error" invert>
-          <plus-avatar shape="square"></plus-avatar>
-        </plus-badge>
-      </div>
-
-      <div class="row"><plus-avatar></plus-avatar></div>
-      <div class="row">
-        <plus-avatar shape="circle"></plus-avatar>
-        <plus-avatar shape="square"></plus-avatar>
-      </div>
-      <div class="row">
-        <plus-avatar text="Murat Polat Özkan"></plus-avatar>
-        <plus-avatar text="Ramazan Yıldırım"></plus-avatar>
-        <plus-avatar text="Ömer Duraker Hilal Duraker"></plus-avatar>
-        <plus-avatar text="Didem"></plus-avatar>
-      </div>
-      <div class="row">
-        <plus-avatar size="xs"></plus-avatar>
-        <plus-avatar size="sm"></plus-avatar>
-        <plus-avatar size="md"></plus-avatar>
-        <plus-avatar size="lg"></plus-avatar>
-        <plus-avatar size="xl"></plus-avatar>
-        <plus-avatar size="80"></plus-avatar>
-      </div>
-      <div class="row">
-        <plus-avatar size="xs" text="Murat Polat Özkan" invert></plus-avatar>
-        <plus-avatar size="sm" text="Murat Polat Özkan" invert></plus-avatar>
-        <plus-avatar size="md" text="Murat Polat Özkan" invert></plus-avatar>
-        <plus-avatar size="lg" text="Murat Polat Özkan" invert></plus-avatar>
-        <plus-avatar size="xl" text="Murat Polat Özkan" invert></plus-avatar>
-        <plus-avatar size="80" text="Murat Polat Özkan" invert></plus-avatar>
-      </div>
-      <div class="row">
-        <plus-avatar></plus-avatar>
-        <plus-avatar image="https://i.pravatar.cc/50"></plus-avatar>
-        <plus-avatar image="https://i.pravatar.cc/60" text="Murat Polat Özkan"></plus-avatar>
-        <plus-avatar image="https://picsum.photoasds/200" text="Murat Polat Özkan"></plus-avatar>
-        <plus-avatar image="https://picsum.photoasds/200" icon="fas fa-home"></plus-avatar>
-        <plus-avatar>M</plus-avatar>
-      </div>
-
-      <div class="row">
-        <plus-button>
-          <i class="fa-solid fa-plus"></i>
-          Filled Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-      </div>
-      <div class="row">
-        <plus-button size="sm">
-          <i class="fa-solid fa-plus"></i>
-          Filled Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button size="md">
-          <i class="fa-solid fa-plus"></i>
-          Filled Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button size="lg">
-          <i class="fa-solid fa-plus"></i>
-          Filled Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-      </div>
-      <div class="row">
-        <plus-button kind="filled">
-          <i class="fa-solid fa-plus"></i> Filled Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button kind="outlined">
-          <i class="fa-solid fa-plus"></i> Outlined Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button kind="dashed">
-          <i class="fa-solid fa-plus"></i> Dashed Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button kind="text">
-          <i class="fa-solid fa-plus"></i> Text Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-      </div>
-      <div class="row">
-        <plus-button status="primary" kind="filled">
-          <i class="fa-solid fa-plus"></i> Filled Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button status="primary" kind="outlined">
-          <i class="fa-solid fa-plus"></i> Outlined Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button status="primary" kind="dashed">
-          <i class="fa-solid fa-plus"></i> Dashed Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button status="primary" kind="text">
-          <i class="fa-solid fa-plus"></i> Text Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-      </div>
-      <div class="row">
-        <plus-button disabled kind="filled">
-          <i class="fa-solid fa-plus"></i> Filled Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button disabled kind="outlined">
-          <i class="fa-solid fa-plus"></i> Outlined Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button disabled kind="dashed">
-          <i class="fa-solid fa-plus"></i> Dashed Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button disabled kind="text">
-          <i class="fa-solid fa-plus"></i> Text Default Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-      </div>
-      <div class="row">
-        <plus-button disabled status="primary" kind="filled">
-          <i class="fa-solid fa-plus"></i> Filled Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button disabled status="primary" kind="outlined">
-          <i class="fa-solid fa-plus"></i> Outlined Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button disabled status="primary" kind="dashed">
-          <i class="fa-solid fa-plus"></i> Dashed Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-        <plus-button disabled status="primary" kind="text">
-          <i class="fa-solid fa-plus"></i> Text Primary Button
-          <i class="fa-solid fa-plus"></i>
-        </plus-button>
-      </div>
     </div>
-
-    <script>
-      document.addEventListener("plus-click", e => {
-        console.log(e);
-      });
-    </script>
   </body>
 </html>

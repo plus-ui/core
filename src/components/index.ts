@@ -7,3 +7,5 @@ export * from "./chip/chip.component";
 export * from "./alert/alert.component";
 export * from "./text/text.component";
 export * from "./button-group/button-group.component";
+export * from "./input/input.component";
+export * from "./textarea/textarea.component";
