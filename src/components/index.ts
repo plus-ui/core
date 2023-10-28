@@ -9,3 +9,4 @@ export * from "./text/text.component";
 export * from "./button-group/button-group.component";
 export * from "./input/input.component";
 export * from "./textarea/textarea.component";
+export * from "./checkbox/checkbox.component";

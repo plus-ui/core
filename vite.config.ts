@@ -18,6 +18,7 @@ export default defineConfig({
         alert: "src/components/alert/alert.component.ts",
         text: "src/components/text/text.component.ts",
         buttonGroup: "src/components/button-group/button-group.component.ts",
+        checkbox: "src/components/checkbox/checkbox.component.ts",
         input: "src/components/input/input.component.ts",
         textarea: "src/components/textarea/textarea.component.ts",
       },
