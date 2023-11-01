@@ -12,7 +12,7 @@ The anatomy of a Chip component within Plus UI is comprised of several integral 
 
 ## 🛠️ Properties
 
-
+Our chip component offers consistent design properties across our system and component library, giving you the creative freedom to customize and match your design preferences. With customizable variants and a unified structure, you can effortlessly create chips that seamlessly integrate with your application's design.
 
 | Kinds    | State   | Status  | Size   | Invert | Disabled |
 | -------- | ------- | ------- | ------ | ------ | -------- |
