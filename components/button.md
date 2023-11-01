@@ -15,11 +15,13 @@ The Button component is a flexible user interface element that allows users to i
 
 ## 🧩 Anatomy
 
-The Chip component in Plus UI is built upon fundamental elements that define its functionality and appearance. These elements collectively create a versatile component for displaying essential information or context in a visually appealing manner. Customizable properties further enhance the Chip component's user interaction and engagement capabilities within your application.
+The anatomy of a button component consists of essential elements such as the button label, container, prefix/suffix icon, and optional properties for customization, enabling user interaction and engagement within your application.
+
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 ## 🛠️ Properties
 
-With our button properties and variable structure, you have the creative freedom to tailor your buttons to precisely match your design preferences. All variable and variants identified exactly same on both our design system and our multi-framework component library.
+With our variants and variable structure, you have the creative freedom to tailor your buttons to precisely match your design preferences. All variable and variants identified exactly same on both our design system and our multi-framework component library.
 
 <table><thead><tr><th>Kinds</th><th>Status</th><th>States</th><th>Icons</th><th>Size</th><th data-hidden>Kinds</th><th data-hidden>States</th><th data-hidden>Size</th><th data-hidden>Icons</th><th data-hidden></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td>Filled</td><td>Default</td><td>Default</td><td>No icon</td><td>Small</td><td>Filled</td><td>Default</td><td>Small</td><td></td><td></td><td></td><td></td></tr><tr><td>Outlined</td><td>Primary</td><td>Hovered</td><td>Prefix icon</td><td>Medium</td><td>Outlined</td><td>Hovered</td><td>Medium</td><td></td><td></td><td></td><td></td></tr><tr><td>Dashed</td><td></td><td>Pressed</td><td>Suffix icon</td><td>Large</td><td>Dashed</td><td>Pressed</td><td>Large</td><td></td><td></td><td></td><td></td></tr><tr><td>Text</td><td></td><td>Disabled</td><td>Icon only</td><td></td><td>Text</td><td>Disabled</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>Loading</td><td></td><td></td><td></td><td>Loading</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 
@@ -168,12 +170,6 @@ The Button component supports different sizes such as small, medium, large to fi
 <figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
-{% tab title="Javascript" %}
-```
-// Some code
-```
-{% endtab %}
-
 {% tab title="React" %}
 
 {% endtab %}
@@ -187,6 +183,10 @@ The Button component supports different sizes such as small, medium, large to fi
 {% endtab %}
 
 {% tab title="Stelve" %}
+
+{% endtab %}
+
+{% tab title="Javascript" %}
 
 {% endtab %}
 {% endtabs %}
@@ -233,9 +233,9 @@ To learn more about Plus UI's accessibility criteria, please visit [Accessibilit
 
 {% @figma/embed fileId="3NjFHfYJfEz4T5R18heV9O" nodeId="1573:14605" url="https://www.figma.com/file/3NjFHfYJfEz4T5R18heV9O/Plus-UI-Design-System?mode=design&node-id=1573:14605&t=I4RiPafecFlUYrfn-1&type=design" %}
 
-##
+
 
 ## ⇅ API
 
-<table data-full-width="false"><thead><tr><th width="124">Property</th><th width="306">Description</th><th width="232" data-type="select" data-multiple>Type</th><th>Default</th></tr></thead><tbody><tr><td>kind</td><td>The kind of button, which affects its appearance.</td><td></td><td>filled</td></tr><tr><td>type</td><td>The type of the button.</td><td></td><td>button</td></tr><tr><td>size</td><td>The size of the button.</td><td></td><td>md</td></tr><tr><td>color</td><td>The color of the button.</td><td></td><td></td></tr><tr><td>icon</td><td>The name of the icon to display in the button.</td><td></td><td>null</td></tr><tr><td>readonly</td><td>Whether the button is readonly.</td><td></td><td>false</td></tr><tr><td>disabled</td><td>This property, when set to <code>true</code>, renders the associated component or element non-interactive, typically by graying it out. It is commonly used to indicate that a particular feature or functionality is temporarily unavailable or inactive."</td><td></td><td>false</td></tr><tr><td>href</td><td>The URL that the hyperlink points to. If defined, the button will render as an anchor.</td><td></td><td></td></tr><tr><td>target</td><td>The target attribute to use when the button is rendered as an anchor.</td><td></td><td></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th>Property</th><th>Description</th><th width="244" data-type="select" data-multiple>Type</th><th>Default</th></tr></thead><tbody><tr><td>kind</td><td>The kind of button, which affects its appearance.</td><td></td><td>filled</td></tr><tr><td>type</td><td>The type of the button.</td><td></td><td>button</td></tr><tr><td>size</td><td>The size of the button.</td><td></td><td>md</td></tr><tr><td>color</td><td>The color of the button.</td><td></td><td></td></tr><tr><td>icon</td><td>The name of the icon to display in the button.</td><td></td><td>null</td></tr><tr><td>readonly</td><td>Whether the button is readonly.</td><td></td><td>false</td></tr><tr><td>disabled</td><td>This property, when set to <code>true</code>, renders the associated component or element non-interactive, typically by graying it out. It is commonly used to indicate that a particular feature or functionality is temporarily unavailable or inactive."</td><td></td><td>false</td></tr><tr><td>href</td><td>The URL that the hyperlink points to. If defined, the button will render as an anchor.</td><td></td><td></td></tr><tr><td>target</td><td>The target attribute to use when the button is rendered as an anchor.</td><td></td><td></td></tr></tbody></table>
 

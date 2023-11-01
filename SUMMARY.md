@@ -1,8 +1,16 @@
 # Table of contents
 
-## Design Tokens
+## Getting Started
 
 * [Overview](README.md)
+* [Component List & Plans](getting-started/component-list-and-plans.md)
+* [Support](getting-started/support.md)
+* [Contributing](getting-started/contributing.md)
+* [FAQs](getting-started/faqs.md)
+
+## Design Tokens
+
+* [Overview](design-tokens/overview/README.md)
   * [Color Tokens](design-tokens/overview/color-tokens.md)
   * [Size Tokens](design-tokens/overview/size-tokens.md)
   * [Border Radius Tokens](design-tokens/overview/border-radius-tokens.md)

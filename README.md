@@ -1,119 +1,67 @@
 ---
-description: >-
-  Design tokens are a single source of truth to name and store design decisions
-  for Plus UI's products.
+description: From design to development, we provide experience excellence
 ---
 
 # Overview
 
-## What are design tokens?
+Plus UI is a new-era user interface and experience product that can be used with all popular frameworks and design tools together.
 
-Design Tokens are the single source of truth that stores design decisions distributed across design tools and coding languages. Use them for **colors**, **typography**, **shadows**, **border radius**, **spacing**, **borders**, **animation**, **icon** **sizing** and more. Design Tokens will help you:
+We offer the full functionality of components that are carefully designed to meet modern design standards and developed to create consistent applications. Developers and designers can work together using a common set of tools and components, resulting in a more streamlined design and development process and consistent, user-friendly products.
 
-* Manage your Design systems more efficiently
-* Maintain consistency across product UI
-* Bring developers and designers closer by creating a common language between them
+{% hint style="success" %}
+✔ Multi-framework (works with React, Vue, Angular, and other JS frameworks)
 
-\
-Design tokens are the new way to apply visual foundations in Plus UI Design System and Component Library. They are a combination of names and corresponding values that encapsulate concise and recurring design choices. These tokens encompass a variety of attributes, such as colors, font styles, spacing units, or even motion animations, all tailored to serve specific design requirements.
+✔ Powered by Plus UI Design System
 
-For example,&#x20;
+✔ Rich and functional components
 
-{% hint style="warning" %}
+✔ Designer and developer friendly
 
+✔ Fully customizable and accessible
+
+✔ Light package size
+
+✔ Smart and easy to use
+
+✔ Open-source
 {% endhint %}
 
-### Why use design tokens?
+## Why Plus UI?
 
-Design tokens unlock the potential for dynamic features such as global theming (including dark mode), responsive design, and user customization. They streamline both the design and development processes, simplifying decision-making and facilitating a seamless transition between design and development.
+* **Save thousands of dollars & hours:** designing and developing a component and its variants, color, size, shape, placement, accessibility, header, cards, data grids, and modals costs thousands of dollars. Instead, Plus UI provides all the foundational components you need and is ready to be customized for your brand. Since it's built on web standards, it works across frameworks and browsers and will continue to be supported for many years.
+* **Ship faster:** We have invested thousands of hours into designing and developing these components so you don't have to. Also, they are fully customizable and compatible with all frameworks. Our unified approach to design and development ensures consistency and speed throughout the process.
+* **Integrated Systems**: As a unique in the market, we have a cohesive approach to user interface development where design and development are tightly aligned. It involves combining a comprehensive design system with a set of pre-built UI components into a unified package. This integrated approach aims to ensure consistency, efficiency, and collaboration between designers and developers throughout the entire product development lifecycle.
+* **Multi-framework:** Plus UI is a multi-framework library that works with all frameworks such as React, Vue, Angular, Svelte, and other JS frameworks. It ensures consistency and efficiency across different technology stacks.
+* **Designer & developer friendly:** Plus UI provides a user-friendly design system and component library that empowers designers and developers to create high-quality interfaces with ease. It prioritizes collaboration, user-centered design, and consistency, offering a range of reusable assets that promote flexibility and seamless integration into existing development workflows.
+* **Light package size:** Our component library is fully functional, yet boasts a lightweight package size, even with a wide variety of components and their variants. This combination of functionality and efficiency provides numerous benefits, including improved performance, reduced development time, simplified maintenance, increased compatibility, and lower bandwidth costs. These advantages ultimately lead to a better user experience and a more efficient development process.
+* **User experience excellence:** Plus UI offers excellent user experience for both end users and project teams through a unified design system and component library, which delivers consistency, efficiency, scalability, accessibility, and branding across all products and services.
+* **Technical support:** Our all users get access to technical support from our team and community. Pro users get access to priority support for issues, bug fixes, and feature requests.&#x20;
 
-Our visual language continues to evolve, design tokens offer a game-changing advantage. Modifications can be made at a single point within the system, resonating across all products. Say goodbye to the tedious task of finding and replacing hard-coded values scattered throughout.
+## Our Products
 
-Plus UI further expedites the use of design tokens with automated tools, ensuring that both designers and developers can harness their power efficiently.
+Plus UI provides a collection of a professionally designed, highly customizable Design System and a Component Library built on a framework-agnostic technology with functional components.
 
-Tokens serve as the linchpin for implementing our newest visual foundations. This not only ensures visual consistency but also paves the way for other enhancements in the Plus UI.
+<table data-card-size="large" data-view="cards"><thead><tr><th data-card-target data-type="content-ref"></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a href="broken-reference">Broken link</a></td><td>Plus UI Component Library is a multi-framework library, powered by a design system that works with all frameworks <strong>React, Vue, Angular, Svelte,</strong> and <strong>other JS frameworks</strong> in a project at the same time</td><td><a href="broken-reference">Broken file</a></td></tr><tr><td><a href="broken-reference">Broken link</a></td><td>Plus UI Design system is a comprehensive design system, powered by an integrated component library that provides guidelines and components for creating visually appealing and consistent user interfaces across different platforms and devices.</td><td><a href="broken-reference">Broken file</a></td></tr></tbody></table>
 
-### How to Interpret Design Token Names
+## Foundations
 
-Understanding the structure of design token names is key to swiftly locating the right token in both design and code contexts. Let's break it down:
+The foundations of Plus UI guide to creating a consistent, effective, and accessible product that meets the needs of users. It helps designers and developers to work together more efficiently, reducing the risk of inconsistencies, enlightening the principles and patterns, and general solutions for specific problems. Visit the [Foundations](broken-reference) section for further information.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+## Components
 
-1. **Foundation**: This part signifies the foundational design attribute or style, encompassing elements like color, elevation, or space.
-2. **Property**: The property segment points to the specific UI element to which the token applies, whether it's a border, background, shadow, or another property.
-3. **Modifier**: The modifier offers additional insights into the token's purpose, delineating its color role, emphasis, or interaction state. It's important to note that not every token requires a modifier. For instance, `color.text` represents our default body text color and doesn't necessitate a modifier.
+Plus UI components are the reusable and pre-build blocks of our design system to help designers and developers build a modern product faster with an intuitive user experience. You can fully customize our full-function components to match your existing designs to provide a unified experience. Visit the[ Components](broken-reference) section for further information.
 
-## Plus UI's Design Tokens
+## Customization
 
-### Color Tokens
+Our fully function components are ready to be customized for your brand. By customizing, you can control the theme, dark/light mode, and general styling. Keep your eye on us, we will launch an advanced customization capability to create your theme soon.
 
-Color tokens simplify the process of selecting and applying colors, ensuring a harmonious and cohesive color palette throughout your design. These tokens are versatile and are designed to cover a wide range of use cases, allowing you to maintain visual consistency across your design elements.
+## Contributing
 
-Specific color tokens have been designated for various design elements, including text, links, icons, backgrounds, borders, overlays, charts, and skeleton loaders in Plus UI's Design System.
+You can contribute to us in many ways to help more designers and developers worldwide to build apps with excellent experience on the below platforms. Visit [Contributing](getting-started/contributing.md) page for further information.
 
-For a comprehensive exploration of our color token system and guidance on using colors effectively in your designs, refer to our dedicated [color foundation.](broken-reference)
+<table data-column-title-hidden data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Join our Figma Community</td><td><a href="broken-reference">Broken file</a></td><td></td></tr><tr><td>Follow us on Github</td><td><a href="broken-reference">Broken file</a></td><td></td></tr><tr><td>Join us on Discord</td><td><a href="broken-reference">Broken file</a></td><td><a href="https://discord.gg/Qks4CrbP">https://discord.gg/Qks4CrbP</a></td></tr><tr><td>Follow us on Twitter</td><td><a href="broken-reference">Broken file</a></td><td><a href="https://twitter.com/PlusUI_Official">https://twitter.com/PlusUI_Official</a></td></tr><tr><td>Request a feature <br>on Canny</td><td><a href="broken-reference">Broken file</a></td><td><a href="https://plusuitest.canny.io/">https://plusuitest.canny.io/</a></td></tr><tr><td>Contribute us on Open Collective</td><td><a href="broken-reference">Broken file</a></td><td><a href="https://opencollective.com/plus-ui">https://opencollective.com/plus-ui</a></td></tr></tbody></table>
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+## FAQ
 
-### Size Tokens
-
-Size tokens simplify decision-making and ensure consistent sizing for elements across your design. These tokens are designed to be used for a wide range of contexts, providing guidance for both horizontal and vertical dimensions.
-
-For an in-depth exploration of our size token system and practical guidance on integrating sizes effectively into your designs, refer to our dedicated size foundation.
-
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
-
-### Border Radius Tokens
-
-Border radius tokens ensure a consistent and harmonious curvature for various elements in your design. These tokens are designed for versatile applications and can be used to define border radius for different UI components and elements.&#x20;
-
-To learn more about our spacing system and discover how to effectively integrate space into your designs, please visit our [spacing foundation](broken-reference) page or check out our design system on Figma.&#x20;
-
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
-
-### Gap Tokens
-
-Space tokens ensure a uniform spacing between elements in your page layout. These tokens are versatile, intended for both horizontal and vertical spacing, and can be applied in various design contexts.&#x20;
-
-To learn more about our spacing system and discover how to effectively integrate space into your designs, please visit our [spacing foundation](broken-reference) page or check out our design system on Figma.&#x20;
-
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
-
-## Use tokens in Figma
-
-## Use tokens in code
-
-### Primitives
-
-Primitives in Figma are foundational design elements that form the basis of your components. By using Primitives like frames, shapes, and groups, you can build versatile and reusable components that are easy to modify and extend. For more information, please visit our [Primitives](design-tokens/primitives.md) page.
-
-<figure><img src="broken-reference" alt=""><figcaption><p>Plus UI's Primitives in Figma</p></figcaption></figure>
-
-### Local Variables
-
-Local Variables in Figma allow you to define and manage reusable values, such as colors, typography, spacing, and more, within your design files.
-
-**Key Benefits of Local Variables:**
-
-* **Centralized Control:** With Local Variables, you have a centralized hub for managing key design properties. Change a variable once, and it updates across your entire project, eliminating the need for manual adjustments.
-* **Effortless Updates:** If you decide to tweak your color palette, typography, or other design elements, you can make updates in one place, and the changes propagate automatically.
-* **Consistency:** Local Variables are the secret sauce for ensuring a consistent look and feel throughout your project, making it easier to maintain design integrity.
-
-### Local Styles
-
-Local Styles in Figma take your design consistency to the next level. They allow you to define and apply reusable text and layer styles, which is especially useful for maintaining a consistent brand identity and design language across your project.
-
-**Key Benefits of Local Styles:**
-
-* **Design Efficiency:** Local Styles streamline the design process by allowing you to save and apply consistent text and layer styles quickly.
-* **Consistency Across Teams:** Whether you're working solo or in a team, Local Styles ensure that everyone adheres to the same design guidelines.
-* **Easy Updates:** If a style needs modification, update the Local Style once, and it cascades across all instances.
-
-### Alias
-
-
-
-
-
-### Components
+Are you facing a specific issue? Before seeking further assistance, please refer to the [FAQ](getting-started/faqs.md) section to see if any of the commonly occurring problems listed there can help resolve your issue. Also, you can refer to our [support page](getting-started/support.md)
 
