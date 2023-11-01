@@ -68,6 +68,11 @@ export default {
           ...themeColors.border,
         },
       }),
+      boxShadow: ({ theme }) => ({
+        ...theme("colors"),
+        DEFAULT: "var(--color-shadow)",
+        'radio': '0 0 0 0 hsl(0 0% 100%) inset,0 0 0 3px hsl(0 0% 100%) inset',
+      }),
       backgroundColor: ({ theme }) => ({
         ...theme("colors"),
         color: {

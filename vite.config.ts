@@ -21,6 +21,7 @@ export default defineConfig({
         checkbox: "src/components/checkbox/checkbox.component.ts",
         input: "src/components/input/input.component.ts",
         textarea: "src/components/textarea/textarea.component.ts",
+        radio: "src/components/radio/radio.component.ts",
       },
       output: {
         format: "es",

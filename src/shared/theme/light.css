@@ -3,7 +3,7 @@
   /* border */
   --color-border-primary: theme(colors.indigo.600);
   --color-border-focus: theme(colors.indigo.300);
-  --color-border-disabled: theme(colors.gray.200);
+  --color-border-disabled: theme(colors.gray.300);
   --color-border-error: theme(colors.red.600);
   --color-border-default: theme(colors.gray.400);
 
