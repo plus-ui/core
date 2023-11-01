@@ -175,6 +175,8 @@ Accessibility is a core consideration for our link components, just like it is f
 
 <table><thead><tr><th width="204.33333333333331">Criteria</th><th width="445">Description</th><th data-type="select">Status</th></tr></thead><tbody><tr><td>ARIA Hidden Elements</td><td>Ensures aria-hidden elements are not focusable nor contain focusable elements</td><td></td></tr><tr><td>ID Attributes</td><td>Ensures every id attribute value is unique</td><td></td></tr><tr><td>Discernible Text</td><td>Ensures links have discernible text</td><td></td></tr><tr><td>Color Contrast</td><td>Ensures the contrast between foreground and background colors meets WCAG 2 AA  contrast ratio thresholds</td><td></td></tr></tbody></table>
 
+To learn more about Plus UI's accessibility criteria, please visit [Accessibility](broken-reference).
+
 ## 🎨 Design System
 
 {% @figma/embed fileId="3NjFHfYJfEz4T5R18heV9O" nodeId="1667:6962" url="https://www.figma.com/file/3NjFHfYJfEz4T5R18heV9O/Plus-UI-Design-System?mode=design&node-id=1667:6962&t=SswlqwqlZ8qCzMIR-1&type=design" %}

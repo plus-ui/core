@@ -157,7 +157,7 @@ Chips come in different sizes to accommodate various design needs.
 
 ### Invert
 
-
+The "invert" property for the chip component is a versatile attribute that empowers developers to easily toggle between the default and inverted appearance of the chip. This feature allows for greater design flexibility, enabling you to create eye-catching interfaces and customize the chip's look to match your application's style. Whether you're highlighting specific selections or adding emphasis to certain chips, the "invert" property provides a straightforward way to achieve a dynamic and engaging user interface.
 
 {% tabs %}
 {% tab title="Javascript" %}
@@ -225,15 +225,15 @@ The placement and spacing of chip elements significantly impact the overall aest
 
 ## 🌙 Light & Dark Mode
 
-
+Offering light and dark mode options for chip components in user interfaces enhances user experience by catering to their comfort, preference, and accessibility. This design approach aligns with current trends and supports a range of user needs and choices. Additionally, it contributes to energy efficiency and a more sustainable user interaction.
 
 ## 🦾 Accessibility
 
-|   |   |   |
-| - | - | - |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+Ensuring that chip components meet all accessibility criteria is of paramount importance. Accessible chips enable a wide range of users, including those with disabilities, to interact with the interface effectively. By adhering to these criteria, the chips provide equal access to information and functionality, promoting inclusivity and a positive user experience for everyone.
+
+<table><thead><tr><th>Criteria</th><th width="397.3333333333333">Description</th><th data-type="select">Status</th></tr></thead><tbody><tr><td>ARIA Hidden Elements</td><td>Ensures aria-hidden elements are not focusable nor contain focusable elements</td><td></td></tr><tr><td>IDs of Active Elements</td><td>Ensures every id attribute value of active elements is unique</td><td></td></tr><tr><td>ID Elements</td><td>Ensures every id attribute value is unique</td><td></td></tr><tr><td>Tabindex Attributes</td><td>Ensures tabindex attribute values are not greater than 0</td><td></td></tr><tr><td>Color Contrast</td><td>Ensures the contrast between foreground and background colors meets WCAG 2 AA  contrast ratio thresholds</td><td></td></tr></tbody></table>
+
+To learn more about Plus UI's accessibility criteria, please visit [Accessibility](broken-reference).
 
 ## 🎨 Design System
 
@@ -242,10 +242,4 @@ The placement and spacing of chip elements significantly impact the overall aest
 ## ⇅API
 
 
-
-|   |   |   |
-| - | - | - |
-|   |   |   |
-|   |   |   |
-|   |   |   |
 
