@@ -73,7 +73,6 @@ export class BreadCrumbComponent extends PlusBase {
 
   render() {
     const { size } = this;
-    console.log(this.maxItems);
     const { base } = breadCrumbStyle({ size });
     return html`
       <nav class="flex" aria-label="Breadcrumb">
