@@ -1,10 +1,10 @@
 import { customElement, property } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
-import { breadCrumbItemStyle } from "./breadcrumb-item.style";
+import { breadCrumbItemStyle } from "./breadcrumb-nav-item.style";
 
-@customElement("plus-breadcrumb-item")
-export class BreadCrumbItemComponent extends PlusBase {
+@customElement("plus-breadcrumb-nav-item")
+export class BreadComponentNavItem extends PlusBase {
   @property({ type: String, reflect: true }) url: string;
   @property({ type: String, reflect: true }) label: string;
   @property({ type: Boolean, reflect: true, converter: value => (value == "false" ? false : true) }) active;
@@ -33,6 +33,6 @@ export class BreadCrumbItemComponent extends PlusBase {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "plus-breadcrumb-item": BreadCrumbItemComponent;
+    "plus-breadcrumb-nav-item": BreadComponentNavItem;
   }
 }

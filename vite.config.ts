@@ -23,7 +23,7 @@ export default defineConfig({
         textarea: "src/components/textarea/textarea.component.ts",
         radio: "src/components/radio/radio.component.ts",
         breadcrumb: "src/components/breadcrumb/breadcrumb.component.ts",
-        breadcrumbItem: "src/components/breadcrumb/breadcrumb-item.component.ts",
+        breadcrumNavItem: "src/components/breadcrumb-nav-item/breadcrumb-nav-item.component.ts",
       },
       output: {
         format: "es",

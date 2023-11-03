@@ -12,4 +12,4 @@ export * from "./textarea/textarea.component";
 export * from "./checkbox/checkbox.component";
 export * from "./radio/radio.component";
 export * from "./breadcrumb/breadcrumb.component";
-export * from "./breadcrumb/breadcrumb-item.component";
+export * from "./breadcrumb-nav-item/breadcrumb-nav-item.component";

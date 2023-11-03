@@ -36,11 +36,11 @@ export class BreadCrumbComponent extends PlusBase {
   @state() private _maxItems: number;
 
   handleChanges() {
-    const items = [...this.defaultSlot?.assignedElements({ flatten: true })].filter(item => item.tagName.toLowerCase() === "plus-breadcrumb-item") as any[];
-    items.forEach((item, index) => {
-      item.addEventListener("plus-breadcrum-change", e => {
+    const items = [...this.defaultSlot?.assignedElements({ flatten: true })].filter(item => item.tagName.toLowerCase() === "plus-breadcrumb-nav-item") as any[];
+    items?.forEach((item, index) => {
+      item?.addEventListener("plus-breadcrum-change", e => {
         items.forEach(item => {
-          if(item.disabled || item.readonly) return;
+          if(item?.disabled || item?.readonly) return;
           if (item !== e.target) {
             item.setAttribute("active","false");
             item.setAttribute("aria-current","false");
@@ -57,9 +57,9 @@ export class BreadCrumbComponent extends PlusBase {
   }
 
   private handleClickItem({ target }) {
-    if (target.tagName.toLowerCase() === "plus-breadcrumb-item") {
+    if (target.tagName.toLowerCase() === "plus-breadcrumb-nav-item") {
       //const items = this.el?.shadowRoot.querySelectorAll('plus-breadcrumb-item');
-      this.el?.querySelectorAll("plus-breadcrumb-item").forEach(item => {
+      this.el?.querySelectorAll("plus-breadcrumb-nav-item").forEach(item => {
         if (item !== target) {
           item.setAttribute("active", "false");
           item.setAttribute("aria-current", "false");
