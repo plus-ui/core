@@ -39,13 +39,13 @@ export class AlertComponent extends PlusBase {
 
   render() {
     const { kind, status, size, invert, fullWidth, closable, message, description, icon } = this;
-    const { base, textArea, descriptionClass, closableArea } = alertStyle({ status, kind, size, invert, fullWidth, closable });
+    const { base, textArea, descriptionClass, closableArea, iconClass } = alertStyle({ status, kind, size, invert, fullWidth, closable });
 
 
 
 
     return html`<div class=${"alert " + base()} role="alert">
-      ${icon ? html`<div><i class=${icon}></i></div>` : null}
+      ${icon ? html`<div class=${iconClass()}><i class=${icon}></i></div>` : null}
       <div class=${textArea()}>
         <span class="empty:hidden">${message}</span>
         <span class=${descriptionClass()}>${description}</span>

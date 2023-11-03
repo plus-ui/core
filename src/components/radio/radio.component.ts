@@ -40,3 +40,11 @@ export class RadioComponent extends PlusBase {
     `;
   }
 }
+
+
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "plus-radio": RadioComponent;
+  }
+}

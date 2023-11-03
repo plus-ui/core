@@ -6,6 +6,7 @@ export const alertStyle = tv({
     textArea: "flex flex-1 flex-col items-start justify-center",
     descriptionClass: "empty:hidden font-normal",
     closableArea: "flex h-6 w-6 cursor-pointer items-center justify-center",
+    iconClass:""
   },
   variants: {
     size: {
@@ -13,16 +14,19 @@ export const alertStyle = tv({
         base: "text-sm p-3 gap-2.5",
         descriptionClass: "text-xs",
         textArea: "gap-2",
+        iconClass: "text-sm"
       },
       md: {
         base: "text-base p-3.5 gap-3",
         descriptionClass: "text-sm",
         textArea: "gap-3",
+        iconClass: "text-base"
       },
       lg: {
         base: "text-lg p-4 gap-3.5",
         descriptionClass: "text-base",
         textArea: "gap-3.5",
+        iconClass: "text-lg"
       },
     },
     kind: {

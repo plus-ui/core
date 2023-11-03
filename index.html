@@ -47,7 +47,28 @@
   <body>
     <div class="container">
       <div class="col">
-        <plus-checkbox label="merhaba" required indeterminate></plus-checkbox>
+        <plus-breadcrumb></plus-breadcrumb>
+        <plus-radio label="Radio Button" size="sm"></plus-radio>
+        <plus-radio label="Radio Button" size="md"></plus-radio>
+        <plus-radio label="Radio Button" size="lg"></plus-radio>
+
+        <plus-radio label="Radio Button" required disabled checked></plus-radio>
+        <plus-radio label="Radio Button" required readonly checked></plus-radio>
+        <plus-radio label="Radio Button" required></plus-radio>
+
+        <plus-breadcrumb max-items="2">
+          <plus-breadcrumb-item label="Home" href="javascript:void(0)"></plus-breadcrumb-item>
+        </plus-breadcrumb>
+        <script>
+          const breadcrumb = document.querySelector('plus-breadcrumb');
+          breadcrumb.items = [
+            { label: 'Home', href: 'javascript:void(0)' , prefixIcon:"fa fa-user", readonly:true},
+            { label: 'About', href: 'javascript:void(0)' , disabled: true},
+            { label: 'Contact', href: 'javascript:void(0)' },
+            { label: 'Profile', href: 'javascript:void(0)', active:true },
+
+          ];
+        </script>
 
     </div>
   </body>
