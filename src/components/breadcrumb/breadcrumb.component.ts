@@ -7,7 +7,7 @@ import { breadCrumbStyle } from "./breadcrumb.style";
 interface BreadCrumbItem {
   id?: string;
   label: string;
-  href: string;
+  url: string;
   active?: boolean;
   prefixIcon?: string;
   suffixIcon?: string;
@@ -19,7 +19,7 @@ interface BreadCrumbItem {
 
 @customElement("plus-breadcrumb")
 export class BreadCrumbComponent extends PlusBase {
-  @(query(".breadcrumb")!) el: HTMLElement;
+  @query(".breadcrumb") el: HTMLElement;
   @query("slot") defaultSlot: HTMLSlotElement;
 
   @property({ type: Array, converter: items => (typeof items == "string" ? JSON.parse(items) : items) }) items: BreadCrumbItem[] = [];
@@ -37,7 +37,23 @@ export class BreadCrumbComponent extends PlusBase {
 
   handleChanges() {
     const items = [...this.defaultSlot?.assignedElements({ flatten: true })].filter(item => item.tagName.toLowerCase() === "plus-breadcrumb-item") as any[];
-    console.log(items);
+    items.forEach((item, index) => {
+      item.addEventListener("plus-breadcrum-change", e => {
+        items.forEach(item => {
+          if(item.disabled || item.readonly) return;
+          if (item !== e.target) {
+            item.setAttribute("active","false");
+            item.setAttribute("aria-current","false");
+          } else {
+            item.setAttribute("active", "true");
+            item.setAttribute("aria-current", "page");
+          }
+        });
+      });
+      if (index === items.length - 1) {
+        item.setAttribute("isLast", "true");
+      }
+    });
   }
 
   private handleClickItem({ target }) {
@@ -74,14 +90,14 @@ export class BreadCrumbComponent extends PlusBase {
                 .suffixIcon=${item.suffixIcon}
                 .iconOnly=${item.iconOnly}
                 .label=${item.label}
-                .href=${item.href}
+                .url=${item.url}
                 .isLast=${index == this.items?.length - 1}
                 .seperator=${this.seperator}
                 @click=${e => this.handleClickItem(e)}
               ></plus-breadcrumb-item>`,
           )}
 
-          <slot @slotchange=${()=> this.handleChanges()}></slot>
+          <slot @slotchange=${() => this.handleChanges()}></slot>
         </ol>
       </nav>
     `;

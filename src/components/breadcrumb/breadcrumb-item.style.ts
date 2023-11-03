@@ -51,6 +51,7 @@ export const breadCrumbItemStyle = tv({
       readonly: false,
       class:{
         hrefClass: "text-color-default pointer-events-none visited:text-color-default",
+        linkClass: "text-color-default",
       }
     },
     {

@@ -57,17 +57,20 @@
         <plus-radio label="Radio Button" required></plus-radio>
 
         <plus-breadcrumb max-items="2">
-          <plus-breadcrumb-item label="Home" href="javascript:void(0)"></plus-breadcrumb-item>
+          <plus-breadcrumb-item label="Home" url="javascript:void(0)"></plus-breadcrumb-item>
+          <plus-breadcrumb-item label="Profile" url="javascript:void(0)"></plus-breadcrumb-item>
+          <plus-breadcrumb-item label="Settings" url="javascript:void(0)"></plus-breadcrumb-item>
+          <plus-breadcrumb-item label="About" url="javascript:void(0)"></plus-breadcrumb-item>
         </plus-breadcrumb>
         <script>
-          const breadcrumb = document.querySelector('plus-breadcrumb');
-          breadcrumb.items = [
-            { label: 'Home', href: 'javascript:void(0)' , prefixIcon:"fa fa-user", readonly:true},
-            { label: 'About', href: 'javascript:void(0)' , disabled: true},
-            { label: 'Contact', href: 'javascript:void(0)' },
-            { label: 'Profile', href: 'javascript:void(0)', active:true },
+          // const breadcrumb = document.querySelector('plus-breadcrumb');
+          // breadcrumb.items = [
+          //   { label: 'Home', url: 'javascript:void(0)' , prefixIcon:"fa fa-user", readonly:true},
+          //   { label: 'About', url: 'javascript:void(0)' , disabled: true},
+          //   { label: 'Contact', url: 'javascript:void(0)' },
+          //   { label: 'Profile', url: 'javascript:void(0)', active:true },
 
-          ];
+          // ];
         </script>
 
     </div>
