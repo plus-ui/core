@@ -13,3 +13,4 @@ export * from "./checkbox/checkbox.component";
 export * from "./radio/radio.component";
 export * from "./breadcrumb/breadcrumb.component";
 export * from "./breadcrumb-nav-item/breadcrumb-nav-item.component";
+export * from "./toggle/toggle.component";

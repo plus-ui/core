@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const inputStyle = tv({
   slots: {
-    host: ["font-sans flex flex-col gap-1 items-start justify-start w-full relative"],
+    host: ["font-sans antialiased flex flex-col gap-1 items-start justify-start w-full relative"],
     base: [""],
     inputElement: ["focus:outline-none flex-1 px-1 w-full"],
     inputWrapper: [
