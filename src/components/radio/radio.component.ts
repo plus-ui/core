@@ -1,4 +1,4 @@
-import { customElement, property, query } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import { live } from "lit/directives/live.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
@@ -6,42 +6,44 @@ import { radioStyle } from "./radio.style";
 
 @customElement("plus-radio")
 export class RadioComponent extends PlusBase {
-  @query("radio") el: HTMLInputElement;
-
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: String }) label: string;
+  @property({ type: String }) text: string;
   @property({ type: Boolean, reflect: true }) checked = false;
 
-  handleChange(e) {
-    this.checked = e?.target?.checked ?? false;
-    this.emit("plus-change", { detail: { checked: this.checked } });
+  private handleClick() {
+    /* TODO: should be on host */
+    this.checked = !this.checked;
+    this.emit("plus-change");
   }
 
   render() {
-    const { id, size, disabled, readonly, checked, required, label } = this;
-    const radioId = id + "-radio";
-    const { base, radio, labelClass } = radioStyle({ size, disabled, readonly, checked, required });
+    const { disabled, readonly, checked, text, title, id } = this;
+    const { base, inputElement, radio, radioDot, host } = radioStyle({ disabled, readonly, checked });
     return html`
-      <div class=${base()}>
+      <div class=${host()}>
         <input
-          id=${radioId}
-          role="radio"
-          type="radio"
-          class=${radio()}
+          id=${id}
+          class=${inputElement()}
+          type="checkbox"
+          title=${title}
           .checked=${live(checked)}
-          .disabled=${disabled}
-          .required=${required}
-          .readonly=${readonly}
-          @change=${e => this.handleChange(e)}
-          aria-checked=${this.checked ? "true" : "false"}
+          .disabled=${disabled || readonly}
+          role="radio"
+          aria-checked=${checked ? "true" : "false"}
+          @click=${this.handleClick /* TODO: should be on host */}
         />
-        ${label ? html`<label class=${labelClass()} for=${radioId}>${label}</label>` : null}
+        <label for=${id} class=${base()}>
+          <div class="relative">
+            <div class=${radio()}>
+              <i class=${radioDot() + " fa-solid fa-circle"}></i>
+            </div>
+          </div>
+          <slot>${text}</slot>
+        </label>
       </div>
     `;
   }
 }
-
-
 
 declare global {
   interface HTMLElementTagNameMap {

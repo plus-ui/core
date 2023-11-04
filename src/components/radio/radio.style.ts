@@ -2,98 +2,68 @@ import { tv } from "tailwind-variants";
 
 export const radioStyle = tv({
   slots: {
-    base: "flex items-center justify-start gap-1.5 font-sans",
-    radio: ["radio bg-default-base shrink-0 cursor-pointer appearance-none rounded-full border border-solid border-color-default"],
-    hover: "bg-color-default-hover active:bg-color-default-pressed",
-    labelClass: "text-color-default font-normal",
+    host: ["antialiased font-sans text-base flex flex-col gap-1 items-start justify-start w-full relative"],
+    base: ["flex flex-row items-center justify-start gap-2 group/base cursor-pointer text-color-default"],
+    inputElement: ["sr-only"],
+    radio: ["w-4 h-4 rounded-full bg-color-base border border-color-default"],
+    radioDot: ["text-[8px] leading-[8px] text-color-transparent transition-all ease-in-out scale-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"],
   },
   variants: {
-    size: {
-      sm: {
-        radio: "h-3.5 w-3.5",
-        labelClass: "text-sm",
-      },
-      md: {
-        radio: "h-4 w-4",
-        labelClass: "text-base",
-      },
-      lg: {
-        radio: "h-5 w-5",
-        labelClass: "text-lg",
-      },
-    },
-    disabled: {
+    checked: {
       true: {
-        base: "cursor-not-allowed",
-        radio: "bg-color-disabled border-color-disabled cursor-not-allowed",
-        labelClass: "text-color-disabled cursor-not-allowed",
+        radioDot: ["scale-100 text-color-primary"],
+        radio: ["border-color-primary"],
       },
     },
     readonly: {
       true: {
-        base: "pointer-events-none",
-        radio: "bg-color-base border-color-disabled",
-      },
+        base: ["cursor-default"],
+        radio: ["bg-color-base", "border-color-disabled"],
+      }
     },
-    checked: {
+    disabled: {
       true: {
-        radio: "shadow-radio bg-color-primary border-color-primary",
-      },
-    },
-    required: {
-      true: {
-        labelClass: "after:content-['*'] after:text-color-error after:ml-1",
-      },
+        base: ["cursor-not-allowed"],
+        radio: ["bg-color-disabled", "border-color-disabled"],
+      }
     },
   },
   compoundVariants: [
     {
+      disabled: false,
+      readonly: false,
       checked: false,
-      disabled: false,
-      readonly: false,
       class: {
-        radio: "hover:bg-color-default-hover active:bg-color-default-pressed",
+        radio: ["group-hover/base:bg-color-base-hover", "group-active/base:bg-color-base-pressed"],
       },
     },
     {
+      disabled: false,
+      readonly: false,
       checked: true,
-      disabled: false,
-      readonly: false,
       class: {
-        radio: "hover:ring-4 ring-color-invert-primary-hover ring-inset active:ring-4 ring-color-invert-primary-pressed ring-inset",
+        radio: ["group-hover/base:bg-color-invert-primary-hover", "group-active/base:bg-color-invert-primary-pressed"],
       },
     },
-    {
-      required: true,
-      disabled: true,
-      class: {
-        labelClass: "after:text-color-disabled",
-      },
-    },
-    {
-      required: true,
-      readonly: true,
-      class: {
-        labelClass: "after:text-color-default",
-      },
-    },
+
     {
       readonly: true,
       checked: true,
       class: {
-        radio: "bg-color-invert-default border-color-disabled",
+        radio: [],
+        radioDot: ["text-color-default"]
       },
     },
     {
       disabled: true,
       checked: true,
       class: {
-        radio: "bg-gray-400 border-color-disabled",
+        radio: [],
+        radioDot: ["text-color-disabled"]
       },
     },
   ],
   defaultVariants: {
-    size: "md",
     disabled: false,
     readonly: false,
     checked: false,
