@@ -19,13 +19,13 @@ export const alertStyle = tv({
       md: {
         base: "text-base p-3.5 gap-3",
         descriptionClass: "text-sm",
-        textArea: "gap-3",
+        textArea: "gap-2.5",
         iconClass: "text-base",
       },
       lg: {
         base: "text-lg p-4 gap-3.5",
         descriptionClass: "text-base",
-        textArea: "gap-3.5",
+        textArea: "gap-3",
         iconClass: "text-lg",
       },
     },
