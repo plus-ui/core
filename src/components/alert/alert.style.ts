@@ -2,11 +2,11 @@ import { tv } from "tailwind-variants";
 
 export const alertStyle = tv({
   slots: {
-    base: "font-sans flex flex-row items-baseline justify-between border border-solid rounded-md font-medium w-fit",
+    base: "font-sans antialiased flex flex-row items-baseline justify-between border border-solid rounded-md font-medium w-fit",
     textArea: "flex flex-1 flex-col items-start justify-center",
     descriptionClass: "empty:hidden font-normal",
     closableArea: "flex h-6 w-6 cursor-pointer items-center justify-center",
-    iconClass:""
+    iconClass: "",
   },
   variants: {
     size: {
@@ -14,19 +14,19 @@ export const alertStyle = tv({
         base: "text-sm p-3 gap-2.5",
         descriptionClass: "text-xs",
         textArea: "gap-2",
-        iconClass: "text-sm"
+        iconClass: "text-sm",
       },
       md: {
         base: "text-base p-3.5 gap-3",
         descriptionClass: "text-sm",
         textArea: "gap-3",
-        iconClass: "text-base"
+        iconClass: "text-base",
       },
       lg: {
         base: "text-lg p-4 gap-3.5",
         descriptionClass: "text-base",
         textArea: "gap-3.5",
-        iconClass: "text-lg"
+        iconClass: "text-lg",
       },
     },
     kind: {
@@ -40,7 +40,7 @@ export const alertStyle = tv({
         base: "rounded-md",
       },
       dashed: {
-        base: " border border-dashed",
+        base: " border border-dashed border-color-default",
       },
     },
     fullWidth: {
@@ -57,11 +57,25 @@ export const alertStyle = tv({
       },
     },
     status: {
-      success: "bg-color-success text-color-base",
-      warning: "bg-color-warning text-color-base",
-      error: "bg-color-error text-color-base",
-      info: "bg-color-information text-color-base",
-      default: "bg-color-default text-color-default",
+      success: { 
+        base: ["bg-color-success text-color-base"],
+        // iconClass: "text-color-invert-success"
+      },
+      warning: { 
+        base: ["bg-color-warning text-color-base"],
+        // iconClass: "text-color-invert-warning"
+      },
+      error: { 
+        base: ["bg-color-error text-color-base"],
+        // iconClass: "text-color-invert-error"
+      },
+      info: { 
+        base: ["bg-color-information text-color-base"],
+        // iconClass: "text-color-invert-information"
+      },
+      default: { 
+        base: ["bg-color-default text-color-default"],
+      },
     },
     invert: {
       true: {},
@@ -71,7 +85,7 @@ export const alertStyle = tv({
     {
       kind: ["outlined", "dashed"],
       class: {
-        base: ["border-box border"],
+        base: ["border"],
       },
     },
     {
@@ -80,6 +94,24 @@ export const alertStyle = tv({
         base: [""],
       },
     },
+    {
+      kind: "filled",
+      status: "success",
+      invert: false,
+      class: {
+        iconClass: "text-color-invert-success",
+      },
+    },
+    
+    {
+      kind: "filled",
+      status: "info",
+      invert: false,
+      class: {
+        iconClass: "text-color-invert-success",
+      },
+    },
+
     {
       status: "default",
       invert: true,
@@ -92,6 +124,7 @@ export const alertStyle = tv({
       invert: true,
       class: {
         base: ["bg-color-invert-success text-color-default"],
+        iconClass: "text-color-success",
       },
     },
     {
@@ -99,6 +132,7 @@ export const alertStyle = tv({
       invert: true,
       class: {
         base: ["bg-color-invert-warning text-color-default"],
+        iconClass: "text-color-warning",
       },
     },
     {
@@ -106,6 +140,7 @@ export const alertStyle = tv({
       invert: true,
       class: {
         base: ["bg-color-invert-error text-color-default"],
+        iconClass: "text-color-error",
       },
     },
     {
@@ -113,6 +148,7 @@ export const alertStyle = tv({
       invert: true,
       class: {
         base: ["bg-color-invert-information text-color-default"],
+        iconClass: "text-color-information",
       },
     },
     {
