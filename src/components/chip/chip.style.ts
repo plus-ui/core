@@ -65,7 +65,7 @@ export const chipStyle = tv({
       invert: true,
       status: "info",
       class: {
-        base: ["bg-color-invert-information text-color-default hover:bg-color-invert-information-hover active:bg-color-invert-info-pressed"],
+        base: ["bg-color-invert-information text-color-default hover:bg-color-invert-information-hover active:bg-color-invert-information-pressed"],
       },
     },
     {
