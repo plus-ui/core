@@ -3,20 +3,20 @@ import { tv } from "tailwind-variants";
 export const buttonStyle = tv({
   slots: {
     base: [
-      "relative flex items-center justify-center font-sans rounded border", 
+      "relative flex items-center justify-center font-sans rounded border border-color-default", 
       "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:z-[1]",
     ],
   },
   variants: {
     size: {
       sm: {
-        base: "gap-2 py-1 px-2 text-sm",
-      },
-      md: {
         base: "gap-2 py-2 px-2 text-sm",
       },
+      md: {
+        base: "gap-2.5 py-2 px-3 text-base",
+      },
       lg: {
-        base: "gap-2 py-2 px-2.5 text-lg",
+        base: "gap-3 py-2 px-4 text-lg",
       },
     },
     kind: {
@@ -27,7 +27,7 @@ export const buttonStyle = tv({
         base: "bg-color-base",
       },
       dashed: {
-        base: "bg-color-base border-dashed",
+        base: "bg-color-base border-dashed ",
       },
       text: {
         base: "bg-transparent border-transparent",
