@@ -32,19 +32,19 @@ export const chipStyle = tv({
     },
     status: {
       success: {
-        base: "bg-color-success text-color-base hover:bg-color-success-hover active:bg-color-success-active",
+        base: "bg-color-success text-color-base hover:bg-color-success-hover active:bg-color-success-pressed",
       },
       warning: {
-        base: "bg-color-warning text-color-base hover:bg-color-warning-hover active:bg-color-warning-active",
+        base: "bg-color-warning text-color-base hover:bg-color-warning-hover active:bg-color-warning-pressed",
       },
       error: {
-        base: "bg-color-error text-color-base hover:bg-color-error-hover active:bg-color-error-active",
+        base: "bg-color-error text-color-base hover:bg-color-error-hover active:bg-color-error-pressed",
       },
       info: {
-        base: "bg-color-information text-color-base hover:bg-color-information-hover active:bg-color-information-active",
+        base: "bg-color-information text-color-base hover:bg-color-information-hover active:bg-color-information-pressed",
       },
       default: {
-        base: "bg-color-default text-color-default hover:bg-color-default-hover active:bg-color-default-active",
+        base: "bg-color-default text-color-default hover:bg-color-default-hover active:bg-color-default-pressed",
       },
     },
     disabled: {
@@ -58,34 +58,40 @@ export const chipStyle = tv({
       invert: true,
       status: "success",
       class: {
-        base: ["bg-color-invert-success text-color-default hover:bg-color-invert-success-hover active:bg-color-invert-success-active"],
+        base: ["bg-color-invert-success text-color-default hover:bg-color-invert-success-hover active:bg-color-invert-success-pressed"],
       },
     },
     {
       invert: true,
       status: "info",
       class: {
-        base: ["bg-color-invert-information text-color-default hover:bg-color-invert-information-hover active:bg-color-invert-information-active"],
+        base: ["bg-color-invert-information text-color-default hover:bg-color-invert-information-hover active:bg-color-invert-info-pressed"],
       },
     },
     {
       invert: true,
       status: "warning",
       class: {
-        base: ["bg-color-invert-warning text-color-default hover:bg-color-invert-warning-hover active:bg-color-invert-warning-active"],
+        base: ["bg-color-invert-warning text-color-default hover:bg-color-invert-warning-hover active:bg-color-invert-warning-pressed"],
       },
     },
     {
       invert: true,
       status: "error",
       class: {
-        base: ["bg-color-invert-error text-color-default hover:bg-color-invert-error-hover active:bg-color-invert-error-active"],
+        base: ["bg-color-invert-error text-color-default hover:bg-color-invert-error-hover active:bg-color-invert-error-pressed"],
       },
     },
     {
       kind: "outlined",
       class: {
         base: ["border border-solid bg-transparent"],
+      },
+    },
+    {
+      kind: "outlined",
+      class: {
+        base: ["border border-solid bg-transparent hover:bg-color-base-hover active:bg-color-base-pressed"],
       },
     },
     {
@@ -127,14 +133,14 @@ export const chipStyle = tv({
       disabled: true,
       kind: "filled",
       class: {
-        base: ["bg-color-disabled text-color-disabled cursor-not-allowed"],
+        base: ["bg-color-disabled text-color-disabled cursor-not-allowed active:bg-color-disabled hover:bg-color-disabled"],
       },
     },
     {
       disabled: true,
       kind: "outlined",
       class: {
-        base: ["border-color-disabled text-color-disabled cursor-not-allowed hover:bg-transparent"],
+        base: ["border-color-disabled text-color-disabled cursor-not-allowed hover:bg-color-base active:bg-color-base "],
       },
     },
   ],
