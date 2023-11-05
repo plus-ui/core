@@ -25,6 +25,7 @@ export default defineConfig({
         breadcrumb: "src/components/breadcrumb/breadcrumb.component.ts",
         breadcrumNavItem: "src/components/breadcrumb-nav-item/breadcrumb-nav-item.component.ts",
         toggle: "src/components/toggle/toggle.component.ts",
+        radioGroup: "src/components/radio-group/radio-group.component.ts",
       },
       output: {
         format: "es",
