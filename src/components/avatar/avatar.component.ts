@@ -14,16 +14,16 @@ export class AvatarComponent extends PlusBase {
   @property() color: string;
   @property() icon: string = "fas fa-user";
   @property({ type: Boolean, converter: value => value != "false" }) invert = false;
+  @property() text?: string;
 
-  @state() _text = "";
-  @property()
-  set text(value) {
-    const words = value.split(" ");
-    const isSizeLargeEnough = this.customSize() ? +this.size >= 24 : Plus.Sizes[this.size] != Plus.Sizes.xs;
-    this._text = words[0][0] + (words.length > 1 && isSizeLargeEnough ? words[words.length - 1][0] : "");
+  isSizeLargeEnough() {
+    return this.customSize() ? +this.size >= 24 : Plus.Sizes[this.size] != "xs";
   }
-  get text() {
-    return this._text;
+
+  getText() {
+    const words = this.text?.split(" ");
+    if (!words) return;
+    return words[0][0] + (words.length > 1 && this.isSizeLargeEnough() ? words[words.length - 1][0] : "");
   }
 
   customSize() {
@@ -36,37 +36,41 @@ export class AvatarComponent extends PlusBase {
 
   @state() isFallback: boolean = false;
 
-  renderDefaultIcon() {
-    return html`<i class=${this.icon}></i>`;
-  }
+  // renderDefaultIcon() {
+  //   return html`<i class=${this.icon}></i>`;
+  // }
 
   render() {
-    const { shape, size, text, alt, invert } = this;
+    const { shape, size, alt, invert } = this;
 
-    const { base, image } = avatarStyle({
+    const text = this.getText();
+
+    const { base, image, icon } = avatarStyle({
       size: this.sizeValue(),
       shape,
       invert,
     });
+
+    const renderDefaultIcon = () => { return html`<i class=${icon() + " " + this.icon}></i>`; }
 
     const RenderContent = () => {
       if (this.isFallback) {
         if (this.text) {
           return text;
         } else {
-          return this.renderDefaultIcon();
+          return renderDefaultIcon();
         }
       } else if (this.image) {
         return html`<img class=${image()} @error=${() => (this.isFallback = true)} src=${this.image} alt=${this.alt} />`;
       } else if (text) {
         return text;
       } else {
-        return this.renderDefaultIcon();
+        return renderDefaultIcon();
       }
     };
 
     return html`
-      <div role="img" aria-label=${alt || text || "Avatar"} class=${base()} style=${styleMap(this.customSize() ? { ["--size"]: +size + "px" } : {})}>${RenderContent()}</div>
+      <div role="img" aria-label=${alt || this.text || "Avatar"} class=${base()} style=${styleMap(this.customSize() ? { ["--size"]: +size + "px" } : {})}>${RenderContent()}</div>
     `;
   }
 }
