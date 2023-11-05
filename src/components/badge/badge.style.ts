@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const badgeStyle = tv({
   slots: {
-    base: ["absolute font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto border border-white empty:box-content"],
+    base: ["absolute font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto border border-transparent empty:box-content"],
   },
   variants: {
     size: {
