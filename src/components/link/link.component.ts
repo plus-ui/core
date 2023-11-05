@@ -19,9 +19,9 @@ export class LinkComponent extends PlusBase {
   }
 
   render() {
-    const { href, target, download, rel, kind } = this;
+    const { href, target, download, rel, kind, disabled } = this;
 
-    const { base } = linkStyle({ kind });
+    const { base } = linkStyle({ kind, disabled });
 
     return html`
       <plus-text size="inherit">
