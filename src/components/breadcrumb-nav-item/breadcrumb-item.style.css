@@ -1,0 +1,6 @@
+:host {
+  display: inline-flex;
+}
+:host(:last-of-type) .plus-separator {
+  display: none;
+}
