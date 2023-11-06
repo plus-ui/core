@@ -13,18 +13,19 @@ export class LinkComponent extends PlusBase {
   @property() target: "_blank" | "_parent" | "_self" | "_top";
   @property() download?: string;
   @property() rel = "noreferrer noopener";
+  @property() size = "inherit";
 
   private handleClick() {
     this.emit("plus-click");
   }
 
   render() {
-    const { href, target, download, rel, kind, disabled } = this;
+    const { href, target, download, rel, kind, disabled, size } = this;
 
     const { base } = linkStyle({ kind, disabled });
 
     return html`
-      <plus-text size="inherit">
+      <plus-text size=${size}>
         <a class="${base()}" href="${href}" target="${ifDefined(target)}" download="${ifDefined(download)}" rel="${ifDefined(rel)}" @click="${this.handleClick}">
           <slot></slot>
         </a>

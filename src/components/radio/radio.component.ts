@@ -30,8 +30,8 @@ export class RadioComponent extends PlusBase {
   }
 
   render() {
-    const { disabled, readonly, checked, text, title, id } = this;
-    const { base, inputElement, radio, radioDot, host } = radioStyle({ disabled, readonly, checked, focus: this.hasFocus });
+    const { disabled, readonly, checked, text, title, id, size } = this;
+    const { base, inputElement, radio, radioDot, host } = radioStyle({ disabled, readonly, checked, size, focus: this.hasFocus });
     return html`
       <div class=${host()}>
         <input
