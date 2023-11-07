@@ -80,11 +80,11 @@ export class textareaComponent extends PlusBase {
   }
 
   render() {
-    const { label, hasFocus, error, disabled, caption, clearable, value } = this;
-    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = textareaStyle({ focus: hasFocus, error, disabled, clearable });
+    const { label, hasFocus, error, disabled, caption, clearable, value, size, required } = this;
+    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = textareaStyle({ focus: hasFocus, error, disabled, size });
 
-    const LabelTemplate = () => (label ? html`<label class=${labelStyle()} for="textarea">${label}</label>` : null);
-    const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error })}>${caption}</div>` : null);
+    const LabelTemplate = () => (label ? html`<label class=${labelStyle({ size, required })} for="textarea">${label}</label>` : null);
+    const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
     const ClearTemplate = () =>
       clearable && value
         ? html`<div class=${clearButton() + suffix()} @click=${this.handleClearClick}>
@@ -95,7 +95,7 @@ export class textareaComponent extends PlusBase {
     return html`<div class=${host()}>
       ${LabelTemplate()}
       <div class=${inputWrapper()} @click=${() => this.textarea.focus()}>
-        <slot name="prefix" class=${prefix()}></slot>
+        <!-- <slot name="prefix" class=${prefix()}></slot> -->
         <textarea
           id="textarea"
           type="text"
@@ -125,8 +125,8 @@ export class textareaComponent extends PlusBase {
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
         ></textarea>
-        <slot name="suffix" class=${suffix()}></slot>
-        ${ClearTemplate()}
+        <!-- <slot name="suffix" class=${suffix()}></slot> -->
+        <!-- ${ClearTemplate()} -->
       </div>
       ${CaptionTemplate()}
     </div>`;
