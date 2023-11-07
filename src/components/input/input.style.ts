@@ -40,7 +40,7 @@ export const inputStyle = tv({
     size: {
       sm: {
         host: ["gap-0.5"],
-        inputWrapper: ["py-2 px-2 text-xs"],
+        inputWrapper: ["py-2 px-2 text-sm"],
         inputElement: [""],
         prefix: ["pr-2"],
         suffix: ["pl-2"],
