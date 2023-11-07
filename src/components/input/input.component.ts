@@ -85,12 +85,19 @@ export class InputComponent extends PlusBase {
     // TODO
   }
 
-  render() {
-    const { label, hasFocus, error, disabled, caption, clearable, value } = this;
-    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = inputStyle({ focus: hasFocus, error, disabled });
+  handleSlotchange(e) {
+    const childNodes = e.target.assignedNodes({ flatten: true });
+    if (childNodes.length) {
+      e.target.style.display = "block";
+    }
+  }
 
-    const LabelTemplate = () => (label ? html`<label class=${labelStyle()} for="input">${label}</label>` : null);
-    const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error })}>${caption}</div>` : null);
+  render() {
+    const { label, hasFocus, error, disabled, caption, clearable, value, size, required } = this;
+    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = inputStyle({ focus: hasFocus, error, disabled, size });
+
+    const LabelTemplate = () => (label ? html`<label class=${labelStyle({ size, required })} for="input">${label}</label>` : null);
+    const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
     const ClearTemplate = () =>
       clearable && value
         ? html`<div class=${clearButton() + suffix()} @click=${this.handleClearClick}>
@@ -101,7 +108,7 @@ export class InputComponent extends PlusBase {
     return html`<div class=${host()}>
       ${LabelTemplate()}
       <div class=${inputWrapper()} @click=${() => this.input.focus()}>
-        <slot name="prefix" class=${prefix()}></slot>
+        <slot name="prefix" class=${prefix()} @slotchange=${this.handleSlotchange}></slot>
         <input
           id="input"
           type="text"
@@ -135,7 +142,7 @@ export class InputComponent extends PlusBase {
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
         />
-        <slot name="suffix" class=${suffix()}></slot>
+        <slot name="suffix" class=${suffix()} @slotchange=${this.handleSlotchange}></slot>
         ${ClearTemplate()}
       </div>
       ${CaptionTemplate()}

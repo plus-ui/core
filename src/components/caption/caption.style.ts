@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const captionStyle = tv({
-  base: "block font-sans text-xs font-normal text-color-caption",
+  base: "block font-sans font-normal text-color-caption",
   variants: {
     error: {
       true: "text-color-error",
@@ -9,8 +9,8 @@ export const captionStyle = tv({
     },
     size: {
       sm: "text-xs",
-      md: "text-xs",
-      lg: "text-sm",
+      md: "text-sm",
+      lg: "text-base",
     },
   },
   compoundVariants: [],
