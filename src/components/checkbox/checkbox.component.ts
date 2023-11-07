@@ -1,49 +1,79 @@
-import { html } from "lit/static-html.js";
-
-import { customElement, property, query } from "lit/decorators.js";
-import { ifDefined } from "lit/directives/if-defined.js";
+import { customElement, property, query, state } from "lit/decorators.js";
 import { live } from "lit/directives/live.js";
+import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
+import { captionStyle } from "../caption/caption.style";
+import { labelStyle } from "../label/label.style";
 import { checkboxStyle } from "./checkbox.style";
 
 @customElement("plus-checkbox")
 export class CheckboxComponent extends PlusBase {
-  @query("checkbox") el: HTMLInputElement;
-
+  @query(".checkbox") checkbox: HTMLInputElement;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: String }) label: string;
+  @property({ type: String }) text: string;
   @property({ type: Boolean, reflect: true }) checked = false;
   @property({ type: Boolean, reflect: true }) indeterminate = false;
 
-  handleChange = (e: Event) => {
-    const input = e.target as HTMLInputElement;
-    this.checked = input.checked;
-    this.indeterminate = input.indeterminate;
-    this.emit("plus-change", { detail: { id: this.id, checked: this.checked } });
-  };
+  @property({ type: String }) label?: string;
+  @property({ type: String }) caption?: string;
+  @property({ type: Boolean, converter: value => value != "false" }) error = false;
+
+  @state() hasFocus = false;
+
+  private handleClick() {
+    /* TODO: should be on host */
+    this.checked = !this.checked;
+    this.emit("plus-change");
+  }
+
+  private handleFocus() {
+    this.hasFocus = true;
+    this.emit("plus-focus");
+  }
+
+  private handleBlur() {
+    this.hasFocus = false;
+    this.emit("plus-blur");
+  }
+
+  private handleChange() {
+    this.checked = this.checkbox.checked;
+    this.emit("plus-change");
+  }
 
   render() {
-    const { id, size, disabled, readonly, indeterminate, checked, required } = this;
-    const checkboxId = id + "-checkbox";
-    const { base, input, icon, label } = checkboxStyle({ size, disabled, readonly, indeterminate, checked, required });
+    const { disabled, readonly, checked, text, title, id, size, label, caption, error, required,indeterminate } = this;
+    const { base, inputElement, checkbox, checkIcon, host } = checkboxStyle({ disabled, readonly, checked: checked || indeterminate, size, focus: this.hasFocus });
+
+    const LabelTemplate = () => (label ? html`<label class=${labelStyle({ required, size })} @click=${this.focus}>${label}</label>` : null);
+    const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
+   
     return html`
-      <div class=${base()}>
+      <div class=${host()}>
+        ${LabelTemplate()}
         <input
-          id=${checkboxId}
-          class=${input()}
+          id=${id}
+          class=${inputElement()}
           type="checkbox"
-          name=${this.name}
-          value=${ifDefined(this.value)}
+          title=${title}
           .checked=${live(checked)}
-          .indeterminate=${indeterminate}
-          .disabled=${disabled}
-          .required=${required}
-          .readonly=${readonly}
-          aria-checked=${this.checked ? "true" : "false"}
+          .disabled=${disabled || readonly}
+          role="checkbox"
+          aria-checked=${checked ? "true" : "false"}
+          @blur=${this.handleBlur}
+          @focus=${this.handleFocus}
+          @click=${this.handleClick /* TODO: should be on host */}
           @change=${this.handleChange}
         />
-        <div class=${icon()}>${indeterminate ? html`<i class="fa fa-minus text-xs"></i>` : html`<i class="fas fa-check text-xs"></i>`}</div>
-        <label class=${label()} for=${checkboxId}>${this.label}</label>
+        <label for=${id} class=${base()}>
+          <div class="relative">
+            <div class=${checkbox()}>
+              <i class=${checkIcon() + " fa-solid " + (indeterminate ? "fa-minus" : "fa-check" )} ></i>
+            </div>
+          </div>
+          <slot>${text}</slot>
+        </label>
+        ${CaptionTemplate()}
       </div>
     `;
   }

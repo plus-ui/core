@@ -29,7 +29,7 @@ export const radioStyle = tv({
     },
     disabled: {
       true: {
-        base: ["cursor-not-allowed"],
+        base: ["cursor-not-allowed text-color-disabled"],
         radio: ["bg-color-disabled", "border-color-disabled"],
       },
     },

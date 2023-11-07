@@ -2,75 +2,94 @@ import { tv } from "tailwind-variants";
 
 export const checkboxStyle = tv({
   slots: {
-    base: ["font-sans flex w-full flex-row items-center justify-start gap-1.5 font-normal"],
-    input: [
-      "peer relative appearance-none  flex flex-row items-center justify-center rounded border border-solid border-color-default bg-color-base",
-      "active:enabled:bg-color-primary-pressed",
-      "hover:bg-color-default-hover checked:hover:enabled:bg-color-primary-hover",
-    ],
-    icon: ["pointer-events-none absolute ml-[2.5px] hidden flex-row items-center justify-center text-sm text-color-default outline-none peer-checked:flex"],
-    label: ["text-base text-color-default"],
+    host: ["antialiased font-sans flex flex-col  items-start justify-start w-full relative"],
+    base: ["flex flex-row items-center justify-start gap-2 group/base cursor-pointer text-color-default"],
+    inputElement: ["checkbox sr-only"],
+    checkbox: ["rounded bg-color-base border border-color-default"],
+    checkIcon: ["text-color-transparent transition-all ease-in-out scale-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"],
   },
   variants: {
-    size: {
-      sm: {
-        input: "h-3 w-3",
+    checked: {
+      true: {
+        checkIcon: ["scale-100 text-color-base"],
+        checkbox: ["border-color-primary bg-color-primary"],
       },
-      md: {
-        input: "h-4 w-4",
+    },
+    focus: {
+      true: {
+        checkbox: "ring-2 ring-offset-2 z-[1] border-color-primary",
       },
-      lg: {
-        input: "h-5 w-5",
+      false: [""],
+    },
+    readonly: {
+      true: {
+        base: ["cursor-default"],
+        checkbox: ["bg-color-base", "border-color-disabled"],
       },
     },
     disabled: {
-      true: ""
-    },
-    readonly: {
-      true: ""
-    },
-    indeterminate: {
       true: {
-        input: ["bg-color-primary border-transparent active:bg-color-primary-pressed text-color-base hover:bg-color-primary-hover disabled:bg-color-disabled disabled:text-color-disabled"],
-        icon: "text-color-base flex",
+        base: ["cursor-not-allowed text-color-disabled"],
+        checkbox: ["bg-color-disabled", "border-color-disabled"],
       },
     },
-    checked: {
-      true: {
-        input: "bg-color-primary border-transparent active:enabled:bg-color-primary-pressed",
-        icon: "text-color-base",
+    size: {
+      sm: {
+        host: ["text-sm gap-1.5"],
+        checkbox: ["w-4 h-4"],
+        checkIcon: ["text-[8px] leading-[8px]"],
       },
-    },
-    required: {
-      true: {
-        label: "after:content-['*'] after:text-color-error after:ml-1",
-      }
+      md: {
+        host: ["text-base gap-2"],
+        checkbox: ["w-4.5 h-4.5"],
+        checkIcon: ["text-[10px] leading-[10px]"],
+      },
+      lg: {
+        host: ["text-lg gap-2.5"],
+        checkbox: ["w-5 h-5"],
+        checkIcon: ["text-[12px] leading-[12px]"],
+      },
     },
   },
   compoundVariants: [
     {
-      readonly: true,
+      disabled: false,
+      readonly: false,
+      checked: false,
       class: {
-        input: "bg-color-base text-color-default border border-solid border-disabled",
-        base: "pointer-events-none",
-        icon: "text-color-default",
-      }
+        checkbox: ["group-hover/base:bg-color-base-hover", "group-active/base:bg-color-base-pressed"],
+      },
+    },
+    {
+      disabled: false,
+      readonly: false,
+      checked: true,
+      class: {
+        checkbox: ["group-hover/base:bg-color-primary-hover", "group-active/base:bg-color-primary-pressed"],
+      },
+    },
+
+    {
+      readonly: true,
+      checked: true,
+      class: {
+        checkbox: [],
+        checkIcon: ["text-color-default"],
+      },
     },
     {
       disabled: true,
+      checked: true,
       class: {
-        input: "bg-color-disabled border-color-disabled text-color-disabled cursor-not-allowed",
-        icon: "text-color-disabled",
-        base: "cursor-not-allowed",
-        label: "text-color-disabled cursor-not-allowed",
+        checkbox: [],
+        checkIcon: ["text-color-disabled"],
       },
     },
   ],
   defaultVariants: {
-    size: "md",
     disabled: false,
     readonly: false,
-    indeterminate: false,
     checked: false,
+    size: "md",
   },
 });
