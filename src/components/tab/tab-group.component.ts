@@ -14,6 +14,7 @@ export class TabGroupComponent extends PlusBase {
   @query("slot[name='content']") panelSlot: HTMLSlotElement;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) kind: "vertical" | "horizontal" = "horizontal";
+  @property({ type: Boolean, converter: value => value != "false" }) disabled = false;
 
   private get tabItems() {
     return [...this.tabSlot?.assignedElements({ flatten: true })].filter(item => item.tagName.toLowerCase() === "plus-tab") as any;
@@ -27,6 +28,7 @@ export class TabGroupComponent extends PlusBase {
     this.tabItems?.forEach((item, _) => {
       item.setAttribute("size", this.size);
       item.setAttribute("kind", this.kind);
+      this.disabled ? item.setAttribute("disabled", "") : item.removeAttribute("disabled");
     });
   }
 

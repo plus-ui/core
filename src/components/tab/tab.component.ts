@@ -23,7 +23,7 @@ export class TabComponent extends PlusBase {
     const { size, active, disabled, kind } = this;
     const { tabItem } = tabStyle({ size, active, disabled, kind });
     return html`
-      <div class=${tabItem()} @click=${() => this.emit("plus-tab-click")} role="tab" aria-selected=${active} tabindex=${active ? 0 : -1}>
+      <div class=${tabItem()} @click=${() => !this.disabled && this.emit("plus-tab-click")} role="tab" aria-selected=${active} tabindex=${active ? 0 : -1}>
         <slot></slot>
       </div>
     `;
