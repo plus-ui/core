@@ -2,58 +2,51 @@ import { tv } from "tailwind-variants";
 
 export const tabStyle = tv({
   slots: {
-    host: ["antialiased font-sans flex flex-col items-center justify-center w-full"],
-    tab: ["flex-1 flex-row items-center justify-center gap-2 cursor-pointer relative"],
-    inkBar: ["absolute -bottom-[4px] left-0 h-[2px] w-full rounded-sm bg-color-primary transition-transform transform-gpu"],
+    tabItem: ["antialiased font-sans cursor-pointer flex flex-row items-center justify-start  transition-all duration-300 ease-in-out text-color-default w-max"],
+    tabHeader: ["flex flex-col items-end justify-start"],
+    tabGroup: "",
   },
+
   variants: {
-    checked: {
-      true: {
-        radioDot: ["scale-100 text-color-primary"],
-        radio: ["border-color-primary"],
+    size: {
+      sm: {
+        tabItem: ["text-sm gap-1.5 py-1.5 px-2"],
+      },
+      md: {
+        tabItem: ["text-base gap-2 py-2 px-2 "],
+      },
+      lg: {
+        tabItem: ["text-lg gap-2.5 py-2.5 px-2"],
       },
     },
-    focus: {
-      true: {
-        radio: "ring-2 ring-offset-2 z-[1] border-color-primary",
+    kind: {
+      vertical: {
+        tabHeader: ["flex flex-col items-end justify-start"],
+        tabItem: [" border-r border-r-color-default"],
+        tabGroup: ["flex flex-row items-start justify-start gap-2"],
       },
-      false: [""],
+      horizontal: {
+        tabHeader: ["flex flex-row items-end justify-start"],
+        tabItem: [" border-b border-b-color-default"],
+        tabGroup: ["flex flex-col items-start justify-start gap-2"],
+      },
     },
-    readonly: {
+    active: {
       true: {
-        base: ["cursor-default"],
-        radio: ["bg-color-base", "border-color-disabled"],
+        tabItem: ["text-color-primary border-color-primary"],
       },
     },
     disabled: {
       true: {
-        base: ["cursor-not-allowed text-color-disabled"],
-        radio: ["bg-color-disabled", "border-color-disabled"],
-      },
-    },
-    active:{
-        true: "",
-        false: ""
-    },
-    size: {
-      sm: {
-        host: ["text-sm gap-1.5"],
-      },
-      md: {
-        host: ["text-base gap-2"],
-      },
-      lg: {
-        host: ["text-lg gap-2.5"],
+        tabItem: ["text-color-disabled cursor-not-allowed"],
       },
     },
   },
-  compoundVariants: [
-    
-  ],
   defaultVariants: {
     disabled: false,
     readonly: false,
     size: "md",
-    active:false
+    active: false,
+    kind: "horizontal",
   },
 });

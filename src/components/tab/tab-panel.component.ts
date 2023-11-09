@@ -7,9 +7,14 @@ export class TabPanelComponent extends PlusBase {
   @property({ type: Boolean, reflect: true }) active = false;
 
 
+  constructor() {
+    super();
+    this.slot = "content";
+  }
+
   render() {
     return html`
-      <div slot="content" class=${this.active ? "block" : "hidden"}>
+      <div class=${this.active ? "block" : "hidden"}>
         <slot></slot>
       </div>
     `;

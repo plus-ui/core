@@ -1,19 +1,22 @@
+import { PropertyValueMap, unsafeCSS } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
 // @ts-ignore
-import style from "./tab-group.css?inline";
-
+import style from "./tab.style.css?inline";
+import { tabStyle } from "./tab.style";
 @customElement("plus-tab-group")
 export class TabGroupComponent extends PlusBase {
+  static styles = [...PlusBase.styles, unsafeCSS(style)];
+
   @query(".tab-group") tabGroup: HTMLDivElement;
-  @query("slot") defaultSlot: HTMLSlotElement;
+  @query("slot[name='tabItem'") tabSlot: HTMLSlotElement;
   @query("slot[name='content']") panelSlot: HTMLSlotElement;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: String }) align: "vertical" | "horizontal" = "horizontal";
+  @property({ type: String }) kind: "vertical" | "horizontal" = "horizontal";
 
   private get tabItems() {
-    return [...this.defaultSlot?.assignedElements({ flatten: true })].filter(item => item.tagName.toLowerCase() === "plus-tab") as any;
+    return [...this.tabSlot?.assignedElements({ flatten: true })].filter(item => item.tagName.toLowerCase() === "plus-tab") as any;
   }
 
   private get panelItems() {
@@ -21,12 +24,21 @@ export class TabGroupComponent extends PlusBase {
   }
 
   protected handleSlotChange() {
-    this.panelItems?.forEach((panel, _) => {
-      panel.slot = "content";
+    this.tabItems?.forEach((item, _) => {
+      item.setAttribute("size", this.size);
+      item.setAttribute("kind", this.kind);
     });
   }
 
+  protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
+    super.updated(_changedProperties);
+    this.handleSlotChange();
+  }
+
   handleClickItem({ target }: Event) {
+    const _target = target as HTMLElement;
+    const _parent = _target.parentElement;
+    console.log({ _parent });
     if (target instanceof HTMLElement && target.tagName.toLowerCase() === "plus-tab") {
       const { id } = target;
       this.tabItems?.forEach((item, _) => {
@@ -40,13 +52,17 @@ export class TabGroupComponent extends PlusBase {
   }
 
   render() {
+    const { size, disabled, kind } = this;
+    const { tabHeader, tabGroup } = tabStyle({ size, disabled, kind });
+
     return html`
-      <div class="tab-group flex flex-col justify-start items-start gap-2" role="tablist" aria-label="Tab Group">
-        <div class="flex flex-row items-center justify-start gap-2">
-          <slot @slotchange=${() => this.handleSlotChange()} @click=${this.handleClickItem}></slot>
+      <div class=${tabGroup()} role="tablist" aria-label="Tab Group">
+        <div class=${tabHeader()}>
+          <slot name="tabItem" @slotchange=${this.handleSlotChange} @plus-tab-click=${this.handleClickItem}></slot>
         </div>
-        <div class="-mt-[6px] flex h-[2px] w-full flex-row items-end justify-between rounded-md bg-color-default"></div>
-        <slot class="flex flex-row justify-start items-start" name="content"></slot>
+        <div class="flex w-full flex-col items-start justify-start">
+          <slot name="content"></slot>
+        </div>
       </div>
     `;
   }
