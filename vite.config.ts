@@ -29,6 +29,7 @@ export default defineConfig({
         tab: "src/components/tab/tab.component.ts",
         tabGroup: "src/components/tab-group/tab-group.component.ts",
         tabPanel: "src/components/tab-panel/tab-panel.component.ts",
+        progress: "src/components/progress/progress.component.ts",
       },
       output: {
         format: "es",

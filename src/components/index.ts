@@ -18,3 +18,4 @@ export * from "./radio-group/radio-group.component";
 export * from "./tab/tab.component";
 export * from "./tab/tab-group.component";
 export * from "./tab/tab-panel.component";
+export * from "./progress/progress.component";
