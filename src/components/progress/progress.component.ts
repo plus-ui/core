@@ -23,6 +23,7 @@ export class ProgressComponent extends PlusBase {
   @property({ type: String }) status: "success" | "warning" | "error" | "info" | "default" = "default";
   @property({ type: Boolean, reflect: true, attribute: "status-icon" }) statusIcon = false;
   @property({ type: Number, attribute: "max-value" }) maxValue = 100;
+  @property({ type: Boolean }) indeterminate = false;
 
   static host = css`
     :host {
@@ -34,8 +35,8 @@ export class ProgressComponent extends PlusBase {
   static styles = [...PlusBase.styles, unsafeCSS(ProgressComponent.host)];
 
   render() {
-    const { size, label, caption, required, error, status, valueFormat, disabled } = this;
-    const { host, progress, progressLine, infoArea } = progressStyle({ size, status, disabled });
+    const { size, label, caption, required, error, status, valueFormat, disabled, indeterminate } = this;
+    const { host, progress, progressLine, infoArea } = progressStyle({ size, status, disabled, indeterminate });
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ required, size, disabled })} @click=${this.focus}>${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size, disabled })}>${caption}</div>` : null);
     const PercentTemplate = () => html`<span>${(+this.value / +this.maxValue) * 100}%</span>`;

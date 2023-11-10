@@ -85,6 +85,18 @@ export default {
         DEFAULT: "var(--color-border-focus)",
         ...theme('colors'),
       }),
+      animation: {
+        ...require("tailwindcss/defaultConfig").theme.animation,
+        "progress-indeterminate": "progress-indeterminate 3s infinite ease-in-out",
+      },
+      keyframes: {
+        ...require("tailwindcss/defaultConfig").theme.keyframes,
+        "progress-indeterminate": {
+          "0%": { transform: "translateX(-100%) scaleX(0.3)" },
+          "50%": { transform: "translateX(0%) scaleX(0.3)" },
+          "100%": { transform: "translateX(100%) scaleX(0.3)" },
+        },
+      },
       ...themeVariables,
     },
   },

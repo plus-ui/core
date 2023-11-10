@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const progressStyle = tv({
   slots: {
     host: ["antialiased font-sans flex flex-col w-full font-medium text-default"],
-    progress: ["w-full rounded-full bg-color-default transition-colors duration-400 ease-in-out progress"],
+    progress: ["w-full rounded-full bg-color-default transition-colors duration-400 ease-in-out progress relative"],
     progressLine: ["h-full rounded-full"],
     infoArea: ["flex flex-row items-center justify-center gap-2 font-medium"],
   },
@@ -50,6 +50,12 @@ export const progressStyle = tv({
     error: {
       true: "",
     },
+    indeterminate: {
+      true: {
+        progress: ["overflow-hidden"],
+        progressLine: ["!w-full animate-progress-indeterminate"],
+      }
+    },
   },
   compoundVariants: [
     {
@@ -67,5 +73,6 @@ export const progressStyle = tv({
     status: "default",
     disabled: false,
     error: false,
+    indeterminate: false,
   },
 });
