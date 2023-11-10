@@ -22,7 +22,7 @@ export abstract class PlusBase extends LitElement {
 
   // Value property with default value
   @property({ type: String, reflect: true })
-  value: string = "";
+  value: string | number = "";
 
   // Disabled property with default value
   @property({ type: Boolean, reflect: true })
