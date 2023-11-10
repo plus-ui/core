@@ -1,7 +1,15 @@
 {
-  "name": "core",
+  "name": "@plusui/core",
   "private": true,
   "version": "0.0.1",
+  "description": "PlusUI Library built with Lit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plus-ui/core.git"
+  },
+  "author": "PlusUI",
+  "homepage": "https://www.plusui.com/",
   "exports": {
     ".": [
       {
