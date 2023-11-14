@@ -28,12 +28,14 @@
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
-    "preview": "vite preview --open"
+    "preview": "vite preview --open",
+    "analyze": "cem analyze"
   },
   "dependencies": {
     "lit": "^2.8.0"
   },
   "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.9.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
@@ -46,5 +48,6 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0"
-  }
+  },
+  "customElements": "custom-elements.json"
 }

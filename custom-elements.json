@@ -1,0 +1,4306 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/badge/badge.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "BadgeComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"dot\" | \"text\""
+              },
+              "default": "\"text\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "invert"
+            },
+            {
+              "kind": "field",
+              "name": "placement",
+              "type": {
+                "text": "\"top-left\" | \"top-right\" | \"bottom-left\" | \"bottom-right\""
+              },
+              "default": "\"top-right\"",
+              "attribute": "placement"
+            },
+            {
+              "kind": "field",
+              "name": "content",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "content"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "backgroundColor",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "backgroundColor"
+            },
+            {
+              "kind": "field",
+              "name": "offset",
+              "type": {
+                "text": "[string, string]"
+              },
+              "attribute": "offset"
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"dot\" | \"text\""
+              },
+              "default": "\"text\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invert"
+            },
+            {
+              "name": "placement",
+              "type": {
+                "text": "\"top-left\" | \"top-right\" | \"bottom-left\" | \"bottom-right\""
+              },
+              "default": "\"top-right\"",
+              "fieldName": "placement"
+            },
+            {
+              "name": "content",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "content"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "backgroundColor",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "backgroundColor"
+            },
+            {
+              "name": "offset",
+              "type": {
+                "text": "[string, string]"
+              },
+              "fieldName": "offset"
+            },
+            {
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "color"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BadgeComponent",
+          "declaration": {
+            "name": "BadgeComponent",
+            "module": "src/components/badge/badge.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-badge",
+          "declaration": {
+            "name": "BadgeComponent",
+            "module": "src/components/badge/badge.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/alert/alert.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "AlertComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "el",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"outlined\" | \"filled\" | \"dashed\""
+              },
+              "default": "\"filled\"",
+              "attribute": "kind",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "attribute": "status",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "message",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "message"
+            },
+            {
+              "kind": "field",
+              "name": "_icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "description"
+            },
+            {
+              "kind": "field",
+              "name": "fullWidth",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "full-width",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "closable"
+            },
+            {
+              "kind": "field",
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "invert"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"outlined\" | \"filled\" | \"dashed\""
+              },
+              "default": "\"filled\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "message",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "message"
+            },
+            {
+              "name": "icon",
+              "fieldName": "icon"
+            },
+            {
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "description"
+            },
+            {
+              "name": "full-width",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "fullWidth"
+            },
+            {
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "closable"
+            },
+            {
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invert"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-alert",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AlertComponent",
+          "declaration": {
+            "name": "AlertComponent",
+            "module": "src/components/alert/alert.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-alert",
+          "declaration": {
+            "name": "AlertComponent",
+            "module": "src/components/alert/alert.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/breadcrumb-item/breadcrumb-item.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "BreadComponentNavItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "href",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "text",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "attribute": "active",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "prefixIcon",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "prefixIcon",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "suffixIcon",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "suffixIcon",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "separator",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"/\"",
+              "attribute": "separator",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "href"
+            },
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "text"
+            },
+            {
+              "name": "active",
+              "fieldName": "active"
+            },
+            {
+              "name": "prefixIcon",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "prefixIcon"
+            },
+            {
+              "name": "suffixIcon",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "suffixIcon"
+            },
+            {
+              "name": "separator",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"/\"",
+              "fieldName": "separator"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-breadcrumb-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BreadComponentNavItem",
+          "declaration": {
+            "name": "BreadComponentNavItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-breadcrumb-item",
+          "declaration": {
+            "name": "BreadComponentNavItem",
+            "module": "src/components/breadcrumb-item/breadcrumb-item.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button-group/button-group.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ButtonGroupComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "buttonGroup",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"dot\" | \"text\""
+              },
+              "default": "\"text\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "invert"
+            },
+            {
+              "kind": "field",
+              "name": "content",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "content"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "attribute": "type"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"dot\" | \"text\""
+              },
+              "default": "\"text\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invert"
+            },
+            {
+              "name": "content",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "content"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "color"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "fieldName": "type"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-button-group",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonGroupComponent",
+          "declaration": {
+            "name": "ButtonGroupComponent",
+            "module": "src/components/button-group/button-group.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-button-group",
+          "declaration": {
+            "name": "ButtonGroupComponent",
+            "module": "src/components/button-group/button-group.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/avatar/avatar.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "AvatarComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\""
+              },
+              "default": "\"circle\"",
+              "attribute": "shape"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "Plus.Sizes | string"
+              },
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"fas fa-user\"",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "invert"
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "text"
+            },
+            {
+              "kind": "method",
+              "name": "isSizeLargeEnough"
+            },
+            {
+              "kind": "method",
+              "name": "getText"
+            },
+            {
+              "kind": "method",
+              "name": "customSize"
+            },
+            {
+              "kind": "method",
+              "name": "sizeValue"
+            },
+            {
+              "kind": "field",
+              "name": "isFallback",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "image"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "alt"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\""
+              },
+              "default": "\"circle\"",
+              "fieldName": "shape"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "Plus.Sizes | string"
+              },
+              "fieldName": "size"
+            },
+            {
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "color"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"fas fa-user\"",
+              "fieldName": "icon"
+            },
+            {
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invert"
+            },
+            {
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "text"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-avatar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AvatarComponent",
+          "declaration": {
+            "name": "AvatarComponent",
+            "module": "src/components/avatar/avatar.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-avatar",
+          "declaration": {
+            "name": "AvatarComponent",
+            "module": "src/components/avatar/avatar.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/button.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ButtonComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"filled\" | \"outlined\" | \"dashed\" | \"text\""
+              },
+              "default": "\"filled\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"default\" | \"primary\""
+              },
+              "default": "\"default\"",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"button\" | \"submit\" | \"reset\""
+              },
+              "default": "\"button\"",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\""
+              },
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "download"
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "attribute": "rel"
+            },
+            {
+              "kind": "field",
+              "name": "groupOrder",
+              "type": {
+                "text": "\"first\" | \"middle\" | \"last\""
+              },
+              "attribute": "group-order",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "groupPosition",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "attribute": "group-position",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "isLink",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"filled\" | \"outlined\" | \"dashed\" | \"text\""
+              },
+              "default": "\"filled\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"default\" | \"primary\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "\"button\" | \"submit\" | \"reset\""
+              },
+              "default": "\"button\"",
+              "fieldName": "type"
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\""
+              },
+              "fieldName": "target"
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "download"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "fieldName": "rel"
+            },
+            {
+              "name": "group-order",
+              "type": {
+                "text": "\"first\" | \"middle\" | \"last\""
+              },
+              "fieldName": "groupOrder"
+            },
+            {
+              "name": "group-position",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "fieldName": "groupPosition"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          }
+        },
+        {
+          "kind": "variable",
+          "name": "reactWrapper"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonComponent",
+          "declaration": {
+            "name": "ButtonComponent",
+            "module": "src/components/button/button.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "ButtonComponent",
+            "module": "src/components/button/button.component.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "reactWrapper",
+            "module": "src/components/button/button.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/breadcrumb/breadcrumb.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "BreadCrumbComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "separator",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"/\"",
+              "attribute": "separator"
+            },
+            {
+              "kind": "field",
+              "name": "slotItems",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "handleChanges",
+              "privacy": "protected"
+            },
+            {
+              "kind": "method",
+              "name": "handleClickItem",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "{ target }",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "separator",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"/\"",
+              "fieldName": "separator"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-breadcrumb",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BreadCrumbComponent",
+          "declaration": {
+            "name": "BreadCrumbComponent",
+            "module": "src/components/breadcrumb/breadcrumb.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-breadcrumb",
+          "declaration": {
+            "name": "BreadCrumbComponent",
+            "module": "src/components/breadcrumb/breadcrumb.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/checkbox/checkbox.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CheckboxComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checkbox",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "text"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "indeterminate",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "caption"
+            },
+            {
+              "kind": "field",
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "error"
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleChange",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "text"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "checked"
+            },
+            {
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "indeterminate"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "caption"
+            },
+            {
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "error"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-checkbox",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CheckboxComponent",
+          "declaration": {
+            "name": "CheckboxComponent",
+            "module": "src/components/checkbox/checkbox.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-checkbox",
+          "declaration": {
+            "name": "CheckboxComponent",
+            "module": "src/components/checkbox/checkbox.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/chip/chip.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ChipComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"filled\" | \"outlined\""
+              },
+              "default": "\"filled\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "invert"
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "color"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"filled\" | \"outlined\""
+              },
+              "default": "\"filled\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "invert",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invert"
+            },
+            {
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "color"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-chip",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ChipComponent",
+          "declaration": {
+            "name": "ChipComponent",
+            "module": "src/components/chip/chip.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-chip",
+          "declaration": {
+            "name": "ChipComponent",
+            "module": "src/components/chip/chip.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/default/default.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "DefaultComponent",
+          "members": [],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-default",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DefaultComponent",
+          "declaration": {
+            "name": "DefaultComponent",
+            "module": "src/components/default/default.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-default",
+          "declaration": {
+            "name": "DefaultComponent",
+            "module": "src/components/default/default.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/divider/divider.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "DividerComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"dashed\""
+              },
+              "default": "\"default\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "attribute": "type"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"dashed\""
+              },
+              "default": "\"default\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "fieldName": "type"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-divider",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DividerComponent",
+          "declaration": {
+            "name": "DividerComponent",
+            "module": "src/components/divider/divider.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-divider",
+          "declaration": {
+            "name": "DividerComponent",
+            "module": "src/components/divider/divider.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/link/link.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LinkComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"primary\""
+              },
+              "default": "\"default\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\""
+              },
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "download"
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "attribute": "rel"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"inherit\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"primary\""
+              },
+              "default": "\"default\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\""
+              },
+              "fieldName": "target"
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "download"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "fieldName": "rel"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"inherit\"",
+              "fieldName": "size"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-link",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LinkComponent",
+          "declaration": {
+            "name": "LinkComponent",
+            "module": "src/components/link/link.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-link",
+          "declaration": {
+            "name": "LinkComponent",
+            "module": "src/components/link/link.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/progress/progress.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ProgressComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "valueFormat",
+              "type": {
+                "text": "\"percent\" | \"step\""
+              },
+              "default": "\"percent\"",
+              "attribute": "value-format"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "caption"
+            },
+            {
+              "kind": "field",
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "error"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "statusIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "status-icon",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "maxValue",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "attribute": "max-value"
+            },
+            {
+              "kind": "field",
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "indeterminate"
+            },
+            {
+              "kind": "field",
+              "name": "host",
+              "static": true,
+              "default": "css`\n    :host {\n      display: block;\n      width: 100%;\n    }\n  `"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "value-format",
+              "type": {
+                "text": "\"percent\" | \"step\""
+              },
+              "default": "\"percent\"",
+              "fieldName": "valueFormat"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "caption"
+            },
+            {
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "error"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"success\" | \"warning\" | \"error\" | \"info\" | \"default\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "status-icon",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "statusIcon"
+            },
+            {
+              "name": "max-value",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "fieldName": "maxValue"
+            },
+            {
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "indeterminate"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-progress",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ProgressComponent",
+          "declaration": {
+            "name": "ProgressComponent",
+            "module": "src/components/progress/progress.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-progress",
+          "declaration": {
+            "name": "ProgressComponent",
+            "module": "src/components/progress/progress.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/input/input.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "InputComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "input",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"date\" | \"datetime-local\" | \"email\" | \"number\" | \"password\" | \"search\" | \"tel\" | \"text\" | \"time\" | \"url\""
+              },
+              "default": "\"text\"",
+              "attribute": "type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "placeholder"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "clearable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "clearable"
+            },
+            {
+              "kind": "field",
+              "name": "passwordToggle",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "password-toggle"
+            },
+            {
+              "kind": "field",
+              "name": "passwordVisible",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "password-visible"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "pattern",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "pattern"
+            },
+            {
+              "kind": "field",
+              "name": "minlength",
+              "type": {
+                "text": "number"
+              },
+              "attribute": "minlength"
+            },
+            {
+              "kind": "field",
+              "name": "maxlength",
+              "type": {
+                "text": "number"
+              },
+              "attribute": "maxlength"
+            },
+            {
+              "kind": "field",
+              "name": "min",
+              "type": {
+                "text": "number | string"
+              },
+              "attribute": "min"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number | string"
+              },
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "step",
+              "type": {
+                "text": "number | \"any\""
+              },
+              "attribute": "step"
+            },
+            {
+              "kind": "field",
+              "name": "autocapitalize",
+              "type": {
+                "text": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
+              },
+              "attribute": "autocapitalize"
+            },
+            {
+              "kind": "field",
+              "name": "autocorrect",
+              "type": {
+                "text": "\"off\" | \"on\""
+              },
+              "attribute": "autocorrect"
+            },
+            {
+              "kind": "field",
+              "name": "autocomplete",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "autocomplete"
+            },
+            {
+              "kind": "field",
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "autofocus"
+            },
+            {
+              "kind": "field",
+              "name": "enterkeyhint",
+              "type": {
+                "text": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
+              },
+              "attribute": "enterkeyhint"
+            },
+            {
+              "kind": "field",
+              "name": "inputmode",
+              "type": {
+                "text": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
+              },
+              "attribute": "inputmode"
+            },
+            {
+              "kind": "field",
+              "name": "spellcheck",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "spellcheck"
+            },
+            {
+              "kind": "field",
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "caption"
+            },
+            {
+              "kind": "field",
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "error"
+            },
+            {
+              "kind": "field",
+              "name": "fullWidth",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "full-width",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleClearClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInput",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInvalid",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "_event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "_event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotchange",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "type",
+              "type": {
+                "text": "\"date\" | \"datetime-local\" | \"email\" | \"number\" | \"password\" | \"search\" | \"tel\" | \"text\" | \"time\" | \"url\""
+              },
+              "default": "\"text\"",
+              "fieldName": "type"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "value"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "clearable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "clearable"
+            },
+            {
+              "name": "password-toggle",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "passwordToggle"
+            },
+            {
+              "name": "password-visible",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "passwordVisible"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "pattern",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "pattern"
+            },
+            {
+              "name": "minlength",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "minlength"
+            },
+            {
+              "name": "maxlength",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "maxlength"
+            },
+            {
+              "name": "min",
+              "type": {
+                "text": "number | string"
+              },
+              "fieldName": "min"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number | string"
+              },
+              "fieldName": "max"
+            },
+            {
+              "name": "step",
+              "type": {
+                "text": "number | \"any\""
+              },
+              "fieldName": "step"
+            },
+            {
+              "name": "autocapitalize",
+              "type": {
+                "text": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
+              },
+              "fieldName": "autocapitalize"
+            },
+            {
+              "name": "autocorrect",
+              "type": {
+                "text": "\"off\" | \"on\""
+              },
+              "fieldName": "autocorrect"
+            },
+            {
+              "name": "autocomplete",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "autocomplete"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "enterkeyhint",
+              "type": {
+                "text": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
+              },
+              "fieldName": "enterkeyhint"
+            },
+            {
+              "name": "inputmode",
+              "type": {
+                "text": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
+              },
+              "fieldName": "inputmode"
+            },
+            {
+              "name": "spellcheck",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "spellcheck"
+            },
+            {
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "caption"
+            },
+            {
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "error"
+            },
+            {
+              "name": "full-width",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "fullWidth"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-input",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "InputComponent",
+          "declaration": {
+            "name": "InputComponent",
+            "module": "src/components/input/input.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-input",
+          "declaration": {
+            "name": "InputComponent",
+            "module": "src/components/input/input.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/radio/radio.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RadioComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "radio",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "text"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "text"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "checked"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-radio",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RadioComponent",
+          "declaration": {
+            "name": "RadioComponent",
+            "module": "src/components/radio/radio.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-radio",
+          "declaration": {
+            "name": "RadioComponent",
+            "module": "src/components/radio/radio.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/radio-group/radio-group.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RadioGroupComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "aligment",
+              "type": {
+                "text": "\"horizontal\" | \"vertical\""
+              },
+              "default": "\"horizontal\"",
+              "attribute": "aligment"
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "aligment",
+              "type": {
+                "text": "\"horizontal\" | \"vertical\""
+              },
+              "default": "\"horizontal\"",
+              "fieldName": "aligment"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-radio-group",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RadioGroupComponent",
+          "declaration": {
+            "name": "RadioGroupComponent",
+            "module": "src/components/radio-group/radio-group.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-radio-group",
+          "declaration": {
+            "name": "RadioGroupComponent",
+            "module": "src/components/radio-group/radio-group.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/rating/rating.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RatingComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "host",
+              "static": true,
+              "default": "css`\n    :host {\n      display: block;\n    }\n  `"
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"icon\" | \"face\""
+              },
+              "default": "\"default\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"default\" | \"primary\" | \"custom\""
+              },
+              "default": "\"default\"",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "emptyIcon",
+              "type": {
+                "text": "string"
+              },
+              "default": "`<i class=\"fa-regular fa-star\"></i>`",
+              "attribute": "empty-icon"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "`<i class=\"fa-solid fa-star\"></i>`",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "attribute": "step"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "default-value"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hoveredValue",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "hoveredValue"
+            },
+            {
+              "kind": "field",
+              "name": "half",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "half"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "calculateSelectedWidth",
+              "parameters": [
+                {
+                  "name": "index",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "half",
+                  "default": "false"
+                },
+                {
+                  "name": "val",
+                  "default": "0"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "hoveredWidth",
+              "parameters": [
+                {
+                  "name": "index",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "handleSelect"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"icon\" | \"face\""
+              },
+              "default": "\"default\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"default\" | \"primary\" | \"custom\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "empty-icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "`<i class=\"fa-regular fa-star\"></i>`",
+              "fieldName": "emptyIcon"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "`<i class=\"fa-solid fa-star\"></i>`",
+              "fieldName": "icon"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "fieldName": "max"
+            },
+            {
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "fieldName": "step"
+            },
+            {
+              "name": "default-value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "defaultValue"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "value"
+            },
+            {
+              "name": "hoveredValue",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "hoveredValue"
+            },
+            {
+              "name": "half",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "half"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-rating",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RatingComponent",
+          "declaration": {
+            "name": "RatingComponent",
+            "module": "src/components/rating/rating.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-rating",
+          "declaration": {
+            "name": "RatingComponent",
+            "module": "src/components/rating/rating.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/text.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TextComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"placeholder\" | \"caption\""
+              },
+              "default": "\"default\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "\"default\" | \"success\" | \"warning\" | \"error\" | \"info\""
+              },
+              "default": "\"default\"",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "underline",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "underline"
+            },
+            {
+              "kind": "field",
+              "name": "overline",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "overline"
+            },
+            {
+              "kind": "field",
+              "name": "lineThrough",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "line-through"
+            },
+            {
+              "kind": "field",
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "highlight"
+            },
+            {
+              "kind": "field",
+              "name": "strong",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "strong"
+            },
+            {
+              "kind": "field",
+              "name": "italic",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "italic"
+            },
+            {
+              "kind": "field",
+              "name": "textTransform",
+              "type": {
+                "text": "\"uppercase\" | \"lowercase\" | \"capitalize\" | undefined"
+              },
+              "attribute": "text-transform"
+            },
+            {
+              "kind": "field",
+              "name": "code",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "code"
+            },
+            {
+              "kind": "field",
+              "name": "truncate",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "truncate"
+            },
+            {
+              "kind": "field",
+              "name": "blockquote",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "blockquote"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"base\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"p\"",
+              "attribute": "type"
+            },
+            {
+              "kind": "method",
+              "name": "textDecoration"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"default\" | \"placeholder\" | \"caption\""
+              },
+              "default": "\"default\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "\"default\" | \"success\" | \"warning\" | \"error\" | \"info\""
+              },
+              "default": "\"default\"",
+              "fieldName": "status"
+            },
+            {
+              "name": "underline",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "underline"
+            },
+            {
+              "name": "overline",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "overline"
+            },
+            {
+              "name": "line-through",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "lineThrough"
+            },
+            {
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "highlight"
+            },
+            {
+              "name": "strong",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "strong"
+            },
+            {
+              "name": "italic",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "italic"
+            },
+            {
+              "name": "text-transform",
+              "type": {
+                "text": "\"uppercase\" | \"lowercase\" | \"capitalize\" | undefined"
+              },
+              "fieldName": "textTransform"
+            },
+            {
+              "name": "code",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "code"
+            },
+            {
+              "name": "truncate",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "truncate"
+            },
+            {
+              "name": "blockquote",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "blockquote"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"base\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"p\"",
+              "fieldName": "type"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-text",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TextComponent",
+          "declaration": {
+            "name": "TextComponent",
+            "module": "src/components/text/text.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-text",
+          "declaration": {
+            "name": "TextComponent",
+            "module": "src/components/text/text.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/textarea/textarea.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "textareaComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "textarea",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "placeholder"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "clearable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "clearable"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "minlength",
+              "type": {
+                "text": "number"
+              },
+              "attribute": "minlength"
+            },
+            {
+              "kind": "field",
+              "name": "maxlength",
+              "type": {
+                "text": "number"
+              },
+              "attribute": "maxlength"
+            },
+            {
+              "kind": "field",
+              "name": "autocapitalize",
+              "type": {
+                "text": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
+              },
+              "attribute": "autocapitalize"
+            },
+            {
+              "kind": "field",
+              "name": "autocorrect",
+              "type": {
+                "text": "\"off\" | \"on\""
+              },
+              "attribute": "autocorrect"
+            },
+            {
+              "kind": "field",
+              "name": "autocomplete",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "autocomplete"
+            },
+            {
+              "kind": "field",
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "autofocus"
+            },
+            {
+              "kind": "field",
+              "name": "enterkeyhint",
+              "type": {
+                "text": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
+              },
+              "attribute": "enterkeyhint"
+            },
+            {
+              "kind": "field",
+              "name": "inputmode",
+              "type": {
+                "text": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
+              },
+              "attribute": "inputmode"
+            },
+            {
+              "kind": "field",
+              "name": "spellcheck",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "spellcheck"
+            },
+            {
+              "kind": "field",
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "caption"
+            },
+            {
+              "kind": "field",
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "error"
+            },
+            {
+              "kind": "field",
+              "name": "rows",
+              "type": {
+                "text": "number"
+              },
+              "default": "4",
+              "attribute": "rows"
+            },
+            {
+              "kind": "field",
+              "name": "fullWidth",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "full-width",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleClearClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInput",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInvalid",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "_event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "_event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "value"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "clearable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "clearable"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "minlength",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "minlength"
+            },
+            {
+              "name": "maxlength",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "maxlength"
+            },
+            {
+              "name": "autocapitalize",
+              "type": {
+                "text": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
+              },
+              "fieldName": "autocapitalize"
+            },
+            {
+              "name": "autocorrect",
+              "type": {
+                "text": "\"off\" | \"on\""
+              },
+              "fieldName": "autocorrect"
+            },
+            {
+              "name": "autocomplete",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "autocomplete"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "enterkeyhint",
+              "type": {
+                "text": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
+              },
+              "fieldName": "enterkeyhint"
+            },
+            {
+              "name": "inputmode",
+              "type": {
+                "text": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
+              },
+              "fieldName": "inputmode"
+            },
+            {
+              "name": "spellcheck",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "spellcheck"
+            },
+            {
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "caption"
+            },
+            {
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "error"
+            },
+            {
+              "name": "rows",
+              "type": {
+                "text": "number"
+              },
+              "default": "4",
+              "fieldName": "rows"
+            },
+            {
+              "name": "full-width",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "fullWidth"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-textarea",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "textareaComponent",
+          "declaration": {
+            "name": "textareaComponent",
+            "module": "src/components/textarea/textarea.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-textarea",
+          "declaration": {
+            "name": "textareaComponent",
+            "module": "src/components/textarea/textarea.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/toggle/toggle.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ToggleComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "input",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "checked",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "text"
+            },
+            {
+              "kind": "field",
+              "name": "textPosition",
+              "type": {
+                "text": "\"left\" | \"right\""
+              },
+              "default": "\"right\"",
+              "attribute": "text-position"
+            },
+            {
+              "kind": "field",
+              "name": "toggleIcon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "toggle-icon"
+            },
+            {
+              "kind": "field",
+              "name": "toggleActiveIcon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "toggle-active-icon"
+            },
+            {
+              "kind": "field",
+              "name": "toggleInActiveIcon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "toggle-inactive-icon"
+            },
+            {
+              "kind": "field",
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "caption"
+            },
+            {
+              "kind": "field",
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "error"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInput",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInvalid",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "_event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "click"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "blur"
+            },
+            {
+              "kind": "method",
+              "name": "getToggleIcon"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "value"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "checked"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "text"
+            },
+            {
+              "name": "text-position",
+              "type": {
+                "text": "\"left\" | \"right\""
+              },
+              "default": "\"right\"",
+              "fieldName": "textPosition"
+            },
+            {
+              "name": "toggle-icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "toggleIcon"
+            },
+            {
+              "name": "toggle-active-icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "toggleActiveIcon"
+            },
+            {
+              "name": "toggle-inactive-icon",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "toggleInActiveIcon"
+            },
+            {
+              "name": "caption",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "caption"
+            },
+            {
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "error"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-toggle",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ToggleComponent",
+          "declaration": {
+            "name": "ToggleComponent",
+            "module": "src/components/toggle/toggle.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-toggle",
+          "declaration": {
+            "name": "ToggleComponent",
+            "module": "src/components/toggle/toggle.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tab/tab-group.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TabGroupComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tabGroup",
+              "type": {
+                "text": "HTMLDivElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "tabSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "panelSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "tabItems",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "panelItems",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "protected"
+            },
+            {
+              "kind": "method",
+              "name": "handleClickItem",
+              "parameters": [
+                {
+                  "name": "{ target }",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "fieldName": "kind"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-tab-group",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TabGroupComponent",
+          "declaration": {
+            "name": "TabGroupComponent",
+            "module": "src/components/tab/tab-group.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-tab-group",
+          "declaration": {
+            "name": "TabGroupComponent",
+            "module": "src/components/tab/tab-group.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tab/tab-panel.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TabPanelComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "active",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slot",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"content\""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "active"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-tab-panel",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TabPanelComponent",
+          "declaration": {
+            "name": "TabPanelComponent",
+            "module": "src/components/tab/tab-panel.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-tab-panel",
+          "declaration": {
+            "name": "TabPanelComponent",
+            "module": "src/components/tab/tab-panel.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tab/tab.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TabComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "active",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "kind",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "attribute": "kind"
+            },
+            {
+              "kind": "field",
+              "name": "slot",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"tabItem\""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"md\" | \"lg\""
+              },
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "active"
+            },
+            {
+              "name": "kind",
+              "type": {
+                "text": "\"vertical\" | \"horizontal\""
+              },
+              "default": "\"horizontal\"",
+              "fieldName": "kind"
+            }
+          ],
+          "superclass": {
+            "name": "PlusBase",
+            "module": "/src/base/plus-base"
+          },
+          "tagName": "plus-tab",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TabComponent",
+          "declaration": {
+            "name": "TabComponent",
+            "module": "src/components/tab/tab.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "plus-tab",
+          "declaration": {
+            "name": "TabComponent",
+            "module": "src/components/tab/tab.component.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
