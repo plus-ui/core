@@ -1,5 +1,5 @@
 import { css, unsafeCSS } from "lit";
-import { customElement, property, state } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";

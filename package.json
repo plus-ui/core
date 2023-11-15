@@ -1,7 +1,7 @@
 {
   "name": "@plusui/core",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "PlusUI Library built with Lit",
   "license": "MIT",
   "repository": {
@@ -10,26 +10,23 @@
   },
   "author": "PlusUI",
   "homepage": "https://www.plusui.com/",
+  "type": "module",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": [
-      {
-        "import": "./dist/index.js",
-        "types": "./dist/types/index.d.ts"
-      },
-      "./dist/index.js"
-    ]
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "scripts": {
     "dev": "vite --open",
-    "build": "vite build",
-    "preview": "vite preview --open",
-    "analyze": "cem analyze"
+    "build":"run-s build:tailwind build:dev",
+    "build:tailwind": "tailwindcss -i ./src/shared/tailwind.global.css -o ./src/shared/tailwind.css --minify",
+    "build:dev": "vite build --mode lib",
+    "preview": "vite preview --open"
   },
   "dependencies": {
     "lit": "^2.8.0"
@@ -45,9 +42,10 @@
     "sass": "^1.69.4",
     "tailwind-variants": "^0.1.14",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2",
+    "typescript": "5.0.4",
     "vite": "^4.4.5",
-    "vite-plugin-dts": "^3.6.0"
+    "vite-plugin-dts": "^3.6.0",
+    "npm-run-all": "^4.1.5"
   },
   "customElements": "custom-elements.json"
 }

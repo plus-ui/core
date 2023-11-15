@@ -29,7 +29,7 @@ export class BadgeComponent extends PlusBase {
   @property({ type: String }) color!: string;
 
   render() {
-    const { size, color, invert, kind, status, placement, content, offset } = this;
+    const { size, invert, kind, status, placement, content, offset } = this;
 
     const { base } = badgeStyle({ size, kind, status, invert, placement, isSingleChar: content?.length === 1 });
     return html`

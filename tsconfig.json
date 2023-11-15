@@ -14,8 +14,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "declaration": true,
-    "declarationDir": "./types",
     "outDir": "./dist",
 
     /* Linting */
@@ -25,6 +23,6 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
   },
-  "include": ["src","types"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"],
 }

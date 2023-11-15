@@ -2,3 +2,4 @@
 @import "light.css";
 @import "dark.css";
 @import "variables.css";
+@import "../tailwind.css";

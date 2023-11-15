@@ -30,7 +30,7 @@ export class ButtonComponent extends PlusBase {
   @property({ reflect: true, attribute: "group-position" }) groupPosition: "vertical" | "horizontal";
 
 
-  @state() private hasFocus = false;
+  @state() hasFocus = false;
 
   private isLink() {
     return this.href ? true : false;
