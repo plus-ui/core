@@ -10,7 +10,6 @@
   },
   "author": "PlusUI",
   "homepage": "https://www.plusui.com/",
-  "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
@@ -23,10 +22,9 @@
   ],
   "scripts": {
     "dev": "vite --open",
-    "build":"run-s build:tailwind build:dev",
-    "build:tailwind": "tailwindcss -i ./src/shared/tailwind.global.css -o ./src/shared/tailwind.css --minify",
-    "build:dev": "vite build --mode lib",
-    "preview": "vite preview --open"
+    "build": "vite build",
+    "preview": "vite preview --open",
+    "analyze": "cem analyze"
   },
   "dependencies": {
     "lit": "^2.8.0"
@@ -44,8 +42,7 @@
     "tailwindcss": "^3.3.3",
     "typescript": "5.0.4",
     "vite": "^4.4.5",
-    "vite-plugin-dts": "^3.6.0",
-    "npm-run-all": "^4.1.5"
+    "vite-plugin-dts": "^3.6.0"
   },
   "customElements": "custom-elements.json"
 }
