@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const checkboxStyle = tv({
   slots: {
-    host: ["antialiased font-sans flex flex-col  items-start justify-start w-full relative"],
+    host: ["antialiased font-sans flex flex-col  items-start justify-start w-full relative gap-0.5"],
     base: ["flex flex-row items-center justify-start gap-2 group/base cursor-pointer text-color-default"],
     inputElement: ["checkbox sr-only"],
     checkbox: ["rounded bg-color-base border border-color-default"],
@@ -35,17 +35,17 @@ export const checkboxStyle = tv({
     },
     size: {
       sm: {
-        host: ["text-sm gap-1.5"],
+        host: ["text-sm "],
         checkbox: ["w-4 h-4"],
         checkIcon: ["text-[8px] leading-[8px]"],
       },
       md: {
-        host: ["text-base gap-2"],
+        host: ["text-base"],
         checkbox: ["w-4.5 h-4.5"],
         checkIcon: ["text-[10px] leading-[10px]"],
       },
       lg: {
-        host: ["text-lg gap-2.5"],
+        host: ["text-lg "],
         checkbox: ["w-5 h-5"],
         checkIcon: ["text-[12px] leading-[12px]"],
       },

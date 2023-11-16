@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const labelStyle = tv({
-  base: "block font-sans font-medium",
+  base: "block font-sans font-medium text-color-default",
   variants: {
     size: {
       sm: "text-xs",
@@ -14,13 +14,8 @@ export const labelStyle = tv({
     },
     disabled: {
       true: {
-        base: "text-color-disabled",
-        required: "after:text-color-disabled",
-      },
-      false: {
-        base: "text-color-default",
-        required: "after:text-color-default",
-      },
+        base: "text-color-disabled after:text-color-disabled"
+      }
     },
   },
   defaultVariants: {

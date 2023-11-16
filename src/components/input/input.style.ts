@@ -4,7 +4,7 @@ export const inputStyle = tv({
   slots: {
     host: ["font-sans antialiased flex flex-col  items-start justify-start w-full relative"],
     base: [""],
-    inputElement: ["focus:outline-none flex-1 w-full"],
+    inputElement: ["focus:outline-none flex-1 w-full bg-transparent"],
     inputWrapper: [
       "flex flex-row items-center justify-start flex-1 w-full",
       "placeholder-color-placeholder",

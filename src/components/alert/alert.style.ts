@@ -108,7 +108,7 @@ export const alertStyle = tv({
       status: "info",
       invert: false,
       class: {
-        iconClass: "text-color-invert-success",
+        iconClass: "text-color-invert-information",
       },
     },
 
@@ -163,6 +163,7 @@ export const alertStyle = tv({
       status: "success",
       class: {
         base: ["border-color-success text-color-success bg-transparent"],
+        descriptionClass: "text-color-default",
       },
     },
     {
@@ -170,6 +171,7 @@ export const alertStyle = tv({
       status: "warning",
       class: {
         base: ["border-color-warning text-color-warning bg-transparent"],
+        descriptionClass: "text-color-default",
       },
     },
     {
@@ -177,6 +179,7 @@ export const alertStyle = tv({
       status: "info",
       class: {
         base: ["border-color-information text-color-information bg-transparent"],
+        descriptionClass: "text-color-default",
       },
     },
     {
@@ -184,6 +187,7 @@ export const alertStyle = tv({
       status: "error",
       class: {
         base: ["border-color-error text-color-error bg-transparent"],
+        descriptionClass: "text-color-default",
       },
     },
   ],

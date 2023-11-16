@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const captionStyle = tv({
-  base: "block font-sans font-normal",
+  base: "block font-sans font-normal text-color-caption",
   variants: {
     error: {
       true: "text-color-error",
@@ -15,9 +15,6 @@ export const captionStyle = tv({
     disabled: {
       true: {
         base: "text-color-disabled",
-      },
-      false: {
-        base: "text-color-caption",
       }
     },
   },

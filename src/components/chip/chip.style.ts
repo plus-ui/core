@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const chipStyle = tv({
   slots: {
     base: [
-      "font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto rounded-fullborder border-solid rounded-full bg-color-default text-color-default",
+      "font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto rounded-fullborder border-solid rounded-full bg-color-default text-color-default hover:bg-color-default-hover active:bg-color-default-pressed",
     ],
   },
   variants: {
@@ -27,7 +27,7 @@ export const chipStyle = tv({
       },
     },
     invert: {
-      true: "bg-color-invert-default text-color-base",
+      true: "bg-color-invert-default text-color-base hover:bg-color-invert-default-hover active:bg-color-invert-default-pressed",
       false: "",
     },
     status: {
@@ -44,7 +44,7 @@ export const chipStyle = tv({
         base: "bg-color-information text-color-base hover:bg-color-information-hover active:bg-color-information-pressed",
       },
       default: {
-        base: "bg-color-default text-color-default hover:bg-color-default-hover active:bg-color-default-pressed",
+        base: "",
       },
     },
     disabled: {
