@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-textarea size="sm" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea size="md" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea size="lg" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+      </div>
+      <div class="row">
+        <plus-textarea readonly size="sm" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea readonly size="md" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea readonly size="lg" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+      </div>
+      <div class="row">
+        <plus-textarea disabled size="sm" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea disabled size="md" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea disabled size="lg" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+      </div>
+      <div class="row">
+        <plus-textarea error size="sm" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea error size="md" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+        <plus-textarea error size="lg" label="Label" caption="There will be a caption text here" placeholder="Placeholder" required></plus-textarea>
+      </div>
+    </div>
+  </body>
+</html>

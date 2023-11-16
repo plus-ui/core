@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        flex: 1;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-button size="sm"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+      <div class="row">
+        <plus-button size="sm" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+      <div class="row">
+        <plus-button size="sm" kind="outlined"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm" kind="outlined"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md" kind="outlined"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg" kind="outlined"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+      <div class="row">
+        <plus-button size="sm" kind="outlined" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm" kind="outlined" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md" kind="outlined" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg" kind="outlined" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+      <div class="row">
+        <plus-button size="sm" kind="dashed"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm" kind="dashed"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md" kind="dashed"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg" kind="dashed"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+      <div class="row">
+        <plus-button size="sm" kind="dashed" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm" kind="dashed" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md" kind="dashed" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg" kind="dashed" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+      <div class="row">
+        <plus-button size="sm" kind="text"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm" kind="text"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md" kind="text"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg" kind="text"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+      <div class="row">
+        <plus-button size="sm" kind="text" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button disabled size="sm" kind="text" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="md" kind="text" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+        <plus-button size="lg" kind="text" status="primary"><i class="fa-solid fa-plus"></i> Button <i class="fa-solid fa-plus"></i></plus-button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-avatar size="xs" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar size="sm" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar size="md" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar size="lg" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar size="44" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar invert size="xs" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar invert size="sm" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar invert size="md" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar invert size="lg" text="plus ui" shape="circle"></plus-avatar>
+        <plus-avatar invert size="44" text="plus ui" shape="circle"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar size="xs" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar size="sm" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar size="md" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar size="lg" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar size="44" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar invert size="xs" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar invert size="sm" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar invert size="md" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar invert size="lg" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+        <plus-avatar invert size="44" icon="fa-solid fa-user" shape="circle"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar size="xs" image="https://i.pravatar.cc/50?u=1" shape="circle"></plus-avatar>
+        <plus-avatar size="sm" image="https://i.pravatar.cc/50?u=2" shape="circle"></plus-avatar>
+        <plus-avatar size="md" image="https://i.pravatar.cc/50?u=3" shape="circle"></plus-avatar>
+        <plus-avatar size="lg" image="https://i.pravatar.cc/50?u=4" shape="circle"></plus-avatar>
+        <plus-avatar size="44" image="https://i.pravatar.cc/50?u=5" shape="circle"></plus-avatar>
+        <plus-avatar invert size="xs" image="https://i.pravatar.cc/50?u=6" shape="circle"></plus-avatar>
+        <plus-avatar invert size="sm" image="https://i.pravatar.cc/50?u=7" shape="circle"></plus-avatar>
+        <plus-avatar invert size="md" image="https://i.pravatar.cc/50?u=8" shape="circle"></plus-avatar>
+        <plus-avatar invert size="lg" image="https://i.pravatar.cc/50?u=9" shape="circle"></plus-avatar>
+        <plus-avatar invert size="44" image="https://i.pravatar.cc/50?u=10" shape="circle"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar size="xs" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar size="sm" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar size="md" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar size="lg" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar size="44" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar invert size="xs" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar invert size="sm" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar invert size="md" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar invert size="lg" text="plus ui" shape="square"></plus-avatar>
+        <plus-avatar invert size="44" text="plus ui" shape="square"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar size="xs" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar size="sm" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar size="md" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar size="lg" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar size="44" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar invert size="xs" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar invert size="sm" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar invert size="md" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar invert size="lg" icon="fa-solid fa-user" shape="square"></plus-avatar>
+        <plus-avatar invert size="44" icon="fa-solid fa-user" shape="square"></plus-avatar>
+      </div>
+      <div class="row">
+        <plus-avatar size="xs" image="https://i.pravatar.cc/50?u=1" shape="square"></plus-avatar>
+        <plus-avatar size="sm" image="https://i.pravatar.cc/50?u=2" shape="square"></plus-avatar>
+        <plus-avatar size="md" image="https://i.pravatar.cc/50?u=3" shape="square"></plus-avatar>
+        <plus-avatar size="lg" image="https://i.pravatar.cc/50?u=4" shape="square"></plus-avatar>
+        <plus-avatar size="44" image="https://i.pravatar.cc/50?u=5" shape="square"></plus-avatar>
+        <plus-avatar invert size="xs" image="https://i.pravatar.cc/50?u=6" shape="square"></plus-avatar>
+        <plus-avatar invert size="sm" image="https://i.pravatar.cc/50?u=7" shape="square"></plus-avatar>
+        <plus-avatar invert size="md" image="https://i.pravatar.cc/50?u=8" shape="square"></plus-avatar>
+        <plus-avatar invert size="lg" image="https://i.pravatar.cc/50?u=9" shape="square"></plus-avatar>
+        <plus-avatar invert size="44" image="https://i.pravatar.cc/50?u=10" shape="square"></plus-avatar>
+      </div>
+    </div>
+  </body>
+</html>

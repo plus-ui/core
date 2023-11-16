@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        justify-content: flex-start;
+        gap: 12px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          invert
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="outlined"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="dashed"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          icon="fa-solid fa-heart-circle-plus"
+          status="default"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          invert
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="outlined"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="dashed"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="info"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          invert
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="outlined"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="dashed"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="success"
+        ></plus-alert>
+      </div>
+
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          invert
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="outlined"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="dashed"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="warning"
+        ></plus-alert>
+      </div>
+
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="filled"
+          invert
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="filled"
+          invert
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="outlined"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="outlined"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+      </div>
+      <div class="row">
+        <plus-alert
+          kind="dashed"
+          size="sm"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="md"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+        <plus-alert
+          kind="dashed"
+          size="lg"
+          closable
+          message="This is a Plus UI alert message component"
+          description="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          status="error"
+        ></plus-alert>
+      </div>
+    </div>
+  </body>
+</html>

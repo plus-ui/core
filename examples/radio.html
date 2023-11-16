@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-radio required size="sm">Radio</plus-radio>
+        <plus-radio required size="md">Radio</plus-radio>
+        <plus-radio required size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio size="sm">Radio</plus-radio>
+        <plus-radio size="md">Radio</plus-radio>
+        <plus-radio size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio readonly size="sm">Radio</plus-radio>
+        <plus-radio readonly size="md">Radio</plus-radio>
+        <plus-radio readonly size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio disabled size="sm">Radio</plus-radio>
+        <plus-radio disabled size="md">Radio</plus-radio>
+        <plus-radio disabled size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio checked size="sm">Radio</plus-radio>
+        <plus-radio checked size="md">Radio</plus-radio>
+        <plus-radio checked size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio checked readonly size="sm">Radio</plus-radio>
+        <plus-radio checked readonly size="md">Radio</plus-radio>
+        <plus-radio checked readonly size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio checked disabled size="sm">Radio</plus-radio>
+        <plus-radio checked disabled size="md">Radio</plus-radio>
+        <plus-radio checked disabled size="lg">Radio</plus-radio>
+      </div>
+
+      <div class="row">
+        <plus-radio error size="sm">Radio</plus-radio>
+        <plus-radio error size="md">Radio</plus-radio>
+        <plus-radio error size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio error readonly size="sm">Radio</plus-radio>
+        <plus-radio error readonly size="md">Radio</plus-radio>
+        <plus-radio error readonly size="lg">Radio</plus-radio>
+      </div>
+      <div class="row">
+        <plus-radio error disabled size="sm">Radio</plus-radio>
+        <plus-radio error disabled size="md">Radio</plus-radio>
+        <plus-radio error disabled size="lg">Radio</plus-radio>
+      </div>
+    </div>
+  </body>
+</html>

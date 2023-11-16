@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-chip size="sm">Chip</plus-chip>
+        <plus-chip size="sm" invert>Chip</plus-chip>
+        <plus-chip size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip size="md">Chip</plus-chip>
+        <plus-chip size="md" invert>Chip</plus-chip>
+        <plus-chip size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip size="lg">Chip</plus-chip>
+        <plus-chip size="lg" invert>Chip</plus-chip>
+        <plus-chip size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip disabled size="sm">Chip</plus-chip>
+        <plus-chip disabled size="sm" invert>Chip</plus-chip>
+        <plus-chip disabled size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled size="md">Chip</plus-chip>
+        <plus-chip disabled size="md" invert>Chip</plus-chip>
+        <plus-chip disabled size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled size="lg">Chip</plus-chip>
+        <plus-chip disabled size="lg" invert>Chip</plus-chip>
+        <plus-chip disabled size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip status="info" size="sm">Chip</plus-chip>
+        <plus-chip status="info" size="sm" invert>Chip</plus-chip>
+        <plus-chip status="info" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip status="info" size="md">Chip</plus-chip>
+        <plus-chip status="info" size="md" invert>Chip</plus-chip>
+        <plus-chip status="info" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip status="info" size="lg">Chip</plus-chip>
+        <plus-chip status="info" size="lg" invert>Chip</plus-chip>
+        <plus-chip status="info" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip disabled status="info" size="sm">Chip</plus-chip>
+        <plus-chip disabled status="info" size="sm" invert>Chip</plus-chip>
+        <plus-chip disabled status="info" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="info" size="md">Chip</plus-chip>
+        <plus-chip disabled status="info" size="md" invert>Chip</plus-chip>
+        <plus-chip disabled status="info" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="info" size="lg">Chip</plus-chip>
+        <plus-chip disabled status="info" size="lg" invert>Chip</plus-chip>
+        <plus-chip disabled status="info" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip status="success" size="sm">Chip</plus-chip>
+        <plus-chip status="success" size="sm" invert>Chip</plus-chip>
+        <plus-chip status="success" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip status="success" size="md">Chip</plus-chip>
+        <plus-chip status="success" size="md" invert>Chip</plus-chip>
+        <plus-chip status="success" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip status="success" size="lg">Chip</plus-chip>
+        <plus-chip status="success" size="lg" invert>Chip</plus-chip>
+        <plus-chip status="success" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip disabled status="success" size="sm">Chip</plus-chip>
+        <plus-chip disabled status="success" size="sm" invert>Chip</plus-chip>
+        <plus-chip disabled status="success" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="success" size="md">Chip</plus-chip>
+        <plus-chip disabled status="success" size="md" invert>Chip</plus-chip>
+        <plus-chip disabled status="success" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="success" size="lg">Chip</plus-chip>
+        <plus-chip disabled status="success" size="lg" invert>Chip</plus-chip>
+        <plus-chip disabled status="success" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip status="warning" size="sm">Chip</plus-chip>
+        <plus-chip status="warning" size="sm" invert>Chip</plus-chip>
+        <plus-chip status="warning" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip status="warning" size="md">Chip</plus-chip>
+        <plus-chip status="warning" size="md" invert>Chip</plus-chip>
+        <plus-chip status="warning" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip status="warning" size="lg">Chip</plus-chip>
+        <plus-chip status="warning" size="lg" invert>Chip</plus-chip>
+        <plus-chip status="warning" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip disabled status="warning" size="sm">Chip</plus-chip>
+        <plus-chip disabled status="warning" size="sm" invert>Chip</plus-chip>
+        <plus-chip disabled status="warning" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="warning" size="md">Chip</plus-chip>
+        <plus-chip disabled status="warning" size="md" invert>Chip</plus-chip>
+        <plus-chip disabled status="warning" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="warning" size="lg">Chip</plus-chip>
+        <plus-chip disabled status="warning" size="lg" invert>Chip</plus-chip>
+        <plus-chip disabled status="warning" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip status="error" size="sm">Chip</plus-chip>
+        <plus-chip status="error" size="sm" invert>Chip</plus-chip>
+        <plus-chip status="error" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip status="error" size="md">Chip</plus-chip>
+        <plus-chip status="error" size="md" invert>Chip</plus-chip>
+        <plus-chip status="error" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip status="error" size="lg">Chip</plus-chip>
+        <plus-chip status="error" size="lg" invert>Chip</plus-chip>
+        <plus-chip status="error" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+      <div class="row">
+        <plus-chip disabled status="error" size="sm">Chip</plus-chip>
+        <plus-chip disabled status="error" size="sm" invert>Chip</plus-chip>
+        <plus-chip disabled status="error" size="sm" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="error" size="md">Chip</plus-chip>
+        <plus-chip disabled status="error" size="md" invert>Chip</plus-chip>
+        <plus-chip disabled status="error" size="md" kind="outlined">Chip</plus-chip>
+        <plus-chip disabled status="error" size="lg">Chip</plus-chip>
+        <plus-chip disabled status="error" size="lg" invert>Chip</plus-chip>
+        <plus-chip disabled status="error" size="lg" kind="outlined">Chip</plus-chip>
+      </div>
+    </div>
+  </body>
+</html>
