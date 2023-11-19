@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row" style="width: 500px">
+      <plus-tab-group size="sm">
+        <plus-tab value="1" active> Lorem Ipsum </plus-tab>
+        <plus-tab value="2"><i class="fa fa-home"></i> Dolor Sit </plus-tab>
+        <plus-tab value="3"><i class="fa fa-home"></i> Amet </plus-tab>
+        <plus-tab-panel value="1" active> Lorem ipsum dolor sit amet consectetur adipisicing elit. </plus-tab-panel>
+        <plus-tab-panel value="2"> Dolor sit amet consectetur adipisicing elit. </plus-tab-panel>
+        <plus-tab-panel value="3"> Amet consectetur adipisicing elit. </plus-tab-panel>
+      </plus-tab-group>
+    </div>
+    <div class="row" style="width: 500px">
+      <plus-tab-group size="sm" kind="vertical">
+        <plus-tab value="1"> Lorem Ipsum </plus-tab>
+        <plus-tab value="2"><i class="fa fa-home"></i> Dolor Sit </plus-tab>
+        <plus-tab value="3"><i class="fa fa-home"></i> Amet </plus-tab>
+        <plus-tab-panel value="1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </plus-tab-panel>
+        <plus-tab-panel value="2"> Dolor sit amet consectetur adipisicing elit. </plus-tab-panel>
+        <plus-tab-panel value="3"> Amet consectetur adipisicing elit. </plus-tab-panel>
+      </plus-tab-group>
+    </div>
+  </body>
+</html>
