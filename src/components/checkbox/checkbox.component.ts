@@ -42,12 +42,12 @@ export class CheckboxComponent extends PlusBase {
   }
 
   render() {
-    const { disabled, readonly, checked, text, title, id, size, label, caption, error, required,indeterminate } = this;
-    const { base, inputElement, checkbox, checkIcon, host } = checkboxStyle({ disabled, readonly, checked: checked || indeterminate, size, focus: this.hasFocus });
+    const { disabled, readonly, checked, text, title, id, size, label, caption, error, required, indeterminate } = this;
+    const { base, inputElement, checkbox, checkIcon, host, textSlot } = checkboxStyle({ disabled, readonly, checked: checked || indeterminate, size, focus: this.hasFocus, required, error });
 
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ required, size })} @click=${this.focus}>${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
-   
+
     return html`
       <div class=${host()}>
         ${LabelTemplate()}
@@ -68,10 +68,10 @@ export class CheckboxComponent extends PlusBase {
         <label for=${id} class=${base()}>
           <div class="relative">
             <div class=${checkbox()}>
-              <i class=${checkIcon() + " fa-solid " + (indeterminate ? "fa-minus" : "fa-check" )} ></i>
+              <i class=${checkIcon() + " fa-solid " + (indeterminate ? "fa-minus" : "fa-check")}></i>
             </div>
           </div>
-          <slot>${text}</slot>
+          <span class=${textSlot()}><slot>${text}</slot></span>
         </label>
         ${CaptionTemplate()}
       </div>

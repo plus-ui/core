@@ -7,6 +7,8 @@ export const checkboxStyle = tv({
     inputElement: ["checkbox sr-only"],
     checkbox: ["rounded bg-color-base border border-color-default"],
     checkIcon: ["text-color-transparent transition-all ease-in-out scale-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"],
+    textSlot: [],
+    error: []
   },
   variants: {
     checked: {
@@ -33,6 +35,11 @@ export const checkboxStyle = tv({
         checkbox: ["bg-color-disabled", "border-color-disabled"],
       },
     },
+    error: {
+      true: {
+        checkbox: ["border-color-error"],
+      },
+    },
     size: {
       sm: {
         host: ["text-sm "],
@@ -50,6 +57,10 @@ export const checkboxStyle = tv({
         checkIcon: ["text-[12px] leading-[12px]"],
       },
     },
+    required: {
+      true: { textSlot: "after:content-['*'] after:text-color-default after:ml-0.5" },
+      false: "",
+    },
   },
   compoundVariants: [
     {
@@ -63,9 +74,27 @@ export const checkboxStyle = tv({
     {
       disabled: false,
       readonly: false,
+      checked: false,
+      error: true,
+      class: {
+        checkbox: ["group-hover/base:bg-color-invert-error-hover", "group-active/base:bg-color-invert-error-pressed"],
+      },
+    },
+    {
+      disabled: false,
+      readonly: false,
       checked: true,
       class: {
         checkbox: ["group-hover/base:bg-color-primary-hover", "group-active/base:bg-color-primary-pressed"],
+      },
+    },
+    {
+      disabled: false,
+      readonly: false,
+      checked: true,
+      error: true,
+      class: {
+        checkbox: ["border-color-error bg-color-error group-hover/base:bg-color-error-hover", "group-active/base:bg-color-error-pressed"],
       },
     },
 
@@ -91,5 +120,7 @@ export const checkboxStyle = tv({
     readonly: false,
     checked: false,
     size: "md",
+    required: false,
+    error: false,
   },
 });
