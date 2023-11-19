@@ -40,9 +40,7 @@ export class BadgeComponent extends PlusBase {
           style=${styleMap({
             ...(offset && { transform: `translate(${offset[0]}, ${offset[1]})` }),
           })}
-        >
-          ${content}
-        </div>
+        >${content}</div>
       </div>
     `;
   }

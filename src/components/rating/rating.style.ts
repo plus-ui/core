@@ -5,7 +5,7 @@ export const ratingStyle = tv({
     host: ["antialiased w-full flex items-center justify-start gap-2"],
     empty: "text-color-placeholder",
     predefined: "text-color-disabled",
-    hovered: "text-color-warning",
+    hovered: "text-color-primary",
     box: "relative",
     icon: "overflow-hidden absolute top-0 left-0 h-full ",
   },
