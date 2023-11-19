@@ -70,8 +70,8 @@ export const alertStyle = tv({
         // iconClass: "text-color-invert-error"
       },
       info: { 
-        base: ["bg-color-information text-color-base"],
-        // iconClass: "text-color-invert-information"
+        base: ["bg-color-info text-color-base"],
+        // iconClass: "text-color-invert-info"
       },
       default: { 
         base: ["bg-color-default text-color-default"],
@@ -108,7 +108,7 @@ export const alertStyle = tv({
       status: "info",
       invert: false,
       class: {
-        iconClass: "text-color-invert-information",
+        iconClass: "text-color-invert-info",
       },
     },
 
@@ -147,8 +147,8 @@ export const alertStyle = tv({
       status: "info",
       invert: true,
       class: {
-        base: ["bg-color-invert-information text-color-default"],
-        iconClass: "text-color-information",
+        base: ["bg-color-invert-info text-color-default"],
+        iconClass: "text-color-info",
       },
     },
     {
@@ -178,7 +178,7 @@ export const alertStyle = tv({
       kind: ["outlined", "dashed"],
       status: "info",
       class: {
-        base: ["border-color-information text-color-information bg-transparent"],
+        base: ["border-color-info text-color-info bg-transparent"],
         descriptionClass: "text-color-default",
       },
     },

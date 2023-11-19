@@ -23,7 +23,7 @@
   --color-text-error: theme(colors.red.600);
   --color-text-success: theme(colors.green.600);
   --color-text-warning: theme(colors.yellow.600);
-  --color-text-information: theme(colors.blue.600);
+  --color-text-info: theme(colors.blue.600);
 
   /* text invert */
   --color-text-invert-base: theme(colors.gray.950);
@@ -38,7 +38,7 @@
   --color-text-invert-error: theme(colors.red.100);
   --color-text-invert-success: theme(colors.green.100);
   --color-text-invert-warning: theme(colors.yellow.100);
-  --color-text-invert-information: theme(colors.blue.100);
+  --color-text-invert-info: theme(colors.blue.100);
 
   /* background */
   --color-background-default-default: theme(colors.gray.100);
@@ -86,14 +86,14 @@
   --color-background-error-invert-hover: theme(colors.red.200);
   --color-background-error-invert-pressed: theme(colors.red.300);
   --color-background-error-invert-focus: theme(colors.red.100);
-  --color-background-information-default: theme(colors.blue.600);
-  --color-background-information-hover: theme(colors.blue.700);
-  --color-background-information-pressed: theme(colors.blue.800);
-  --color-background-information-focus: theme(colors.blue.600);
-  --color-background-information-invert-default: theme(colors.blue.100);
-  --color-background-information-invert-hover: theme(colors.blue.200);
-  --color-background-information-invert-pressed: theme(colors.blue.300);
-  --color-background-information-invert-focus: theme(colors.blue.100);
+  --color-background-info-default: theme(colors.blue.600);
+  --color-background-info-hover: theme(colors.blue.700);
+  --color-background-info-pressed: theme(colors.blue.800);
+  --color-background-info-focus: theme(colors.blue.600);
+  --color-background-info-invert-default: theme(colors.blue.100);
+  --color-background-info-invert-hover: theme(colors.blue.200);
+  --color-background-info-invert-pressed: theme(colors.blue.300);
+  --color-background-info-invert-focus: theme(colors.blue.100);
 
   /* surface */
   --color-surface-base: theme(colors.white);

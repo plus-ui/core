@@ -41,7 +41,7 @@ export const chipStyle = tv({
         base: "bg-color-error text-color-base hover:bg-color-error-hover active:bg-color-error-pressed",
       },
       info: {
-        base: "bg-color-information text-color-base hover:bg-color-information-hover active:bg-color-information-pressed",
+        base: "bg-color-info text-color-base hover:bg-color-info-hover active:bg-color-info-pressed",
       },
       default: {
         base: "",
@@ -65,7 +65,7 @@ export const chipStyle = tv({
       invert: true,
       status: "info",
       class: {
-        base: ["bg-color-invert-information text-color-default hover:bg-color-invert-information-hover active:bg-color-invert-information-pressed"],
+        base: ["bg-color-invert-info text-color-default hover:bg-color-invert-info-hover active:bg-color-invert-info-pressed"],
       },
     },
     {

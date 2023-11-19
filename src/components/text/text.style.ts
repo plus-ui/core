@@ -48,7 +48,7 @@ export const textStyle = tv({
       success: { base: "text-color-success" },
       warning: { base: "text-color-warning" },
       error: { base: "text-color-error" },
-      info: { base: "text-color-information" },
+      info: { base: "text-color-info" },
     },
     disabled: {
       true: { base: "text-color-disabled" },

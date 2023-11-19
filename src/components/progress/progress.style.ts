@@ -36,8 +36,8 @@ export const progressStyle = tv({
         infoArea: ["text-color-error"],
       },
       info: {
-        progressLine: ["bg-color-information"],
-        infoArea: ["text-color-information"],
+        progressLine: ["bg-color-info"],
+        infoArea: ["text-color-info"],
       },
       default: {
         progressLine: ["bg-color-invert-default"],

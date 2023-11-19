@@ -35,7 +35,7 @@ export const badgeStyle = tv({
         base: "bg-color-error text-color-base",
       },
       info: {
-        base: "bg-color-information text-color-base",
+        base: "bg-color-info text-color-base",
       },
       default: {
         base: "bg-color-default text-color-default",
@@ -101,7 +101,7 @@ export const badgeStyle = tv({
       status: "info",
       invert: true,
       class: {
-        base: ["bg-color-invert-information"],
+        base: ["bg-color-invert-info"],
       },
     },
     {

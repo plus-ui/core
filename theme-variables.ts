@@ -68,7 +68,7 @@ export const themeColors = {
     success: "var(--color-border-success)",
     warning: "var(--color-border-warning)",
     default: "var(--color-border-default)",
-    information: "var(--color-border-information)",
+    info: "var(--color-border-info)",
   },
   text: {
     base: "var(--color-text-base)",
@@ -82,7 +82,7 @@ export const themeColors = {
     error: "var(--color-text-error)",
     success: "var(--color-text-success)",
     warning: "var(--color-text-warning)",
-    information: "var(--color-text-information)",
+    info: "var(--color-text-info)",
   },
   textInvert: {
     base: "var(--color-text-invert-base)",
@@ -96,7 +96,7 @@ export const themeColors = {
     error: "var(--color-text-invert-error)",
     success: "var(--color-text-invert-success)",
     warning: "var(--color-text-invert-warning)",
-    information: "var(--color-text-invert-information)",
+    info: "var(--color-text-invert-info)",
   },
   background: {
     default: {
@@ -136,11 +136,11 @@ export const themeColors = {
       pressed: "var(--color-background-error-pressed)",
       focus: "var(--color-background-error-focus)",
     },
-    information: {
-      DEFAULT: "var(--color-background-information-default)",
-      hover: "var(--color-background-information-hover)",
-      pressed: "var(--color-background-information-pressed)",
-      focus: "var(--color-background-information-focus)",
+    info: {
+      DEFAULT: "var(--color-background-info-default)",
+      hover: "var(--color-background-info-hover)",
+      pressed: "var(--color-background-info-pressed)",
+      focus: "var(--color-background-info-focus)",
     },
   },
   backgroundInvert: {
@@ -174,11 +174,11 @@ export const themeColors = {
       pressed: "var(--color-background-error-invert-pressed)",
       focus: "var(--color-background-error-invert-focus)",
     },
-    information: {
-      DEFAULT: "var(--color-background-information-invert-default)",
-      hover: "var(--color-background-information-invert-hover)",
-      pressed: "var(--color-background-information-invert-pressed)",
-      focus: "var(--color-background-information-invert-focus)",
+    info: {
+      DEFAULT: "var(--color-background-info-invert-default)",
+      hover: "var(--color-background-info-invert-hover)",
+      pressed: "var(--color-background-info-invert-pressed)",
+      focus: "var(--color-background-info-invert-focus)",
     },
   },
   surface: {
