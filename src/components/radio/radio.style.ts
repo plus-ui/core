@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const radioStyle = tv({
   slots: {
     host: ["antialiased font-sans flex flex-col  items-start justify-start w-full relative"],
-    base: ["flex flex-row items-center justify-start gap-2 group/base cursor-pointer text-color-default"],
+    base: ["flex flex-row items-center justify-start gap-2 group/base cursor-pointer text-color-default py-2 border border-transparent"],
     inputElement: ["radio sr-only"],
     radio: ["rounded-full bg-color-base border border-color-default"],
     radioDot: ["text-color-transparent transition-all ease-in-out scale-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"],
@@ -31,6 +31,13 @@ export const radioStyle = tv({
       true: {
         base: ["cursor-not-allowed text-color-disabled"],
         radio: ["bg-color-disabled", "border-color-disabled"],
+      },
+    },
+    error: {
+      true: {
+        radioDot: [" text-color-error"],
+
+        radio: ["border-color-error"],
       },
     },
     size: {
@@ -63,12 +70,30 @@ export const radioStyle = tv({
     {
       disabled: false,
       readonly: false,
+      checked: false,
+      error: true,
+      class: {
+        radio: ["group-hover/base:bg-color-invert-error-hover", "group-active/base:bg-color-invert-error-pressed"],
+      },
+    },
+    {
+      disabled: false,
+      readonly: false,
       checked: true,
       class: {
         radio: ["group-hover/base:bg-color-invert-primary-hover", "group-active/base:bg-color-invert-primary-pressed"],
       },
     },
 
+    {
+      disabled: false,
+      readonly: false,
+      checked: true,
+      error: true,
+      class: {
+        radio: ["border-color-error bg-color-invert-error group-hover/base:bg-color-invert-error-hover", "group-active/base:bg-color-invert-error-pressed"],
+      },
+    },
     {
       readonly: true,
       checked: true,
@@ -91,5 +116,6 @@ export const radioStyle = tv({
     readonly: false,
     checked: false,
     size: "md",
+    error: false,
   },
 });

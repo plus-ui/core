@@ -10,6 +10,7 @@ export class RadioComponent extends PlusBase {
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) text: string;
   @property({ type: Boolean, reflect: true }) checked = false;
+  @property({ type: Boolean, converter: value => value != "false" }) error = false;
 
   @state() hasFocus = false;
 
@@ -30,8 +31,8 @@ export class RadioComponent extends PlusBase {
   }
 
   render() {
-    const { disabled, readonly, checked, text, title, id, size } = this;
-    const { base, inputElement, radio, radioDot, host } = radioStyle({ disabled, readonly, checked, size, focus: this.hasFocus });
+    const { disabled, readonly, checked, text, title, id, size, error } = this;
+    const { base, inputElement, radio, radioDot, host } = radioStyle({ disabled, readonly, checked, size, focus: this.hasFocus, error });
     return html`
       <div class=${host()}>
         <input
