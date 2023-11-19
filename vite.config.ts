@@ -29,6 +29,7 @@ const _COMPONENTS = [
   "./src/components/progress/progress.component.ts",
   "./src/components/rating/rating.component.ts",
   "./src/components/loading/loading.component.ts",
+  "./src/components/checkbox-group/checkbox-group.component.ts",
 ];
 
 export default defineConfig({

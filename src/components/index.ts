@@ -21,3 +21,4 @@ export * from "./tab/tab-panel.component";
 export * from "./progress/progress.component";
 export * from "./rating/rating.component";
 export * from "./loading/loading.component";
+export * from "./checkbox-group/checkbox-group.component";

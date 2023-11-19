@@ -1,3 +1,4 @@
+import { unsafeCSS } from "lit";
 import { customElement, property, query, state } from "lit/decorators.js";
 import { live } from "lit/directives/live.js";
 import { html } from "lit/static-html.js";
@@ -5,9 +6,12 @@ import { PlusBase } from "../../base/plus-base";
 import { captionStyle } from "../caption/caption.style";
 import { labelStyle } from "../label/label.style";
 import { checkboxStyle } from "./checkbox.style";
-
+// @ts-ignore
+import style from "./checkbox.style.css?inline";
 @customElement("plus-checkbox")
 export class CheckboxComponent extends PlusBase {
+  static styles = [...PlusBase.styles, unsafeCSS(style)];
+
   @query(".checkbox") checkbox: HTMLInputElement;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) text: string;
@@ -43,7 +47,15 @@ export class CheckboxComponent extends PlusBase {
 
   render() {
     const { disabled, readonly, checked, text, title, id, size, label, caption, error, required, indeterminate } = this;
-    const { base, inputElement, checkbox, checkIcon, host, textSlot } = checkboxStyle({ disabled, readonly, checked: checked || indeterminate, size, focus: this.hasFocus, required, error });
+    const { base, inputElement, checkbox, checkIcon, host, textSlot } = checkboxStyle({
+      disabled,
+      readonly,
+      checked: checked || indeterminate,
+      size,
+      focus: this.hasFocus,
+      required,
+      error,
+    });
 
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ required, size })} @click=${this.focus}>${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
