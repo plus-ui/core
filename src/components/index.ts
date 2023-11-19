@@ -20,3 +20,4 @@ export * from "./tab/tab-group.component";
 export * from "./tab/tab-panel.component";
 export * from "./progress/progress.component";
 export * from "./rating/rating.component";
+export * from "./loading/loading.component";

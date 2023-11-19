@@ -28,6 +28,7 @@ const _COMPONENTS = [
   "./src/components/tab/tab-panel.component.ts",
   "./src/components/progress/progress.component.ts",
   "./src/components/rating/rating.component.ts",
+  "./src/components/loading/loading.component.ts",
 ];
 
 export default defineConfig({

@@ -1,0 +1,13 @@
+:host { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
