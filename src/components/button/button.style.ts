@@ -64,6 +64,11 @@ export const buttonStyle = tv({
         base: "rounded-none rounded-r",
       },
     },
+    loading: {
+      true: {
+        base: "cursor-wait relative overflow-hidden",
+      },
+    },
   },
   compoundVariants: [
     {
@@ -96,7 +101,8 @@ export const buttonStyle = tv({
           "text-color-default bg-color-default", 
           "hover:bg-color-default-hover", 
           "active:bg-color-default-pressed", 
-          "focus-visible:bg-color-default-focus"
+          "focus-visible:bg-color-default-focus",
+          "data-[loading=true]:bg-color-default-pressed"
         ],
       },
     },
@@ -109,7 +115,8 @@ export const buttonStyle = tv({
           "text-color-base bg-color-primary", 
           "hover:bg-color-primary-hover", 
           "active:bg-color-primary-pressed", 
-          "focus-visible:bg-color-primary-focus"
+          "focus-visible:bg-color-primary-focus",
+          "data-[loading=true]:bg-color-primary-pressed"
         ],
       },
     },
@@ -129,7 +136,8 @@ export const buttonStyle = tv({
           "text-color-default border-color-default", 
           "hover:bg-color-default-hover", 
           "active:bg-color-default-pressed", 
-          "focus-visible:bg-color-default-focus"
+          "focus-visible:bg-color-default-focus",
+          "data-[loading=true]:bg-color-default-pressed"
         ],
       },
     },
@@ -142,7 +150,8 @@ export const buttonStyle = tv({
           "text-color-primary border-color-primary", 
           "hover:bg-color-base-hover", 
           "active:bg-color-base-pressed", 
-          "focus-visible:bg-color-base-focus"
+          "focus-visible:bg-color-base-focus",
+          "data-[loading=true]:bg-color-base-pressed"
         ],
       },
     },
@@ -156,6 +165,7 @@ export const buttonStyle = tv({
           "hover:bg-color-base-hover",
           "active:bg-color-base-pressed",
           "focus-visible:bg-color-base-focus",
+          "data-[loading=true]:bg-color-base-pressed",
         ],
       },
     },
@@ -169,6 +179,7 @@ export const buttonStyle = tv({
           "hover:bg-color-base-hover",
           "active:bg-color-base-pressed",
           "focus-visible:bg-color-base-focus",
+          "data-[loading=true]:bg-color-base-pressed",
         ],
       },
     },
@@ -181,7 +192,8 @@ export const buttonStyle = tv({
           "text-color-default", 
           "hover:bg-color-default-hover", 
           "active:bg-color-default-pressed", 
-          "focus-visible:bg-color-default-focus"
+          "focus-visible:bg-color-default-focus",
+          "data-[loading=true]:bg-color-default-pressed"
         ],
       },
     },
@@ -194,7 +206,8 @@ export const buttonStyle = tv({
           "text-color-primary", 
           "hover:bg-color-base-hover", 
           "active:bg-color-base-pressed", 
-          "focus-visible:bg-color-base-focus"
+          "focus-visible:bg-color-base-focus",
+          "data-[loading=true]:bg-color-base-pressed"
         ],
       },
     },
@@ -206,5 +219,6 @@ export const buttonStyle = tv({
     disabled: false,
     groupOrder: undefined,
     groupPosition: undefined,
+    loading: false,
   },
 });

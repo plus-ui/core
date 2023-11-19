@@ -1,10 +1,10 @@
 import { ifDefined } from "lit/directives/if-defined.js";
 import { html, unsafeStatic } from "lit/static-html.js";
 
+import { unsafeCSS } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { buttonStyle } from "./button.style";
-import { unsafeCSS } from "lit";
 
 // @ts-ignore
 import style from "./button.style.css?inline";
@@ -14,7 +14,6 @@ export class ButtonComponent extends PlusBase {
   //   @property({ type: String }) color!: string;
 
   static styles = [...PlusBase.styles, unsafeCSS(style)];
-
 
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) kind: "filled" | "outlined" | "dashed" | "text" = "filled";
@@ -28,7 +27,7 @@ export class ButtonComponent extends PlusBase {
   @property() rel = "noreferrer noopener";
   @property({ reflect: true, attribute: "group-order" }) groupOrder: "first" | "middle" | "last";
   @property({ reflect: true, attribute: "group-position" }) groupPosition: "vertical" | "horizontal";
-
+  @property({ type: Boolean }) loading = false;
 
   @state() hasFocus = false;
 
@@ -51,9 +50,9 @@ export class ButtonComponent extends PlusBase {
   }
 
   render() {
-    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder, groupPosition } = this;
+    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder, groupPosition, loading } = this;
 
-    const { base } = buttonStyle({ size, disabled, kind, status, groupOrder,groupPosition });
+    const { base } = buttonStyle({ size, disabled, kind, status, groupOrder, groupPosition, loading });
 
     const isLink = this.isLink();
     const tag = unsafeStatic(isLink ? `a` : `button`);
@@ -75,13 +74,15 @@ export class ButtonComponent extends PlusBase {
         rel=${ifDefined(isLink ? rel : undefined)}
         role=${ifDefined(isLink ? undefined : "button")}
         aria-disabled=${disabled ? "true" : "false"}
+        data-loading=${loading ? "true" : "false"}
         tabindex=${disabled ? "-1" : "0"}
         @blur=${this.handleBlur}
         @focus=${this.handleFocus}
         @click=${this.handleClick}
       >
-        <slot></slot>
-    </${tag}>
+      <slot></slot>
+      ${loading ? html`<plus-loading></plus-loading>` : ""}
+      </${tag}>
     `;
   }
 }
