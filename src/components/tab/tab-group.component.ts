@@ -28,7 +28,7 @@ export class TabGroupComponent extends PlusBase {
     this.tabItems?.forEach((item, _) => {
       item.setAttribute("size", this.size);
       item.setAttribute("kind", this.kind);
-      this.disabled ? item.setAttribute("disabled", "") : item.removeAttribute("disabled");
+      item.disabled = this.disabled || item.disabled;
     });
   }
 
