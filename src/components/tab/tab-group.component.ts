@@ -40,11 +40,11 @@ export class TabGroupComponent extends PlusBase {
   handleClickItem({ target }: Event) {
     const _target = target as HTMLElement;
     const _parent = _target.parentElement;
-    console.log({ _parent });
     if (target instanceof HTMLElement && target.tagName.toLowerCase() === "plus-tab") {
       const { id } = target;
       this.tabItems?.forEach((item, _) => {
         item.active = item.id === id;
+        this.emit("plus-change", { detail: { id } });
       });
       const activeItem = this.tabItems?.find(item => item.active);
       this.panelItems?.forEach((panel, _) => {

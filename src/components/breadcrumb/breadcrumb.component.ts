@@ -33,6 +33,7 @@ export class BreadCrumbComponent extends PlusBase {
       this.slotItems?.forEach((item, _) => {
         if(item.id === id) {
           item.setAttribute("active","true");
+          this.emit("plus-click", { detail: { id } });
         } else {
           item.setAttribute("active","false");
         }
