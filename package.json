@@ -1,7 +1,7 @@
 {
   "name": "@plusui/core",
   "private": false,
-  "version": "0.1.6",
+  "version": "0.1.9",
   "description": "PlusUI Library built with Lit",
   "license": "MIT",
   "repository": {
@@ -13,8 +13,13 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "files": [

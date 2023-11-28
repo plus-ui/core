@@ -5,7 +5,7 @@ import { customElement, property } from "lit/decorators.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { PlusBase } from "../../base/plus-base";
 import { textStyle } from "./text.style";
-/** @ts-ignorqe */
+/** @ts-ignore */
 import style from "./text.style.css?inline";
 
 @customElement("plus-text")
