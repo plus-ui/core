@@ -7,7 +7,7 @@ import { checkboxGroupStyle } from "./checkbox-group.style";
 
 @customElement("plus-checkbox-group")
 export class CheckboxGroupComponent extends PlusBase {
-  @property({ type: String }) aligment: "horizontal" | "vertical" = "horizontal";
+  @property({ type: String }) orientation: "horizontal" | "vertical" = "horizontal";
 
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) label?: string;
@@ -35,8 +35,8 @@ export class CheckboxGroupComponent extends PlusBase {
   // }
 
   render() {
-    const { size, required, error, label, caption, aligment } = this;
-    const { host, inputWrapper } = checkboxGroupStyle({ size, aligment });
+    const { size, required, error, label, caption, orientation } = this;
+    const { host, inputWrapper } = checkboxGroupStyle({ size, orientation });
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ size, required })} for="input">${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
     return html`

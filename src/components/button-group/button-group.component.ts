@@ -7,7 +7,7 @@ import { buttonGroupStyle } from "./button-group.style";
 export class ButtonGroupComponent extends PlusBase {
   @query(".button-group") buttonGroup!: HTMLElement;
 
-  @property({ type: String }) type: "vertical" | "horizontal" = "horizontal";
+  @property({ type: String }) orientation: "vertical" | "horizontal" = "horizontal";
 
   handleSlotChange() {
     const slot = this.shadowRoot.querySelector("slot");
@@ -16,7 +16,7 @@ export class ButtonGroupComponent extends PlusBase {
     const buttons = assignedNodes.filter(node => node.tagName === "PLUS-BUTTON");
 
     buttons.forEach((button, index) => {
-      button.groupPosition = this.type;  
+      button.groupPosition = this.orientation;  
       if (index === 0) {
         button.groupOrder = "first";
       }
@@ -30,8 +30,8 @@ export class ButtonGroupComponent extends PlusBase {
   }
 
   render() {
-    const { type } = this;
-    const { base } = buttonGroupStyle({type});
+    const { orientation } = this;
+    const { base } = buttonGroupStyle({orientation});
     return html`
       <div class=${"button-group " + base()} role="group" aria-live="polite">
         <slot @slotchange=${this.handleSlotChange}></slot>

@@ -7,7 +7,7 @@ import { radioGroupStyle } from "./radio-group.style";
 
 @customElement("plus-radio-group")
 export class RadioGroupComponent extends PlusBase {
-  @property({ type: String }) aligment: "horizontal" | "vertical" = "horizontal";
+  @property({ type: String }) orientation: "horizontal" | "vertical" = "horizontal";
   @query("slot") defaultSlot: HTMLSlotElement;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) label?: string;
@@ -31,8 +31,8 @@ export class RadioGroupComponent extends PlusBase {
   }
 
   render() {
-    const { aligment, label, caption, size, error, required } = this;
-    const { host, inputWrapper } = radioGroupStyle({ aligment });
+    const { orientation, label, caption, size, error, required } = this;
+    const { host, inputWrapper } = radioGroupStyle({ orientation });
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ size, required })} for="input">${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
     return html`

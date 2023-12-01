@@ -12,7 +12,7 @@ export const checkboxGroupStyle = tv({
       lg: "",
     },
 
-    aligment: {
+    orientation: {
       horizontal: {
         inputWrapper: ["flex-row"],
       },
@@ -24,42 +24,42 @@ export const checkboxGroupStyle = tv({
   compoundVariants: [
     {
       size: "sm",
-      aligment: "horizontal",
+      orientation: "horizontal",
       class: {
         inputWrapper: ["gap-4"],
       },
     },
     {
       size: "sm",
-      aligment: "vertical",
+      orientation: "vertical",
       class: {
         inputWrapper: ["gap-2"],
       },
     },
     {
       size: "md",
-      aligment: "horizontal",
+      orientation: "horizontal",
       class: {
         inputWrapper: ["gap-5"],
       },
     },
     {
       size: "md",
-      aligment: "vertical",
+      orientation: "vertical",
       class: {
         inputWrapper: ["gap-2.5"],
       },
     },
     {
       size: "lg",
-      aligment: "horizontal",
+      orientation: "horizontal",
       class: {
         inputWrapper: ["gap-6"],
       },
     },
     {
       size: "lg",
-      aligment: "vertical",
+      orientation: "vertical",
       class: {
         inputWrapper: ["gap-3"],
       },
@@ -67,6 +67,6 @@ export const checkboxGroupStyle = tv({
   ],
   defaultVariants: {
     size: "md",
-    aligment: "horizontal",
+    orientation: "horizontal",
   },
 });

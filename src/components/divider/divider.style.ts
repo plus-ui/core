@@ -9,13 +9,13 @@ export const DividerStyle = tv({
       default: "border-solid",
       dashed: "border-dashed",
     },
-    type: {
+    orientation: {
       vertical: " h-full w-2 border-l",
       horizontal: "h-2 w-full border-t",
     },
   },
   defaultVariants: {
     kind: "default",
-    type: "horizontal",
+    orientation: "horizontal",
   },
 });

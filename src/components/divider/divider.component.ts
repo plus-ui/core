@@ -12,12 +12,12 @@ export class DividerComponent extends PlusBase {
   static styles = [...PlusBase.styles, unsafeCSS(style)];
 
   @property({ type: String }) kind: "default" | "dashed" = "default";
-  @property({ type: String }) type: "vertical" | "horizontal" = "horizontal";
+  @property({ type: String }) orientation: "vertical" | "horizontal" = "horizontal";
 
   render() {
-    const { kind, type } = this;
+    const { kind, orientation } = this;
 
-    const { base } = DividerStyle({ kind, type });
+    const { base } = DividerStyle({ kind, orientation });
 
     return html`<hr class="${base()}" />`;
   }

@@ -5,7 +5,7 @@
   height: 1px;
 }
 
-:host([type='vertical']) {
+:host([orientation='vertical']) {
   width: 1px;
   height: auto;
 }
