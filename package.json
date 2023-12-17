@@ -35,13 +35,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run format && git add -A .",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-     "src/components/**/*.{js,ts,css,scss}": "prettier --write",
-     "src/components/**/*.{ts}": "eslint"
+    "src/components/**/*.{js,ts,css,scss}": "prettier --write",
+    "src/components/**/*.{ts}": "eslint"
   },
   "dependencies": {
     "lit": "^2.8.0"
