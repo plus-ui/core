@@ -30,7 +30,6 @@
     "build": "vite build",
     "preview": "vite preview --open",
     "analyze": "cem analyze",
-    "lint": "prettier --check .",
     "format": "prettier --write ."
   },
   "husky": {
@@ -40,8 +39,8 @@
   },
   "lint-staged": {
     "src/components/**/*.{js,ts,css,scss}": "prettier --write",
-    "src/components/**/*.ts": "eslint",
-    "*.html": "prettier --write"
+    "*.html": "prettier --write",
+    "src/*.ts": "eslint"
   },
   "dependencies": {
     "lit": "^2.8.0"
@@ -51,6 +50,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@custom-elements-manifest/analyzer": "^0.9.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
+    "@types/node": "^20.10.5",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "autoprefixer": "^10.4.16",
