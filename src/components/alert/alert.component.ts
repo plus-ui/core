@@ -15,18 +15,18 @@ export class AlertComponent extends PlusBase {
   @property({ type: String, reflect: true }) size: "sm" | "md" | "lg" = "md";
 
   @property({ type: String }) message: string;
-  
+
   @state() _icon = "";
-  @property({ type: String }) 
+  @property({ type: String })
   set icon(value) {
     this._icon = value;
   }
   get icon() {
     const defaultIcon = {
-      info : "fa-solid fa-circle-info",
-      success : "fa-solid fa-circle-check",
-      warning : "fa-solid fa-triangle-exclamation",
-      error : "fa-solid fa-circle-exclamation",
+      info: "fa-solid fa-circle-info",
+      success: "fa-solid fa-circle-check",
+      warning: "fa-solid fa-triangle-exclamation",
+      error: "fa-solid fa-circle-exclamation",
     };
     return this._icon ? this._icon : defaultIcon[this.status];
   }
@@ -40,9 +40,6 @@ export class AlertComponent extends PlusBase {
   render() {
     const { kind, status, size, invert, fullWidth, closable, message, description, icon } = this;
     const { base, textArea, descriptionClass, closableArea, iconClass } = alertStyle({ status, kind, size, invert, fullWidth, closable });
-
-
-
 
     return html`<div class=${"alert " + base()} role="alert">
       ${icon ? html`<div class=${iconClass()}><i class=${icon}></i></div>` : null}

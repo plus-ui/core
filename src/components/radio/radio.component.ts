@@ -1,4 +1,4 @@
-import { customElement, property, query , state} from "lit/decorators.js";
+import { customElement, property, query, state } from "lit/decorators.js";
 import { live } from "lit/directives/live.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";

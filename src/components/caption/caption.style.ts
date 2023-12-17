@@ -15,7 +15,7 @@ export const captionStyle = tv({
     disabled: {
       true: {
         base: "text-color-disabled",
-      }
+      },
     },
   },
   compoundVariants: [],

@@ -70,10 +70,10 @@ export class ColorHelper {
     } else {
       // Generate CSS variables for each tone
       const toneList = Array.isArray(tones) ? tones : Object.keys(tones);
-      toneList.forEach((tone) => {
+      toneList.forEach(tone => {
         if (colors[color][tone]) {
           if (Array.isArray(tones[tone])) {
-            tones[tone].forEach((item) => {
+            tones[tone].forEach(item => {
               result[`${variable}-${item}`] = colors[color][tone];
             });
           } else {
@@ -85,7 +85,7 @@ export class ColorHelper {
 
     // Generate the return statement as a string
     const returnStatement = Object.keys(result)
-      .map((key) => `--${variable}-${key}: ${result[key]};`)
+      .map(key => `--${variable}-${key}: ${result[key]};`)
       .join("\n");
 
     return returnStatement;

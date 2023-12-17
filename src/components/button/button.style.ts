@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const buttonStyle = tv({
   slots: {
     base: [
-      "relative flex items-center justify-center font-sans rounded border border-color-default", 
+      "relative flex items-center justify-center font-sans rounded border border-color-default",
       "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:z-[1]",
     ],
   },
@@ -34,11 +34,10 @@ export const buttonStyle = tv({
       },
     },
     groupPosition: {
-      vertical: {   
-       base: "w-full"  
+      vertical: {
+        base: "w-full",
       },
-      horizontal: { 
-      },
+      horizontal: {},
     },
     status: {
       default: {
@@ -98,11 +97,11 @@ export const buttonStyle = tv({
       disabled: false,
       class: {
         base: [
-          "text-color-default bg-color-default", 
-          "hover:bg-color-default-hover", 
-          "active:bg-color-default-pressed", 
+          "text-color-default bg-color-default",
+          "hover:bg-color-default-hover",
+          "active:bg-color-default-pressed",
           "focus-visible:bg-color-default-focus",
-          "data-[loading=true]:bg-color-default-pressed"
+          "data-[loading=true]:bg-color-default-pressed",
         ],
       },
     },
@@ -112,11 +111,11 @@ export const buttonStyle = tv({
       disabled: false,
       class: {
         base: [
-          "text-color-base bg-color-primary", 
-          "hover:bg-color-primary-hover", 
-          "active:bg-color-primary-pressed", 
+          "text-color-base bg-color-primary",
+          "hover:bg-color-primary-hover",
+          "active:bg-color-primary-pressed",
           "focus-visible:bg-color-primary-focus",
-          "data-[loading=true]:bg-color-primary-pressed"
+          "data-[loading=true]:bg-color-primary-pressed",
         ],
       },
     },
@@ -133,11 +132,11 @@ export const buttonStyle = tv({
       disabled: false,
       class: {
         base: [
-          "text-color-default border-color-default", 
-          "hover:bg-color-default-hover", 
-          "active:bg-color-default-pressed", 
+          "text-color-default border-color-default",
+          "hover:bg-color-default-hover",
+          "active:bg-color-default-pressed",
           "focus-visible:bg-color-default-focus",
-          "data-[loading=true]:bg-color-default-pressed"
+          "data-[loading=true]:bg-color-default-pressed",
         ],
       },
     },
@@ -147,11 +146,11 @@ export const buttonStyle = tv({
       disabled: false,
       class: {
         base: [
-          "text-color-primary border-color-primary", 
-          "hover:bg-color-base-hover", 
-          "active:bg-color-base-pressed", 
+          "text-color-primary border-color-primary",
+          "hover:bg-color-base-hover",
+          "active:bg-color-base-pressed",
           "focus-visible:bg-color-base-focus",
-          "data-[loading=true]:bg-color-base-pressed"
+          "data-[loading=true]:bg-color-base-pressed",
         ],
       },
     },
@@ -189,11 +188,11 @@ export const buttonStyle = tv({
       disabled: false,
       class: {
         base: [
-          "text-color-default", 
-          "hover:bg-color-default-hover", 
-          "active:bg-color-default-pressed", 
+          "text-color-default",
+          "hover:bg-color-default-hover",
+          "active:bg-color-default-pressed",
           "focus-visible:bg-color-default-focus",
-          "data-[loading=true]:bg-color-default-pressed"
+          "data-[loading=true]:bg-color-default-pressed",
         ],
       },
     },
@@ -202,13 +201,7 @@ export const buttonStyle = tv({
       status: "primary",
       disabled: false,
       class: {
-        base: [
-          "text-color-primary", 
-          "hover:bg-color-base-hover", 
-          "active:bg-color-base-pressed", 
-          "focus-visible:bg-color-base-focus",
-          "data-[loading=true]:bg-color-base-pressed"
-        ],
+        base: ["text-color-primary", "hover:bg-color-base-hover", "active:bg-color-base-pressed", "focus-visible:bg-color-base-focus", "data-[loading=true]:bg-color-base-pressed"],
       },
     },
   ],

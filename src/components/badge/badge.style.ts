@@ -110,7 +110,7 @@ export const badgeStyle = tv({
       class: {
         base: ["bg-color-invert-default text-color-base"],
       },
-    }
+    },
   ],
   defaultVariants: {
     size: "md",

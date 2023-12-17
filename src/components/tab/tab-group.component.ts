@@ -3,8 +3,8 @@ import { customElement, property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
 // @ts-ignore
-import style from "./tab.style.css?inline";
 import { tabStyle } from "./tab.style";
+import style from "./tab.style.css?inline";
 @customElement("plus-tab-group")
 export class TabGroupComponent extends PlusBase {
   static styles = [...PlusBase.styles, unsafeCSS(style)];

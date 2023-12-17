@@ -8,7 +8,7 @@ export const checkboxStyle = tv({
     checkbox: ["rounded bg-color-base border border-color-default"],
     checkIcon: ["text-color-transparent transition-all ease-in-out scale-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"],
     textSlot: [],
-    error: []
+    error: [],
   },
   variants: {
     checked: {

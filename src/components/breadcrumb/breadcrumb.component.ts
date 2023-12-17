@@ -1,8 +1,8 @@
+import { PropertyValueMap } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
 import { breadCrumbStyle } from "./breadcrumb.style";
-import { PropertyValueMap } from "lit";
 
 @customElement("plus-breadcrumb")
 export class BreadCrumbComponent extends PlusBase {
@@ -18,7 +18,7 @@ export class BreadCrumbComponent extends PlusBase {
   protected handleChanges() {
     this.slotItems?.forEach((item, _) => {
       item.setAttribute("size", this.size);
-      item.setAttribute("separator", this.separator); 
+      item.setAttribute("separator", this.separator);
     });
   }
 
@@ -28,23 +28,22 @@ export class BreadCrumbComponent extends PlusBase {
   }
 
   private handleClickItem({ target }: Event) {
-   if(target instanceof HTMLElement && target.tagName.toLowerCase() === "plus-breadcrumb-item") {
+    if (target instanceof HTMLElement && target.tagName.toLowerCase() === "plus-breadcrumb-item") {
       const { id } = target;
       this.slotItems?.forEach((item, _) => {
-        if(item.id === id) {
-          item.setAttribute("active","true");
+        if (item.id === id) {
+          item.setAttribute("active", "true");
           this.emit("plus-click", { detail: { id } });
         } else {
-          item.setAttribute("active","false");
+          item.setAttribute("active", "false");
         }
       });
-   }
-    
+    }
   }
 
   render() {
-    const {size} = this;
-    const {host} = breadCrumbStyle({size});
+    const { size } = this;
+    const { host } = breadCrumbStyle({ size });
     return html`
       <nav class=${host()} aria-label="Breadcrumb">
         <slot @slotchange=${() => this.handleChanges()} @click=${this.handleClickItem}></slot>

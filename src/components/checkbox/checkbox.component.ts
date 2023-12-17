@@ -79,9 +79,7 @@ export class CheckboxComponent extends PlusBase {
         />
         <label for=${id} class=${base()}>
           <div class="relative">
-            <div class=${checkbox()}>
-              ${indeterminate ? html`<i class=${checkIcon() + " fa-solid fa-minus"}></i>` : html`<i class=${checkIcon() + " fa-solid fa-check"}></i>`}
-            </div>
+            <div class=${checkbox()}>${indeterminate ? html`<i class=${checkIcon() + " fa-solid fa-minus"}></i>` : html`<i class=${checkIcon() + " fa-solid fa-check"}></i>`}</div>
           </div>
           <span class=${textSlot()}><slot>${text}</slot></span>
         </label>

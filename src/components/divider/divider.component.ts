@@ -4,8 +4,8 @@ import { customElement, property } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { DividerStyle } from "./divider.style";
 /** @ts-ignore */
-import style from "./divider.style.css?inline";
 import { unsafeCSS } from "lit";
+import style from "./divider.style.css?inline";
 
 @customElement("plus-divider")
 export class DividerComponent extends PlusBase {

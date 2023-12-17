@@ -4,6 +4,6 @@ export const LoadingStyle = tv({
   slots: {
     base: [],
   },
-  variants: { },
+  variants: {},
   defaultVariants: {},
 });

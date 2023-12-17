@@ -14,8 +14,8 @@ export const labelStyle = tv({
     },
     disabled: {
       true: {
-        base: "text-color-disabled after:text-color-disabled"
-      }
+        base: "text-color-disabled after:text-color-disabled",
+      },
     },
   },
   defaultVariants: {

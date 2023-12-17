@@ -6,7 +6,6 @@ import { PlusBase } from "../../base/plus-base";
 export class TabPanelComponent extends PlusBase {
   @property({ type: Boolean, reflect: true }) active = false;
 
-
   constructor() {
     super();
     this.slot = "content";

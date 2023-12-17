@@ -57,23 +57,23 @@ export const alertStyle = tv({
       },
     },
     status: {
-      success: { 
+      success: {
         base: ["bg-color-success text-color-base"],
         // iconClass: "text-color-invert-success"
       },
-      warning: { 
+      warning: {
         base: ["bg-color-warning text-color-base"],
         // iconClass: "text-color-invert-warning"
       },
-      error: { 
+      error: {
         base: ["bg-color-error text-color-base"],
         // iconClass: "text-color-invert-error"
       },
-      info: { 
+      info: {
         base: ["bg-color-info text-color-base"],
         // iconClass: "text-color-invert-info"
       },
-      default: { 
+      default: {
         base: ["bg-color-default text-color-default"],
       },
     },
@@ -102,7 +102,7 @@ export const alertStyle = tv({
         iconClass: "text-color-invert-success",
       },
     },
-    
+
     {
       kind: "filled",
       status: "info",

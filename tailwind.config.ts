@@ -10,7 +10,7 @@ export default {
         ...require("tailwindcss/defaultConfig").theme.fontFamily,
         sans: ["Inter", ...require("tailwindcss/defaultConfig").theme.fontFamily.sans],
       },
-      colors: ({  colors }) => ({
+      colors: ({ colors }) => ({
         inherit: colors.inherit,
         current: colors.current,
         transparent: colors.transparent,
@@ -38,7 +38,7 @@ export default {
         fuchsia: colors.fuchsia,
         pink: colors.pink,
         rose: colors.rose,
-        primaryColor: colors.blue
+        primaryColor: colors.blue,
       }),
       minHeight: ({ theme }) => ({
         ...theme("spacing"),
@@ -83,7 +83,7 @@ export default {
       }),
       ringColor: ({ theme }) => ({
         DEFAULT: "var(--color-border-focus)",
-        ...theme('colors'),
+        ...theme("colors"),
       }),
       animation: {
         ...require("tailwindcss/defaultConfig").theme.animation,

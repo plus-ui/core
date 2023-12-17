@@ -103,7 +103,7 @@ export class ToggleComponent extends PlusBase {
     const { label, hasFocus, error, disabled, caption, value, checked, title, name, required, textPosition, text, readonly, size } = this;
     const { inputElement, host, toggle, toggleText, toggleDot, base } = toggleStyle({ focus: hasFocus, error, disabled, checked, textPosition, readonly, size });
 
-    const LabelTemplate = () => (label ? html`<label class=${labelStyle({required, size})} @click=${this.focus}>${label}</label>` : null);
+    const LabelTemplate = () => (label ? html`<label class=${labelStyle({ required, size })} @click=${this.focus}>${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
 
     return html`<div class=${host()}>

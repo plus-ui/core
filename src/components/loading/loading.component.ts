@@ -1,9 +1,9 @@
 import { html } from "lit/static-html.js";
 
+import { unsafeCSS } from "lit";
 import { customElement } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { LoadingStyle } from "./loading.style";
-import { unsafeCSS } from "lit";
 /** @ts-ignore */
 import style from "./loading.style.css?inline";
 

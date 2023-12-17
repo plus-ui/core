@@ -54,7 +54,7 @@ export const progressStyle = tv({
       true: {
         progress: ["overflow-hidden"],
         progressLine: ["!w-full animate-progress-indeterminate"],
-      }
+      },
     },
   },
   compoundVariants: [

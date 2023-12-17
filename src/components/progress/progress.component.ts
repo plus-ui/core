@@ -31,7 +31,7 @@ export class ProgressComponent extends PlusBase {
       width: 100%;
     }
   `;
-  
+
   static styles = [...PlusBase.styles, unsafeCSS(ProgressComponent.host)];
 
   render() {
