@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
 import { tabStyle } from "./tab.style";
-// @ts-ignore
+// eslint-disable-next-line
 import style from "./tab.style.css?inline";
 
 @customElement("plus-tab")
