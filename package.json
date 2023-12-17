@@ -29,7 +29,8 @@
     "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview --open",
-    "analyze": "cem analyze"
+    "analyze": "cem analyze",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
