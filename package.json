@@ -40,7 +40,8 @@
   },
   "lint-staged": {
     "src/components/**/*.{js,ts,css,scss}": "prettier --write",
-    "src/components/**/*.{ts}": "eslint"
+    "src/components/**/*.ts": "eslint",
+    "*.html": "prettier --write"
   },
   "dependencies": {
     "lit": "^2.8.0"
