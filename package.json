@@ -31,6 +31,11 @@
     "preview": "vite preview --open",
     "analyze": "cem analyze"
   },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
   "dependencies": {
     "lit": "^2.8.0"
   },
@@ -38,6 +43,7 @@
     "@custom-elements-manifest/analyzer": "^0.9.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
     "autoprefixer": "^10.4.16",
+    "husky": "^8.0.3",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.3",
@@ -51,5 +57,3 @@
   },
   "customElements": "custom-elements.json"
 }
-
-

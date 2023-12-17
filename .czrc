@@ -1,0 +1,102 @@
+{
+  "types": [
+    {
+      "value": "feat",
+      "name": "feat: add a new feature"
+    },
+    {
+      "value": "add",
+      "name": "add: add a new feature"
+    },
+    {
+      "value": "update",
+      "name": "update: make updates"
+    },
+    {
+      "value": "remove",
+      "name": "remove: remove"
+    },
+    {
+      "value": "delete",
+      "name": "delete: delete"
+    },
+    {
+      "value": "fix",
+      "name": "fix: fix a bug"
+    },
+    {
+      "value": "bug",
+      "name": "bug: fix a bug"
+    },
+    {
+      "value": "story",
+      "name": "story: add a story"
+    },
+    {
+      "value": "docs",
+      "name": "docs: update documentation"
+    },
+    {
+      "value": "style",
+      "name": "style: format code, punctuation, etc."
+    },
+    {
+      "value": "refactor",
+      "name": "refactor: refactor code"
+    },
+    {
+      "value": "test",
+      "name": "test: add tests"
+    },
+    {
+      "value": "chore",
+      "name": "chore: miscellaneous changes"
+    },
+    {
+      "value": "wip",
+      "name": "wip: work in progress"
+    },
+    {
+      "value": "revert",
+      "name": "revert: revert a change"
+    },
+    {
+      "value": "release",
+      "name": "release: release a version"
+    },
+    {
+      "value": "pbi",
+      "name": "pbi: add a product backlog item"
+    },
+    {
+        "value":"config",
+        "name":"config: update config"
+    }
+  ],
+  "scopes": [
+    {
+      "name": "component"
+    },
+    {
+      "name": "core"
+    },
+    {
+      "name": "docs"
+    },
+    {
+      "name": "example"
+    },
+    {
+      "name": "lib"
+    },
+    {
+      "name": "test"
+    },
+    {
+      "name": "util"
+    },
+    {
+      "name": "config"
+    }
+  ]
+}
