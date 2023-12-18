@@ -30,12 +30,18 @@
     "build": "vite build",
     "preview": "vite preview --open",
     "analyze": "cem analyze",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "src/components/**/*.{js,ts,css,scss}": "prettier --write",
+    "*.html": "prettier --write",
+    "src/*.ts": "eslint"
   },
   "dependencies": {
     "lit": "^2.8.0"
@@ -43,8 +49,11 @@
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.9.0",
     "@fortawesome/fontawesome-free": "^6.4.2",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "autoprefixer": "^10.4.16",
-    "commitizen": "^4.3.0",
+    "eslint": "^8.56.0",
+    "lint-staged": "^15.2.0",
     "husky": "^8.0.3",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
