@@ -31,7 +31,7 @@
     "preview": "vite preview --open",
     "analyze": "cem analyze",
     "prepare": "husky install",
-    "format": "prettier --write ."
+    "format": "prettier --write *.ts --ignore-unknown"
   },
   "husky": {
     "hooks": {
@@ -39,7 +39,7 @@
     }
   },
   "lint-staged": {
-    "src/components/**/*.{js,ts,css,scss}": "prettier --write",
+    "src/**/*.ts": "prettier --write . --ignore-unknown",
     "*.html": "prettier --write",
     "src/*.ts": "eslint"
   },
