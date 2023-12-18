@@ -51,7 +51,9 @@ export class AvatarComponent extends PlusBase {
       invert,
     });
 
-    const renderDefaultIcon = () => { return html`<i class=${icon() + " " + this.icon}></i>`; }
+    const renderDefaultIcon = () => {
+      return html`<i class=${icon() + " " + this.icon}></i>`;
+    };
 
     const RenderContent = () => {
       if (this.isFallback) {
