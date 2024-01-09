@@ -48,6 +48,14 @@ export default {
         ...theme("spacing"),
         ...require("tailwindcss/defaultConfig").theme.minWidth,
       }),
+      maxWidth: ({ theme }) => ({
+        ...theme("spacing"),
+        ...require("tailwindcss/defaultConfig").theme.maxWidth,
+      }),
+      maxHeight: ({ theme }) => ({
+        ...theme("spacing"),
+        ...require("tailwindcss/defaultConfig").theme.maxHeight,
+      }),
       textColor: ({ theme }) => ({
         ...theme("colors"),
         color: {

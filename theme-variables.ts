@@ -57,6 +57,42 @@ export const themeVariables = {
     "9xl": ["var(--font-size-9xl, 8rem)", { lineHeight: "var(--font-size-9xl-line-height, 1)" }],
     "size-inherit": ["inherit", { lineHeight: "inherit" }],
   },
+
+  borderRadius: {
+    none: "var(--border-radius-none, 0px)",
+    sm: "var(--border-radius-sm, 0.125rem)",
+    DEFAULT: "var(--border-radius-default, 0.25rem)",
+    md: "var(--border-radius-md, 0.375rem)",
+    lg: "var(--border-radius-lg, 0.5rem)",
+    xl: "var(--border-radius-xl, 0.75rem)",
+    "2xl": "var(--border-radius-2xl, 1rem)",
+    "3xl": "var(--border-radius-3xl, 1.5rem)",
+    full: "var(--border-radius-full, 9999px)",
+  },
+
+  opacity: {
+    0: "var(--opacity-0, 0)",
+    5: "var(--opacity-5, 0.05)",
+    10: "var(--opacity-10, 0.1)",
+    15: "var(--opacity-15, 0.15)",
+    20: "var(--opacity-20, 0.2)",
+    25: "var(--opacity-25, 0.25)",
+    30: "var(--opacity-30, 0.3)",
+    35: "var(--opacity-35, 0.35)",
+    40: "var(--opacity-40, 0.4)",
+    45: "var(--opacity-45, 0.45)",
+    50: "var(--opacity-50, 0.5)",
+    55: "var(--opacity-55, 0.55)",
+    60: "var(--opacity-60, 0.6)",
+    65: "var(--opacity-65, 0.65)",
+    70: "var(--opacity-70, 0.7)",
+    75: "var(--opacity-75, 0.75)",
+    80: "var(--opacity-80, 0.8)",
+    85: "var(--opacity-85, 0.85)",
+    90: "var(--opacity-90, 0.9)",
+    95: "var(--opacity-95, 0.95)",
+    100: "var(--opacity-100, 1)",
+  },
 };
 
 export const themeColors = {
