@@ -7,9 +7,14 @@ import { captionStyle } from "../caption/caption.style";
 import { labelStyle } from "../label/label.style";
 import { checkboxStyle } from "./checkbox.style";
 // @ts-ignore
+import { FormController } from "../form/form-abstract";
 import style from "./checkbox.style.css?inline";
 @customElement("plus-checkbox")
-export class CheckboxComponent extends PlusBase {
+export class CheckboxComponent extends PlusBase implements FormController {
+  customValidity(error?: string): void {
+    this.checkbox.setCustomValidity("Lütfen Tıklayınız");
+  }
+
   static styles = [...PlusBase.styles, unsafeCSS(style)];
 
   @query(".checkbox") checkbox: HTMLInputElement;
@@ -45,6 +50,16 @@ export class CheckboxComponent extends PlusBase {
     this.emit("plus-change");
   }
 
+  checkValidity(): boolean {
+    console.log("checkValidity");
+    return this.checkbox.checkValidity();
+  }
+  reportValidity(): boolean {
+    console.log("reportValidity");
+    this.checkbox.setCustomValidity("Lütfen Tıklayınız");
+    return this.checkbox.reportValidity();
+  }
+
   render() {
     const { disabled, readonly, checked, text, title, id, size, label, caption, error, required, indeterminate } = this;
     const { base, inputElement, checkbox, checkIcon, host, textSlot } = checkboxStyle({
@@ -71,17 +86,17 @@ export class CheckboxComponent extends PlusBase {
           .checked=${live(checked)}
           .disabled=${disabled || readonly}
           role="checkbox"
+          ?required=${required}
           aria-checked=${checked ? "true" : "false"}
           @blur=${this.handleBlur}
           @focus=${this.handleFocus}
           @click=${this.handleClick /* TODO: should be on host */}
           @change=${this.handleChange}
+          @ref=${(el: HTMLInputElement) => (this.checkbox = el)}
         />
         <label for=${id} class=${base()}>
           <div class="relative">
-            <div class=${checkbox()}>
-              ${indeterminate ? html`<i class=${checkIcon() + " fa-solid fa-minus"}></i>` : html`<i class=${checkIcon() + " fa-solid fa-check"}></i>`}
-            </div>
+            <div class=${checkbox()}>${indeterminate ? html`<i class=${checkIcon() + " fa-solid fa-minus"}></i>` : html`<i class=${checkIcon() + " fa-solid fa-check"}></i>`}</div>
           </div>
           <span class=${textSlot()}><slot>${text}</slot></span>
         </label>

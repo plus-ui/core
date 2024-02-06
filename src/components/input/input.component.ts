@@ -11,13 +11,27 @@ import { labelStyle } from "../label/label.style";
 import { inputStyle } from "./input.style";
 
 import { ifDefined } from "lit/directives/if-defined.js";
+import { FormController } from "../form/form-abstract";
 
 @customElement("plus-input")
-export class InputComponent extends PlusBase {
+export class InputComponent extends PlusBase implements FormController {
   static styles = [...PlusBase.styles, unsafeCSS(style)];
 
   @query("#input") input: HTMLInputElement;
 
+  constructor() {
+    super();
+  }
+  customValidity(error: string): void {
+    throw new Error("Method not implemented.");
+  }
+  checkValidity(): boolean {
+    return this.input.checkValidity();
+  }
+
+  reportValidity(): boolean {
+    return this.input.reportValidity();
+  }
   @state() private hasFocus = false;
 
   @property({ reflect: true }) type: "date" | "datetime-local" | "email" | "number" | "password" | "search" | "tel" | "text" | "time" | "url" = "text";
@@ -119,6 +133,8 @@ export class InputComponent extends PlusBase {
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ?required=${this.required}
+          autocomplete="off"
+          autocorrect="off"
           placeholder=${ifDefined(this.placeholder)}
           minlength=${ifDefined(this.minlength)}
           maxlength=${ifDefined(this.maxlength)}
