@@ -30,6 +30,11 @@ const _COMPONENTS = [
   "./src/components/rating/rating.component.ts",
   "./src/components/loading/loading.component.ts",
   "./src/components/checkbox-group/checkbox-group.component.ts",
+  "./src/components/toast/toast.component.ts",
+  "./src/components/tooltip/tooltip.component.ts",
+  "./src/components/dialog/dialog.component.ts",
+  "./src/components/select/select.component.ts",
+  "./src/components/dropdown/dropdown.component.ts",
 ];
 
 export default defineConfig({

@@ -22,3 +22,8 @@ export * from "./progress/progress.component";
 export * from "./rating/rating.component";
 export * from "./loading/loading.component";
 export * from "./checkbox-group/checkbox-group.component";
+export * from "./toast/toast.component";
+export * from "./tooltip/tooltip.component";
+export * from "./dialog/dialog.component";
+export * from "./select/select.component";
+export * from "./dropdown/dropdown.component";

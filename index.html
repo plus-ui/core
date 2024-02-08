@@ -17,6 +17,7 @@
         /* align-items: center; */
         justify-content: flex-start;
         gap: 12px;
+        width: 100%;
       }
       .col {
         display: flex;
@@ -47,9 +48,98 @@
   <body>
     <div class="container">
       <div class="row">
-        <i class="fa-solid fa-plus"></i>
-        asdasdasdas asdasdasd asdasdasdadsda
+        <plus-tooltip message="This is a Plus UI default tooltip">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-button>Button</plus-button>
       </div>
+
+      <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description">
+        <plus-button>Button</plus-button>
+      </plus-tooltip>
+
+      <div class="row">
+        <plus-tooltip description="This is a Plus UI default tooltip description">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-tooltip message="This is a Plus UI default tooltip">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-tooltip>
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+      </div>
+      <div class="row">
+        <plus-tooltip message="This is a Plus UI default tooltip" size="sm">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-tooltip message="This is a Plus UI default tooltip" size="md">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-tooltip message="This is a Plus UI default tooltip" size="lg">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+      </div>
+      <div class="row">
+        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description" size="sm">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description" size="md">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description" size="lg">
+          <plus-button>Button</plus-button>
+        </plus-tooltip>
+      </div>
+
+      <plus-button>Button</plus-button>
+      <script>
+        const button = document.querySelector("plus-button");
+        button.addEventListener("click", () => {
+          const toast = document.querySelector("#toast");
+          toast.show();
+        });
+      </script>
+      <plus-toast message="This is a Plus UI default toast notification" id="toast"></plus-toast>
+      <div class="row">
+        <plus-toast size="md" message="This is a Plus UI default toast notification"></plus-toast>
+        <plus-toast size="sm" message="This is a Plus UI default toast notification"></plus-toast>
+        <plus-toast size="lg" message="This is a Plus UI default toast notification"></plus-toast>
+      </div>
+      <div class="row">
+        <plus-toast message="This is a Plus UI default toast notification"></plus-toast>
+        <plus-toast message="This is a Plus UI default toast notification" dismiss></plus-toast>
+      </div>
+
+      <div class="row"></div>
+      <div class="row">
+        <plus-toast message="This is a Plus UI default toast notification" icon="fa-solid fa-check"></plus-toast>
+        <plus-toast message="This is a Plus UI default toast notification" icon="fa-solid fa-check" dismiss></plus-toast>
+      </div>
+      <div class="row">
+        <plus-toast message="This is a Plus UI default toast notification" status="success" icon="fa-solid fa-check"></plus-toast>
+        <plus-toast message="This is a Plus UI default toast notification" status="success" icon="fa-solid fa-check" dismiss></plus-toast>
+      </div>
+      <div class="row">
+        <plus-toast message="This is a Plus UI default toast notification" status="success"></plus-toast>
+        <plus-toast message="This is a Plus UI default toast notification" status="success" dismiss></plus-toast>
+      </div>
+      <div class="row">
+        <plus-toast message="This is a Plus UI default toast notification" status="info"></plus-toast>
+        <plus-toast message="This is a Plus UI default toast notification" status="info" dismiss></plus-toast>
+      </div>
+      <div class="row">
+        <plus-toast message="This is a Plus UI default toast notification" status="warning"></plus-toast>
+        <plus-toast message="This is a Plus UI default toast notification" status="warning" dismiss></plus-toast>
+      </div>
+      <div class="row">
+        <plus-toast message="This is a Plus UI default toast notification" status="error"></plus-toast>
+        <plus-toast message="This is a Plus UI default toast notification" status="error" dismiss></plus-toast>
+      </div>
+
       <div class="row">
         <plus-input label="Label" caption="Caption" text="Toogle Text"></plus-input>
         <plus-toggle label="Label" caption="Caption" text="Toogle Text"></plus-toggle>
