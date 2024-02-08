@@ -8,4 +8,5 @@ export namespace Plus {
     custom = "custom",
   }
 }
+
 export default Plus;

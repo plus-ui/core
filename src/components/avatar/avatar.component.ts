@@ -4,13 +4,14 @@ import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
 import Plus from "../../model/plus";
 import { avatarStyle } from "./avatar.style";
+import { SizeType } from "src/model/plus-types";
 
 @customElement("plus-avatar")
 export class AvatarComponent extends PlusBase {
   @property() image: string;
   @property() alt: string;
   @property() shape: "circle" | "square" = "circle";
-  @property() size: Plus.Sizes | string = Plus.Sizes.md;
+  @property() size: SizeType | string = Plus.Sizes.md;
   @property() color: string;
   @property() icon: string = "fas fa-user";
   @property({ type: Boolean, converter: value => value != "false" }) invert = false;
