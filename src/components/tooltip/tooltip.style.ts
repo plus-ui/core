@@ -2,7 +2,10 @@ import { tv } from "tailwind-variants";
 
 export const tooltipStyle = tv({
   slots: {
-    base: ["plus-tooltip font-sans antialiased", "rounded bg-color-invert-default text-color-base"],
+    base: ["plus-tooltip font-sans antialiased", 
+    "rounded bg-color-invert-default text-color-base",
+    "absolute top-0 left-0 z-50 hidden",
+  ],
     descriptionClass: [""],
     messageClass: ["font-medium"],
   },
