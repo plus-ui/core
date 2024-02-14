@@ -46,9 +46,20 @@
     </style>
   </head>
   <body>
+    <plus-modal>
+      <div slot="header">Lorem ipsum dolor sit amet</div>
+      <div slot="body">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+      <slot slot="footer">
+        <plus-button>Button</plus-button>
+        <plus-button>Button</plus-button>
+      </slot>
+    </plus-modal>
+
     <div class="container">
-
-
       <div class="row">
         <plus-dialog title="This is a Plus UI default dialog" trigger="click">
           <plus-button>Button</plus-button>
@@ -60,7 +71,10 @@
         <plus-dialog description="This is a Plus UI default dialog description">
           <plus-button>Button</plus-button>
         </plus-dialog>
-        <plus-dialog title="This is a Plus UI default dialog" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Ut enim ad minim.">
+        <plus-dialog
+          title="This is a Plus UI default dialog"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Ut enim ad minim."
+        >
           <plus-button>Button</plus-button>
         </plus-dialog>
         <plus-dialog title="This is a Plus UI default dialog" placement="left">

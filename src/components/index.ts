@@ -27,3 +27,5 @@ export * from "./tooltip/tooltip.component";
 export * from "./dialog/dialog.component";
 export * from "./select/select.component";
 export * from "./dropdown/dropdown.component";
+export * from "./modal/modal.component";
+export * from "./drawer/drawer.component";
