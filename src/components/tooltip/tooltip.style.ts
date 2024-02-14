@@ -13,17 +13,17 @@ export const tooltipStyle = tv({
   variants: {
     size: {
       sm: {
-        base: ["text-sm"],
+        base: ["text-xs"],
         descriptionClass: ["py-1 px-2"],
         messageClass: ["py-1 px-2"],
       },
       md: {
-        base: ["text-base"],
+        base: ["text-sm"],
         descriptionClass: ["py-1 px-3"],
         messageClass: ["py-1 px-3"],
       },
       lg: {
-        base: ["text-lg"],
+        base: ["text-base"],
         descriptionClass: ["py-1 px-4"],
         messageClass: ["py-1 px-4"],
       },
