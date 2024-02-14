@@ -87,6 +87,9 @@ export default {
           invert: {
             ...themeColors.backgroundInvert,
           },
+          surface: {
+            ...themeColors.surface,
+          },
         },
       }),
       ringColor: ({ theme }) => ({

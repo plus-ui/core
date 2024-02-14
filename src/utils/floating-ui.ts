@@ -73,7 +73,7 @@ export class FloatingUI extends PlusBase {
           top: arrowY != null ? `${arrowY}px` : "",
           right: "",
           bottom: "",
-          [staticSide]: "-4px",
+          [staticSide]: "-6px",
         });
       }
     });
