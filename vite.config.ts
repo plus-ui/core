@@ -37,6 +37,7 @@ const _COMPONENTS = [
   "./src/components/dropdown/dropdown.component.ts",
   "./src/components/modal/modal.component.ts",
   "./src/components/drawer/drawer.component.ts",
+  "./src/components/sticky-box/sticky-box.component.ts",
 ];
 
 export default defineConfig({
