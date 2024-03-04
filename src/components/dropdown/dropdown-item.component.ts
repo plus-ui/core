@@ -1,7 +1,9 @@
+import { consume } from "@lit/context";
 import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { dropdownItemStyle } from "./dropdown-item.style";
+import { DropdownContext, dropdownContext } from "./dropdown.component";
 
 @customElement("plus-dropdown-item")
 export class DropDownItemComponent extends PlusBase {
@@ -9,12 +11,18 @@ export class DropDownItemComponent extends PlusBase {
   @property({ type: Boolean, reflect: true, converter: value => value != "false" }) active = false;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
 
-  private handleClick() {
+  @consume({ context: dropdownContext })
+  @property({ attribute: false })
+  public dropdownContext?: DropdownContext;
+
+  private handleClick(): void {
     if (this.disabled) return;
+    this.dropdownContext.onSelect(this.id);
   }
 
   render() {
-    const { active, disabled, size } = this;
+    const size = this.dropdownContext.size ?? this.size;
+    const { active, disabled } = this;
     const { base } = dropdownItemStyle({ active, disabled, size });
 
     return html`

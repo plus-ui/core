@@ -9,13 +9,13 @@ export const dropdownItemStyle = tv({
   variants: {
     size: {
       sm: {
-        base: ["h-8 gap-2 text-sm  py-0.5 px-1"],
+        base: ["h-10 gap-2 text-sm  py-0.5 px-1"],
       },
       md: {
-        base: ["h-10 gap-2 text-md py-1 px-1.5"],
+        base: ["h-12 gap-2 text-md py-1 px-1.5"],
       },
       lg: {
-        base: ["h-12 gap-2 text-lg py-1.5 px-2"],
+        base: ["h-14 gap-2 text-lg py-1.5 px-2"],
       },
     },
     active: {
