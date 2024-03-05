@@ -44,6 +44,7 @@
     "src/*.ts": "eslint"
   },
   "dependencies": {
+    "@lit/context": "^1.1.0",
     "lit": "^2.8.0"
   },
   "devDependencies": {

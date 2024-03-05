@@ -1,15 +1,24 @@
+import { consume } from "@lit/context";
 import { html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement, property, queryAssignedElements } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
-import { dropdownItemStyle } from "./dropdown-item.style";
-
+import { DropdownContext, dropdownContext } from "./dropdown.component";
 @customElement("plus-dropdown-menu")
 export class DropdonwMenuComponent extends PlusBase {
-  render() {
-    const { base } = dropdownItemStyle();
+  @queryAssignedElements() defaultSlot: HTMLElement[] | undefined;
+  @property({ type: String }) size: "sm" | "md" | "lg" = "md";
 
+  @consume({ context: dropdownContext })
+  @property({ attribute: false })
+  public dropdownContext?: DropdownContext;
+
+  private handleSlotChange() {
+    this.dropdownContext.slot = this.defaultSlot.map(el => el.tagName.toLowerCase() == "plus-dropdown-item" && el);
+  }
+
+  render() {
     return html` <div class="flex w-full flex-col">
-      <slot></slot>
+      <slot @slotchange=${this.handleSlotChange}></slot>
     </div>`;
   }
 }
