@@ -20,6 +20,22 @@ export const accordionStyle = tv({
         header: "rounded-md",
       },
     },
+    isGrouped: {
+      true: {
+        base: "border-t-0 border-l-0 border-r-0 rounded-b-0 rounded-b-none",
+      },
+      false: {
+        base: "border-t",
+      },
+    },
+    isLast: {
+      true: {
+        base: "border-b-0",
+      },
+      false: {
+        base: "border-b",
+      },
+    },
   },
   defaultVariants: {
     open: false,

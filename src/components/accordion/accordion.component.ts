@@ -6,6 +6,8 @@ import { accordionStyle } from "./accordion.style";
 @customElement("plus-accordion")
 export class PlusAccordion extends PlusBase {
   @property({ type: Boolean, reflect: true }) open: boolean = false;
+  @property({ type: Boolean, reflect: true }) isGrouped: boolean = false;
+  @property({ type: Boolean, reflect: true }) isLast: boolean = false;
 
   private toggleOpen(): void {
     this.open = !this.open;
@@ -14,7 +16,7 @@ export class PlusAccordion extends PlusBase {
 
   render() {
     const { open } = this;
-    const { base, header, panel, icon } = accordionStyle({ open });
+    const { base, header, panel, icon } = accordionStyle({ open, isGrouped: this.isGrouped, isLast: this.isLast });
     return html`
       <div class=${base()}>
         <div class=${header()} @click=${this.toggleOpen}>

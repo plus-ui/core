@@ -14,6 +14,9 @@ export class PlusAccordionGroup extends PlusBase {
   private handleSlotChange(): void {
     const accordions = this.accordions.filter(el => el.tagName?.toLowerCase() == "plus-accordion");
     accordions?.forEach((accordion: any) => {
+      accordion.isGrouped = true;
+      const isLast = accordions.indexOf(accordion) == accordions.length - 1;
+      accordion.isLast = isLast;
       accordion.addEventListener("plus-accordion-toggle", (event: any) => {
         if (!this.multi && event.detail.open) {
           accordions.forEach((el: any) => {
@@ -27,7 +30,9 @@ export class PlusAccordionGroup extends PlusBase {
   }
 
   render() {
-    return html` <slot @slotchange=${this.handleSlotChange}></slot> `;
+    return html` <div class="rounded-md border border-color-default font-sans antialiased">
+      <slot @slotchange=${this.handleSlotChange}></slot>
+    </div>`;
   }
 }
 
