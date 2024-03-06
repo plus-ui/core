@@ -1,3 +1,7 @@
+export * from "./accordion/accordion-group.component";
+export * from "./accordion/accordion-header.component";
+export * from "./accordion/accordion-panel.component";
+export * from "./accordion/accordion.component";
 export * from "./alert/alert.component";
 export * from "./avatar/avatar.component";
 export * from "./badge/badge.component";
