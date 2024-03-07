@@ -1,6 +1,6 @@
 import { createContext, provide } from "@lit/context";
 import { PropertyValueMap, html } from "lit";
-import { customElement, property, query, queryAsync, state } from "lit/decorators.js";
+import { customElement, property, queryAsync, state } from "lit/decorators.js";
 import { PlacementType } from "../../../src/model/plus-types";
 import { PlusBase } from "../../base/plus-base";
 import { selectStyle } from "./select.style";
@@ -14,11 +14,9 @@ export const selectContext = createContext<SelectContext>("selectContext");
 @customElement("plus-select")
 export class SelectComponent extends PlusBase {
   @queryAsync(".plus-input") input!: Promise<HTMLElement> | undefined;
-  @query(".plus-sticky-box") stickyBox!: any | undefined;
+
   @property({ attribute: false }) position: PlacementType = "bottom-start";
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-
-  @property({ type: Boolean, attribute: false }) isOpen = false;
 
   @state() selected = "";
   @state() open = false;
