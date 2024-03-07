@@ -7,23 +7,40 @@ import { modalStyle } from "./modal.style";
 
 @customElement("plus-modal")
 export class ModalComponent extends PlusBase {
-  // modal özellikleri
-  // show ve hide metotları olur
-  // eventler fire eder
-  // size özelliği olur
   @property() size: SizeType = Plus.Sizes.md;
+  @property({ type: Boolean }) isOpen: boolean = false;
+
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.addEventListener("plus-modal-before-show", this.modalShow);
+    this.addEventListener("plus-modal-before-hide", this.modalHide);
+  }
 
   hide() {
+    this.emit("plus-modal-before-hide");
+  }
+
+  private modalHide() {
+    this.isOpen = false;
     this.emit("plus-modal-hide");
   }
 
   show() {
+    this.emit("plus-modal-before-show");
+  }
+
+  private modalShow() {
+    this.isOpen = true;
     this.emit("plus-modal-show");
   }
 
   render() {
-    const { size } = this;
-    const { base, modalClass, modalOverlay, modalContainer, modalHeader, modalBody, modalFooter, modalCloseButtonClass } = modalStyle({ size });
+    const { size, isOpen } = this;
+    const { base, modalClass, modalOverlay, modalContainer, modalHeader, modalBody, modalFooter, modalCloseButtonClass } = modalStyle({ size, isOpen });
 
     return html`<div class=${base()}>
       <div class=${modalOverlay()}></div>
