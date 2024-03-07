@@ -17,7 +17,7 @@ export class ButtonComponent extends PlusBase {
 
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) kind: "filled" | "outlined" | "dashed" | "text" = "filled";
-  @property({ type: String }) status: "default" | "primary" = "default";
+  @property({ type: String }) status: "default" | "primary" | "success" | "warning" | "error" | "info" | "invert" = "default";
 
   @property() type: "button" | "submit" | "reset" = "button";
 
