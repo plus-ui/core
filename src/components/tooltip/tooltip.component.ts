@@ -11,7 +11,6 @@ export class TooltipComponent extends FloatingService {
   @property({ type: String }) placement: PlacementType = "top";
   @property({ type: Boolean }) showArrow: boolean = true;
   @property({ type: String }) message: string;
-  @property({ type: String }) description: string;
   @property() trigger = "hover focus"; // hover focus click manual
 
   constructor() {
@@ -27,15 +26,12 @@ export class TooltipComponent extends FloatingService {
   }
 
   render() {
-    const { size, message, description, showArrow } = this;
-    const { base, messageClass, descriptionClass, arrowClass } = tooltipStyle({ size, available: !!(message || description) });
+    const { size, message, showArrow } = this;
+    const { base, descriptionClass, arrowClass } = tooltipStyle({ size, available: !!message });
 
     return html`
       <slot @slotchange=${this.handleSlotChange.bind(this)}></slot>
-      <div class=${base()}>
-        ${showArrow && !!(message || description) ? html`<div class=${arrowClass()}></div>` : ""} ${message ? html`<div class=${messageClass()}>${message}</div>` : ""}
-        ${!!(message && description) ? html`<plus-divider></plus-divider>` : ""} ${description ? html`<div class=${descriptionClass()}>${description}</div>` : ""}
-      </div>
+      <div class=${base()}>${showArrow && !!message ? html`<div class=${arrowClass()}></div>` : ""} ${message ? html`<div class=${descriptionClass()}>${message}</div>` : ""}</div>
     `;
   }
 }
