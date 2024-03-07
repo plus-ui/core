@@ -22,6 +22,7 @@ export * from "./link/link.component";
 export * from "./loading/loading.component";
 export * from "./modal/modal.component";
 export * from "./popconfirm/popconfirm.component";
+export * from "./popover/popover.component";
 export * from "./progress/progress.component";
 export * from "./radio-group/radio-group.component";
 export * from "./radio/radio.component";
