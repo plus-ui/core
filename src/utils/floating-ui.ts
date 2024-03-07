@@ -14,6 +14,7 @@ export type FloatingUIOptions = {
   autoHide?: boolean;
   onShow?: () => void;
   onHide?: () => void;
+  isOpened?: (open: boolean) => void;
   onVisibleChange?: (visible: boolean) => void;
   onPositionChange?: (position: PlacementType) => void;
 };
@@ -83,11 +84,13 @@ export class FloatingUI extends PlusBase {
     const { content } = this.options;
     content.style.display = "block";
     this.updatePosition();
+    this.options.isOpened?.(true);
   }
 
   hide() {
     const { content } = this.options;
     content.style.display = "none";
+    this.options.isOpened?.(false);
   }
 
   isOpen() {

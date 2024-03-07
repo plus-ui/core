@@ -10,6 +10,7 @@ export class StickyBoxComponent extends StickyService {
 
   @property({ attribute: false }) target: Promise<HTMLElement> | undefined;
   @property({ attribute: false }) position: PlacementType = "bottom-start";
+  @property({ attribute: false }) open: boolean = false;
 
   constructor() {
     super();
@@ -27,6 +28,12 @@ export class StickyBoxComponent extends StickyService {
       this.options.position = this.position;
       this.options.offset = 4;
       this.listener();
+      this.options.isOpened = (open: boolean) => {
+        if (this.open != open) {
+          this.open = open;
+          this.emit("plus-sticky-box-change", { detail: { open } });
+        }
+      };
     }
   }
 

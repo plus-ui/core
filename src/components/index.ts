@@ -26,6 +26,8 @@ export * from "./progress/progress.component";
 export * from "./radio-group/radio-group.component";
 export * from "./radio/radio.component";
 export * from "./rating/rating.component";
+export * from "./select/select-option.component";
+export * from "./select/select-options.component";
 export * from "./select/select.component";
 export * from "./sticky-box/sticky-box.component";
 export * from "./tab/tab-group.component";
