@@ -32,7 +32,7 @@ const _COMPONENTS = [
   "./src/components/checkbox-group/checkbox-group.component.ts",
   "./src/components/toast/toast.component.ts",
   "./src/components/tooltip/tooltip.component.ts",
-  "./src/components/dialog/dialog.component.ts",
+  "./src/components/popconfirm/popconfirm.component.ts",
   "./src/components/select/select.component.ts",
   "./src/components/dropdown/dropdown.component.ts",
   "./src/components/modal/modal.component.ts",

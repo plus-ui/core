@@ -44,6 +44,7 @@ export class FloatingService extends FloatingUI {
     this.getTarget()?.addEventListener("click", this.handleClick);
     this.getTarget()?.addEventListener("mouseover", this.handleMouseOver);
     this.getTarget()?.addEventListener("mouseout", this.handleMouseOut);
+    document.addEventListener("click", this.handleClickOutside);
   }
 
   private handleBlur = () => {
@@ -79,6 +80,14 @@ export class FloatingService extends FloatingUI {
     if (this.hasTrigger("hover")) {
       clearTimeout(this.hoverTimeout);
       this.hoverTimeout = window.setTimeout(() => this.hide(), this.options.hideDelay);
+    }
+  };
+
+  private handleClickOutside = (event: MouseEvent) => {
+    if (this.hasTrigger("click") && this.isOpen()) {
+      if (!this?.contains(event.target as Node)) {
+        this.hide();
+      }
     }
   };
 }

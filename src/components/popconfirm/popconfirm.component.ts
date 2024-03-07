@@ -1,21 +1,38 @@
 import { html } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { customElement, property, state } from "lit/decorators.js";
 import { PlacementType, SizeType } from "src/model/plus-types";
 import Plus from "../../model/plus";
 import { FloatingService } from "../../services/floating.service";
-import { dialogStyle } from "./dialog.style";
+import { popconfirmStyle } from "./popconfirm.style";
 
-@customElement("plus-dialog")
-export class DialogComponent extends FloatingService {
+@customElement("plus-popconfirm")
+export class PopconfirmComponent extends FloatingService {
   @property({ type: String }) size: SizeType = Plus.Sizes.md;
   @property({ type: String }) placement: PlacementType = "top";
   @property({ type: Boolean }) showArrow: boolean = true;
-  @property({ type: String }) prefixIcon: string = "fas fa-heart-circle-plus";
+
   @property({ type: String }) title: string;
   @property({ type: String }) description: string;
+  @property({ type: String }) status: "success" | "warning" | "error" | "info" | "default" | "primary" | "attention" = "primary";
   @property() okText: string = "Confirm";
   @property() cancelText: string = "Cancel";
   @property() trigger = "click"; // click manual
+
+  @state() _prefixIcon = "";
+  @property({ type: String })
+  set prefixIcon(value) {
+    this._prefixIcon = value;
+  }
+  get prefixIcon() {
+    const defaultIcon = {
+      info: "fa-solid fa-circle-info",
+      success: "fa-solid fa-circle-check",
+      warning: "fa-solid fa-triangle-exclamation",
+      error: "fa-solid fa-xmark-circle",
+      attention: "fa-solid fa-circle-exclamation",
+    };
+    return this._prefixIcon ? this._prefixIcon : defaultIcon[this.status];
+  }
 
   private onConfirm() {
     this.emit("plus-confirm");
@@ -40,12 +57,16 @@ export class DialogComponent extends FloatingService {
   }
 
   render() {
-    const { size, title, prefixIcon, description, showArrow, cancelText, okText } = this;
-    const { base, contentClass, footerClass, wrapperClass, titleClass, descriptionClass, prefixIconClass, arrowClass } = dialogStyle({ size, available: !!(title || description) });
+    const { size, title, prefixIcon, description, showArrow, cancelText, okText, status } = this;
+    const { base, contentClass, footerClass, wrapperClass, titleClass, descriptionClass, prefixIconClass, arrowClass } = popconfirmStyle({
+      size,
+      available: !!(title || description),
+      status,
+    });
 
     const renderPrefixIcon = () => {
-      if (prefixIcon === "") return;
-      return html`<i class=${prefixIconClass() + " " +  prefixIcon}></i>`;
+      if (!prefixIcon) return;
+      return html`<div class=${prefixIconClass()}><i class=${prefixIcon}></i></div>`;
     };
 
     return html`
@@ -59,7 +80,7 @@ export class DialogComponent extends FloatingService {
           </div>
           <div class=${footerClass()}>
             <plus-button @click=${this.onCancel} size=${size}>${cancelText}</plus-button>
-            <plus-button @click=${this.onConfirm} status="primary" size=${size}>${okText}</plus-button>
+            <plus-button @click=${this.onConfirm} status=${status != "attention" ? status : "invert"} size=${size}>${okText}</plus-button>
           </div>
         </div>
       </div>
@@ -69,6 +90,6 @@ export class DialogComponent extends FloatingService {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "plus-dialog": DialogComponent;
+    "plus-popconfirm": PopconfirmComponent;
   }
 }
