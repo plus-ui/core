@@ -43,7 +43,7 @@ export class ModalComponent extends PlusBase {
     const { base, modalClass, modalOverlay, modalContainer, modalHeader, modalBody, modalFooter, modalCloseButtonClass } = modalStyle({ size, isOpen });
 
     return html`<div class=${base()}>
-      <div class=${modalOverlay()}></div>
+      <div class=${modalOverlay()} aria-label="Close" @click=${() => this.hide()}></div>
       <div class=${modalClass()}>
         <div class=${modalContainer()}>
           <slot name="close">
@@ -61,7 +61,7 @@ export class ModalComponent extends PlusBase {
           </div>
         </div>
       </div>
-    </div> `;
+    </div>`;
   }
 }
 
