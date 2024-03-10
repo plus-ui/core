@@ -1,10 +1,14 @@
 name: Publish to NPM
 on:
-  release:
-    types: [created]
+  pull_request:
+    types:
+    - labeled
+    branches:
+    - main
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    if: github.event.action == 'labeled' && github.event.label.name == 'release'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -15,6 +19,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
         run: npm ci && npm run build
+      - name: Increment version ⬆️
+        run: npm version patch
       - name: Publish package on NPM 📦
         run: npm publish
         env:
