@@ -78,7 +78,7 @@ export default {
       }),
       boxShadow: ({ theme }) => ({
         ...theme("colors"),
-        DEFAULT: "var(--color-shadow)",
+        DEFAULT: "var(--plusui-color-shadow)",
       }),
       backgroundColor: ({ theme }) => ({
         ...theme("colors"),
@@ -87,10 +87,13 @@ export default {
           invert: {
             ...themeColors.backgroundInvert,
           },
+          surface: {
+            ...themeColors.surface,
+          },
         },
       }),
       ringColor: ({ theme }) => ({
-        DEFAULT: "var(--color-border-focus)",
+        DEFAULT: "var(--plusui-color-border-focus)",
         ...theme('colors'),
       }),
       animation: {

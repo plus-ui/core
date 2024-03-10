@@ -1,28 +1,37 @@
 import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { PlacementType, SizeType } from "src/model/plus-types";
-import { PlusBase } from "../../base/plus-base";
 import Plus from "../../model/plus";
+import { FloatingService } from "../../services/floating.service";
 import { tooltipStyle } from "./tooltip.style";
 
 @customElement("plus-tooltip")
-export class TooltipComponent extends PlusBase {
+export class TooltipComponent extends FloatingService {
   @property({ type: String }) size: SizeType = Plus.Sizes.md;
-  @property({ type: String }) placement: PlacementType = "top-start";
+  @property({ type: String }) placement: PlacementType = "top";
+  @property({ type: Boolean }) showArrow: boolean = true;
   @property({ type: String }) message: string;
-  @property({ type: String }) description: string;
+  @property() trigger = "hover focus"; // hover focus click manual
+
+  constructor() {
+    super();
+  }
+
+  protected firstUpdated() {
+    this.options = {
+      ...this.options,
+      position: this.placement,
+      showArrow: this.showArrow,
+    };
+  }
 
   render() {
-    const { size, message, description } = this;
-    const { base, messageClass, descriptionClass } = tooltipStyle({ size, available: !!(message || description) })
+    const { size, message, showArrow } = this;
+    const { base, descriptionClass, arrowClass } = tooltipStyle({ size, available: !!message });
 
     return html`
-      <slot></slot>
-      <div class=${base()}>
-        ${message ? html`<div class=${messageClass()}>${message}</div>` : ""}
-        ${!!(message && description) ? html`<plus-divider></plus-divider>` : ""}
-        ${description ? html`<div class=${descriptionClass()}>${description}</div>` : ""}
-      </div>
+      <slot @slotchange=${this.handleSlotChange.bind(this)}></slot>
+      <div class=${base()}>${showArrow && !!message ? html`<div class=${arrowClass()}></div>` : ""} ${message ? html`<div class=${descriptionClass()}>${message}</div>` : ""}</div>
     `;
   }
 }
