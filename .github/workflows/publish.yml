@@ -2,7 +2,9 @@ name: Publish to NPM
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v0.*"
+      - "v1.*"
+
 jobs:
   build:
     runs-on: ubuntu-latest    
