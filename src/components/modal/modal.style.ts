@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const modalStyle = tv({
   slots: {
-    base: ["plus-modal font-sans antialiased"],
+    base: ["plus-modal font-sans antialiased text-color-default"],
     modalOverlay: ["modal-overlay fixed inset-0 z-40 bg-black bg-opacity-50"],
     modalClass: ["modal fixed z-50 inset-0 overflow-y-auto p-4"],
     modalContainer: ["modal-container relative w-full mx-auto my-8 bg-color-base rounded-lg shadow-xl text-base"],

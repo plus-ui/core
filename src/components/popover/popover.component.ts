@@ -9,12 +9,12 @@ import { popoverStyle } from "./popover.style";
 export class PopoverComponent extends FloatingService {
   @property({ type: String }) size: SizeType = Plus.Sizes.md;
   @property({ type: String }) placement: PlacementType = "top";
-  @property({ type: Boolean }) showArrow: boolean = true;
+  @property({ type: Boolean, attribute: "show-arrow" }) showArrow: boolean = true;
 
   @property({ type: String }) title: string;
   @property({ type: String }) status: "success" | "warning" | "error" | "info" | "default" | "primary" | "attention" = "primary";
-  @property() okText: string = "Confirm";
-  @property() cancelText: string = "Cancel";
+  @property({ attribute: "ok-text" }) okText: string = "Confirm";
+  @property({ attribute: "cancel-text" }) cancelText: string = "Cancel";
   @property() trigger = "click"; // click manual
 
   @state() _prefixIcon = "";

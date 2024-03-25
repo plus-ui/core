@@ -9,7 +9,7 @@ import { tooltipStyle } from "./tooltip.style";
 export class TooltipComponent extends FloatingService {
   @property({ type: String }) size: SizeType = Plus.Sizes.md;
   @property({ type: String }) placement: PlacementType = "top";
-  @property({ type: Boolean }) showArrow: boolean = true;
+  @property({ type: Boolean, attribute: "show-arrow" }) showArrow: boolean = true;
   @property({ type: String }) message: string;
   @property() trigger = "hover focus"; // hover focus click manual
 

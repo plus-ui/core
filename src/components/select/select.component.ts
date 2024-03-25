@@ -17,6 +17,8 @@ export class SelectComponent extends PlusBase {
 
   @property({ attribute: false }) position: PlacementType = "bottom-start";
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
+  @property() placeholder = "";
+  @property({ type: String }) label?: string;
 
   @state() selected = "";
   @state() open = false;
@@ -41,7 +43,7 @@ export class SelectComponent extends PlusBase {
   render() {
     const { base } = selectStyle();
     return html`<div class=${base()}>
-      <plus-input class="plus-input" .value=${this.selected} readonly size=${this.size}>
+      <plus-input class="plus-input" .value=${this.selected} readonly size=${this.size} placeholder=${this.placeholder} label=${this.label}>
         <i slot="suffix" class=${!this.open ? "fas fa-angle-down" : "fas fa-angle-up"}></i>
       </plus-input>
       <plus-sticky-box class="plus-sticky-box" .target=${this.input} .position=${this.position} @plus-sticky-box-change=${({ detail: { open } }) => (this.open = open)}>

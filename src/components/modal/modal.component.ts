@@ -8,7 +8,7 @@ import { modalStyle } from "./modal.style";
 @customElement("plus-modal")
 export class ModalComponent extends PlusBase {
   @property() size: SizeType = Plus.Sizes.md;
-  @property({ type: Boolean }) isOpen: boolean = false;
+  @property({ type: Boolean, attribute: "is-open" }) isOpen: boolean = false;
 
   constructor() {
     super();
