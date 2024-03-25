@@ -45,7 +45,8 @@
   },
   "dependencies": {
     "@lit/context": "^1.1.0",
-    "lit": "^2.8.0"
+    "lit": "^2.8.0",
+    "@floating-ui/dom": "^1.6.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
