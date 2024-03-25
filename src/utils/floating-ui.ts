@@ -1,6 +1,6 @@
 import { arrow, computePosition, flip, hide, offset, shift } from "@floating-ui/dom";
-import { PlusBase } from "../../src/base/plus-base";
 import { PlacementType } from "../../src/model/plus-types";
+import { PlusBase } from "../base/plus-base";
 
 export type FloatingUIOptions = {
   target?: HTMLElement;
