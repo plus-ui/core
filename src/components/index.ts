@@ -36,6 +36,7 @@ export * from "./tab/tab-panel.component";
 export * from "./tab/tab.component";
 export * from "./text/text.component";
 export * from "./textarea/textarea.component";
+export * from "./toast/toast-container";
 export * from "./toast/toast.component";
 export * from "./toggle/toggle.component";
 export * from "./tooltip/tooltip.component";

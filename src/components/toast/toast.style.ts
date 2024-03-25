@@ -2,7 +2,9 @@ import { tv } from "tailwind-variants";
 
 export const toastStyle = tv({
   slots: {
-    base: ["plus-toast font-sans antialiased flex items-center justify-between border border-solid border-transparent rounded font-medium w-full max-w-2xl"],
+    base: [
+      "plus-toast-class font-sans antialiased flex items-center justify-between border border-solid border-transparent rounded font-medium w-full max-w-2xl transition duration-300 ease-in-out transform scale-95",
+    ],
     iconClass: ["plus-toast__icon"],
     messageClass: ["plus-toast__message flex items-center"],
     closeClass: [

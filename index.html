@@ -46,6 +46,20 @@
     </style>
   </head>
   <body>
+    <plus-toast message="test" position="top-right"></plus-toast>
+    <plus-toast message="test" position="top-left"></plus-toast>
+    <plus-toast message="test" position="bottom-right"></plus-toast>
+    <plus-toast message="test" position="bottom-left"></plus-toast>
+
+    <plus-button onclick="show()">Show Toast</plus-button>
+    <script>
+      function show() {
+        const allToast = document.querySelectorAll("plus-toast");
+        allToast.forEach(toast => {
+          toast.show();
+        });
+      }
+    </script>
     <!-- <plus-modal>
       <div slot="header">Lorem ipsum dolor sit amet</div>
       <div slot="body">
@@ -236,78 +250,6 @@
         <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description" size="lg">
           <plus-button>Button</plus-button>
         </plus-tooltip>
-      </div>
-
-      <plus-button>Button</plus-button>
-      <script>
-        const button = document.querySelector("plus-button");
-        button.addEventListener("click", () => {
-          const toast = document.querySelector("#toast");
-          toast.show();
-        });
-      </script>
-      <plus-toast message="This is a Plus UI default toast notification" id="toast"></plus-toast>
-      <div class="row">
-        <plus-toast size="md" message="This is a Plus UI default toast notification"></plus-toast>
-        <plus-toast size="sm" message="This is a Plus UI default toast notification"></plus-toast>
-        <plus-toast size="lg" message="This is a Plus UI default toast notification"></plus-toast>
-      </div>
-      <div class="row">
-        <plus-toast message="This is a Plus UI default toast notification"></plus-toast>
-        <plus-toast message="This is a Plus UI default toast notification" dismiss></plus-toast>
-      </div>
-
-      <div class="row"></div>
-      <div class="row">
-        <plus-toast message="This is a Plus UI default toast notification" icon="fa-solid fa-check"></plus-toast>
-        <plus-toast message="This is a Plus UI default toast notification" icon="fa-solid fa-check" dismiss></plus-toast>
-      </div>
-      <div class="row">
-        <plus-toast message="This is a Plus UI default toast notification" status="success" icon="fa-solid fa-check"></plus-toast>
-        <plus-toast message="This is a Plus UI default toast notification" status="success" icon="fa-solid fa-check" dismiss></plus-toast>
-      </div>
-      <div class="row">
-        <plus-toast message="This is a Plus UI default toast notification" status="success"></plus-toast>
-        <plus-toast message="This is a Plus UI default toast notification" status="success" dismiss></plus-toast>
-      </div>
-      <div class="row">
-        <plus-toast message="This is a Plus UI default toast notification" status="info"></plus-toast>
-        <plus-toast message="This is a Plus UI default toast notification" status="info" dismiss></plus-toast>
-      </div>
-      <div class="row">
-        <plus-toast message="This is a Plus UI default toast notification" status="warning"></plus-toast>
-        <plus-toast message="This is a Plus UI default toast notification" status="warning" dismiss></plus-toast>
-      </div>
-      <div class="row">
-        <plus-toast message="This is a Plus UI default toast notification" status="error"></plus-toast>
-        <plus-toast message="This is a Plus UI default toast notification" status="error" dismiss></plus-toast>
-      </div>
-
-      <div class="row">
-        <plus-input label="Label" caption="Caption" text="Toogle Text"></plus-input>
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text"></plus-toggle>
-      </div>
-      <div class="row">
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" text-position="left"></plus-toggle>
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text"></plus-toggle>
-      </div>
-      <div class="row">
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" disabled></plus-toggle>
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" disabled checked></plus-toggle>
-      </div>
-      <div class="row">
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" readonly></plus-toggle>
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" readonly checked></plus-toggle>
-      </div>
-      <div class="row">
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" toggle-icon="fa-solid fa-star"></plus-toggle>
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" toggle-inactive-icon="fa-solid fa-volume-xmark" toggle-active-icon="fa-solid fa-volume-low"></plus-toggle>
-      </div>
-      <div class="row">
-        <plus-checkbox label="Label" caption="Caption" checked>Merhaba </plus-checkbox>
-      </div>
-      <div class="row">
-        <plus-toggle label="Label" caption="Caption" text="Toogle Text" error></plus-toggle>
       </div>
     </div>
   </body>
