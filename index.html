@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Lit + TS</title>
-    <script type="module" src="./src/components/index.ts"></script>
+    <script type="module" src="../src/components/index.ts"></script>
     <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
     <style>
       body {
@@ -14,10 +14,9 @@
       .row {
         display: flex;
         flex-direction: row;
-        /* align-items: center; */
+        align-items: center;
         justify-content: flex-start;
         gap: 12px;
-        width: 100%;
       }
       .col {
         display: flex;
@@ -30,7 +29,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 12px;
+        gap: 24px;
         width: 100%;
       }
 
@@ -46,210 +45,62 @@
     </style>
   </head>
   <body>
-    <plus-toast message="test" position="top-right"></plus-toast>
-    <plus-toast message="test" position="top-left"></plus-toast>
-    <plus-toast message="test" position="bottom-right"></plus-toast>
-    <plus-toast message="test" position="bottom-left"></plus-toast>
-
-    <plus-button onclick="show()">Show Toast</plus-button>
-    <script>
-      function show() {
-        const allToast = document.querySelectorAll("plus-toast");
-        allToast.forEach(toast => {
-          toast.show();
-        });
-      }
-    </script>
-    <!-- <plus-modal>
-      <div slot="header">Lorem ipsum dolor sit amet</div>
-      <div slot="body">
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </div>
-      <slot slot="footer">
-        <plus-button>Button</plus-button>
-        <plus-button>Button</plus-button>
-      </slot>
-    </plus-modal> -->
-    <plus-select>
-      <plus-select-options>
-        <plus-select-option>test1</plus-select-option>
-        <plus-select-option>test2</plus-select-option>
-        <plus-select-option>test3</plus-select-option>
-      </plus-select-options>
-    </plus-select>
-
-    <p>Classic Accordion</p>
-    <plus-accordion>
-      <plus-accordion-header> Test</plus-accordion-header>
-      <plus-accordion-panel>
-        <plus-button>Button</plus-button>
-      </plus-accordion-panel>
-    </plus-accordion>
-
-    <p>Group Accordion</p>
-    <plus-accordion-group>
-      <plus-accordion>
-        <plus-accordion-header> Test</plus-accordion-header>
-        <plus-accordion-panel>
-          <plus-button>Button</plus-button>
-        </plus-accordion-panel>
-      </plus-accordion>
-      <plus-accordion>
-        <plus-accordion-header> Test</plus-accordion-header>
-        <plus-accordion-panel>
-          <plus-button>Button</plus-button>
-        </plus-accordion-panel>
-      </plus-accordion>
-    </plus-accordion-group>
-
-    <p>Multi Group Accordion</p>
-    <plus-accordion-group multi>
-      <plus-accordion>
-        <plus-accordion-header> Test</plus-accordion-header>
-        <plus-accordion-panel>
-          <plus-button>Button</plus-button>
-        </plus-accordion-panel>
-      </plus-accordion>
-      <plus-accordion>
-        <plus-accordion-header> Test</plus-accordion-header>
-        <plus-accordion-panel>
-          <plus-button>Button</plus-button>
-        </plus-accordion-panel>
-      </plus-accordion>
-    </plus-accordion-group>
-
     <div class="container">
       <div class="row">
-        <plus-dropdown text="Dropdown">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
+        <plus-checkbox required size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox required size="md">Checkbox</plus-checkbox>
+        <plus-checkbox required size="lg">Checkbox</plus-checkbox>
+      </div>
+      <div class="row">
+        <plus-checkbox size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox size="md">Checkbox</plus-checkbox>
+        <plus-checkbox size="lg">Checkbox</plus-checkbox>
+      </div>
+      <div class="row">
+        <plus-checkbox readonly size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox readonly size="md">Checkbox</plus-checkbox>
+        <plus-checkbox readonly size="lg">Checkbox</plus-checkbox>
+      </div>
+      <div class="row">
+        <plus-checkbox disabled size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox disabled size="md">Checkbox</plus-checkbox>
+        <plus-checkbox disabled size="lg">Checkbox</plus-checkbox>
+      </div>
+      <div class="row">
+        <plus-checkbox checked size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox checked size="md">Checkbox</plus-checkbox>
+        <plus-checkbox checked size="lg">Checkbox</plus-checkbox>
+      </div>
+      <div class="row">
+        <plus-checkbox checked readonly size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox checked readonly size="md">Checkbox</plus-checkbox>
+        <plus-checkbox checked readonly size="lg">Checkbox</plus-checkbox>
+      </div>
+      <div class="row">
+        <plus-checkbox checked disabled size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox checked disabled size="md">Checkbox</plus-checkbox>
+        <plus-checkbox checked disabled size="lg">Checkbox</plus-checkbox>
       </div>
 
       <div class="row">
-        <plus-dropdown size="sm" text="Dropdown">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-            <plus-dropdown-item>Item 4</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
+        <plus-checkbox indeterminate size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox indeterminate size="md">Checkbox</plus-checkbox>
+        <plus-checkbox indeterminate size="lg">Checkbox</plus-checkbox>
       </div>
       <div class="row">
-        <plus-dialog title="This is a Plus UI default dialog" trigger="click">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-        <plus-button>Button</plus-button>
-      </div>
-
-      <div class="row">
-        <plus-dialog description="This is a Plus UI default dialog description">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-        <plus-dialog
-          title="This is a Plus UI default dialog"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Ut enim ad minim."
-        >
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-        <plus-dialog title="This is a Plus UI default dialog" placement="left">
-          <plus-button>Left</plus-button>
-        </plus-dialog>
-        <plus-dialog>
-          <plus-button>Button</plus-button>
-        </plus-dialog>
+        <plus-checkbox indeterminate readonly size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox indeterminate readonly size="md">Checkbox</plus-checkbox>
+        <plus-checkbox indeterminate readonly size="lg">Checkbox</plus-checkbox>
       </div>
       <div class="row">
-        <plus-dialog title="This is a Plus UI default dialog" size="sm">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-        <plus-dialog title="This is a Plus UI default dialog" size="md">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-        <plus-dialog title="This is a Plus UI default dialog" size="lg">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
+        <plus-checkbox indeterminate disabled size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox indeterminate disabled size="md">Checkbox</plus-checkbox>
+        <plus-checkbox indeterminate disabled size="lg">Checkbox</plus-checkbox>
       </div>
       <div class="row">
-        <plus-dialog title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description" size="sm">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-        <plus-dialog title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description" size="md">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-        <plus-dialog title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description" size="lg">
-          <plus-button>Button</plus-button>
-        </plus-dialog>
-      </div>
-      <plus-divider></plus-divider>
-      <div class="row">
-        <plus-tooltip message="This is a Plus UI default tooltip" trigger="click">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-        <plus-tooltip message="This is a Plus UI default tooltip"></plus-tooltip>
-        <plus-button>Button</plus-button>
-      </div>
-
-      <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description">
-        <plus-button>Button</plus-button>
-      </plus-tooltip>
-
-      <div class="row">
-        <plus-tooltip description="This is a Plus UI default tooltip description">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-        <plus-tooltip message="This is a Plus UI default tooltip" placement="left">
-          <plus-button>Left</plus-button>
-        </plus-tooltip>
-        <plus-tooltip>
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-      </div>
-      <div class="row">
-        <plus-tooltip message="This is a Plus UI default tooltip" size="sm">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-        <plus-tooltip message="This is a Plus UI default tooltip" size="md">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-        <plus-tooltip message="This is a Plus UI default tooltip" size="lg">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-      </div>
-      <div class="row">
-        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description" size="sm">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description" size="md">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
-        <plus-tooltip message="This is a Plus UI default tooltip" description="This is a Plus UI default tooltip description" size="lg">
-          <plus-button>Button</plus-button>
-        </plus-tooltip>
+        <plus-checkbox required caption="This is a required field" error size="sm">Checkbox</plus-checkbox>
+        <plus-checkbox required caption="This is a required field" error size="md">Checkbox</plus-checkbox>
+        <plus-checkbox required caption="This is a required field" error size="lg">Checkbox</plus-checkbox>
       </div>
     </div>
   </body>

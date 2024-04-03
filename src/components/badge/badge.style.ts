@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const badgeStyle = tv({
   slots: {
-    base: ["absolute font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto border border-transparent empty:box-content"],
+    base: ["absolute antialiased font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto border border-transparent empty:box-content"],
   },
   variants: {
     size: {
@@ -110,7 +110,7 @@ export const badgeStyle = tv({
       class: {
         base: ["bg-color-invert-default text-color-base"],
       },
-    }
+    },
   ],
   defaultVariants: {
     size: "md",

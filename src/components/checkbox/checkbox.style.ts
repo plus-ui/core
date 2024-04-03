@@ -2,13 +2,13 @@ import { tv } from "tailwind-variants";
 
 export const checkboxStyle = tv({
   slots: {
-    host: ["antialiased font-sans flex flex-col  items-start justify-start w-full relative gap-0.5"],
+    host: ["antialiased font-sans font-normal flex flex-col  items-start justify-start w-full relative gap-0.5"],
     base: ["flex flex-row items-center justify-start gap-2 group/base cursor-pointer text-color-default w-max py-2 border border-transparent"],
     inputElement: ["checkbox sr-only"],
     checkbox: ["rounded bg-color-base border border-color-default"],
     checkIcon: ["text-color-transparent transition-all ease-in-out scale-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"],
     textSlot: [],
-    error: []
+    error: [],
   },
   variants: {
     checked: {

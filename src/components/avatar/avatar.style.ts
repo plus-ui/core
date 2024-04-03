@@ -2,28 +2,27 @@ import { tv } from "tailwind-variants";
 
 export const avatarStyle = tv({
   slots: {
-    base: "uppercase flex items-center justify-center font-sans",
+    base: "uppercase antialiased flex items-center justify-center font-sans font-normal",
     image: "w-full h-full",
     icon: "",
   },
   variants: {
     size: {
-      xs: { 
-        base: ["text-xs w-4 h-4"], 
-        icon: "text-[8px]" 
+      xs: {
+        base: ["text-xs w-4 h-4"],
+        icon: "text-[8px]",
       },
-      sm: { 
-        base: ["text-xs w-6 h-6"], 
+      sm: {
+        base: ["text-xs w-6 h-6"],
       },
-      md: { 
-        base: ["text-sm w-9 h-9"], 
+      md: {
+        base: ["text-sm w-9 h-9"],
       },
-      lg: { 
-        base: ["text-base w-10 h-10"], 
+      lg: {
+        base: ["text-base w-10 h-10"],
       },
-      xl: { 
-        base: ["text-lg w-11 h-11"], 
-        
+      xl: {
+        base: ["text-lg w-11 h-11"],
       },
       custom: "text-[calc(var(--size)/2.50)] w-[--size] h-[--size]",
     },
