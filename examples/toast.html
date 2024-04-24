@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="./src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-button onclick="document.getElementById('toast-top-right').show()">Top Right</plus-button>
+        <plus-button onclick="document.getElementById('toast-top-left').show()">Top Left</plus-button>
+        <plus-button onclick="document.getElementById('toast-bottom-right').show()">Bottom Right</plus-button>
+        <plus-button onclick="document.getElementById('toast-bottom-left').show()">Bottom Left</plus-button>
+
+        <plus-toast position="top-right" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-top-right"></plus-toast>
+        <plus-toast position="top-left" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-top-left"></plus-toast>
+        <plus-toast position="bottom-right" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-bottom-right"></plus-toast>
+        <plus-toast position="bottom-left" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-bottom-left"></plus-toast>
+      </div>
+      <div class="row">
+        <plus-button onclick="document.getElementById('toast-sm').show()">Small</plus-button>
+        <plus-button onclick="document.getElementById('toast-md').show()">Medium</plus-button>
+        <plus-button onclick="document.getElementById('toast-lg').show()">Large</plus-button>
+
+        <plus-toast size="sm" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-sm"></plus-toast>
+        <plus-toast size="md" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-md"></plus-toast>
+        <plus-toast size="lg" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-lg"></plus-toast>
+      </div>
+      <div class="row">
+        <plus-button onclick="document.getElementById('toast-success').show()">Success</plus-button>
+        <plus-button onclick="document.getElementById('toast-info').show()">Info</plus-button>
+        <plus-button onclick="document.getElementById('toast-warning').show()">Warning</plus-button>
+        <plus-button onclick="document.getElementById('toast-error').show()">Error</plus-button>
+
+        <plus-toast status="success" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-success"></plus-toast>
+        <plus-toast status="info" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-info"></plus-toast>
+        <plus-toast status="warning" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-warning"></plus-toast>
+        <plus-toast status="error" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-error"></plus-toast>
+      </div>
+    </div>
+  </body>
+</html>

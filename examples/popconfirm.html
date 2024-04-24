@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="../src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        justify-content: flex-start;
+        gap: 12px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sizes</h1>
+      <div class="row">
+        <plus-popconfirm
+          size="sm"
+          title="This is a Plus UI default dialog"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Ut enim ad minim."
+        >
+          <plus-button>Button</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm
+          title="This is a Plus UI default dialog"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Ut enim ad minim."
+        >
+          <plus-button>Button</plus-button>
+        </plus-popconfirm>
+
+        <plus-popconfirm
+          size="lg"
+          title="This is a Plus UI default dialog"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Ut enim ad minim."
+        >
+          <plus-button>Button</plus-button>
+        </plus-popconfirm>
+      </div>
+      <h1>Status</h1>
+      <div class="row">
+        <plus-popconfirm status="success" title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description">
+          <plus-button>success</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm status="warning" title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description">
+          <plus-button>warning</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm status="error" title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description">
+          <plus-button>error</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm status="info" title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description">
+          <plus-button>info</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description">
+          <plus-button>default</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm status="attention" title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description">
+          <plus-button>attention</plus-button>
+        </plus-popconfirm>
+      </div>
+      <h1>Placement</h1>
+      <div class="row">
+        <plus-popconfirm title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description" placement="top">
+          <plus-button>Top</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description" placement="right">
+          <plus-button>Right</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description" placement="bottom">
+          <plus-button>Bottom</plus-button>
+        </plus-popconfirm>
+        <plus-popconfirm title="This is a Plus UI default dialog" description="This is a Plus UI default dialog description" placement="left">
+          <plus-button>Left</plus-button>
+        </plus-popconfirm>
+      </div>
+    </div>
+  </body>
+</html>

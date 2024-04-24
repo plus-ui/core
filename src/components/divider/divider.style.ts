@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const DividerStyle = tv({
   slots: {
-    base: ["block border-0   border-color-default"],
+    base: ["block border-0 border-color-default"],
   },
   variants: {
     kind: {
@@ -10,7 +10,7 @@ export const DividerStyle = tv({
       dashed: "border-dashed",
     },
     orientation: {
-      vertical: " h-full w-2 border-l",
+      vertical: "h-full w-2 border-l",
       horizontal: "h-2 w-full border-t",
     },
   },

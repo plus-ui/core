@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="./src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+
+      .popover-content {
+        /* padding: 12px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-popover size="sm" title="Small popover">
+          <plus-button kind="outlined" size="sm">Small</plus-button>
+          <div slot="content" class="popover-content">
+            <plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input>
+          </div>
+        </plus-popover>
+        <plus-popover size="md" title="Medium popover">
+          <plus-button kind="outlined" size="md">Medium</plus-button>
+          <div slot="content" class="popover-content">
+            <plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input>
+          </div>
+        </plus-popover>
+        <plus-popover size="lg" title="Large popover">
+          <plus-button kind="outlined" size="lg">Large</plus-button>
+          <div slot="content" class="popover-content">
+            <plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input>
+          </div>
+        </plus-popover>
+      </div>
+
+      <div class="row">
+        <plus-popover placement="top-start" title="Top Start popover">
+          <plus-button kind="outlined" size="sm">Top Start</plus-button>
+          <div slot="content" class="popover-content">
+            <plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input>
+          </div>
+        </plus-popover>
+        <plus-popover placement="top" title="Top popover">
+          <plus-button kind="outlined" size="sm">Top Center</plus-button>
+          <div slot="content" class="popover-content">
+            <plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input>
+          </div>
+        </plus-popover>
+        <plus-popover placement="top-end" title="Top End popover">
+          <plus-button kind="outlined" size="sm">Top End</plus-button>
+          <div slot="content" class="popover-content">
+            <plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input>
+          </div>
+        </plus-popover>
+      </div>
+      <div class="row">
+        <plus-popover placement="bottom-start" title="Bottom Start popover">
+          <plus-button kind="outlined" size="sm">Bottom Start</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+        <plus-popover placement="bottom" title="Bottom popover">
+          <plus-button kind="outlined" size="sm">Bottom Center</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+        <plus-popover placement="bottom-end" title="Bottom End popover">
+          <plus-button kind="outlined" size="sm">Bottom End</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+      </div>
+      <div class="row">
+        <plus-popover placement="left-start" title="Left Start popover">
+          <plus-button kind="outlined" size="sm">Left Start</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+        <plus-popover placement="left" title="Left popover">
+          <plus-button kind="outlined" size="sm">Left Center</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+        <plus-popover placement="left-end" title="Left End popover">
+          <plus-button kind="outlined" size="sm">Left End</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+      </div>
+      <div class="row">
+        <plus-popover placement="right-start" title="Right Start popover">
+          <plus-button kind="outlined" size="sm">Right Start</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+        <plus-popover placement="right" title="Right popover">
+          <plus-button kind="outlined" size="sm">Right Center</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+        <plus-popover placement="right-end" title="Right End popover">
+          <plus-button kind="outlined" size="sm">Right End</plus-button>
+          <div slot="content" class="popover-content"><plus-input label="Label" placeholder="Enter something..." size="sm"></plus-input></div>
+        </plus-popover>
+      </div>
+    </div>
+  </body>
+</html>

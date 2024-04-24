@@ -46,8 +46,16 @@
     </style>
   </head>
   <body>
-    <plus-button onclick="showDrawer()">Show Drawer</plus-button>
-    <plus-drawer id="example">
+    <div class="container">
+      <div class="row">
+        <plus-button onclick="document.getElementById('drawer-left').show()">Left</plus-button>
+        <plus-button onclick="document.getElementById('drawer-right').show()">Right</plus-button>
+        <plus-button onclick="document.getElementById('drawer-top').show()">Top</plus-button>
+        <plus-button onclick="document.getElementById('drawer-bottom').show()">Bottom</plus-button>
+      </div>
+    </div>
+
+    <plus-drawer id="drawer-left" orientation="left">
       <div slot="header">Drawer Header</div>
       <div slot="body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -58,10 +66,38 @@
         <plus-button status="primary">Button</plus-button>
       </slot>
     </plus-drawer>
-    <script>
-      function showDrawer() {
-        document.querySelector("plus-drawer#example").show();
-      }
-    </script>
+    <plus-drawer id="drawer-right" orientation="right">
+      <div slot="header">Drawer Header</div>
+      <div slot="body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+      <slot slot="footer">
+        <plus-button>Button</plus-button>
+        <plus-button status="primary">Button</plus-button>
+      </slot>
+    </plus-drawer>
+    <plus-drawer id="drawer-top" orientation="top">
+      <div slot="header">Drawer Header</div>
+      <div slot="body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+      <slot slot="footer">
+        <plus-button>Button</plus-button>
+        <plus-button status="primary">Button</plus-button>
+      </slot>
+    </plus-drawer>
+    <plus-drawer id="drawer-bottom" orientation="bottom">
+      <div slot="header">Drawer Header</div>
+      <div slot="body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+      <slot slot="footer">
+        <plus-button>Button</plus-button>
+        <plus-button status="primary">Button</plus-button>
+      </slot>
+    </plus-drawer>
   </body>
 </html>

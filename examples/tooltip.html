@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="./src/components/index.ts"></script>
+    <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 100px;
+        font-size: 16px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <plus-tooltip size="sm" message="Small tooltip">
+          <plus-button size="sm">Small</plus-button>
+        </plus-tooltip>
+        <plus-tooltip size="md" message="Medium tooltip">
+          <plus-button size="md">Medium</plus-button>
+        </plus-tooltip>
+        <plus-tooltip size="lg" message="Large tooltip">
+          <plus-button size="lg">Large</plus-button>
+        </plus-tooltip>
+      </div>
+
+      <div class="row">
+        <plus-tooltip placement="top-start" message="Top Start tooltip">
+          <plus-button size="sm">Top Start</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="top" message="Top tooltip">
+          <plus-button size="sm">Top Center</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="top-end" message="Top End tooltip">
+          <plus-button size="sm">Top End</plus-button>
+        </plus-tooltip>
+      </div>
+      <div class="row">
+        <plus-tooltip placement="bottom-start" message="Bottom Start tooltip">
+          <plus-button size="sm">Bottom Start</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="bottom" message="Bottom tooltip">
+          <plus-button size="sm">Bottom Center</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="bottom-end" message="Bottom End tooltip">
+          <plus-button size="sm">Bottom End</plus-button>
+        </plus-tooltip>
+      </div>
+      <div class="row">
+        <plus-tooltip placement="left-start" message="Left Start tooltip">
+          <plus-button size="sm">Left Start</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="left" message="Left tooltip">
+          <plus-button size="sm">Left Center</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="left-end" message="Left End tooltip">
+          <plus-button size="sm">Left End</plus-button>
+        </plus-tooltip>
+      </div>
+      <div class="row">
+        <plus-tooltip placement="right-start" message="Right Start tooltip">
+          <plus-button size="sm">Right Start</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="right" message="Right tooltip">
+          <plus-button size="sm">Right Center</plus-button>
+        </plus-tooltip>
+        <plus-tooltip placement="right-end" message="Right End tooltip">
+          <plus-button size="sm">Right End</plus-button>
+        </plus-tooltip>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,13 +1,16 @@
-import { html } from "lit";
+import { html, unsafeCSS } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { accordionStyle } from "./accordion.style";
-
+/** @ts-ignore */
+import style from "./accordion.style.css?inline";
 @customElement("plus-accordion")
 export class PlusAccordion extends PlusBase {
   @property({ type: Boolean, reflect: true }) open: boolean = false;
   @property({ type: Boolean, reflect: true }) isGrouped: boolean = false;
   @property({ type: Boolean, reflect: true }) isLast: boolean = false;
+
+  static styles = [...PlusBase.styles, unsafeCSS(style)];
 
   private toggleOpen(): void {
     this.open = !this.open;

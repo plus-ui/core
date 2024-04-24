@@ -1,18 +1,22 @@
-import { html } from "lit";
+import { html, unsafeCSS } from "lit";
 import { customElement, property, queryAssignedNodes } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
+/** @ts-ignore */
+import style from "./accordion.style.css?inline";
 
 @customElement("plus-accordion-group")
 export class PlusAccordionGroup extends PlusBase {
   @queryAssignedNodes({ flatten: true }) accordions!: Array<Node>;
   @property({ type: Boolean, reflect: true, converter: value => value != "false" }) multi = false;
 
+  static styles = [...PlusBase.styles, unsafeCSS(style)];
+
   constructor() {
     super();
   }
 
   private handleSlotChange(): void {
-    const accordions = this.accordions.filter(el => el.tagName?.toLowerCase() == "plus-accordion");
+    const accordions = this.accordions.filter(el => (el as any)?.tagName?.toLowerCase() == "plus-accordion");
     accordions?.forEach((accordion: any) => {
       accordion.isGrouped = true;
       const isLast = accordions.indexOf(accordion) == accordions.length - 1;
