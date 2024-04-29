@@ -2,22 +2,34 @@ import { tv } from "tailwind-variants";
 
 export const accordionStyle = tv({
   slots: {
-    base: "font-sans antialiased rounded border border-color-default",
-    header: "header flex h-[46px] cursor-pointer flex-row items-center justify-between bg-color-default px-5 py-2.5 text-lg font-medium text-color-default",
-    panel: "p-5",
-    icon: "text-base",
+    base: "font-sans antialiased border border-color-default",
+    header: "header flex cursor-pointer flex-row items-center justify-between bg-color-default font-medium text-color-default",
+    panel: "",
+    icon: "text-base text-center",
   },
   variants: {
-    open: {
+    size: {
+      sm: {
+        header: "py-2 px-4 text-base gap-2",
+        panel: "p-4 gap-4 text-base",
+      },
+      md: {
+        header: "py-2.5 px-5 text-lg gap-3 h-[48px]",
+        panel: "p-5 gap-5 text-lg",
+      },
+      lg: {
+        header: "py-3 px-6 text-xl gap-3  h-[52px]",
+        panel: "p-6 gap-6 text-xl",
+      },
+    },
+    expand: {
       true: {
         panel: "block",
         icon: "fa-solid fa-angle-up",
-        header: "rounded-t",
       },
       false: {
         panel: "hidden",
         icon: "fa-solid fa-angle-down",
-        header: "rounded",
       },
     },
     isGrouped: {
@@ -25,7 +37,7 @@ export const accordionStyle = tv({
         base: "border-t-0 border-l-0 border-r-0 rounded-b-0 rounded-b-none",
       },
       false: {
-        base: "border-t",
+        base: "",
       },
     },
     isLast: {
@@ -37,7 +49,33 @@ export const accordionStyle = tv({
       },
     },
   },
+  compoundVariants: [
+    // {
+    //   isGrouped: true,
+    //   isLast: true,
+    //   expand: false,
+    //   class: {
+    //     header: "rounded-t-none rounded-b-md",
+    //   },
+    // },
+    // {
+    //   isGrouped: true,
+    //   isLast: true,
+    //   expand: true,
+    //   class: {
+    //     header: "rounded-t-none rounded-b-none",
+    //   },
+    // },
+    // {
+    //   isGrouped: true,
+    //   isLast: false,
+    //   expand: true,
+    //   class: {
+    //     header: "rounded-t-none",
+    //   },
+    // },
+  ],
   defaultVariants: {
-    open: false,
+    expand: false,
   },
 });
