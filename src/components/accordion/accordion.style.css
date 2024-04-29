@@ -10,3 +10,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+:host(:last-of-type):host([isGrouped]):host([expand]) .header {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
