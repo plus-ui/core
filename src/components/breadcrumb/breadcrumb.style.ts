@@ -2,18 +2,18 @@ import { tv } from "tailwind-variants";
 
 export const breadCrumbStyle = tv({
   slots: {
-    host: "breadcrumb flex flex-row items-center justify-start font-sans",
+    host: "breadcrumb flex flex-row items-center justify-start font-sans gap-2.5",
   },
   variants: {
     size: {
       sm: {
-        host: "gap-1.5",
+        host: "",
       },
       md: {
-        host: "gap-2",
+        host: "",
       },
       lg: {
-        host: "gap-2.5",
+        host: "",
       },
     },
   },

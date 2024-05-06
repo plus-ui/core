@@ -7,7 +7,6 @@ export * from "./accordion/accordion.component";
 export * from "./alert/alert.component";
 export * from "./avatar/avatar.component";
 export * from "./badge/badge.component";
-export * from "./breadcrumb-item/breadcrumb-item.component";
 export * from "./breadcrumb/breadcrumb.component";
 export * from "./button-group/button-group.component";
 export * from "./button/button.component";

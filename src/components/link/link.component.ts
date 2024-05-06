@@ -14,22 +14,27 @@ export class LinkComponent extends PlusBase {
   @property() download?: string;
   @property() rel = "noreferrer noopener";
   @property() size = "inherit";
+  @property({ type: Boolean, reflect: true, converter: value => (value == "false" || false ? false : true) }) active = false;
+  @property({ type: Boolean, reflect: true, converter: value => (value == "false" || false ? false : true) }) isBreadcrumb = false;
 
   private handleClick() {
     this.emit("plus-click");
   }
 
   render() {
-    const { href, target, download, rel, kind, disabled, size } = this;
+    const { href, target, download, rel, kind, disabled, size, active, isBreadcrumb } = this;
 
-    const { base } = linkStyle({ kind, disabled });
+    const { base, host } = linkStyle({ kind, disabled, active, isBreadcrumb });
 
     return html`
-      <plus-text size=${size}>
-        <a class="${base()}" href="${href}" target="${ifDefined(target)}" download="${ifDefined(download)}" rel="${ifDefined(rel)}" @click="${this.handleClick}">
-          <slot></slot>
-        </a>
-      </plus-text>
+      <div class=${host()}>
+        <plus-text size=${size}>
+          <a class="${base()}" href="${href}" target="${ifDefined(target)}" download="${ifDefined(download)}" rel="${ifDefined(rel)}" @click="${this.handleClick}">
+            <slot></slot>
+          </a>
+        </plus-text>
+        <slot class="no-underline" name="separator"></slot>
+      </div>
     `;
   }
 }

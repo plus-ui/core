@@ -20,7 +20,6 @@ const _COMPONENTS = [
   "./src/components/checkbox/checkbox.component.ts",
   "./src/components/radio/radio.component.ts",
   "./src/components/breadcrumb/breadcrumb.component.ts",
-  "./src/components/breadcrumb-item/breadcrumb-item.component.ts",
   "./src/components/toggle/toggle.component.ts",
   "./src/components/radio-group/radio-group.component.ts",
   "./src/components/tab/tab.component.ts",
