@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Lit + TS</title>
-    <script type="module" src="../src/components/index.ts"></script>
+    <script type="module" src="./src/components/index.ts"></script>
     <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
     <style>
       body {
@@ -17,6 +17,7 @@
         /* align-items: center; */
         justify-content: flex-start;
         gap: 12px;
+        width: 100%;
       }
       .col {
         display: flex;
@@ -29,7 +30,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 24px;
+        gap: 12px;
         width: 100%;
       }
 
@@ -46,56 +47,73 @@
   </head>
   <body>
     <div class="container">
-      <h1>Kinds</h1>
       <div class="row">
-        <plus-dropdown text="Primary">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
+        <plus-accordion>
+          <plus-accordion-header>...</plus-accordion-header>
+          <plus-accordion-panel>...</plus-accordion-panel>
+        </plus-accordion>
+        <plus-accordion-group>
+          <plus-accordion>
+            <plus-accordion-header>...</plus-accordion-header>
+            <plus-accordion-panel>...</plus-accordion-panel>
+          </plus-accordion>
+          <plus-accordion>
+            <plus-accordion-header>...</plus-accordion-header>
+            <plus-accordion-panel>...</plus-accordion-panel>
+          </plus-accordion>
+        </plus-accordion-group>
+        <plus-accordion-group multi>
+          <plus-accordion>
+            <plus-accordion-header>...</plus-accordion-header>
+            <plus-accordion-panel>...</plus-accordion-panel>
+          </plus-accordion>
+          <plus-accordion>
+            <plus-accordion-header>...</plus-accordion-header>
+            <plus-accordion-panel>...</plus-accordion-panel>
+          </plus-accordion>
+        </plus-accordion-group>
       </div>
-      <h1>Sizes</h1>
       <div class="row">
-        <plus-dropdown size="sm" text="Small">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
-        <plus-dropdown size="md" text="Medium">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
-        <plus-dropdown size="lg" text="Large">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
+        <plus-accordion>
+          <plus-accordion-header>Test</plus-accordion-header>
+          <plus-accordion-panel>
+            <plus-button>Button</plus-button>
+          </plus-accordion-panel>
+        </plus-accordion>
       </div>
-      <h1>Orientation</h1>
+      <p>Group Accordion</p>
       <div class="row">
-        <plus-dropdown text="Bottom">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
-        <plus-dropdown text="Right" position="right">
-          <plus-dropdown-menu>
-            <plus-dropdown-item>Item 1</plus-dropdown-item>
-            <plus-dropdown-item>Item 2</plus-dropdown-item>
-            <plus-dropdown-item>Item 3</plus-dropdown-item>
-          </plus-dropdown-menu>
-        </plus-dropdown>
+        <plus-accordion-group>
+          <plus-accordion>
+            <plus-accordion-header> Test</plus-accordion-header>
+            <plus-accordion-panel>
+              <plus-button>Button</plus-button>
+            </plus-accordion-panel>
+          </plus-accordion>
+          <plus-accordion>
+            <plus-accordion-header> Test</plus-accordion-header>
+            <plus-accordion-panel>
+              <plus-button>Button</plus-button>
+            </plus-accordion-panel>
+          </plus-accordion>
+        </plus-accordion-group>
+      </div>
+      <p>Multi Group Accordion</p>
+      <div class="row">
+        <plus-accordion-group multi>
+          <plus-accordion>
+            <plus-accordion-header> Test</plus-accordion-header>
+            <plus-accordion-panel>
+              <plus-button>Button</plus-button>
+            </plus-accordion-panel>
+          </plus-accordion>
+          <plus-accordion>
+            <plus-accordion-header> Test</plus-accordion-header>
+            <plus-accordion-panel>
+              <plus-button>Button</plus-button>
+            </plus-accordion-panel>
+          </plus-accordion>
+        </plus-accordion-group>
       </div>
     </div>
   </body>
