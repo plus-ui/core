@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const optionStyle = tv({
   slots: {
     base: [
-      "plus-select-item flex flex-row items-center text-color-default bg-base-default rounded  hover:bg-color-default-hover cursor-pointer w-full active:bg-color-default-pressed focus:bg-color-default-focus disabled:bg-color-disabled",
+      "plus-select-item flex flex-row w-full items-center text-color-default bg-base-default rounded  hover:bg-color-default-hover cursor-pointer active:bg-color-default-pressed focus:bg-color-default-focus disabled:bg-color-disabled",
     ],
   },
   variants: {

@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const selectStyle = tv({
   slots: {
-    base: [""],
+    base: "flex flex-col min-w-96 items-center justify-center relative",
   },
   variants: {
     size: {

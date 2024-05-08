@@ -19,9 +19,14 @@ export class SelectComponent extends PlusBase {
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property() placeholder = "";
   @property({ type: String }) label?: string;
+  @property({ type: Boolean, converter: value => value != "false" }) error = false;
+  @property({ type: String }) caption?: string;
+  @property({ type: Boolean }) clearable = false;
 
   @state() selected = "";
   @state() open = false;
+
+  @state() inputWrapper: Promise<HTMLElement> | undefined;
 
   @provide({ context: selectContext })
   context = {
@@ -36,6 +41,16 @@ export class SelectComponent extends PlusBase {
     size: this.size,
   } as SelectContext;
 
+  connectedCallback(): void {
+    super.connectedCallback();
+    this.input?.then(input => {
+      this.inputWrapper = new Promise(resolve => {
+        const wrapper = input.shadowRoot?.querySelector(".input-wrapper");
+        resolve(wrapper as HTMLElement);
+      });
+    });
+  }
+
   protected update(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
     super.update(changedProperties);
   }
@@ -43,10 +58,23 @@ export class SelectComponent extends PlusBase {
   render() {
     const { base } = selectStyle();
     return html`<div class=${base()}>
-      <plus-input class="plus-input" .value=${this.selected} readonly size=${this.size} placeholder=${this.placeholder} label=${this.label}>
+      <plus-input
+        class="plus-input"
+        full-width
+        readonly
+        .value=${this.selected}
+        .error=${this.error}
+        .caption=${this.caption}
+        .clearable=${this.clearable}
+        .disabled=${this.disabled}
+        .size=${this.size}
+        .laceholder=${this.placeholder}
+        .label=${this.label}
+        .required=${this.required}
+      >
         <i slot="suffix" class=${!this.open ? "fas fa-angle-down" : "fas fa-angle-up"}></i>
       </plus-input>
-      <plus-sticky-box class="plus-sticky-box" .target=${this.input} .position=${this.position} @plus-sticky-box-change=${({ detail: { open } }) => (this.open = open)}>
+      <plus-sticky-box class="plus-sticky-box" .target=${this.inputWrapper} .position=${this.position} @plus-sticky-box-change=${({ detail: { open } }) => (this.open = open)}>
         <slot></slot>
       </plus-sticky-box>
     </div> `;

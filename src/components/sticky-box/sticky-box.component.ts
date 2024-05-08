@@ -39,7 +39,7 @@ export class StickyBoxComponent extends StickyService {
 
   render() {
     return html`
-      <div class="stickybox absolute z-50 flex hidden max-h-40 min-w-64 overflow-y-auto !scroll-smooth  rounded border border-color-default bg-color-surface-base shadow-md">
+      <div class="stickybox absolute z-[999] hidden max-h-40 min-w-64 overflow-y-auto !scroll-smooth  rounded border border-color-default bg-color-surface-base shadow-md">
         <slot></slot>
       </div>
     `;

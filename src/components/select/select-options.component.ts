@@ -17,7 +17,7 @@ export class SelectOptionsComponent extends PlusBase {
   }
 
   render() {
-    return html` <div class="flex w-full flex-col px-1 py-1">
+    return html` <div class="min-w-96 flex-1 flex-col px-1 py-1">
       <slot @slotchange=${this.handleSlotChange}></slot>
     </div>`;
   }
