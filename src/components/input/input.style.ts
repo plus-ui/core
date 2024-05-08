@@ -6,7 +6,7 @@ export const inputStyle = tv({
     base: [""],
     inputElement: ["focus:outline-none flex-1 w-full bg-transparent"],
     inputWrapper: [
-      "flex flex-row items-center justify-start flex-1 w-full",
+      "input-wrapper flex flex-row items-center justify-start flex-1 w-full",
       "placeholder-color-placeholder",
       "rounded border border-color-default bg-color-base",
       "hover:border-color-primary",
