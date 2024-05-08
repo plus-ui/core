@@ -18,7 +18,8 @@ export class BreadCrumbComponent extends PlusBase {
       if (index === links.length - 1) {
         item.setAttribute("active", "true");
       } else {
-        item.shadowRoot.querySelector('slot[name="separator"]').innerHTML = this.separator;
+        let separatorSlot = item?.shadowRoot?.querySelector('slot[name="separator"]');
+        separatorSlot && separatorSlot.append(this.separator);
       }
       item.setAttribute("size", this.size);
       item.setAttribute("isBreadcrumb", "true");
