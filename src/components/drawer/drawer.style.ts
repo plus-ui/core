@@ -5,7 +5,7 @@ export const drawerStyle = tv({
     base: ["plus-drawer font-sans antialiased"],
     drawerOverlay: ["drawer-overlay fixed inset-0 z-40 bg-black bg-opacity-50"],
     drawerClass: ["drawer fixed z-50 h-full overflow-y-auto"],
-    drawerContainer: ["drawer-container relative w-full max-w-lg h-full bg-color-base shadow-xl text-base flex flex-col justify-between"],
+    drawerContainer: ["drawer-container relative w-full h-full bg-color-base shadow-xl text-base flex flex-col justify-between"],
     drawerHeader: ["drawer-header flex justify-between items-center py-3 px-4 bg-color-base font-semibold text-lg rounded-t-lg border-b border-color-default"],
     drawerBody: ["drawer-body flex-1 p-4"],
     drawerFooter: ["drawer-footer flex justify-end items-center py-3 px-4 gap-2 rounded-b-lg"],
@@ -42,19 +42,19 @@ export const drawerStyle = tv({
     },
     orientation: {
       left: {
-        drawerClass: ["left-0 top-0 h-full"],
+        drawerClass: ["h-full max-w-lg inset-y-0 left-0"],
         drawerContainer: "overflow-y-auto",
       },
       right: {
-        drawerClass: ["right-0 top-0 h-full "],
+        drawerClass: ["h-full max-w-lg inset-y-0 right-0"],
         drawerContainer: "overflow-y-auto",
       },
       top: {
-        drawerClass: ["top-0 h-96 w-full"],
+        drawerClass: ["h-96 w-full inset-x-0 top-0"],
         drawerContainer: "overflow-x-auto",
       },
       bottom: {
-        drawerClass: ["bottom-0 h-96 w-full"],
+        drawerClass: ["bottom-0 h-96 w-full inset-x-0"],
         drawerContainer: "overflow-x-auto",
       },
     },
