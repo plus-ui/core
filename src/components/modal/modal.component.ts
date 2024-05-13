@@ -9,6 +9,7 @@ import { modalStyle } from "./modal.style";
 export class ModalComponent extends PlusBase {
   @property() size: SizeType = Plus.Sizes.md;
   @property({ type: Boolean, attribute: "is-open" }) isOpen: boolean = false;
+  @property({ reflect: true, attribute: "full-width", type: Boolean }) fullWidth = false;
 
   constructor() {
     super();
@@ -39,8 +40,9 @@ export class ModalComponent extends PlusBase {
   }
 
   render() {
-    const { size, isOpen } = this;
-    const { base, modalClass, modalOverlay, modalContainer, modalHeader, modalBody, modalFooter, modalCloseButtonClass } = modalStyle({ size, isOpen });
+    const { size, isOpen, fullWidth } = this;
+
+    const { base, modalClass, modalOverlay, modalContainer, modalHeader, modalBody, modalFooter, modalCloseButtonClass } = modalStyle({ size, isOpen, fullWidth });
 
     return html`<div class=${base()}>
       <div class=${modalOverlay()} aria-label="Close" @click=${() => this.hide()}></div>
