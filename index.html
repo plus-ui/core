@@ -46,6 +46,25 @@
     </style>
   </head>
   <body>
+    <plus-button onclick="openDrawer('left')">Open Drawer</plus-button>
+    <plus-button onclick="openDrawer('right')">Open Drawer</plus-button>
+    <plus-button onclick="openDrawer('top')">Open Drawer</plus-button>
+    <plus-button onclick="openDrawer('bottom')">Open Drawer</plus-button>
+
+    <plus-drawer id="my-drawer">
+      <div slot="header">Drawer Header</div>
+      <div slot="body">This is the body content of the drawer.</div>
+      <div slot="footer">Drawer Footer</div>
+    </plus-drawer>
+
+    <script>
+      function openDrawer(orientation) {
+        const drawer = document.getElementById("my-drawer");
+        drawer.orientation = orientation;
+        drawer.show();
+      }
+    </script>
+
     <div class="container">
       <plus-select id="select-sm" label="Select" placeholder="Select an option" size="sm" caption="There will be a caption text here" required>
         <plus-select-options>

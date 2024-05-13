@@ -37,14 +37,27 @@ export class DrawerComponent extends PlusBase {
   private drawerShow() {
     this.isOpen = true;
     this.emit("plus-drawer-show");
+    document.addEventListener("keydown", this.keydownHandler);
   }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    this.removeEventListener("plus-drawer-before-show", this.drawerShow);
+    this.removeEventListener("plus-drawer-before-hide", this.drawerHide);
+  }
+
+  keydownHandler = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      this.hide();
+    }
+  };
 
   render() {
     const { size, isOpen, orientation } = this;
     const { base, drawerClass, drawerOverlay, drawerContainer, drawerHeader, drawerBody, drawerFooter, drawerCloseButtonClass } = drawerStyle({ size, isOpen, orientation });
 
     return html`<div class=${base()}>
-      <div class=${drawerOverlay()}></div>
+      <div class=${drawerOverlay()} @click=${() => this.hide()}></div>
       <div class=${drawerClass()}>
         <div class=${drawerContainer()}>
           <slot name="close">
