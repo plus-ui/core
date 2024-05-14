@@ -5,7 +5,7 @@ import { accordionStyle } from "./accordion.style";
 /** @ts-ignore */
 import style from "./accordion.style.css?inline";
 @customElement("plus-accordion")
-export class PlusAccordion extends PlusBase {
+export class AccordionComponent extends PlusBase {
   @property({ type: Boolean, converter: expand => expand != "false", reflect: true }) expand = false;
   @property({ type: Boolean, reflect: true }) isGrouped: boolean = false;
   @property({ type: Boolean, reflect: true }) isLast: boolean = false;
@@ -37,6 +37,6 @@ export class PlusAccordion extends PlusBase {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "plus-accordion": PlusAccordion;
+    "plus-accordion": AccordionComponent;
   }
 }

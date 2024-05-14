@@ -16,15 +16,21 @@ export class SelectComponent extends PlusBase {
   @queryAsync(".plus-input") input!: Promise<HTMLElement> | undefined;
 
   @property({ attribute: false }) position: PlacementType = "bottom-start";
-  @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property() placeholder = "";
   @property({ type: String }) label?: string;
   @property({ type: Boolean, converter: value => value != "false" }) error = false;
   @property({ type: String }) caption?: string;
   @property({ type: Boolean }) clearable = false;
 
+  @property({ type: String })
+  set size(value: "sm" | "md" | "lg") {
+    this._size = value;
+    this.context.size = value;
+  }
+
   @state() selected = "";
   @state() open = false;
+  @state() _size: "sm" | "md" | "lg" = "md";
 
   @state() inputWrapper: Promise<HTMLElement> | undefined;
 
@@ -38,7 +44,6 @@ export class SelectComponent extends PlusBase {
       });
       this.emit("plus-select-change", { detail: { id } });
     },
-    size: this.size,
   } as SelectContext;
 
   connectedCallback(): void {
@@ -67,7 +72,7 @@ export class SelectComponent extends PlusBase {
         .caption=${this.caption}
         .clearable=${this.clearable}
         .disabled=${this.disabled}
-        .size=${this.size}
+        .size=${this._size}
         .laceholder=${this.placeholder}
         .label=${this.label}
         .required=${this.required}
