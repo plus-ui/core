@@ -10,7 +10,7 @@ export class AccordionPanelComponent extends PlusBase {
   }
 
   render() {
-    return html` <slot class="bg-color-default text-color-base"></slot> `;
+    return html` <slot class="bg-color-base text-color-default dark:text-color-base"></slot> `;
   }
 }
 
