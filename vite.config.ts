@@ -51,6 +51,14 @@ export default defineConfig({
         return `${entryName}.js`;
       },
     },
+    rollupOptions: {
+      external: ["@floating-ui"],
+      output: {
+        globals: {
+          vue: "Vue",
+        },
+      },
+    },
   },
   plugins: [
     dts({
