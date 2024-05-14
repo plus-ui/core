@@ -11,7 +11,7 @@ export const linkStyle = tv({
       primary: "text-color-primary hover:underline",
     },
     disabled: {
-      true: "cursor-not-allowed text-color-disabled user-select-none pointer-events-none",
+      true: "",
       false: "",
     },
     active: {
@@ -34,6 +34,13 @@ export const linkStyle = tv({
       isBreadcrumb: false,
       class: {
         base: "visited:text-color-visited",
+      },
+    },
+    {
+      disabled: true,
+      class: {
+        base: "text-color-disabled pointer-events-none",
+        host: "cursor-not-allowed select-none",
       },
     },
   ],
