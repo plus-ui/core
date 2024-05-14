@@ -22,10 +22,10 @@ export class AccordionGroupComponent extends PlusBase {
       const isLast = accordions.indexOf(accordion) == accordions.length - 1;
       accordion.isLast = isLast;
       accordion.addEventListener("plus-accordion-toggle", (event: any) => {
-        if (!this.multi && event.detail.open) {
+        if (!this.multi && event.detail.expand) {
           accordions.forEach((el: any) => {
             if (el != event.target) {
-              el.open = false;
+              el.expand = false;
             }
           });
         }
