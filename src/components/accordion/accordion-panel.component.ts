@@ -3,7 +3,7 @@ import { customElement } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 
 @customElement("plus-accordion-panel")
-export class PlusAccordionPanel extends PlusBase {
+export class AccordionPanelComponent extends PlusBase {
   constructor() {
     super();
     this.slot = "panel";
@@ -16,6 +16,6 @@ export class PlusAccordionPanel extends PlusBase {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "plus-accordion-panel": PlusAccordionPanel;
+    "plus-accordion-panel": AccordionPanelComponent;
   }
 }
