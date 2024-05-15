@@ -1,10 +1,10 @@
 import { customElement, property, state } from "lit/decorators.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { html } from "lit/static-html.js";
+import { SizeType } from "src/model/plus-types";
 import { PlusBase } from "../../base/plus-base";
 import Plus from "../../model/plus";
 import { avatarStyle } from "./avatar.style";
-import { SizeType } from "src/model/plus-types";
 
 @customElement("plus-avatar")
 export class AvatarComponent extends PlusBase {
@@ -12,7 +12,6 @@ export class AvatarComponent extends PlusBase {
   @property() alt: string;
   @property() shape: "circle" | "square" = "circle";
   @property() size: SizeType | string = Plus.Sizes.md;
-  @property() color: string;
   @property() icon: string = "fas fa-user";
   @property({ type: Boolean, converter: value => value != "false" }) invert = false;
   @property() text?: string;
