@@ -66,8 +66,11 @@
     </script>
 
     <div class="container">
+      <plus-input placeholder="text" readonly></plus-input>
+      <plus-input placeholder="text" disabled></plus-input>
+      <plus-input placeholder="text" caption="There will be a caption text here"></plus-input>
       <div class="row">
-        <plus-select id="select-sm" label="Select" placeholder="Select an option" size="sm" caption="There will be a caption text here" required>
+        <plus-select id="select-sm" label="Select" placeholder="Select an option" size="sm" caption="There will be a caption text here">
           <plus-select-options>
             <plus-select-option>test1</plus-select-option>
             <plus-select-option>test2</plus-select-option>
@@ -75,7 +78,7 @@
           </plus-select-options>
         </plus-select>
 
-        <plus-select id="select-sm" label="Select" placeholder="Select an option" size="md" error caption="There will be a caption text here" required>
+        <plus-select id="select-sm" label="Select" placeholder="Select an option" size="sm" caption="There will be a caption text here" readonly>
           <plus-select-options>
             <plus-select-option>test1</plus-select-option>
             <plus-select-option>test2</plus-select-option>
@@ -83,7 +86,7 @@
           </plus-select-options>
         </plus-select>
 
-        <plus-select id="select-sm" label="Select" placeholder="Select an option" size="lg" error caption="There will be a caption text here" required>
+        <plus-select id="select-sm" label="Select" placeholder="Select an option" size="sm" caption="There will be a caption text here" disabled>
           <plus-select-options>
             <plus-select-option>test1</plus-select-option>
             <plus-select-option>test2</plus-select-option>

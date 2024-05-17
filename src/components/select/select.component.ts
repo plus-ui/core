@@ -21,7 +21,6 @@ export class SelectComponent extends PlusBase {
   @property({ type: Boolean, converter: value => value != "false" }) error = false;
   @property({ type: String }) caption?: string;
   @property({ type: Boolean }) clearable = false;
-
   @property({ type: String })
   set size(value: "sm" | "md" | "lg") {
     this._size = value;
@@ -66,16 +65,17 @@ export class SelectComponent extends PlusBase {
       <plus-input
         class="plus-input"
         full-width
-        readonly
         .value=${this.selected}
         .error=${this.error}
         .caption=${this.caption}
         .clearable=${this.clearable}
         .disabled=${this.disabled}
+        .readonly=${this.readonly}
         .size=${this._size}
         .laceholder=${this.placeholder}
         .label=${this.label}
         .required=${this.required}
+        .isSelect=${true}
       >
         <i slot="suffix" class=${!this.open ? "fas fa-angle-down" : "fas fa-angle-up"}></i>
       </plus-input>
