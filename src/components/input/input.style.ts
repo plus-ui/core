@@ -6,7 +6,7 @@ export const inputStyle = tv({
     base: [""],
     inputElement: ["focus:outline-none flex-1 w-full bg-transparent"],
     inputWrapper: [
-      "input-wrapper flex flex-row items-center justify-start flex-1 w-full",
+      "input-wrapper flex flex-row items-center justify-start flex-1 w-full cursor-text",
       "placeholder-color-placeholder",
       "rounded border border-color-default bg-color-base",
       "hover:border-color-primary",
@@ -31,11 +31,25 @@ export const inputStyle = tv({
     },
     disabled: {
       true: {
-        inputWrapper: ["border-color-disabled bg-color-disabled text-color-disabled hover:border-color-disabled"],
+        inputWrapper: ["border-color-disabled cursor-not-allowed bg-color-disabled text-color-disabled hover:border-color-disabled"],
+        inputElement: ["cursor-not-allowed text-color-disabled placeholder:text-color-disabled"],
       },
       false: {
         host: ["cursor-text"],
       },
+    },
+    readonly: {
+      true: {
+        inputWrapper: ["bg-color-default border-color-default text-color-default pointer-events-none"],
+        inputElement: ["cursor-default text-color-default placeholder:text-color-default pointer-events-none"],
+      },
+      false: {
+        host: "",
+      },
+    },
+    isSelect: {
+      true: {},
+      false: {},
     },
     size: {
       sm: {
@@ -72,11 +86,21 @@ export const inputStyle = tv({
         inputWrapper: ["border-color-error"],
       },
     },
+    {
+      isSelect: true,
+      disabled: false,
+      readonly: false,
+      class: {
+        inputWrapper: ["cursor-pointer"],
+        inputElement: ["cursor-pointer"],
+      },
+    },
   ],
   defaultVariants: {
     focus: false,
     error: false,
     disabled: false,
     size: "md",
+    isSelect: false,
   },
 });
