@@ -5,7 +5,7 @@ export const alertStyle = tv({
     base: "font-sans antialiased flex flex-row items-baseline justify-between border border-solid rounded-md font-medium w-fit",
     textArea: "flex flex-1 flex-col items-start justify-center",
     descriptionClass: "empty:hidden font-normal",
-    closableArea: "flex h-6 w-6 cursor-pointer items-center justify-center",
+    dismissArea: "flex h-6 w-6 cursor-pointer items-center justify-center",
     iconClass: "",
   },
   variants: {
@@ -48,32 +48,32 @@ export const alertStyle = tv({
         base: "w-full",
       },
     },
-    closable: {
+    dismiss: {
       true: {
-        closableArea: "cursor-pointer",
+        dismissArea: "cursor-pointer",
       },
       false: {
-        closableArea: "hidden",
+        dismissArea: "hidden",
       },
     },
     status: {
-      success: { 
+      success: {
         base: ["bg-color-success text-color-base"],
         // iconClass: "text-color-invert-success"
       },
-      warning: { 
+      warning: {
         base: ["bg-color-warning text-color-base"],
         // iconClass: "text-color-invert-warning"
       },
-      error: { 
+      error: {
         base: ["bg-color-error text-color-base"],
         // iconClass: "text-color-invert-error"
       },
-      info: { 
+      info: {
         base: ["bg-color-info text-color-base"],
         // iconClass: "text-color-invert-info"
       },
-      default: { 
+      default: {
         base: ["bg-color-default text-color-default"],
       },
     },
@@ -102,7 +102,7 @@ export const alertStyle = tv({
         iconClass: "text-color-invert-success",
       },
     },
-    
+
     {
       kind: "filled",
       status: "info",
