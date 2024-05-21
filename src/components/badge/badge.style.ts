@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const badgeStyle = tv({
   slots: {
-    base: ["absolute antialiased font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto border border-transparent empty:box-content"],
+    base: ["absolute antialiased font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto border border-color-base empty:box-content"],
   },
   variants: {
     size: {
@@ -46,7 +46,7 @@ export const badgeStyle = tv({
         base: "",
       },
     },
-    placement: {
+    orientation: {
       "top-left": {
         base: "top-0 left-0 scale-100 transform -translate-x-1/2 -translate-y-1/2 ",
       },
@@ -116,7 +116,7 @@ export const badgeStyle = tv({
     size: "md",
     status: "default",
     kind: "text",
-    placement: "top-right",
+    orientation: "top-right",
     invert: false,
     isSingleChar: false,
   },
