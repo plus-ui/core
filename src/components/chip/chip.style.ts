@@ -5,7 +5,7 @@ export const chipStyle = tv({
     base: [
       "font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto rounded-full border border-solid rounded-full bg-color-default text-color-default hover:bg-color-default-hover active:bg-color-default-pressed",
     ],
-    dismissClass: ["flex items-center justify-center text-color-default cursor-pointer"],
+    dismissClass: ["flex items-center justify-center text-color-default cursor-pointer hover:text-color-caption"],
   },
   variants: {
     size: {
