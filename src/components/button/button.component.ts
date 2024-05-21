@@ -29,6 +29,9 @@ export class ButtonComponent extends PlusBase {
   @property({ reflect: true, attribute: "group-position" }) groupPosition: "vertical" | "horizontal";
   @property({ type: Boolean }) loading = false;
 
+  @property({ type: String, attribute: "prefix-icon" }) prefixIcon: string;
+  @property({ type: String, attribute: "suffix-icon" }) suffixIcon: string;
+
   @state() hasFocus = false;
 
   private isLink() {
@@ -50,7 +53,7 @@ export class ButtonComponent extends PlusBase {
   }
 
   render() {
-    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder, groupPosition, loading } = this;
+    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder, groupPosition, loading, prefixIcon, suffixIcon } = this;
 
     const { base } = buttonStyle({ size, disabled, kind, status, groupOrder, groupPosition, loading });
 
@@ -80,7 +83,9 @@ export class ButtonComponent extends PlusBase {
         @focus=${this.handleFocus}
         @click=${this.handleClick}
       >
+      ${prefixIcon ? html`<i class="${prefixIcon}"></i>` : ""}
       <slot></slot>
+      ${suffixIcon ? html`<i class="${suffixIcon}"></i>` : ""}
       ${loading ? html`<plus-loading></plus-loading>` : ""}
       </${tag}>
     `;
