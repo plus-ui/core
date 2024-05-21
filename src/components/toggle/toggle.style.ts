@@ -31,7 +31,7 @@ export const toggleStyle = tv({
         toggleDot: ["text-color-caption"],
       },
     },
-    textPosition: {
+    alignment: {
       left: {
         toggleText: ["order-0"],
       },
@@ -153,7 +153,7 @@ export const toggleStyle = tv({
     disabled: false,
     readonly: false,
     checked: false,
-    textPosition: "right",
+    alignment: "right",
     size: "md",
   },
 });
