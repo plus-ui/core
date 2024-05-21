@@ -72,7 +72,7 @@ export class SelectComponent extends PlusBase {
         .disabled=${this.disabled}
         .readonly=${this.readonly}
         .size=${this._size}
-        .laceholder=${this.placeholder}
+        .placeholder=${this.placeholder}
         .label=${this.label}
         .required=${this.required}
         .isSelect=${true}
