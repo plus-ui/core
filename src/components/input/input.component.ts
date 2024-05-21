@@ -37,7 +37,7 @@ export class InputComponent extends PlusBase {
   @property() step: number | "any";
   @property() autocapitalize: "off" | "none" | "on" | "sentences" | "words" | "characters";
   @property() autocorrect: "off" | "on";
-  @property() autocomplete: string;
+  @property() autocomplete: string = "off";
   @property({ type: Boolean }) autofocus: boolean;
   @property() enterkeyhint: "enter" | "done" | "go" | "next" | "previous" | "search" | "send";
   @property() inputmode: "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
@@ -46,6 +46,7 @@ export class InputComponent extends PlusBase {
   @property({ type: Boolean, converter: value => value != "false" }) error = false;
 
   @property({ reflect: true, attribute: "full-width", type: Boolean }) fullWidth = false;
+  @property({ type: Boolean, converter: value => value != "false" }) isSelect = false;
 
   private handleBlur() {
     this.hasFocus = false;
@@ -93,8 +94,8 @@ export class InputComponent extends PlusBase {
   }
 
   render() {
-    const { label, hasFocus, error, disabled, caption, clearable, value, size, required } = this;
-    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = inputStyle({ focus: hasFocus, error, disabled, size });
+    const { label, hasFocus, error, disabled, caption, clearable, value, size, required, readonly, isSelect } = this;
+    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = inputStyle({ focus: hasFocus, error, disabled, size, readonly, isSelect });
 
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ size, required })} for="input">${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
@@ -105,7 +106,12 @@ export class InputComponent extends PlusBase {
           </div>`
         : null;
 
-    return html`<div class=${host()}>
+    return html`<div
+      class=${host()}
+      @click=${e => {
+        if (disabled || readonly) e.stopPropagation();
+      }}
+    >
       ${LabelTemplate()}
       <div class=${inputWrapper()} @click=${() => this.input.focus()}>
         <slot name="prefix" class=${prefix()} @slotchange=${this.handleSlotchange}></slot>
@@ -117,8 +123,8 @@ export class InputComponent extends PlusBase {
           title=${this.title}
           name=${ifDefined(this.name)}
           ?disabled=${this.disabled}
-          ?readonly=${this.readonly}
-          ?required=${this.required}
+          ?readonly=${readonly || isSelect}
+          ?required=${required}
           placeholder=${ifDefined(this.placeholder)}
           minlength=${ifDefined(this.minlength)}
           maxlength=${ifDefined(this.maxlength)}
