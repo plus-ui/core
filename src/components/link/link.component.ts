@@ -25,9 +25,9 @@ export class LinkComponent extends PlusBase {
   }
 
   render() {
-    const { href, target, download, rel, kind, disabled, size, active, isBreadcrumb, truncated, prefixIcon } = this;
+    const { href, target, download, rel, kind, disabled, size, active, isBreadcrumb, truncated, prefixIcon, readonly } = this;
 
-    const { base, host } = linkStyle({ kind, disabled, active, isBreadcrumb });
+    const { base, host } = linkStyle({ kind, disabled, active, isBreadcrumb, readonly });
 
     return html`
       <div class=${host()}>

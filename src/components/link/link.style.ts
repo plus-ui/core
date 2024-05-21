@@ -26,6 +26,10 @@ export const linkStyle = tv({
       true: "",
       false: "",
     },
+    readonly: {
+      true: "cursor-not-allowed select-none pointer-events-none text-color-caption",
+      false: "",
+    },
   },
   compoundVariants: [
     {
