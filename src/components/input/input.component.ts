@@ -48,6 +48,9 @@ export class InputComponent extends PlusBase {
   @property({ reflect: true, attribute: "full-width", type: Boolean }) fullWidth = false;
   @property({ type: Boolean, converter: value => value != "false" }) isSelect = false;
 
+  @property({ type: String, attribute: "prefix-icon" }) prefixIcon: string;
+  @property({ type: String, attribute: "suffix-icon" }) suffixIcon: string;
+
   private handleBlur() {
     this.hasFocus = false;
     this.emit("plus-blur");
@@ -89,12 +92,12 @@ export class InputComponent extends PlusBase {
   handleSlotchange(e) {
     const childNodes = e.target.assignedNodes({ flatten: true });
     if (childNodes.length) {
-      e.target.style.display = "block";
+      e.target.style.display = "flex";
     }
   }
 
   render() {
-    const { label, hasFocus, error, disabled, caption, clearable, value, size, required, readonly, isSelect } = this;
+    const { label, hasFocus, error, disabled, caption, clearable, value, size, required, readonly, isSelect, prefixIcon, suffixIcon } = this;
     const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = inputStyle({ focus: hasFocus, error, disabled, size, readonly, isSelect });
 
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ size, required })} for="input">${label}</label>` : null);
@@ -114,7 +117,8 @@ export class InputComponent extends PlusBase {
     >
       ${LabelTemplate()}
       <div class=${inputWrapper()} @click=${() => this.input.focus()}>
-        <slot name="prefix" class=${prefix()} @slotchange=${this.handleSlotchange}></slot>
+        ${prefixIcon ? html`<div class=${prefix()}><i slot="prefix" class="${prefixIcon}"></i></div>` : null}
+        <slot name="prefix" class=${prefix() + " hidden"} @slotchange=${this.handleSlotchange}></slot>
         <input
           id="input"
           type="text"
@@ -148,8 +152,8 @@ export class InputComponent extends PlusBase {
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
         />
-        <slot name="suffix" class=${suffix()} @slotchange=${this.handleSlotchange}></slot>
-        ${ClearTemplate()}
+        <slot name="suffix" class=${suffix() + " hidden"} @slotchange=${this.handleSlotchange}></slot>
+        ${suffixIcon ? html`<div class=${suffix()}><i class="${suffixIcon}"></i></div>` : null} ${ClearTemplate()}
       </div>
       ${CaptionTemplate()}
     </div>`;

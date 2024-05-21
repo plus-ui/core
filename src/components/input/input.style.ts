@@ -12,8 +12,8 @@ export const inputStyle = tv({
       "hover:border-color-primary",
       "text-color-default",
     ],
-    prefix: ["flex flex-row items-center justify-start hidden"],
-    suffix: ["flex flex-row items-center justify-start hidden"],
+    prefix: ["flex flex-row items-center justify-start"],
+    suffix: ["flex flex-row items-center justify-start"],
     clearButton: ["cursor-pointer flex flex-row items-center justify-center hover:text-color-caption"],
   },
   variants: {
