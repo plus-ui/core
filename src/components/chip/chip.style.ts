@@ -3,8 +3,9 @@ import { tv } from "tailwind-variants";
 export const chipStyle = tv({
   slots: {
     base: [
-      "font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto rounded-fullborder border-solid rounded-full bg-color-default text-color-default hover:bg-color-default-hover active:bg-color-default-pressed",
+      "font-sans inline-flex items-center justify-center text-center whitespace-nowrap z-auto rounded-full border border-solid rounded-full bg-color-default text-color-default hover:bg-color-default-hover active:bg-color-default-pressed",
     ],
+    dismissClass: ["flex items-center justify-center text-color-default cursor-pointer"],
   },
   variants: {
     size: {
