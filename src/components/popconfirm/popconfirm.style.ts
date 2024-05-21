@@ -48,7 +48,6 @@ export const popconfirmStyle = tv({
       },
     },
     status: {
-      default: [""],
       success: {
         prefixIconClass: ["text-color-success"],
       },
@@ -61,9 +60,6 @@ export const popconfirmStyle = tv({
       info: {
         prefixIconClass: ["text-color-info"],
       },
-      primary: {
-        prefixIconClass: ["text-color-primary"],
-      },
       attention: {
         prefixIconClass: ["text-color-default"],
       },
@@ -73,6 +69,6 @@ export const popconfirmStyle = tv({
   defaultVariants: {
     size: "md",
     available: true,
-    status: "default",
+    status: "info",
   },
 });

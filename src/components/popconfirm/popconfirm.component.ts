@@ -8,12 +8,12 @@ import { popconfirmStyle } from "./popconfirm.style";
 @customElement("plus-popconfirm")
 export class PopconfirmComponent extends FloatingService {
   @property({ type: String }) size: SizeType = Plus.Sizes.md;
-  @property({ type: String }) placement: PlacementType = "top";
+  @property({ type: String }) orientation: PlacementType = "top";
   @property({ type: Boolean, attribute: "show-arrow" }) showArrow: boolean = true;
 
   @property({ type: String }) title: string;
   @property({ type: String }) description: string;
-  @property({ type: String }) status: "success" | "warning" | "error" | "info" | "default" | "primary" | "attention" = "primary";
+  @property({ type: String }) status: "success" | "warning" | "error" | "info" | "attention" = "info";
   @property({ attribute: "ok-text" }) okText: string = "Confirm";
   @property({ attribute: "cancel-text" }) cancelText: string = "Cancel";
   @property() trigger = "click"; // click manual
@@ -51,7 +51,7 @@ export class PopconfirmComponent extends FloatingService {
   protected firstUpdated() {
     this.options = {
       ...this.options,
-      position: this.placement,
+      position: this.orientation,
       showArrow: this.showArrow,
     };
   }
