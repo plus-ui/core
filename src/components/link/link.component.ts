@@ -17,19 +17,23 @@ export class LinkComponent extends PlusBase {
   @property({ type: Boolean, reflect: true, converter: value => (value == "false" || false ? false : true) }) active = false;
   @property({ type: Boolean, reflect: true, converter: value => (value == "false" || false ? false : true) }) isBreadcrumb = false;
 
+  @property({ type: Boolean, converter: value => value != "false" }) truncated = false;
+  @property({ type: String, attribute: "prefix-icon" }) prefixIcon: string;
+
   private handleClick() {
     this.emit("plus-click");
   }
 
   render() {
-    const { href, target, download, rel, kind, disabled, size, active, isBreadcrumb } = this;
+    const { href, target, download, rel, kind, disabled, size, active, isBreadcrumb, truncated, prefixIcon } = this;
 
     const { base, host } = linkStyle({ kind, disabled, active, isBreadcrumb });
 
     return html`
       <div class=${host()}>
-        <plus-text size=${size}>
+        <plus-text size=${size} truncated=${truncated} class="w-full">
           <a class="${base()}" href="${href}" target="${ifDefined(target)}" download="${ifDefined(download)}" rel="${ifDefined(rel)}" @click="${this.handleClick}">
+            ${prefixIcon ? html`<i class="${prefixIcon}"></i>` : ""}
             <slot></slot>
           </a>
         </plus-text>
