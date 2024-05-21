@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const textStyle = tv({
   slots: {
-    base: ["inline font-sans text-base font-normal"],
+    base: ["block w-full font-sans text-base font-normal"],
   },
   variants: {
     kind: {
@@ -56,6 +56,9 @@ export const textStyle = tv({
     highlight: {
       true: { base: "bg-color-invert-warning" },
     },
+    truncated: {
+      true: { base: "truncate" },
+    },
   },
   defaultVariants: {
     kind: "default",
@@ -66,5 +69,6 @@ export const textStyle = tv({
     italic: false,
     size: "base",
     type: "p",
+    truncated: false,
   },
 });

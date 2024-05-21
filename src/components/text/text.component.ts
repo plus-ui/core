@@ -28,6 +28,8 @@ export class TextComponent extends PlusBase {
   @property({ type: String }) size = "base";
   @property({ type: String }) type: string = "p";
 
+  @property({ type: Boolean, converter: value => value != "false" }) truncated = false;
+
   textDecoration() {
     const { underline, overline, lineThrough } = this;
     if (!underline && !overline && !lineThrough) {
@@ -39,9 +41,9 @@ export class TextComponent extends PlusBase {
   }
 
   render() {
-    const { kind, status, disabled, highlight, strong, italic, type, size } = this;
+    const { kind, status, disabled, highlight, strong, italic, type, size, truncated } = this;
 
-    const { base } = textStyle({ kind, status, disabled, highlight, strong, italic, type, size });
+    const { base } = textStyle({ kind, status, disabled, highlight, strong, italic, type, size, truncated });
 
     const tag = unsafeStatic(type);
 
