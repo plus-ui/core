@@ -16,7 +16,6 @@ const statusIcons = {
 @customElement("plus-progress")
 export class ProgressComponent extends PlusBase {
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: String, attribute: "value-format" }) valueFormat: "percent" | "step" = "percent";
   @property({ type: String }) label?: string;
   @property({ type: String }) caption?: string;
   @property({ type: Boolean, converter: value => value != "false" }) error = false;
@@ -24,6 +23,8 @@ export class ProgressComponent extends PlusBase {
   @property({ type: Boolean, reflect: true, attribute: "status-icon" }) statusIcon = false;
   @property({ type: Number, attribute: "max-value" }) maxValue = 100;
   @property({ type: Boolean }) indeterminate = false;
+  @property({ type: Boolean, converter: value => value != "false", attribute: "show-percent" }) showPercent = true;
+  @property({ type: Boolean, converter: value => value != "false", attribute: "show-step" }) showStep = false;
 
   static host = css`
     :host {
@@ -31,11 +32,11 @@ export class ProgressComponent extends PlusBase {
       width: 100%;
     }
   `;
-  
+
   static styles = [...PlusBase.styles, unsafeCSS(ProgressComponent.host)];
 
   render() {
-    const { size, label, caption, required, error, status, valueFormat, disabled, indeterminate } = this;
+    const { size, label, caption, required, error, status, valueFormat, disabled, indeterminate, showPercent, showStep } = this;
     const { host, progress, progressLine, infoArea } = progressStyle({ size, status, disabled, indeterminate });
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ required, size, disabled })} @click=${this.focus}>${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size, disabled })}>${caption}</div>` : null);
@@ -46,7 +47,9 @@ export class ProgressComponent extends PlusBase {
       <div class=${host()}>
         <div class="flex flex-row items-start justify-between">
           ${LabelTemplate()}
-          <div class=${infoArea()}>${valueFormat === "percent" ? PercentTemplate() : StepTemplate()} ${this.statusIcon && statusIcons[status] ? StatusIconTemplate() : null}</div>
+          <div class=${infoArea()}>
+            ${showPercent ? PercentTemplate() : null} ${showStep ? StepTemplate() : null} ${this.statusIcon && statusIcons[status] ? StatusIconTemplate() : null}
+          </div>
         </div>
         <div class=${progress()}>
           <div
