@@ -8,7 +8,7 @@ import { popoverStyle } from "./popover.style";
 @customElement("plus-popover")
 export class PopoverComponent extends FloatingService {
   @property({ type: String }) size: SizeType = Plus.Sizes.md;
-  @property({ type: String }) placement: PlacementType = "top";
+  @property({ type: String }) orientation: PlacementType = "top";
   @property({ type: Boolean, attribute: "show-arrow" }) showArrow: boolean = true;
 
   @property({ type: String }) title: string;
@@ -50,7 +50,7 @@ export class PopoverComponent extends FloatingService {
   protected firstUpdated() {
     this.options = {
       ...this.options,
-      position: this.placement,
+      position: this.orientation,
       showArrow: this.showArrow,
     };
   }
