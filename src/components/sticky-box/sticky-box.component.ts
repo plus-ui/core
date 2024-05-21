@@ -9,7 +9,7 @@ export class StickyBoxComponent extends StickyService {
   @query(".stickybox") content: HTMLDivElement;
 
   @property({ attribute: false }) target: Promise<HTMLElement> | undefined;
-  @property({ attribute: false }) position: PlacementType = "bottom-start";
+  @property({ attribute: false }) orientation: PlacementType = "bottom-start";
   @property({ attribute: false }) open: boolean = false;
 
   constructor() {
@@ -25,7 +25,7 @@ export class StickyBoxComponent extends StickyService {
 
     if (this.options.target) {
       this.options.content = this.content;
-      this.options.position = this.position;
+      this.options.position = this.orientation;
       this.options.offset = 4;
       this.listener();
       this.options.isOpened = (open: boolean) => {

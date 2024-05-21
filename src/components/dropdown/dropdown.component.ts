@@ -17,7 +17,7 @@ export class DropdownComponent extends PlusBase {
   @queryAsync(".dropdown") dropdown: Promise<HTMLElement> | undefined;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) text;
-  @property({ attribute: false }) position: PlacementType = "bottom-start";
+  @property({ attribute: false }) orientation: PlacementType = "bottom-start";
 
   @provide({ context: dropdownContext })
   context = {
@@ -39,7 +39,7 @@ export class DropdownComponent extends PlusBase {
     return html`
       <div>
         <plus-button class="dropdown" status="primary" .size=${this.size} id="dropdown">${this.text} <i class="fas fa-caret-down"> </i></plus-button>
-        <plus-sticky-box .target=${this.dropdown} .position=${this.position}>
+        <plus-sticky-box .target=${this.dropdown} .orientation=${this.orientation}>
           <slot></slot>
         </plus-sticky-box>
       </div>

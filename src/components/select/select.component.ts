@@ -15,7 +15,7 @@ export const selectContext = createContext<SelectContext>("selectContext");
 export class SelectComponent extends PlusBase {
   @queryAsync(".plus-input") input!: Promise<HTMLElement> | undefined;
 
-  @property({ attribute: false }) position: PlacementType = "bottom-start";
+  @property({ attribute: false }) orientation: PlacementType = "bottom-start";
   @property() placeholder = "";
   @property({ type: String }) label?: string;
   @property({ type: Boolean, converter: value => value != "false" }) error = false;
@@ -79,7 +79,12 @@ export class SelectComponent extends PlusBase {
       >
         <i slot="suffix" class=${!this.open ? "fas fa-angle-down" : "fas fa-angle-up"}></i>
       </plus-input>
-      <plus-sticky-box class="plus-sticky-box" .target=${this.inputWrapper} .position=${this.position} @plus-sticky-box-change=${({ detail: { open } }) => (this.open = open)}>
+      <plus-sticky-box
+        class="plus-sticky-box"
+        .target=${this.inputWrapper}
+        .orientation=${this.orientation}
+        @plus-sticky-box-change=${({ detail: { open } }) => (this.open = open)}
+      >
         <slot></slot>
       </plus-sticky-box>
     </div> `;
