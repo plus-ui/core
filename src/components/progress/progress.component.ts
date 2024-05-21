@@ -36,7 +36,7 @@ export class ProgressComponent extends PlusBase {
   static styles = [...PlusBase.styles, unsafeCSS(ProgressComponent.host)];
 
   render() {
-    const { size, label, caption, required, error, status, valueFormat, disabled, indeterminate, showPercent, showStep } = this;
+    const { size, label, caption, required, error, status, disabled, indeterminate, showPercent, showStep } = this;
     const { host, progress, progressLine, infoArea } = progressStyle({ size, status, disabled, indeterminate });
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ required, size, disabled })} @click=${this.focus}>${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size, disabled })}>${caption}</div>` : null);
