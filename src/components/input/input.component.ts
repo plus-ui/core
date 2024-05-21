@@ -25,7 +25,7 @@ export class InputComponent extends PlusBase {
   @property() value = "";
   @property() placeholder = "";
   @property({ reflect: true }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: Boolean }) clearable = false;
+  @property({ type: Boolean, converter: value => value != "false" }) clearable = false;
   @property({ attribute: "password-toggle", type: Boolean }) passwordToggle = false;
   @property({ attribute: "password-visible", type: Boolean }) passwordVisible = false;
   @property({ type: String }) label?: string;
@@ -105,7 +105,7 @@ export class InputComponent extends PlusBase {
     const ClearTemplate = () =>
       clearable && value
         ? html`<div class=${clearButton() + suffix()} @click=${this.handleClearClick}>
-            <i class="fas fa-circle-xmark"></i>
+            <i class="fa-solid fa-xmark"></i>
           </div>`
         : null;
 
@@ -152,8 +152,9 @@ export class InputComponent extends PlusBase {
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
         />
+        ${ClearTemplate()}
         <slot name="suffix" class=${suffix() + " hidden"} @slotchange=${this.handleSlotchange}></slot>
-        ${suffixIcon ? html`<div class=${suffix()}><i class="${suffixIcon}"></i></div>` : null} ${ClearTemplate()}
+        ${suffixIcon ? html`<div class=${suffix()}><i class="${suffixIcon}"></i></div>` : null}
       </div>
       ${CaptionTemplate()}
     </div>`;
