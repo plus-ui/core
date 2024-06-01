@@ -19,6 +19,7 @@ export class DropdownComponent extends PlusBase {
   @property({ type: String }) text;
   @property({ attribute: false }) orientation: PlacementType = "bottom-start";
   @property({ type: String }) status: "default" | "primary" | "success" | "warning" | "error" | "info" | "invert" = "default";
+  @property({ type: String }) kind: "filled" | "outlined" | "dashed" | "text" = "filled";
 
   @provide({ context: dropdownContext })
   context = {
@@ -39,7 +40,7 @@ export class DropdownComponent extends PlusBase {
   render() {
     return html`
       <div>
-        <plus-button class="dropdown" .status=${this.status} .size=${this.size} id="dropdown"><slot></slot> <i class="fas fa-caret-down"> </i></plus-button>
+        <plus-button class="dropdown" .status=${this.status} .size=${this.size} .kind=${this.kind} id="dropdown"><slot></slot> <i class="fas fa-caret-down"> </i></plus-button>
         <plus-sticky-box .target=${this.dropdown} .orientation=${this.orientation}>
           <slot name="content"></slot>
         </plus-sticky-box>
