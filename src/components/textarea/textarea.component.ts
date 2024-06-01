@@ -38,6 +38,9 @@ export class textareaComponent extends PlusBase {
   @property({ type: String }) caption?: string;
   @property({ type: Boolean, converter: value => value != "false" }) error = false;
   @property({ type: Number }) rows = 4;
+  @property({ type: Number }) cols = 50;
+
+  @property({ type: String }) resize: "none" | "both" | "horizontal" | "vertical" = "both";
 
   @property({ reflect: true, attribute: "full-width", type: Boolean }) fullWidth = false;
 
@@ -80,8 +83,8 @@ export class textareaComponent extends PlusBase {
   }
 
   render() {
-    const { label, hasFocus, error, disabled, caption, clearable, value, size, required } = this;
-    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = textareaStyle({ focus: hasFocus, error, disabled, size });
+    const { label, hasFocus, error, disabled, caption, clearable, value, size, required, resize } = this;
+    const { inputElement, host, inputWrapper, prefix, suffix, clearButton } = textareaStyle({ focus: hasFocus, error, disabled, size, resize });
 
     const LabelTemplate = () => (label ? html`<label class=${labelStyle({ size, required })} for="textarea">${label}</label>` : null);
     const CaptionTemplate = () => (caption ? html`<div class=${captionStyle({ error, size })}>${caption}</div>` : null);
@@ -107,6 +110,7 @@ export class textareaComponent extends PlusBase {
           ?required=${this.required}
           placeholder=${ifDefined(this.placeholder)}
           rows=${ifDefined(this.rows)}
+          cols=${ifDefined(this.cols)}
           minlength=${ifDefined(this.minlength)}
           maxlength=${ifDefined(this.maxlength)}
           .value=${live(this.value)}

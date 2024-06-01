@@ -21,6 +21,20 @@ export const textareaStyle = tv({
         inputElement: "py-2 px-4",
       },
     },
+    resize: {
+      none: {
+        inputElement: "!resize-none",
+      },
+      both: {
+        inputElement: "!resize",
+      },
+      horizontal: {
+        inputElement: "!resize-x",
+      },
+      vertical: {
+        inputElement: "!resize-y",
+      },
+    },
   },
   defaultVariants: {
     focus: false,
