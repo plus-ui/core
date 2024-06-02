@@ -3,8 +3,8 @@ import { customElement, property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
 // @ts-ignore
-import style from "./tab.style.css?inline";
 import { tabStyle } from "./tab.style";
+import style from "./tab.style.css?inline";
 @customElement("plus-tab-group")
 export class TabGroupComponent extends PlusBase {
   static styles = [...PlusBase.styles, unsafeCSS(style)];
@@ -13,7 +13,7 @@ export class TabGroupComponent extends PlusBase {
   @query("slot[name='tabItem'") tabSlot: HTMLSlotElement;
   @query("slot[name='content']") panelSlot: HTMLSlotElement;
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
-  @property({ type: String }) kind: "vertical" | "horizontal" = "horizontal";
+  @property({ type: String }) orientation: "vertical" | "horizontal" = "horizontal";
   @property({ type: Boolean, converter: value => value != "false" }) disabled = false;
 
   private get tabItems() {
@@ -27,7 +27,7 @@ export class TabGroupComponent extends PlusBase {
   protected handleSlotChange() {
     this.tabItems?.forEach((item, _) => {
       item.setAttribute("size", this.size);
-      item.setAttribute("kind", this.kind);
+      item.setAttribute("orientation", this.orientation);
       item.disabled = this.disabled || item.disabled;
     });
   }
@@ -54,8 +54,8 @@ export class TabGroupComponent extends PlusBase {
   }
 
   render() {
-    const { size, disabled, kind } = this;
-    const { tabHeader, tabGroup } = tabStyle({ size, disabled, kind });
+    const { size, disabled, orientation } = this;
+    const { tabHeader, tabGroup } = tabStyle({ size, disabled, orientation });
 
     return html`
       <div class=${tabGroup()} role="tablist" aria-label="Tab Group">

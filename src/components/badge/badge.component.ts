@@ -29,7 +29,7 @@ export class BadgeComponent extends PlusBase {
 
     const { base } = badgeStyle({ size, kind, status, invert, orientation, isSingleChar: content?.length === 1 });
     return html`
-      <div class="relative box-border inline-block" role="status" aria-live="polite">
+      <div class="relative box-border" role="status" aria-live="polite">
         <slot></slot>
         <div
           class=${base()}

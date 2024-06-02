@@ -19,7 +19,7 @@ export const tabStyle = tv({
         tabItem: ["text-lg gap-2.5 py-2.5 px-2"],
       },
     },
-    kind: {
+    orientation: {
       vertical: {
         tabHeader: ["flex flex-col items-end justify-start"],
         tabItem: [" border-r border-r-color-default"],
@@ -41,12 +41,18 @@ export const tabStyle = tv({
         tabItem: ["text-color-disabled cursor-not-allowed"],
       },
     },
+    truncated: {
+      true: {
+        tabItem: ["truncate"],
+      },
+    },
   },
   defaultVariants: {
     disabled: false,
     readonly: false,
     size: "md",
     active: false,
-    kind: "horizontal",
+    orientation: "horizontal",
+    truncated: false,
   },
 });
