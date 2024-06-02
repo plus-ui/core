@@ -46,26 +46,64 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="row">
       <div class="row">
         <plus-button onclick="document.getElementById('toast-top-right').show()">Top Right</plus-button>
         <plus-button onclick="document.getElementById('toast-top-left').show()">Top Left</plus-button>
         <plus-button onclick="document.getElementById('toast-bottom-right').show()">Bottom Right</plus-button>
         <plus-button onclick="document.getElementById('toast-bottom-left').show()">Bottom Left</plus-button>
 
-        <plus-toast position="top-right" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-top-right"></plus-toast>
-        <plus-toast position="top-left" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-top-left"></plus-toast>
-        <plus-toast position="bottom-right" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-bottom-right"></plus-toast>
-        <plus-toast position="bottom-left" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-bottom-left"></plus-toast>
+        <plus-toast
+          position="top-right"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-top-right"
+        ></plus-toast>
+        <plus-toast
+          position="top-left"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-top-left"
+        ></plus-toast>
+        <plus-toast
+          position="bottom-right"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-bottom-right"
+        ></plus-toast>
+        <plus-toast
+          position="bottom-left"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-bottom-left"
+        ></plus-toast>
       </div>
       <div class="row">
         <plus-button onclick="document.getElementById('toast-sm').show()">Small</plus-button>
         <plus-button onclick="document.getElementById('toast-md').show()">Medium</plus-button>
         <plus-button onclick="document.getElementById('toast-lg').show()">Large</plus-button>
 
-        <plus-toast size="sm" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-sm"></plus-toast>
-        <plus-toast size="md" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-md"></plus-toast>
-        <plus-toast size="lg" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-lg"></plus-toast>
+        <plus-toast
+          size="sm"
+          action-buttons
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-sm"
+        ></plus-toast>
+        <plus-toast
+          size="md"
+          action-buttons
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-md"
+        ></plus-toast>
+        <plus-toast
+          size="lg"
+          action-buttons
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-lg"
+        ></plus-toast>
       </div>
       <div class="row">
         <plus-button onclick="document.getElementById('toast-success').show()">Success</plus-button>
@@ -73,10 +111,38 @@
         <plus-button onclick="document.getElementById('toast-warning').show()">Warning</plus-button>
         <plus-button onclick="document.getElementById('toast-error').show()">Error</plus-button>
 
-        <plus-toast status="success" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-success"></plus-toast>
-        <plus-toast status="info" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-info"></plus-toast>
-        <plus-toast status="warning" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-warning"></plus-toast>
-        <plus-toast status="error" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit." id="toast-error"></plus-toast>
+        <plus-toast
+          action-buttons
+          status="success"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, his rebum salutatus id, purto vitae signi ferumque ea per. An quod erant sed. Viris aliquam impedit et est has veri deleniti sensi busid, summo paulo cetero no vel. Meis labitur ato morum quo eu, nocum no luisse hendrerit."
+          id="toast-success"
+          dismiss
+        ></plus-toast>
+        <plus-toast
+          action-buttons
+          status="info"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-info"
+          dismiss
+        ></plus-toast>
+        <plus-toast
+          action-buttons
+          status="warning"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-warning"
+          dismiss
+        ></plus-toast>
+        <plus-toast
+          action-buttons
+          status="error"
+          header="This is a Plus UI alert message component"
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          id="toast-error"
+          dismiss
+        ></plus-toast>
       </div>
     </div>
   </body>

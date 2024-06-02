@@ -12,6 +12,11 @@ export class DropdonwMenuComponent extends PlusBase {
   @property({ attribute: false })
   public dropdownContext?: DropdownContext;
 
+  connectedCallback(): void {
+    super.connectedCallback();
+    this.slot = "content";
+  }
+
   private handleSlotChange() {
     this.dropdownContext.slot = this.defaultSlot.map(el => el.tagName.toLowerCase() == "plus-dropdown-item" && el);
   }
