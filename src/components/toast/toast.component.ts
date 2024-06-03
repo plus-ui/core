@@ -88,6 +88,10 @@ export class ToastComponent extends PlusBase {
     this.toast.style.display = "none";
   }
 
+  private apply() {
+    this.emit("on-apply");
+  }
+
   render() {
     const { size, invert, kind, status, placement, message, icon, actionButtons, dismiss, header, cancelText, applyText } = this;
     const { base, iconClass, messageClass, closeClass, contentClass, titleClass, footerClass, containerClass } = toastStyle({ size, kind, status, invert, placement });
@@ -102,7 +106,7 @@ export class ToastComponent extends PlusBase {
               ? html`
                   <div class=${footerClass()}>
                     <plus-button .size=${size} kind="text" @plus-click=${() => this.close()}>${cancelText}</plus-button>
-                    <plus-button .size=${size} invert=${status === "default"} status=${status == "default" ? "invert" : status} @plus-click=${() => this.close()}
+                    <plus-button .size=${size} invert=${status === "default"} status=${status == "default" ? "invert" : status} @plus-click=${() => this.apply()}
                       >${applyText}</plus-button
                     >
                   </div>
