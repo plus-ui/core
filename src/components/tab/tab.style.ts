@@ -5,6 +5,7 @@ export const tabStyle = tv({
     tabItem: ["antialiased font-sans cursor-pointer flex flex-row items-center justify-start  transition-all duration-300 ease-in-out text-color-default w-max"],
     tabHeader: ["flex flex-col items-end justify-start"],
     tabGroup: "",
+    tabPanel: [""],
   },
 
   variants: {
@@ -34,6 +35,10 @@ export const tabStyle = tv({
     active: {
       true: {
         tabItem: ["text-color-primary border-color-primary"],
+        tabPanel: ["block"],
+      },
+      false: {
+        tabPanel: ["hidden"],
       },
     },
     disabled: {
@@ -46,6 +51,12 @@ export const tabStyle = tv({
         tabItem: ["truncate"],
       },
     },
+    isRemoved: {
+      true: {
+        tabItem: ["hidden"],
+        tabPanel: ["hidden"],
+      },
+    },
   },
   defaultVariants: {
     disabled: false,
@@ -54,5 +65,6 @@ export const tabStyle = tv({
     active: false,
     orientation: "horizontal",
     truncated: false,
+    isRemoved: false,
   },
 });

@@ -2,8 +2,8 @@ import { PropertyValueMap, unsafeCSS } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
 import { html } from "lit/static-html.js";
 import { PlusBase } from "../../base/plus-base";
-// @ts-ignore
 import { tabStyle } from "./tab.style";
+// @ts-ignore
 import style from "./tab.style.css?inline";
 @customElement("plus-tab-group")
 export class TabGroupComponent extends PlusBase {
@@ -15,6 +15,7 @@ export class TabGroupComponent extends PlusBase {
   @property({ type: String }) size: "sm" | "md" | "lg" = "md";
   @property({ type: String }) orientation: "vertical" | "horizontal" = "horizontal";
   @property({ type: Boolean, converter: value => value != "false" }) disabled = false;
+  @property({ type: Boolean, converter: value => value != "false" }) dismiss = false;
 
   private get tabItems() {
     return [...this.tabSlot?.assignedElements({ flatten: true })].filter(item => item.tagName.toLowerCase() === "plus-tab") as any;
@@ -29,6 +30,7 @@ export class TabGroupComponent extends PlusBase {
       item.setAttribute("size", this.size);
       item.setAttribute("orientation", this.orientation);
       item.disabled = this.disabled || item.disabled;
+      item.dismiss = this.dismiss || item.dismiss;
     });
   }
 
@@ -53,6 +55,30 @@ export class TabGroupComponent extends PlusBase {
     }
   }
 
+  handleDismiss() {
+    return ({ target }: Event) => {
+      const _target = target as HTMLElement;
+      if (target instanceof HTMLElement && target.tagName.toLowerCase() === "plus-tab") {
+        const { id } = target;
+        const findItem = this.tabItems?.find(item => item.id === id);
+        const findPanel = this.panelItems?.find(panel => panel.value === findItem?.value);
+        if (findItem && findPanel) {
+          const isActived = findItem.active;
+          findItem.isRemoved = true;
+          findPanel.isRemoved = true;
+          if (isActived) {
+            const nextItem = this.tabItems?.find(item => !item.isRemoved);
+            const nextPanel = this.panelItems?.find(panel => panel.value === nextItem?.value);
+            if (nextItem && nextPanel) {
+              nextItem.active = true;
+              nextPanel.active = true;
+            }
+          }
+        }
+      }
+    };
+  }
+
   render() {
     const { size, disabled, orientation } = this;
     const { tabHeader, tabGroup } = tabStyle({ size, disabled, orientation });
@@ -60,7 +86,7 @@ export class TabGroupComponent extends PlusBase {
     return html`
       <div class=${tabGroup()} role="tablist" aria-label="Tab Group">
         <div class=${tabHeader()}>
-          <slot name="tabItem" @slotchange=${this.handleSlotChange} @plus-tab-click=${this.handleClickItem}></slot>
+          <slot name="tabItem" @slotchange=${this.handleSlotChange} @plus-tab-click=${this.handleClickItem} @plus-dismiss=${this.handleDismiss()}></slot>
         </div>
         <div class="flex w-full flex-col items-start justify-start">
           <slot name="content"></slot>
