@@ -69,6 +69,11 @@ export const buttonStyle = tv({
         base: "cursor-wait relative overflow-hidden",
       },
     },
+    fullWidth: {
+      true: {
+        base: "w-full",
+      },
+    },
   },
   compoundVariants: [
     {
@@ -284,5 +289,6 @@ export const buttonStyle = tv({
     groupOrder: undefined,
     groupPosition: undefined,
     loading: false,
+    fullWidth: false,
   },
 });

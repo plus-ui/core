@@ -31,6 +31,7 @@ export class ButtonComponent extends PlusBase {
 
   @property({ type: String, attribute: "prefix-icon" }) prefixIcon: string;
   @property({ type: String, attribute: "suffix-icon" }) suffixIcon: string;
+  @property({ type: Boolean, converter: value => value != "false", attribute: "full-width" }) fullWidth = false;
 
   @state() hasFocus = false;
 
@@ -53,9 +54,9 @@ export class ButtonComponent extends PlusBase {
   }
 
   render() {
-    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder, groupPosition, loading, prefixIcon, suffixIcon } = this;
+    const { size, type, disabled, kind, status, title, name, value, href, target, download, rel, groupOrder, groupPosition, loading, prefixIcon, suffixIcon, fullWidth } = this;
 
-    const { base } = buttonStyle({ size, disabled, kind, status, groupOrder, groupPosition, loading });
+    const { base } = buttonStyle({ size, disabled, kind, status, groupOrder, groupPosition, loading, fullWidth });
 
     const isLink = this.isLink();
     const tag = unsafeStatic(isLink ? `a` : `button`);
