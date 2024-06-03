@@ -20,11 +20,14 @@ export class AccordionComponent extends PlusBase {
 
   render() {
     const { expand, size, isGrouped, isLast } = this;
-    const { base, header, panel, icon } = accordionStyle({ expand, isGrouped, isLast, size });
+    const { base, header, panel, icon, helper, headerContainer } = accordionStyle({ expand, isGrouped, isLast, size });
     return html`
       <div class=${base()}>
         <div class=${header()} @click=${this.toggleOpen}>
-          <slot name="header"></slot>
+          <div class=${headerContainer()}>
+            <slot name="header"></slot>
+            <span class=${helper()}><slot name="helper"></slot></span>
+          </div>
           <i class=${icon()}></i>
         </div>
         <div class=${panel()}>
