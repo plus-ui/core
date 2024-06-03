@@ -2,6 +2,7 @@ export * from "../services";
 export * from "../utils";
 export * from "./accordion/accordion-group.component";
 export * from "./accordion/accordion-header.component";
+export * from "./accordion/accordion-helper.component";
 export * from "./accordion/accordion-panel.component";
 export * from "./accordion/accordion.component";
 export * from "./alert/alert.component";

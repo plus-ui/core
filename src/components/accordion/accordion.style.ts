@@ -6,20 +6,25 @@ export const accordionStyle = tv({
     header: "header flex cursor-pointer flex-row items-center justify-between bg-color-default font-medium text-color-default",
     panel: "",
     icon: "text-base text-center",
+    helper: "text-color-caption font-normal",
+    headerContainer: "flex flex-row items-center gap-3",
   },
   variants: {
     size: {
       sm: {
         header: "py-2 px-4 text-base gap-2",
         panel: "p-4 gap-4 text-base",
+        helper: "text-base",
       },
       md: {
         header: "py-2.5 px-5 text-lg gap-3 h-[48px]",
         panel: "p-5 gap-5 text-lg",
+        helper: "text-lg",
       },
       lg: {
         header: "py-3 px-6 text-xl gap-3  h-[52px]",
         panel: "p-6 gap-6 text-xl",
+        helper: "text-xl",
       },
     },
     expand: {
