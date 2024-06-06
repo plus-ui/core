@@ -1,0 +1,334 @@
+
+  /* Dark Mode Themes */
+  @media (prefers-color-scheme: dark) {
+    
+  [data-theme='slate'] {
+    --plusui-color-background-default-default: theme(colors.slate.400);
+    --plusui-color-background-default-hover: theme(colors.slate.500);
+    --plusui-color-background-default-pressed: theme(colors.slate.600);
+    --plusui-color-background-default-focus: theme(colors.slate.400);
+    --plusui-color-background-default-invert-default: theme(colors.slate.900);
+    --plusui-color-background-default-invert-hover: theme(colors.slate.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.slate.700);
+    --plusui-color-background-default-invert-focus: theme(colors.slate.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.slate.700);
+    --plusui-color-text-default-pressed: theme(colors.slate.600);
+  }
+  
+  [data-theme='gray'] {
+    --plusui-color-background-default-default: theme(colors.gray.400);
+    --plusui-color-background-default-hover: theme(colors.gray.500);
+    --plusui-color-background-default-pressed: theme(colors.gray.600);
+    --plusui-color-background-default-focus: theme(colors.gray.400);
+    --plusui-color-background-default-invert-default: theme(colors.gray.900);
+    --plusui-color-background-default-invert-hover: theme(colors.gray.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.gray.700);
+    --plusui-color-background-default-invert-focus: theme(colors.gray.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.gray.700);
+    --plusui-color-text-default-pressed: theme(colors.gray.600);
+  }
+  
+  [data-theme='zinc']{
+    --plusui-color-background-default-default: theme(colors.zinc.400);
+    --plusui-color-background-default-hover: theme(colors.zinc.500);
+    --plusui-color-background-default-pressed: theme(colors.zinc.600);
+    --plusui-color-background-default-focus: theme(colors.zinc.400);
+    --plusui-color-background-default-invert-default: theme(colors.zinc.900);
+    --plusui-color-background-default-invert-hover: theme(colors.zinc.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.zinc.700);
+    --plusui-color-background-default-invert-focus: theme(colors.zinc.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.zinc.700);
+    --plusui-color-text-default-pressed: theme(colors.zinc.600);
+  }
+  
+  [data-theme='neutral'] {
+    --plusui-color-background-default-default: theme(colors.neutral.400);
+    --plusui-color-background-default-hover: theme(colors.neutral.500);
+    --plusui-color-background-default-pressed: theme(colors.neutral.600);
+    --plusui-color-background-default-focus: theme(colors.neutral.400);
+    --plusui-color-background-default-invert-default: theme(colors.neutral.900);
+    --plusui-color-background-default-invert-hover: theme(colors.neutral.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.neutral.700);
+    --plusui-color-background-default-invert-focus: theme(colors.neutral.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.neutral.700);
+    --plusui-color-text-default-pressed: theme(colors.neutral.600);
+  }
+  
+  [data-theme='stone'] {
+    --plusui-color-background-default-default: theme(colors.stone.400);
+    --plusui-color-background-default-hover: theme(colors.stone.500);
+    --plusui-color-background-default-pressed: theme(colors.stone.600);
+    --plusui-color-background-default-focus: theme(colors.stone.400);
+    --plusui-color-background-default-invert-default: theme(colors.stone.900);
+    --plusui-color-background-default-invert-hover: theme(colors.stone.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.stone.700);
+    --plusui-color-background-default-invert-focus: theme(colors.stone.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.stone.700);
+    --plusui-color-text-default-pressed: theme(colors.stone.600);
+  }
+  
+  [data-theme='red'] {
+    --plusui-color-background-default-default: theme(colors.red.400);
+    --plusui-color-background-default-hover: theme(colors.red.500);
+    --plusui-color-background-default-pressed: theme(colors.red.600);
+    --plusui-color-background-default-focus: theme(colors.red.400);
+    --plusui-color-background-default-invert-default: theme(colors.red.900);
+    --plusui-color-background-default-invert-hover: theme(colors.red.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.red.700);
+    --plusui-color-background-default-invert-focus: theme(colors.red.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.red.700);
+    --plusui-color-text-default-pressed: theme(colors.red.600);
+  }
+  
+  [data-theme='orange'] {
+    --plusui-color-background-default-default: theme(colors.orange.400);
+    --plusui-color-background-default-hover: theme(colors.orange.500);
+    --plusui-color-background-default-pressed: theme(colors.orange.600);
+    --plusui-color-background-default-focus: theme(colors.orange.400);
+    --plusui-color-background-default-invert-default: theme(colors.orange.900);
+    --plusui-color-background-default-invert-hover: theme(colors.orange.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.orange.700);
+    --plusui-color-background-default-invert-focus: theme(colors.orange.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.orange.700);
+    --plusui-color-text-default-pressed: theme(colors.orange.600);
+  }
+  
+  [data-theme='amber']{
+    --plusui-color-background-default-default: theme(colors.amber.400);
+    --plusui-color-background-default-hover: theme(colors.amber.500);
+    --plusui-color-background-default-pressed: theme(colors.amber.600);
+    --plusui-color-background-default-focus: theme(colors.amber.400);
+    --plusui-color-background-default-invert-default: theme(colors.amber.900);
+    --plusui-color-background-default-invert-hover: theme(colors.amber.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.amber.700);
+    --plusui-color-background-default-invert-focus: theme(colors.amber.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.amber.700);
+    --plusui-color-text-default-pressed: theme(colors.amber.600);
+  }
+  
+  [data-theme='yellow']{
+    --plusui-color-background-default-default: theme(colors.yellow.400);
+    --plusui-color-background-default-hover: theme(colors.yellow.500);
+    --plusui-color-background-default-pressed: theme(colors.yellow.600);
+    --plusui-color-background-default-focus: theme(colors.yellow.400);
+    --plusui-color-background-default-invert-default: theme(colors.yellow.900);
+    --plusui-color-background-default-invert-hover: theme(colors.yellow.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.yellow.700);
+    --plusui-color-background-default-invert-focus: theme(colors.yellow.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.yellow.700);
+    --plusui-color-text-default-pressed: theme(colors.yellow.600);
+  }
+  
+  [data-theme='lime'] {
+    --plusui-color-background-default-default: theme(colors.lime.400);
+    --plusui-color-background-default-hover: theme(colors.lime.500);
+    --plusui-color-background-default-pressed: theme(colors.lime.600);
+    --plusui-color-background-default-focus: theme(colors.lime.400);
+    --plusui-color-background-default-invert-default: theme(colors.lime.900);
+    --plusui-color-background-default-invert-hover: theme(colors.lime.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.lime.700);
+    --plusui-color-background-default-invert-focus: theme(colors.lime.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.lime.700);
+    --plusui-color-text-default-pressed: theme(colors.lime.600);
+  }
+  
+  [data-theme='green']{
+    --plusui-color-background-default-default: theme(colors.green.400);
+    --plusui-color-background-default-hover: theme(colors.green.500);
+    --plusui-color-background-default-pressed: theme(colors.green.600);
+    --plusui-color-background-default-focus: theme(colors.green.400);
+    --plusui-color-background-default-invert-default: theme(colors.green.900);
+    --plusui-color-background-default-invert-hover: theme(colors.green.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.green.700);
+    --plusui-color-background-default-invert-focus: theme(colors.green.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.green.700);
+    --plusui-color-text-default-pressed: theme(colors.green.600);
+  }
+  
+  [data-theme='emerald']{
+    --plusui-color-background-default-default: theme(colors.emerald.400);
+    --plusui-color-background-default-hover: theme(colors.emerald.500);
+    --plusui-color-background-default-pressed: theme(colors.emerald.600);
+    --plusui-color-background-default-focus: theme(colors.emerald.400);
+    --plusui-color-background-default-invert-default: theme(colors.emerald.900);
+    --plusui-color-background-default-invert-hover: theme(colors.emerald.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.emerald.700);
+    --plusui-color-background-default-invert-focus: theme(colors.emerald.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.emerald.700);
+    --plusui-color-text-default-pressed: theme(colors.emerald.600);
+  }
+  
+  [data-theme='teal'] {
+    --plusui-color-background-default-default: theme(colors.teal.400);
+    --plusui-color-background-default-hover: theme(colors.teal.500);
+    --plusui-color-background-default-pressed: theme(colors.teal.600);
+    --plusui-color-background-default-focus: theme(colors.teal.400);
+    --plusui-color-background-default-invert-default: theme(colors.teal.900);
+    --plusui-color-background-default-invert-hover: theme(colors.teal.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.teal.700);
+    --plusui-color-background-default-invert-focus: theme(colors.teal.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.teal.700);
+    --plusui-color-text-default-pressed: theme(colors.teal.600);
+  }
+  
+  [data-theme='cyan'] {
+    --plusui-color-background-default-default: theme(colors.cyan.400);
+    --plusui-color-background-default-hover: theme(colors.cyan.500);
+    --plusui-color-background-default-pressed: theme(colors.cyan.600);
+    --plusui-color-background-default-focus: theme(colors.cyan.400);
+    --plusui-color-background-default-invert-default: theme(colors.cyan.900);
+    --plusui-color-background-default-invert-hover: theme(colors.cyan.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.cyan.700);
+    --plusui-color-background-default-invert-focus: theme(colors.cyan.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.cyan.700);
+    --plusui-color-text-default-pressed: theme(colors.cyan.600);
+  }
+  
+  [data-theme='sky'] {
+    --plusui-color-background-default-default: theme(colors.sky.400);
+    --plusui-color-background-default-hover: theme(colors.sky.500);
+    --plusui-color-background-default-pressed: theme(colors.sky.600);
+    --plusui-color-background-default-focus: theme(colors.sky.400);
+    --plusui-color-background-default-invert-default: theme(colors.sky.900);
+    --plusui-color-background-default-invert-hover: theme(colors.sky.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.sky.700);
+    --plusui-color-background-default-invert-focus: theme(colors.sky.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.sky.700);
+    --plusui-color-text-default-pressed: theme(colors.sky.600);
+  }
+  
+  [data-theme='blue'] {
+    --plusui-color-background-default-default: theme(colors.blue.400);
+    --plusui-color-background-default-hover: theme(colors.blue.500);
+    --plusui-color-background-default-pressed: theme(colors.blue.600);
+    --plusui-color-background-default-focus: theme(colors.blue.400);
+    --plusui-color-background-default-invert-default: theme(colors.blue.900);
+    --plusui-color-background-default-invert-hover: theme(colors.blue.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.blue.700);
+    --plusui-color-background-default-invert-focus: theme(colors.blue.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.blue.700);
+    --plusui-color-text-default-pressed: theme(colors.blue.600);
+  }
+  
+  [data-theme='indigo'] {
+    --plusui-color-background-default-default: theme(colors.indigo.400);
+    --plusui-color-background-default-hover: theme(colors.indigo.500);
+    --plusui-color-background-default-pressed: theme(colors.indigo.600);
+    --plusui-color-background-default-focus: theme(colors.indigo.400);
+    --plusui-color-background-default-invert-default: theme(colors.indigo.900);
+    --plusui-color-background-default-invert-hover: theme(colors.indigo.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.indigo.700);
+    --plusui-color-background-default-invert-focus: theme(colors.indigo.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.indigo.700);
+    --plusui-color-text-default-pressed: theme(colors.indigo.600);
+  }
+  
+  [data-theme='violet'] {
+    --plusui-color-background-default-default: theme(colors.violet.400);
+    --plusui-color-background-default-hover: theme(colors.violet.500);
+    --plusui-color-background-default-pressed: theme(colors.violet.600);
+    --plusui-color-background-default-focus: theme(colors.violet.400);
+    --plusui-color-background-default-invert-default: theme(colors.violet.900);
+    --plusui-color-background-default-invert-hover: theme(colors.violet.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.violet.700);
+    --plusui-color-background-default-invert-focus: theme(colors.violet.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.violet.700);
+    --plusui-color-text-default-pressed: theme(colors.violet.600);
+  }
+  
+  [data-theme='purple'] {
+    --plusui-color-background-default-default: theme(colors.purple.400);
+    --plusui-color-background-default-hover: theme(colors.purple.500);
+    --plusui-color-background-default-pressed: theme(colors.purple.600);
+    --plusui-color-background-default-focus: theme(colors.purple.400);
+    --plusui-color-background-default-invert-default: theme(colors.purple.900);
+    --plusui-color-background-default-invert-hover: theme(colors.purple.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.purple.700);
+    --plusui-color-background-default-invert-focus: theme(colors.purple.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.purple.700);
+    --plusui-color-text-default-pressed: theme(colors.purple.600);
+  }
+  
+  [data-theme='fuchsia'] {
+    --plusui-color-background-default-default: theme(colors.fuchsia.400);
+    --plusui-color-background-default-hover: theme(colors.fuchsia.500);
+    --plusui-color-background-default-pressed: theme(colors.fuchsia.600);
+    --plusui-color-background-default-focus: theme(colors.fuchsia.400);
+    --plusui-color-background-default-invert-default: theme(colors.fuchsia.900);
+    --plusui-color-background-default-invert-hover: theme(colors.fuchsia.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.fuchsia.700);
+    --plusui-color-background-default-invert-focus: theme(colors.fuchsia.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.fuchsia.700);
+    --plusui-color-text-default-pressed: theme(colors.fuchsia.600);
+  }
+  
+  [data-theme='pink']{
+    --plusui-color-background-default-default: theme(colors.pink.400);
+    --plusui-color-background-default-hover: theme(colors.pink.500);
+    --plusui-color-background-default-pressed: theme(colors.pink.600);
+    --plusui-color-background-default-focus: theme(colors.pink.400);
+    --plusui-color-background-default-invert-default: theme(colors.pink.900);
+    --plusui-color-background-default-invert-hover: theme(colors.pink.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.pink.700);
+    --plusui-color-background-default-invert-focus: theme(colors.pink.900);
+  
+    --plusui-color-text-default: theme(colors.white);
+    --plusui-color-text-default-hover: theme(colors.pink.700);
+    --plusui-color-text-default-pressed: theme(colors.pink.600);
+  }
+  
+  [data-theme='rose']{
+    --plusui-color-background-default-default: theme(colors.rose.400);
+    --plusui-color-background-default-hover: theme(colors.rose.500);
+    --plusui-color-background-default-pressed: theme(colors.rose.600);
+    --plusui-color-background-default-focus: theme(colors.rose.400);
+    --plusui-color-background-default-invert-default: theme(colors.rose.900);
+    --plusui-color-background-default-invert-hover: theme(colors.rose.800);
+    --plusui-color-background-default-invert-pressed: theme(colors.rose.700);
+    --plusui-color-background-default-invert-focus: theme(colors.rose.900);
+  
+    --plusui-color-text-default: theme(colors.black);
+    --plusui-color-text-default-hover: theme(colors.rose.700);
+    --plusui-color-text-default-pressed: theme(colors.rose.600);
+  }
+}

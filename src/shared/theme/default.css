@@ -1,6 +1,12 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap";
+
 @import "light.css";
 /* @import "dark.css"; */
+@import "theme-light.css";
+@import "theme-dark.css";
+
+
+
 @import "variables.css";
 
 
