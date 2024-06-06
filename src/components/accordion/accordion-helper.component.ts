@@ -2,11 +2,11 @@ import { html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 
-@customElement("plus-accordion-header")
-export class AccordionHeaderComponent extends PlusBase {
+@customElement("plus-accordion-helper")
+export class AccordionHelperComponent extends PlusBase {
   constructor() {
     super();
-    this.slot = "header";
+    this.slot = "helper";
   }
 
   render() {
@@ -16,6 +16,6 @@ export class AccordionHeaderComponent extends PlusBase {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "plus-accordion-header": AccordionHeaderComponent;
+    "plus-accordion-helper": AccordionHelperComponent;
   }
 }

@@ -5,6 +5,7 @@ export const tabStyle = tv({
     tabItem: ["antialiased font-sans cursor-pointer flex flex-row items-center justify-start  transition-all duration-300 ease-in-out text-color-default w-max"],
     tabHeader: ["flex flex-col items-end justify-start"],
     tabGroup: "",
+    tabPanel: [""],
   },
 
   variants: {
@@ -19,7 +20,7 @@ export const tabStyle = tv({
         tabItem: ["text-lg gap-2.5 py-2.5 px-2"],
       },
     },
-    kind: {
+    orientation: {
       vertical: {
         tabHeader: ["flex flex-col items-end justify-start"],
         tabItem: [" border-r border-r-color-default"],
@@ -34,11 +35,26 @@ export const tabStyle = tv({
     active: {
       true: {
         tabItem: ["text-color-primary border-color-primary"],
+        tabPanel: ["block"],
+      },
+      false: {
+        tabPanel: ["hidden"],
       },
     },
     disabled: {
       true: {
         tabItem: ["text-color-disabled cursor-not-allowed"],
+      },
+    },
+    truncated: {
+      true: {
+        tabItem: ["truncate"],
+      },
+    },
+    isRemoved: {
+      true: {
+        tabItem: ["hidden"],
+        tabPanel: ["hidden"],
       },
     },
   },
@@ -47,6 +63,8 @@ export const tabStyle = tv({
     readonly: false,
     size: "md",
     active: false,
-    kind: "horizontal",
+    orientation: "horizontal",
+    truncated: false,
+    isRemoved: false,
   },
 });
