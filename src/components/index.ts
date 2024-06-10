@@ -6,6 +6,7 @@ export * from "./accordion/accordion-helper.component";
 export * from "./accordion/accordion-panel.component";
 export * from "./accordion/accordion.component";
 export * from "./alert/alert.component";
+export * from "./avatar/avatar-group.component";
 export * from "./avatar/avatar.component";
 export * from "./badge/badge.component";
 export * from "./breadcrumb/breadcrumb.component";

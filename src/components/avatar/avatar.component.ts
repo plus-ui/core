@@ -1,6 +1,6 @@
+import { PropertyValueMap, css, html, unsafeCSS } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { html } from "lit/static-html.js";
 import { SizeType } from "src/model/plus-types";
 import { PlusBase } from "../../base/plus-base";
 import Plus from "../../model/plus";
@@ -10,11 +10,26 @@ import { avatarStyle } from "./avatar.style";
 export class AvatarComponent extends PlusBase {
   @property() image: string;
   @property() alt: string;
-  @property() shape: "circle" | "square" = "circle";
+  @property({ reflect: true }) shape: "circle" | "square" = "circle";
   @property() size: SizeType | string = Plus.Sizes.md;
   @property() icon: string = "fas fa-user";
   @property({ type: Boolean, converter: value => value != "false" }) invert = false;
   @property() text?: string;
+
+  @property({ type: Boolean, reflect: true }) isGroup: boolean = false;
+
+  static hostStyle = css`
+    :host([isGroup][shape="circle"]) {
+      border: 1px solid var(--plusui-color-border-base);
+      border-radius: 100%;
+    }
+    :host([isGroup][shape="square"]) {
+      border: 1px solid var(--plusui-color-border-base);
+      border-radius: 4px;
+    }
+  `;
+
+  static styles = [...PlusBase.styles, unsafeCSS(AvatarComponent.hostStyle)];
 
   isSizeLargeEnough() {
     return this.customSize() ? +this.size >= 24 : Plus.Sizes[this.size] != "xs";
@@ -39,6 +54,12 @@ export class AvatarComponent extends PlusBase {
   // renderDefaultIcon() {
   //   return html`<i class=${this.icon}></i>`;
   // }
+
+  protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
+    if (this.parentElement.tagName.toLowerCase() === "plus-avatar-group") {
+      this.isGroup = true;
+    }
+  }
 
   render() {
     const { shape, size, alt, invert } = this;
@@ -72,7 +93,9 @@ export class AvatarComponent extends PlusBase {
     };
 
     return html`
-      <div role="img" aria-label=${alt || this.text || "Avatar"} class=${base()} style=${styleMap(this.customSize() ? { ["--size"]: +size + "px" } : {})}>${RenderContent()}</div>
+      <div role="img" aria-label=${alt || this.text || "Avatar"} class=${base()} style=${styleMap(this.customSize() ? { ["--size"]: +size + "px" } : {})}>
+        <slot>${RenderContent()}</slot>
+      </div>
     `;
   }
 }

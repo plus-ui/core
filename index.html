@@ -6,6 +6,8 @@
     <title>Vite + Lit + TS</title>
     <script type="module" src="./src/components/index.ts"></script>
     <script src="https://kit.fontawesome.com/c95256a193.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@plusui/theme@latest/dist/index.css" /> -->
+    <script type="css" src="node_modules/@plusui/theme/dist/index.css"></script>
     <style>
       body {
         padding: 100px;
@@ -46,8 +48,26 @@
     </style>
   </head>
   <body>
-    <plus-button>Button1</plus-button>
-    <plus-button>Button2</plus-button>
-    <plus-button>Button3</plus-button>
+    <div class="container">
+      <div class="row">
+        <plus-avatar-group>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 1"></plus-avatar>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 2"></plus-avatar>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 1"></plus-avatar>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 2"></plus-avatar>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 1"></plus-avatar>
+          <plus-avatar alt="Avatar 3" text="+ 6" invert></plus-avatar>
+        </plus-avatar-group>
+      </div>
+
+      <div class="row">
+        <plus-avatar-group>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 1"></plus-avatar>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 2"></plus-avatar>
+          <plus-avatar src="https://via.placeholder.com/150" alt="Avatar 1"></plus-avatar>
+          <plus-avatar alt="Avatar 3" text="+ 16" invert></plus-avatar>
+        </plus-avatar-group>
+      </div>
+    </div>
   </body>
 </html>

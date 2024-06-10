@@ -97,6 +97,7 @@ export const themeVariables = {
 
 export const themeColors = {
   border: {
+    base: "var(--plusui-color-border-base)",
     primary: "var(--plusui-color-border-primary)",
     focus: "var(--plusui-color-border-focus)",
     disabled: "var(--plusui-color-border-disabled)",
