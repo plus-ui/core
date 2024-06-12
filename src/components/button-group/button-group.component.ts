@@ -1,19 +1,18 @@
 import { html } from "lit";
-import { customElement, query } from "lit/decorators.js";
+import { customElement, property, queryAssignedElements } from "lit/decorators.js";
 import { PlusBase } from "../../base/plus-base";
 import { buttonGroupStyle } from "./button-group.style";
 
 @customElement("plus-button-group")
 export class ButtonGroupComponent extends PlusBase {
-  @query(".button-group") buttonGroup!: HTMLElement;
+  @queryAssignedElements() defaultSlot: HTMLElement[] | undefined;
+  @property({ type: String, reflect: true }) orientation: "horizontal" | "vertical" = "horizontal";
 
   handleSlotChange() {
-    const slot = this.shadowRoot.querySelector("slot");
-    const assignedNodes = slot.assignedNodes({ flatten: true }) as any;
-
-    const buttons = assignedNodes.filter(node => node.tagName === "PLUS-BUTTON");
+    const buttons = this.defaultSlot.map(node => node.tagName === "PLUS-BUTTON" && node) as any;
 
     buttons.forEach((button, index) => {
+      button.groupPosition = this.orientation;
       if (index === 0) {
         button.groupOrder = "first";
       }
@@ -27,9 +26,10 @@ export class ButtonGroupComponent extends PlusBase {
   }
 
   render() {
-    const { base } = buttonGroupStyle();
+    const { orientation } = this;
+    const { base } = buttonGroupStyle({ orientation });
     return html`
-      <div class=${"button-group " + base()} role="group" aria-live="polite">
+      <div class=${base()} role="group" aria-live="polite">
         <slot @slotchange=${this.handleSlotChange}></slot>
       </div>
     `;
