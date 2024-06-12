@@ -7,13 +7,13 @@ export const badgeStyle = tv({
   variants: {
     size: {
       sm: {
-        base: "text-xs empty:min-w-1.5 min-w-5.5 empty:min-h-1.5 min-h-5.5 empty:px-0 px-1",
+        base: "text-xs gap-1 empty:min-w-1.5 min-w-5.5 empty:min-h-1.5 min-h-5.5 empty:px-0 px-1",
       },
       md: {
-        base: "text-sm empty:min-w-2 min-w-6 empty:min-h-2 min-h-6 empty:px-0 px-1.5",
+        base: "text-sm gap-1.5 empty:min-w-2 min-w-6 empty:min-h-2 min-h-6 empty:px-0 px-1.5",
       },
       lg: {
-        base: "text-base empty:min-w-2.5 min-w-7 empty:min-h-2.5 min-h-7 empty:px-0 px-1.5",
+        base: "text-base gap-1.5 empty:min-w-2.5 min-w-7 empty:min-h-2.5 min-h-7 empty:px-0 px-1.5",
       },
     },
     kind: {

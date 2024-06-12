@@ -11,6 +11,9 @@ export class BadgeComponent extends PlusBase {
   @property({ type: Boolean, converter: value => value != "false" }) invert = false;
   @property({ type: String }) content!: string;
   @property({ type: String }) orientation: "top-left" | "top-right" | "bottom-left" | "bottom-right" = "top-right";
+  @property({ type: String, attribute: "prefix-icon" }) prefixIcon: string;
+  @property({ type: String, attribute: "suffix-icon" }) suffixIcon: string;
+
   @property({
     type: Array,
     converter: value => {
@@ -25,7 +28,7 @@ export class BadgeComponent extends PlusBase {
   offset!: [string, string];
 
   render() {
-    const { size, invert, kind, status, orientation, content, offset } = this;
+    const { size, invert, kind, status, orientation, content, offset, prefixIcon, suffixIcon } = this;
 
     const { base } = badgeStyle({ size, kind, status, invert, orientation, isSingleChar: content?.length === 1 });
     return html`
@@ -37,7 +40,7 @@ export class BadgeComponent extends PlusBase {
             ...(offset && { transform: `translate(${offset[0]}, ${offset[1]})` }),
           })}
         >
-          ${content}
+          ${prefixIcon ? html`<i class="${prefixIcon}"></i>` : ""} ${content} ${suffixIcon ? html`<i class="${suffixIcon}"></i>` : ""}
         </div>
       </div>
     `;
