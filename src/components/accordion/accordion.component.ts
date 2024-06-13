@@ -19,11 +19,11 @@ export class AccordionComponent extends PlusBase {
   }
 
   render() {
-    const { expand, size, isGrouped, isLast } = this;
-    const { base, header, panel, icon, helper, headerContainer } = accordionStyle({ expand, isGrouped, isLast, size });
+    const { expand, size, isGrouped, isLast, disabled } = this;
+    const { base, header, panel, icon, helper, headerContainer } = accordionStyle({ expand, isGrouped, isLast, size, disabled });
     return html`
       <div class=${base()}>
-        <div class=${header()} @click=${this.toggleOpen}>
+        <div class=${header()} @click=${!disabled && this.toggleOpen}>
           <div class=${headerContainer()}>
             <slot name="header"></slot>
             <span class=${helper()}><slot name="helper"></slot></span>

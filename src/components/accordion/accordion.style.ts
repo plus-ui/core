@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const accordionStyle = tv({
   slots: {
     base: "font-sans antialiased border border-color-default",
-    header: "header flex cursor-pointer flex-row items-center justify-between bg-color-default font-medium text-color-default",
+    header: "header flex cursor-pointer flex-row items-center justify-between bg-color-default-base font-medium text-color-default",
     panel: "",
     icon: "text-base text-center",
     helper: "text-color-caption font-normal",
@@ -53,6 +53,13 @@ export const accordionStyle = tv({
         base: "border-b",
       },
     },
+    disabled: {
+      true: {
+        base: "cursor-not-allowed",
+        header: "cursor-not-allowed bg-color-disabled text-color-disabled",
+        panel: "bg-color-disabled",
+      },
+    },
   },
   compoundVariants: [
     // {
@@ -82,5 +89,6 @@ export const accordionStyle = tv({
   ],
   defaultVariants: {
     expand: false,
+    disabled: false,
   },
 });
